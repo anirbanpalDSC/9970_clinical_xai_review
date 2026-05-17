@@ -4,7 +4,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-This repository is for a clinical XAI (Explainable AI) review project (reference: 9970). No source files have been committed yet — update this file once the stack and structure are established.
+This repository is for a clinical XAI (Explainable AI) review project (reference: 9970).
+
+## Repository Structure
+
+| Path | Purpose |
+|------|---------|
+| `docs/protocol/` | Review protocol |
+| `docs/osf/` | OSF registration materials |
+| `docs/manuscript/` | Manuscript drafts |
+| `docs/figures/` | Figures for publication |
+| `docs/supplementary/` | Supplementary materials |
+| `data/searches/` | Raw search results |
+| `data/screening/` | Title/abstract and full-text screening |
+| `data/extraction/` | Data extraction forms and outputs |
+| `data/coding/` | Coding schemes and coded data |
+| `data/synthesis/` | Synthesis outputs |
+| `notebooks/` | Analysis notebooks |
+| `scripts/` | Data processing scripts |
+| `references/bib/` | Bibliography files |
+| `references/annotated/` | Annotated references |
+| `memos/` | Research memos |
+| `project_management/milestones/` | Project milestones |
+| `project_management/weekly_logs/` | Weekly progress logs |
+| `project_management/reviewer_risks/` | Reviewer risk tracking |
 
 ## Getting Started
 
