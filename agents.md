@@ -1,4 +1,4 @@
-# agents.md
+# AGENTS.md
 
 Agent instructions for the **Clinical XAI Systematic Review** project (ref: 9970).
 This file governs how AI agents and collaborators work in this repository.
@@ -198,7 +198,7 @@ These definitions are **locked working definitions** for this review. All extrac
 ## Agent Behavioral Rules
 
 1. **Read `research_master_memo.md` before any synthesis task.** Do not derive conclusions the memo has already revised or contradicted.
-2. **Do not rename or move files** without updating both `CLAUDE.md` and this file.
+2. **Do not rename or move files** without updating both `CLAUDE.md` and `AGENTS.md`.
 3. **Do not modify the Definitions Table** without appending a dated rationale entry to the memo and getting explicit user confirmation.
 4. **All extraction work** must use the template in `05_Extraction/` — never create ad-hoc extraction formats.
 5. **Figures** must be saved in both editable source format and exported PNG/SVG in `08_Figures/`.
