@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(p['name']\\) for p in data.get\\('plugins',[]\\)]\")",
+      "Bash(python *)"
+    ]
+  }
+}

@@ -62,3 +62,17 @@ This is a living document. Add a row every time a paper uses a term differently 
 | Term | Why flagged | First seen in |
 |------|-------------|---------------|
 | | | |
+
+---
+
+## Notes
+
+The papers that matter most for #2 specifically:
+
+Read these three first — they do the definitional heavy lifting:
+
+* Lipton (2018) — attacks the conflation directly
+* Doshi-Velez & Kim (2017) — proposes a formal definition of interpretability
+* Arrieta et al. (2020) — maps the full taxonomy
+
+*The other four come after, and will mostly confirm or add nuance.*
