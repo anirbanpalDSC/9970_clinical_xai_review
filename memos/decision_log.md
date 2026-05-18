@@ -62,3 +62,25 @@ Papers:
 **Impact:** Issues for Milestones 4–7 will be filed after screening is complete and the extraction schema is piloted on included papers.
 
 **Defense if challenged:** Not applicable — internal project management decision.
+
+---
+
+## 2026-05-17 — Reference management infrastructure: Zotero linked to Google Drive
+
+**Decision:** PDFs stored in Google Drive, linked into Zotero. Zotero is the single source of truth for paper metadata, tags, and citations.
+
+**Rationale:** PDFs are binary files — they do not belong in Git. Google Drive provides cloud storage and access across devices. Zotero bridges the gap: it manages metadata, enables BibTeX export into the repo, and supports annotation and tagging without polluting version control with large files.
+
+**Alternatives considered:**
+- PDFs directly in repo — rejected (binary files break Git workflows, inflate repo size)
+- Google Drive only — rejected (no structured metadata, no BibTeX export, no tagging)
+- Zotero cloud storage only — acceptable but Google Drive link retained for existing files
+
+**Impact:**
+- `references/bib/` in repo will be populated by Zotero BibTeX exports, not manual entry
+- `references/annotated/` will hold structured reading notes keyed to Zotero item keys
+- PDFs are not tracked by Git; the `.gitignore` covers common document formats
+
+**Next action:** Export the 7 foundational papers from Zotero as `references/bib/foundational.bib` and commit to repo. This makes citations machine-readable and LaTeX/Pandoc-ready for the manuscript.
+
+**Defense if challenged:** Not applicable — internal infrastructure decision. PDFs available on request via Google Drive; metadata and citations are version-controlled in the repo.
