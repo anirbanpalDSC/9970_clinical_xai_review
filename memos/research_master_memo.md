@@ -13,6 +13,8 @@ Append a dated entry every working day. Never overwrite previous entries.
 - Key realization: foundational XAI theory papers (#2, #5, #6) can and should be read before the systematic search runs. They are background/definitional literature, not primary study evidence. They do not appear in the PRISMA count.
 - Order of operations established: concept layer (Layer 1) → infrastructure + rubrics (Layer 2) → search and screening (Layer 3). Critical path: #2 + #7 → #10 → #18.
 - Decision log established as the canonical place to capture methodological nuances, defenses, and rationale — distinct from this memo. This memo captures observations; the decision log captures decisions.
+- Reference management pipeline established: PDFs in Google Drive → linked in Zotero → BibTeX exported to `references/bib/` in repo. `file = {...}` fields must be stripped before committing; Export Notes must be unchecked. `foundational.bib` committed with 7 papers, years corrected for Lipton (2018) and Samek (2017).
+- Samek year discrepancy found and corrected: listed as 2019 in initial decision log entry, actual publication year is 2017. Decision log updated.
 
 ### Contradictions
 -

@@ -81,6 +81,24 @@ Papers:
 - `references/annotated/` will hold structured reading notes keyed to Zotero item keys
 - PDFs are not tracked by Git; the `.gitignore` covers common document formats
 
-**Next action:** Export the 7 foundational papers from Zotero as `references/bib/foundational.bib` and commit to repo. This makes citations machine-readable and LaTeX/Pandoc-ready for the manuscript.
-
 **Defense if challenged:** Not applicable — internal infrastructure decision. PDFs available on request via Google Drive; metadata and citations are version-controlled in the repo.
+
+---
+
+## 2026-05-17 — BibTeX export settings and file cleanup
+
+**Decision:** Exported foundational papers from Zotero with Export Notes unchecked, Export Files unchecked, Use Journal Abbreviation unchecked, Character Encoding UTF-8. Machine-specific `file = {...}` fields stripped before committing. Missing years added for Lipton and Samek.
+
+**Rationale:**
+- Export Notes unchecked: personal working notes are not citation metadata; they pollute the BibTeX file
+- Export Files unchecked: PDFs stay in Google Drive, not in Git
+- Use Journal Abbreviation unchecked: full journal names are unambiguous; abbreviation style is applied by the manuscript template, not the source BibTeX
+- `file = {...}` fields stripped: contained absolute Google Drive paths (`G:\My Drive\...`) which are machine-specific and non-portable
+- Lipton corrected to 2018 (Queue journal publication of the 2016 arXiv preprint)
+- Samek corrected to 2017 (ITU Journal; previously listed as 2019 in this log — that was an error)
+
+**Alternatives considered:** Keeping file paths for personal convenience — rejected because the `.bib` file is version-controlled and shared; portability takes precedence.
+
+**Impact:** `references/bib/foundational.bib` is now clean, portable, and citation-ready for LaTeX/Pandoc. Standard practice for all future BibTeX exports from this project.
+
+**Defense if challenged:** Not applicable — internal infrastructure decision.
