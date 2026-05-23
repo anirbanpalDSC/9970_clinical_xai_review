@@ -4,6 +4,23 @@ Append a dated entry every working day. Never overwrite previous entries.
 
 ---
 
+## 2026-05-23
+
+### Papers Assessed
+- **Miller (2019)** — No new Part 1 definitions. No conflicts logged. Miller is a social science synthesis focused on what makes explanations satisfying to humans (contrastive, selective, social structure) — not an XAI-specific terminology paper. Terms targeted (Justifiability, Trust calibration, Completeness) absent or used only colloquially.
+- **Samek et al. (2017)** — No new Part 1 definitions. Corroborates Doshi-Velez (2017) exactly on three terms: Interpretability (same definition, same incompleteness framing), Simulatability (same forward/counterfactual evaluation-task framing), and Trust (same confidence framing, verbatim "aircraft collision avoidance systems" example — direct citation). Two conflict log entries added for Simulatability and Trust confirming Doshi-Velez over Lipton.
+
+### Terminology Status After 6 of 7 Papers
+- Blanks remaining in Part 1: Justifiability, Trust calibration, Completeness
+- Completeness remains flagged in Part 4 — no technical definition found in any of the 6 papers
+- Simulatability conflict (Lipton model-property vs Doshi-Velez/Samek evaluation-task) now 2-vs-1 in favor of Doshi-Velez framing
+- Trust conflict (Lipton multi-dimensional vs Doshi-Velez/Samek confidence) now 2-vs-1 in favor of Doshi-Velez framing
+
+### Next Step
+- Adadi & Berrada (2018) — final paper. Primary targets: Justifiability, Trust calibration, Completeness. Also watch: whether trust and simulatability framing follows Doshi-Velez or Lipton (would make it 3-vs-1 or 2-vs-2).
+
+---
+
 ## 2026-05-17
 
 ### Insights
