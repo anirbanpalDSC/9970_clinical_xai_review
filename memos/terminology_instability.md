@@ -11,7 +11,7 @@ This is a living document. Add a row every time a paper uses a term differently 
 
 | Term | Working definition for this review | What it excludes | Anchor paper | Last updated |
 |------|------------------------------------|-----------------|--------------|--------------|
-| Interpretability | | | | |
+| Interpretability | The ability to explain or to present in understandable terms to a human. The need for interpretability arises from an incompleteness in problem formalization — when the objective cannot be fully specified or directly optimized, humans must evaluate the model's behavior through explanation. | Technical performance metrics alone — interpretability is required precisely when those metrics are insufficient | Doshi-Velez & Kim (2017) | 2026-05-22 |
 | Explainability | | | | |
 | Transparency | Informally described as the opposite of opacity or "blackbox-ness". It connotes an understanding of the mechanisms by which a model works and is evaluated at three levels: the entire model, individual components, and the learning algorithm. | Does not require that a human can simulate the model — only that the mechanism is understandable in principle | Lipton (2018) | 2026-05-22 |
 | Intelligibility | Equated by referenced literature with understandability — meaning humans can grasp how the model works — and specifically aligns with the property of decomposability where model components admit intuitive explanations. | | Lipton (2018) | 2026-05-22 |
@@ -37,7 +37,7 @@ This is a living document. Add a row every time a paper uses a term differently 
 | Term | Paper | Definition used in that paper | Conflicts with | Nature of conflict | Notes |
 |------|-------|-------------------------------|----------------|--------------------|-------|
 | Interpretability vs Explainability | (general) | Used interchangeably across most of the literature | Working definitions in Part 1 | Synonymous use obscures distinct epistemic claims | Primary motivation for this document |
-| | | | | | |
+| Trust | Doshi-Velez & Kim (2017) | Confidence of human users in system reliability — e.g. "aircraft collision avoidance systems" | Lipton (2018) — trust as multi-dimensional and underspecified | Doshi-Velez narrows trust to a single dimension (confidence); Lipton argues this flattens a genuinely complex construct | Lipton retained as anchor because the multi-dimensional view explains heterogeneity in clinical XAI trust claims. Directly supports Issue #3 argument that clinical XAI papers conflate trust calibration with explanation plausibility |
 
 ---
 
