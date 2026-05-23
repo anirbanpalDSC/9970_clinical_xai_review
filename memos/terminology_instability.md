@@ -13,19 +13,19 @@ This is a living document. Add a row every time a paper uses a term differently 
 |------|------------------------------------|-----------------|--------------|--------------|
 | Interpretability | | | | |
 | Explainability | | | | |
-| Transparency | | | | |
-| Intelligibility | | | | |
+| Transparency | Informally described as the opposite of opacity or "blackbox-ness". It connotes an understanding of the mechanisms by which a model works and is evaluated at three levels: the entire model, individual components, and the learning algorithm. | Does not require that a human can simulate the model — only that the mechanism is understandable in principle | Lipton (2018) | 2026-05-22 |
+| Intelligibility | Equated by referenced literature with understandability — meaning humans can grasp how the model works — and specifically aligns with the property of decomposability where model components admit intuitive explanations. | | Lipton (2018) | 2026-05-22 |
 | Justifiability | | | | |
-| Trust | | | | |
+| Trust | Not a single concept; can mean: (1) subjective peace of mind with a model, (2) confidence that a model will perform well when training and deployment objectives diverge, or (3) willingness to relinquish control to an automated system. | A unified or measurable construct — Lipton treats it as underspecified | Lipton (2018) | 2026-05-22 |
 | Trust calibration | | | | |
-| Explanation plausibility | | | | |
+| Explanation plausibility | Not formally defined; post-hoc explanations can be optimized to present "misleading but plausible explanations" satisfying subjective human demands without being faithful to the actual underlying model decisions. | Faithfulness to the model — plausibility is about human perception, not model accuracy | Lipton (2018) | 2026-05-22 |
 | Fidelity | | | | |
 | Faithfulness | | | | |
 | Completeness | | | | |
-| Simulatability | | | | |
-| Decomposability | | | | |
-| Algorithmic transparency | | | | |
-| Post-hoc explanation | | | | |
+| Simulatability | A strict form of transparency where a person can contemplate the entire model at once — taking input data and parameters to step through every calculation needed to produce a prediction within a reasonable time. | Models too large or complex to mentally simulate | Lipton (2018) | 2026-05-22 |
+| Decomposability | A notion of transparency where every individual part of the model — each input feature, parameter, and calculation — admits an intuitive, plain-text explanation. | Models with components that require domain expertise to interpret | Lipton (2018) | 2026-05-22 |
+| Algorithmic transparency | Transparency at the level of the learning algorithm itself — applies when the mathematical behavior of the system is understood, such as being able to prove that training will always converge to a unique solution. | Black-box optimization processes whose convergence or behavior cannot be formally characterized | Lipton (2018) | 2026-05-22 |
+| Post-hoc explanation | A distinct category of interpretation methods that extract useful information from a trained model without elucidating its precise internal mechanics. Provides descriptive information for practitioners or end-users. | Methods that make the model itself transparent — post-hoc explanation describes behavior, not mechanism | Lipton (2018) | 2026-05-22 |
 | Inherently interpretable model | | | | |
 
 ---
