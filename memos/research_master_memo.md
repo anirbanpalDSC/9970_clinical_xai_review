@@ -16,8 +16,13 @@ Append a dated entry every working day. Never overwrite previous entries.
 - Simulatability conflict (Lipton model-property vs Doshi-Velez/Samek evaluation-task) now 2-vs-1 in favor of Doshi-Velez framing
 - Trust conflict (Lipton multi-dimensional vs Doshi-Velez/Samek confidence) now 2-vs-1 in favor of Doshi-Velez framing
 
-### Next Step
-- Adadi & Berrada (2018) — final paper. Primary targets: Justifiability, Trust calibration, Completeness. Also watch: whether trust and simulatability framing follows Doshi-Velez or Lipton (would make it 3-vs-1 or 2-vs-2).
+### Adadi & Berrada (2018) — Final Paper
+- **No new blank terms filled.** Justifiability, Trust calibration, Completeness absent from all 7 papers — confirmed absent and moved to Part 4 with sourcing notes.
+- **4 new conflict log entries:** Interpretability (validation framing vs Doshi-Velez communicative framing), Explainability (local/per-prediction vs Arrieta's global/model-level), Trust (third distinct framing: relational outcome between parties — neither Lipton's multi-dimensional nor Doshi-Velez/Samek's confidence), Decomposability (LRP technique vs Lipton's general model property — same technique-as-property conflation pattern seen in the Simulatability conflict).
+- **Trust framing tally final:** Lipton (multi-dimensional), Doshi-Velez/Samek (confidence), Adadi (relational). Three distinct framings; none dominant. Lipton retained as anchor for analytical breadth.
+
+### Issue #2 — COMPLETE
+All 7 foundational papers assessed. terminology_instability.md is fully populated with all conflicts found. Update GitHub Issue #2 as closed.
 
 ---
 
