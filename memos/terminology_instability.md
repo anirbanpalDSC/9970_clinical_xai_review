@@ -62,7 +62,7 @@ This is a living document. Add a row every time a paper uses a term differently 
 
 | Term | Why flagged | First seen in |
 |------|-------------|---------------|
-| | | |
+| Completeness | Used by Doshi-Velez as motivational framing (incompleteness of problem formalization) not as a technical property of explanations. The technical sense — an explanation that captures 100% of model mechanics — is not defined by Lipton or Doshi-Velez. Likely anchored in faithfulness/fidelity literature. Do not add to Part 1 until a paper defines it technically. | Doshi-Velez & Kim (2017) |
 
 ---
 
