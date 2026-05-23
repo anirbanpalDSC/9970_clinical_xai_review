@@ -85,6 +85,26 @@ Papers:
 
 ---
 
+## 2026-05-23 — Inclusion boundary: clinical vs medical vs healthcare AI
+
+**Decision:** Three-gate decision rule defining in-scope "clinical AI" for this review.
+- Gate 1: AI operates in a clinical/medical domain (diagnosis, prognosis, treatment, risk, monitoring, imaging, pathology). Excludes administrative, consumer, drug discovery, population analytics.
+- Gate 2: AI output informs an individual patient care decision. Excludes population analytics and clinical trial infrastructure. Clinical trial sub-rule: include if the trial evaluates the AI tool as a clinical intervention; exclude if AI operates the trial.
+- Gate 3: A licensed clinician is involved at any stage of the decision pathway (review, validation, action, or override). Excludes fully automated systems. Asynchronous review satisfies this gate.
+
+**Rationale:** "Clinical," "medical," and "healthcare" AI are not synonyms. Without an explicit boundary, screening decisions drift across reviewers. The three-gate structure forces a consistent sequence of checks and makes borderline cases documentable rather than judgment-dependent.
+
+**Alternatives considered:**
+- Broader: any AI used in a healthcare organisation — rejected because it sweeps in administrative AI (scheduling, billing) that has no clinical decision content.
+- Narrower: require real-time clinician-AI interaction — rejected because batch/asynchronous review (e.g., radiologist reviewing AI-flagged worklist) is clinically valid and excludes too much literature.
+- Exclude all clinical trials — rejected because trials that evaluate AI as a clinical decision support intervention are primary evidence for this review; excluding them would omit important deployment studies.
+
+**Impact:** Applies to title/abstract screening, full-text screening, and extraction. Borderline cases must be documented in decision_log.md with paper title and rationale.
+
+**Defense if challenged:** "We distinguished clinical from administrative and consumer AI using three sequential gates, each of which can be independently verified from paper methods sections. The boundary was committed to the protocol before screening began and logged prospectively on 2026-05-23. The clinical trial sub-rule follows standard systematic review practice of distinguishing interventions under study from study methodology."
+
+---
+
 ## 2026-05-17 — BibTeX export settings and file cleanup
 
 **Decision:** Exported foundational papers from Zotero with Export Notes unchecked, Export Files unchecked, Use Journal Abbreviation unchecked, Character Encoding UTF-8. Machine-specific `file = {...}` fields stripped before committing. Missing years added for Lipton and Samek.
