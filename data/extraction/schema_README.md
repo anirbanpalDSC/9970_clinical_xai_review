@@ -158,6 +158,18 @@ Two booleans — involvement in **evaluation** and in **design** — are kept se
 
 ---
 
+### Semantic Tags
+
+Controlled tag vocabulary defined in `memos/tag_vocabulary.md`. Read that document before applying tags.
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `Tags` | string (multi-tag) | Semicolon-separated list of semantic tags from the controlled vocabulary in `memos/tag_vocabulary.md`. Example: `#trust_calibration;#clinician_study;#deployment`. Apply all tags that meet the `When to use` condition — no minimum, no maximum. Tags must appear in the controlled vocabulary; propose new tags in `memos/decision_log.md` before use. |
+
+Tags that overlap with categorical schema columns (e.g., `#trust_calibration` mirrors `Trust_Claim: Calibrated`) should still be populated in both places — the Tags column enables memo-level cross-cutting retrieval that schema filters alone do not support.
+
+---
+
 ## Inter-Rater Reliability Protocol
 
 Before full extraction begins:
@@ -175,3 +187,4 @@ Seed paper selection: draw from included papers after full-text screening is com
 | Version | Date | Changes |
 |---------|------|---------|
 | v1 | 2026-05-24 | Initial schema. 26 columns. Deviates from Issue #10 spec on `Realism_Level`, EV columns, and clinician involvement split — see Deviations section. |
+| v1.1 | 2026-05-24 | Added `Tags` column (27 columns total). Issue #13. Controlled tag vocabulary in `memos/tag_vocabulary.md` (21 tags across 4 groups). |
