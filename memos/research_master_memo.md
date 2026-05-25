@@ -4,6 +4,23 @@ Append a dated entry every working day. Never overwrite previous entries.
 
 ---
 
+## 2026-05-24
+
+### Issues Resolved
+- **Issue #4 (Workflow Realism Rubric)** — Committed `data/coding/workflow_realism_rubric.md`. 4-level ordinal scale: Synthetic (1) → Simulated (2) → Ecologically Representative (3) → Deployment-Embedded (4). Each level has operational definition, necessary conditions, positive examples, and boundary decision rules. Critical boundary: real clinical data alone does not elevate the level — the task *structure* and workflow context determine the code. Seed paper coding (IRR target κ > 0.70) deferred to pilot extraction phase (Issue #10).
+- **Issue #8 (Evaluation Type Taxonomy)** — Committed `data/coding/eval_type_taxonomy.md`. 6 types: `ProxyMetric`, `ForwardSim`, `BackwardSim`, `TrustQuestionnaire`, `DecisionQuality`, `DownstreamOutcome`. Multi-coding is required; papers commonly combine proxy metrics with questionnaires or decision quality studies. Mapped to Doshi-Velez (2017) 3-category framework. Key flag: `DecisionQuality` can be Human-grounded or Application-grounded depending on participant type — `Participant_Type` field in schema resolves this. `TrustQuestionnaire`-only papers flagged with `Trust_Only: Yes` per Issue #3 concern.
+
+### Design Decisions Made Today
+- **Forward vs backward simulation:** Issue #8 distinguishes these as separate types. Forward = predict model output from explanation; Backward = identify counterfactual from explanation. They test different cognitive tasks and should not be collapsed into a single "simulation" code.
+- **DecisionQuality spans two Doshi-Velez categories:** Rather than forcing a mapping, `Participant_Type` column in the schema makes the distinction post-hoc. This avoids losing data at extraction time.
+- **Level 3 vs Level 4 boundary in realism rubric:** Live deployment alone is not sufficient for Level 4 — the study must also measure real clinical outcomes (diagnostic accuracy on real patients, treatment changes, downstream outcomes). A live deployment study with trust questionnaire only codes as Level 3.
+- **Rubric boundary between Level 1 and Level 2:** Real clinical data (MIMIC, DICOM, EHR) used for proxy metric evaluation only (no human, no workflow context) is Level 1, not Level 2. Real data ≠ clinical workflow context.
+
+### Pending (next: Issue #5)
+- **Issue #5 (Ecological Validity)** — Four-dimension operationalization (Participant / Task / Environment / Outcome validity). Must cross-reference with the realism rubric — the realism rubric is a holistic ordinal scale; ecological validity is a multi-dimensional profile.
+
+---
+
 ## 2026-05-23
 
 ### Papers Assessed
