@@ -17,8 +17,8 @@ Append a dated entry every working day. Never overwrite previous entries.
 ### Also Resolved Today
 - **Issue #20 (Quality and Risk of Bias Rubric)** — Created `data/coding/quality_rubric.md`. Five dimensions (0–2 each): QR1 Participant Appropriateness, QR2 Task Fidelity, QR3 Outcome Measurement, QR4 Explanation Faithfulness, QR5 Reporting Completeness. Standard tools reviewed: QUADAS-2 (Patient Selection → QR1, Reference Standard → QR4), RoB 2 (D4 → QR3, D5 → QR5), TRIPOD (reporting → QR5). Rejected: QUADAS-2 Index Test and Flow/Timing, RoB 2 D1–D3, TRIPOD calibration/discrimination. QR4 and QR5 are entirely new — no standard tool equivalent. QS_Total (0–10) computed at analysis time. Key design decision: QR dimensions are independent of EV dimensions — a study can have high ecological validity but poor quality (EV_Participant=3, QR1=0) or vice versa. Schema updated to v1.2 (33 columns, added QR_Participant, QR_Task, QR_Outcome, QR_Faithfulness, QR_Reporting, QR_Notes). Decision log entry written. Pilot on 3 seed papers (same papers as EV rubric pilot). #fidelity #method_paper #regulatory
 
-### Pending (next: Issue #19 or #17)
-- **Issue #19 (PROSPERO Registration)** — Pre-registration is now filed (OSF URL recorded); PROSPERO draft unblocked.
+### Pending (next: submit PROSPERO, then Issue #17)
+- **Issue #19 (PROSPERO Registration)** — Draft committed to `docs/osf/prospero_draft.md` (2026-05-26). All 38 mandatory fields completed. Ready for portal entry at prospero.york.ac.uk. Search has not yet run — submission window is open. Expected 10-21 days for PROSPERO to publish the record. After publication: record CRD number in decision_log.md and manuscript front matter.
 - **Issue #17 (Title/Abstract Screening Criteria)** — Must be done before screening begins.
 - **Issue #22 (Multi-Database Search)** — Unblocked; can be executed now that OSF pre-registration is confirmed.
 
