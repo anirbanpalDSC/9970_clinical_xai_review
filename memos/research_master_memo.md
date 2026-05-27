@@ -4,6 +4,23 @@ Append a dated entry every working day. Never overwrite previous entries.
 
 ---
 
+## 2026-05-26
+
+### Issues Resolved
+- **Issue #18 (Full-Text Screening Criteria and Exclusion Taxonomy)** — Created `docs/protocol/screening_fulltext_criteria.md` and `data/screening/prisma_counts.csv`. Five full-text inclusion criteria (F1–F5): three gates confirmed, XAI component confirmed, XAI evaluation present, sufficient extraction detail, primary empirical study. Six exclusion codes: E1 (not clinical AI), E2 (no XAI component), E3 (XAI not evaluated), E4 (wrong publication type), E5 (insufficient detail), E6 (duplicate report). Priority order defined — assign highest-priority code when multiple reasons apply. Critical E3 vs MethodPaper distinction formalised: post-hoc SHAP figure with no evaluation = E3; paper where XAI method is the stated primary contribution = MethodPaper (included). PRISMA tracking: `prisma_counts.csv` covers all stages from database identification through included; `fulltext_exclusions.csv` (to be created at screening time) tracks paper-level exclusion codes. Six borderline decision rules documented, including Rule 4 (XAI used internally for model selection) which is the most likely source of screener disagreement. Pilot protocol: κ > 0.70 on 10 papers before full screening begins. #workflow_realism #method_paper
+
+### Design Decisions Made Today
+- **E3 priority lower than E2:** A paper that uses a clinical AI system but has no XAI (E2) is a more fundamental exclusion than a paper that has XAI but doesn't evaluate it (E3). Priority order reflects the logical dependency: you cannot exclude for "XAI not evaluated" if there is no XAI to begin with.
+- **MethodPaper included despite no human evaluation:** The schema accommodates `Eval_Type: None` for MethodPapers. Excluding method papers would bias the review toward applied evaluations and miss the development literature that informs what gets evaluated in subsequent papers.
+- **prisma_counts.csv uses row-per-metric structure:** Preferred over column-per-reason because PRISMA counts are cumulative and hierarchical; a row structure makes it easy to add a formula note and keeps the file human-readable during manual updating.
+
+### Pending (next: Issue #20 or Issue #19)
+- **Issue #20 (Quality and Risk of Bias Rubric)** — Deferred from last session; next Concept Stabilization issue.
+- **Issue #19 (PROSPERO Registration)** — Pre-registration is now filed (OSF URL recorded); PROSPERO draft unblocked.
+- **Issue #22 (Multi-Database Search)** — Unblocked; can be executed now that OSF pre-registration is confirmed.
+
+---
+
 ## 2026-05-24
 
 ### Issues Resolved

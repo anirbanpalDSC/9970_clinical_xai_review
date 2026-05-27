@@ -1,0 +1,22 @@
+Stage,Metric,Count,Notes
+Identification,Records from database: PubMed,,
+Identification,Records from database: Embase,,
+Identification,Records from database: CINAHL,,
+Identification,Records from database: IEEE Xplore,,
+Identification,Records from database: ACM Digital Library,,
+Identification,Records from other sources (hand search / citation tracking),,
+Identification,Total records identified,,Sum of all database + other counts
+Identification,Duplicates removed before screening,,
+Identification,Records after deduplication,,Total identified minus duplicates removed
+Screening,Records screened (title/abstract),,Equal to records after deduplication
+Screening,Records excluded at title/abstract,,
+Screening,Records carried forward to full-text,,Records screened minus title/abstract excluded
+Eligibility,Full-text reports assessed for eligibility,,Equal to records carried forward
+Eligibility,Full-text excluded: E1 Not clinical AI application,,
+Eligibility,Full-text excluded: E2 No XAI component,,
+Eligibility,Full-text excluded: E3 XAI not evaluated,,
+Eligibility,Full-text excluded: E4 Wrong publication type,,
+Eligibility,Full-text excluded: E5 Insufficient extraction detail,,
+Eligibility,Full-text excluded: E6 Duplicate report,,
+Eligibility,Total full-text excluded,,Sum of E1 through E6
+Included,Studies included in review,,Full-text assessed minus total full-text excluded
