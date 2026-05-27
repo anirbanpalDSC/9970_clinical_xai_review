@@ -150,6 +150,25 @@ Two booleans — involvement in **evaluation** and in **design** — are kept se
 
 ---
 
+### Quality and Risk of Bias
+
+Rubric defined in `data/coding/quality_rubric.md`. Score each dimension independently before looking at others. Read that document for the standard tools mapping, boundary notes, and study-design-conditional scoring rules.
+
+| Column | Type | Values | Dimension |
+|--------|------|--------|-----------|
+| `QR_Participant` | ordinal 0–2 | 0=Inappropriate / 1=PartiallyAppropriate / 2=Appropriate | Participant appropriateness — match between participant type and paper claims |
+| `QR_Task` | ordinal 0–2 | 0=Misaligned / 1=PartiallyAligned / 2=WellAligned | Task fidelity — alignment between task design and stated research question |
+| `QR_Outcome` | ordinal 0–2 | 0=InappropriateOrUnvalidated / 1=PartiallyValid / 2=ValidAndAppropriate | Outcome measurement — validity of instruments used |
+| `QR_Faithfulness` | ordinal 0–2 | 0=None / 1=Indirect / 2=Direct | Explanation faithfulness — evidence that explanation reflects model behaviour |
+| `QR_Reporting` | ordinal 0–2 | 0=MajorGaps / 1=Partial / 2=Complete | Reporting completeness — XAI method, model, dataset, evaluation procedure |
+| `QR_Notes` | string | Mandatory-field gaps (QR_Reporting=0), instrument name and citation (QR_Outcome), faithfulness method (QR_Faithfulness=2) | Free text |
+
+A composite quality score (QS_Total = sum of all five QR columns, range 0–10) is not stored in the schema — compute at analysis time.
+
+**Key distinction from EV columns:** EV dimensions characterise the ecological validity of the evidence (what was studied and how realistic it was). QR dimensions assess whether the study executed its design well (methodological quality). These are independent — see cross-reference table in `data/coding/quality_rubric.md` Section 6.
+
+---
+
 ### General Notes
 
 | Column | Type | Description |
@@ -188,3 +207,4 @@ Seed paper selection: draw from included papers after full-text screening is com
 |---------|------|---------|
 | v1 | 2026-05-24 | Initial schema. 26 columns. Deviates from Issue #10 spec on `Realism_Level`, EV columns, and clinician involvement split — see Deviations section. |
 | v1.1 | 2026-05-24 | Added `Tags` column (27 columns total). Issue #13. Controlled tag vocabulary in `memos/tag_vocabulary.md` (21 tags across 4 groups). |
+| v1.2 | 2026-05-26 | Added 6 quality rubric columns: `QR_Participant`, `QR_Task`, `QR_Outcome`, `QR_Faithfulness`, `QR_Reporting`, `QR_Notes` (33 columns total). Issue #20. Rubric in `data/coding/quality_rubric.md`. Adopted and adapted from QUADAS-2, RoB 2, and TRIPOD — see rubric Section 2 for mapping. |

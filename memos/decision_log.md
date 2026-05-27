@@ -122,3 +122,35 @@ Papers:
 **Impact:** `references/bib/foundational.bib` is now clean, portable, and citation-ready for LaTeX/Pandoc. Standard practice for all future BibTeX exports from this project.
 
 **Defense if challenged:** Not applicable — internal infrastructure decision.
+
+---
+
+## 2026-05-26 — Custom quality rubric adopted over QUADAS-2, RoB 2, TRIPOD
+
+**Decision:** Developed a bespoke five-dimension quality rubric (QR1–QR5, scored 0–2 each) rather than applying any standard quality assessment tool directly. Retained specific elements from QUADAS-2, RoB 2, and TRIPOD through adaptation; rejected the remainder. Rubric committed to `data/coding/quality_rubric.md`.
+
+Adopted elements:
+- QUADAS-2 Patient Selection domain adapted into QR1 (Participant Appropriateness): same concern but operationalised as participant-to-claim match rather than a selection bias domain
+- QUADAS-2 Reference Standard domain adapted into QR4 (Explanation Faithfulness): reference standard for an XAI explanation is the model's actual computation; requires a ground truth comparison, not face validity
+- RoB 2 D4 (Outcome Measurement) adopted as the foundation for QR3 (Outcome Measurement): validated instruments required for the primary outcome
+- RoB 2 D5 (Selective Reporting) and TRIPOD reporting requirements absorbed into QR5 (Reporting Completeness)
+
+Rejected elements:
+- QUADAS-2 Index Test and Flow/Timing: structurally inapplicable — no diagnostic test threshold; no patient-level flow across tests
+- RoB 2 D1 (Randomisation), D2 (Deviations), D3 (Missing Data): applicable only to RCTs; fewer than 10% of clinical XAI papers are RCTs (H5)
+- TRIPOD calibration, discrimination, validation type: predictive model properties, not XAI evaluation properties
+
+New dimensions with no standard tool equivalent:
+- QR4 (Explanation Faithfulness): entirely absent from QUADAS-2, RoB 2, and TRIPOD — most consequential gap given that unfaithful explanations in clinical settings may increase confidence without warranting it
+- QR5 partially covers XAI-specific reporting requirements not in TRIPOD (which covers the underlying model but not the explanation system)
+
+**Rationale:** No existing quality tool was designed for XAI evaluation papers. Direct application of QUADAS-2 or RoB 2 would be a category error: QUADAS-2 assumes a diagnostic accuracy study design; RoB 2 assumes a randomised trial. Both tools would leave the most critical XAI-specific quality concerns unaddressed. TRIPOD is a reporting guideline for predictive models, not an evaluation quality tool. Developing a custom rubric is consistent with systematic review methodology when no validated tool exists for the study type.
+
+**Alternatives considered:**
+- Apply QUADAS-2 to all papers regardless of study type — rejected because forced application produces low-informativeness scores for user studies and proxy-metric papers
+- Apply RoB 2 to RCTs and QUADAS-2 to user studies — rejected because it creates non-comparable quality scores across papers; synthesis requires a uniform instrument
+- Apply GRADE certainty of evidence — rejected because GRADE is designed for bodies of evidence supporting clinical recommendations, not for primary study quality assessment in a methodological review
+
+**Impact:** Six new columns added to extraction schema (`QR_Participant`, `QR_Task`, `QR_Outcome`, `QR_Faithfulness`, `QR_Reporting`, `QR_Notes`); schema is now v1.2 (33 columns). Quality scores will be used in sensitivity analyses (e.g., re-running H1 and H3 restricted to QS_Total >= 7 papers) and to characterise the quality distribution of the included literature.
+
+**Defense if challenged:** "Standard quality assessment tools are not designed for XAI evaluation studies, which span proxy-metric papers, user studies, simulation studies, and deployment studies — none fitting the RCT or diagnostic accuracy designs those tools assume. We reviewed each standard tool systematically (logged prospectively in `memos/decision_log.md` on 2026-05-26) and adopted elements that map onto XAI evaluation designs while developing two new dimensions — Explanation Faithfulness and Reporting Completeness — absent from existing tools but representing the primary methodological failure modes in XAI evaluation research."

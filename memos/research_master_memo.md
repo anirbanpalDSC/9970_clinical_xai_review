@@ -14,9 +14,12 @@ Append a dated entry every working day. Never overwrite previous entries.
 - **MethodPaper included despite no human evaluation:** The schema accommodates `Eval_Type: None` for MethodPapers. Excluding method papers would bias the review toward applied evaluations and miss the development literature that informs what gets evaluated in subsequent papers.
 - **prisma_counts.csv uses row-per-metric structure:** Preferred over column-per-reason because PRISMA counts are cumulative and hierarchical; a row structure makes it easy to add a formula note and keeps the file human-readable during manual updating.
 
-### Pending (next: Issue #20 or Issue #19)
-- **Issue #20 (Quality and Risk of Bias Rubric)** — Deferred from last session; next Concept Stabilization issue.
+### Also Resolved Today
+- **Issue #20 (Quality and Risk of Bias Rubric)** — Created `data/coding/quality_rubric.md`. Five dimensions (0–2 each): QR1 Participant Appropriateness, QR2 Task Fidelity, QR3 Outcome Measurement, QR4 Explanation Faithfulness, QR5 Reporting Completeness. Standard tools reviewed: QUADAS-2 (Patient Selection → QR1, Reference Standard → QR4), RoB 2 (D4 → QR3, D5 → QR5), TRIPOD (reporting → QR5). Rejected: QUADAS-2 Index Test and Flow/Timing, RoB 2 D1–D3, TRIPOD calibration/discrimination. QR4 and QR5 are entirely new — no standard tool equivalent. QS_Total (0–10) computed at analysis time. Key design decision: QR dimensions are independent of EV dimensions — a study can have high ecological validity but poor quality (EV_Participant=3, QR1=0) or vice versa. Schema updated to v1.2 (33 columns, added QR_Participant, QR_Task, QR_Outcome, QR_Faithfulness, QR_Reporting, QR_Notes). Decision log entry written. Pilot on 3 seed papers (same papers as EV rubric pilot). #fidelity #method_paper #regulatory
+
+### Pending (next: Issue #19 or #17)
 - **Issue #19 (PROSPERO Registration)** — Pre-registration is now filed (OSF URL recorded); PROSPERO draft unblocked.
+- **Issue #17 (Title/Abstract Screening Criteria)** — Must be done before screening begins.
 - **Issue #22 (Multi-Database Search)** — Unblocked; can be executed now that OSF pre-registration is confirmed.
 
 ---
