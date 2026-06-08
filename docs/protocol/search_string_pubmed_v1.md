@@ -13,7 +13,9 @@
 The string uses a **two-concept AND structure** rather than three:
 
 - **Concept A — XAI / Interpretability** (the intervention, from `xai_method_taxonomy.md`)
-- **Concept B — Clinical / Medical AI** (the domain, from Gate 1 of `inclusion_boundary.md`)
+- **Concept B — Clinical / Medical Context** (the domain, from Gate 1 of `inclusion_boundary.md`)
+
+A separate "AI/ML system present" check is deliberately **not** layered in as a third concept: every Concept A term (explainable AI, interpretable machine learning, SHAP, LIME, Grad-CAM, attention, etc.) already presupposes an AI/ML system by definition — adding a redundant generic-AI requirement only risks excluding papers that name a specific model ("XGBoost," "ResNet") rather than saying "machine learning."
 
 Gate 2 (individual patient decision) and Gate 3 (clinician in the loop) are **not** encoded as search terms. These are eligibility properties that rarely appear as distinguishing vocabulary in titles/abstracts — encoding them would cost recall without buying precision (a paper passing Gates 1 may still describe Gate 2/3 only in its Methods section). They remain screening-stage filters, applied during title/abstract and full-text review per `inclusion_boundary.md`.
 
@@ -43,34 +45,28 @@ Source: every method named in `xai_method_taxonomy.md` (SHAP, LIME, Grad-CAM, At
 
 ---
 
-## Concept B — Clinical / Medical AI
+## Concept B — Clinical / Medical Context
 
 ```
 ("clinical decision support"[tiab] OR "clinical decision support system*"[tiab] OR "CDSS"[tiab]
 OR "computer-aided diagnos*"[tiab] OR "computer aided diagnos*"[tiab]
 OR "diagnostic algorithm*"[tiab] OR "predictive model*"[tiab] OR "risk prediction model*"[tiab]
-OR "machine learning"[tiab] OR "deep learning"[tiab] OR "artificial intelligence"[tiab]
-OR "neural network*"[tiab] OR "convolutional neural network*"[tiab]
-OR "Artificial Intelligence"[Mesh] OR "Decision Support Systems, Clinical"[Mesh]
-OR "Machine Learning"[Mesh] OR "Deep Learning"[Mesh] OR "Neural Networks, Computer"[Mesh])
-
-AND
-
-("clinical"[tiab] OR "clinician*"[tiab] OR "physician*"[tiab] OR "radiolog*"[tiab]
+OR "clinical"[tiab] OR "clinician*"[tiab] OR "physician*"[tiab] OR "radiolog*"[tiab]
 OR "patholog*"[tiab] OR "nurse*"[tiab] OR "diagnosis"[tiab] OR "diagnostic"[tiab]
 OR "prognosis"[tiab] OR "treatment"[tiab] OR "patient care"[tiab] OR "hospital*"[tiab]
-OR "Physicians"[Mesh] OR "Clinical Decision-Making"[Mesh] OR "Diagnosis, Computer-Assisted"[Mesh]
+OR "Decision Support Systems, Clinical"[Mesh] OR "Physicians"[Mesh]
+OR "Clinical Decision-Making"[Mesh] OR "Diagnosis, Computer-Assisted"[Mesh]
 OR "Patient Care"[Mesh])
 ```
 
-Concept B is itself a nested AND of two sub-blocks: (AI/ML technology terms) AND (clinical/medical context terms). This keeps Concept B from matching purely technical ML papers with no clinical framing, and from matching purely clinical papers with no AI/ML component — both of which would fail Gate 1 anyway, but excluding them at the search stage reduces the screening burden substantially.
+**Revision note (2026-06-07):** v1 originally nested an AI/ML "technology" sub-block inside Concept B, ANDed against the clinical-context sub-block — making the overall query a 3-way intersection (XAI term AND generic-AI term AND clinical term). That returned only 9 hits, signalling over-constraint: papers that name a specific model ("XGBoost," "ResNet," "random forest") rather than saying "machine learning" or "artificial intelligence" were being filtered out before the clinical-context check ever ran. The technology sub-block was redundant — every Concept A term (explainable AI, interpretable machine learning, SHAP, LIME, Grad-CAM, etc.) already implies an AI/ML system by definition. Removed it; Concept B is now a single flat OR block of clinical-context terms only, restoring the genuine two-concept design described in the rationale above.
 
 ---
 
 ## Full Combined String
 
 ```
-(Concept A) AND (Concept B-tech AND Concept B-clinical)
+(Concept A) AND (Concept B)
 
 AND ("2015/01/01"[Date - Publication] : "2024/12/31"[Date - Publication])
 AND English[Language]
@@ -81,9 +77,8 @@ Paste-ready single-line version (PubMed search box):
 ```
 ("explainable artificial intelligence"[tiab] OR "explainable AI"[tiab] OR "XAI"[tiab] OR "interpretable machine learning"[tiab] OR "interpretability"[tiab] OR "model interpretability"[tiab] OR "explainability"[tiab] OR "explainable model*"[tiab] OR "SHAP"[tiab] OR "Shapley additive explanation*"[tiab] OR "Shapley value*"[tiab] OR "LIME"[tiab] OR "local interpretable model-agnostic"[tiab] OR "Grad-CAM"[tiab] OR "gradient-weighted class activation"[tiab] OR "class activation map*"[tiab] OR "saliency map*"[tiab] OR "attention map*"[tiab] OR "attention weight*"[tiab] OR "attention mechanism*"[tiab] OR "counterfactual explanation*"[tiab] OR "feature attribution"[tiab] OR "feature importance"[tiab] OR "rule extraction"[tiab] OR "decision rule*"[tiab] OR "prototype-based explanation*"[tiab] OR "interpretable AI"[tiab] OR "interpretable artificial intelligence"[tiab] OR "black box"[tiab] OR "black-box"[tiab] OR "explainable deep learning"[tiab])
 AND
-("clinical decision support"[tiab] OR "clinical decision support system*"[tiab] OR "CDSS"[tiab] OR "computer-aided diagnos*"[tiab] OR "computer aided diagnos*"[tiab] OR "diagnostic algorithm*"[tiab] OR "predictive model*"[tiab] OR "risk prediction model*"[tiab] OR "machine learning"[tiab] OR "deep learning"[tiab] OR "artificial intelligence"[tiab] OR "neural network*"[tiab] OR "convolutional neural network*"[tiab] OR "Artificial Intelligence"[Mesh] OR "Decision Support Systems, Clinical"[Mesh] OR "Machine Learning"[Mesh] OR "Deep Learning"[Mesh] OR "Neural Networks, Computer"[Mesh])
 AND
-("clinical"[tiab] OR "clinician*"[tiab] OR "physician*"[tiab] OR "radiolog*"[tiab] OR "patholog*"[tiab] OR "nurse*"[tiab] OR "diagnosis"[tiab] OR "diagnostic"[tiab] OR "prognosis"[tiab] OR "treatment"[tiab] OR "patient care"[tiab] OR "hospital*"[tiab] OR "Physicians"[Mesh] OR "Clinical Decision-Making"[Mesh] OR "Diagnosis, Computer-Assisted"[Mesh] OR "Patient Care"[Mesh])
+("clinical decision support"[tiab] OR "clinical decision support system*"[tiab] OR "CDSS"[tiab] OR "computer-aided diagnos*"[tiab] OR "computer aided diagnos*"[tiab] OR "diagnostic algorithm*"[tiab] OR "predictive model*"[tiab] OR "risk prediction model*"[tiab] OR "clinical"[tiab] OR "clinician*"[tiab] OR "physician*"[tiab] OR "radiolog*"[tiab] OR "patholog*"[tiab] OR "nurse*"[tiab] OR "diagnosis"[tiab] OR "diagnostic"[tiab] OR "prognosis"[tiab] OR "treatment"[tiab] OR "patient care"[tiab] OR "hospital*"[tiab] OR "Decision Support Systems, Clinical"[Mesh] OR "Physicians"[Mesh] OR "Clinical Decision-Making"[Mesh] OR "Diagnosis, Computer-Assisted"[Mesh] OR "Patient Care"[Mesh])
 AND ("2015/01/01"[Date - Publication] : "2024/12/31"[Date - Publication])
 AND English[Language]
 ```
