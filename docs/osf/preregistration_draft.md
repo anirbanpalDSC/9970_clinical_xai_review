@@ -34,7 +34,7 @@ This review applies a pre-specified extraction schema and a set of pre-registere
 - **Population/Context:** Clinical AI systems targeting individual patient-level decisions in any clinical domain.
 - **Intervention:** Any XAI method applied to, or integrated with, a clinical AI system.
 - **Study types:** Any empirical study reporting an evaluation of the XAI component (human-participant studies, proxy-metric-only studies, and deployment studies are all eligible). Method papers with no systematic clinical evaluation are eligible but will be coded `Study_Design: MethodPaper`.
-- **Publication period:** 2015–2024 (inclusive).
+- **Publication period:** 2015–2024 (inclusive) for the initial search. A search update covering January 2025 onward will be conducted across all five databases shortly before manuscript submission (see `docs/osf/prospero_draft.md`, Searches section, for rationale).
 - **Language:** English.
 
 ### Exclusion

@@ -236,3 +236,34 @@ Retraction status was confirmed directly from NLM/MEDLINE indexing — the `RIN`
 **Defense if challenged:** "These four translations are explicitly labeled DRAFT/UNTESTED and are not reported as PRISMA Identification counts — `data/screening/prisma_counts.csv` retains empty cells for Embase/CINAHL/IEEE/ACM pending live execution. Producing the drafts now was a deliberate sequencing choice: the syntax-mapping and precision-tuning judgment calls (which controlled-vocabulary terms to include/exclude, how to handle databases with no clinical thesaurus) depend on the full diagnostic history already established for the PubMed string, and writing them down now avoids re-deriving that reasoning later. Every uncertain syntax element (Emtree term existence, CINAHL heading labels, IEEE/ACM query syntax, wildcard behaviour) is explicitly flagged with a verification step and a fallback, so the live-testing phase is bounded and checklist-driven rather than open-ended."
 
 ---
+
+## 2026-06-09 — Date range kept at 2015–2024 (9,672); 2025+ deferred to a planned pre-submission search update
+
+**Decision:** Investigated extending the search date range beyond 2024 (motivated by wanting to capture the most recent literature before a week away from this environment), but **kept the already-validated 2015–2024 / 9,672-hit PubMed result as-is**. No re-pull was performed. Instead, `docs/osf/prospero_draft.md` (Searches section) and `docs/osf/preregistration_draft.md` (Eligibility Criteria, Publication period) were both updated to explicitly document a **planned search update covering January 2025 onward, to be run across all five databases shortly before manuscript submission**.
+
+**Investigation (PubMed, same validated Concept A/B query, English, run 2026-06-09):**
+
+| Window | Hit count |
+|---|---|
+| 2015–2024 (current registered/logged) | 9,672 |
+| 2015–2026/06/30 (full extension to "now") | 22,406 (+131%) |
+| 2022–2026/06/30 (shifted window) | 19,796 (+105%) |
+| 2025 alone | 8,144 |
+| 2026 Jan–Jun alone | 5,861 |
+| 2015–2021 (would be dropped if shifting to 2022–2026) | 2,785 |
+
+**Rationale:**
+1. **The 2025–2026 surge dominates regardless of start date.** 2025 alone (8,144) is nearly as large as the entire 2015–2024 decade (9,672), and Jan–Jun 2026 alone (5,861) already exceeds half of 2025's full-year count. Any window including 2025–2026 roughly doubles the corpus (~20–22k vs. 9,672) — a major screening-burden change, not a minor search-string tweak.
+2. **Shifting the start date to 2022 doesn't solve this and costs more.** 2022–2026/06/30 (19,796) is barely smaller than 2015–2026/06/30 (22,406) — the saving is only the 2,785 records from 2015–2021, which `docs/osf/prospero_draft.md`'s existing rationale specifically defends as the "early adoption period" for SHAP/LIME/Grad-CAM (these methods emerged 2016 onward). Shifting would mean rewriting that rationale to drop records it was written to protect, for a ~12% reduction in total burden.
+3. **A partial mid-2026 pull would need to be redone anyway.** Today (2026-06-09), a "2026/06/30" cutoff only reflects records indexed through today — the rest of June doesn't exist yet. More importantly, very recent records' `Date - Publication` fields are subject to Epub-ahead-of-print reclassification (the same kind of date-field instability noted for PMID 38142755's retraction notice in the 2026-06-08 entry above), so a 2025–2026 pull done now would not be stable and would need re-verification before being reported. Running the update search later (closer to submission) captures the *complete*, *stable* 2025–2026+ window in one pass — capturing more of "the latest movement in the field" than a partial pull today, not less.
+
+**Alternatives considered:**
+- Extend to 2015–2026/06/30 now (22,406) — rejected: requires re-pulling ~2.3x the records (≈56 efetch batches vs. 25), and rewriting `search_string_pubmed_v1.md`, all four new database-translation drafts, `prisma_counts.csv`, and the PROSPERO/preregistration date-range text, all under a 2-day deadline — and the result would need re-verification later regardless (see Rationale point 3).
+- Shift to 2022–2026/06/30 (19,796) — rejected: similar burden to full extension, but additionally requires rewriting the PROSPERO early-adoption-period rationale to justify dropping 2015–2021 records that rationale currently protects.
+- Do nothing / don't document a future update — rejected: would leave 2025–2026 as a silent gap with no documented plan to address it, inviting exactly the "don't we miss the latest movement in the field?" objection this entry exists to pre-empt.
+
+**Impact:** No change to `search_string_pubmed_v1.md`, `prisma_counts.csv`, or any of the four new database-translation drafts — all remain correct at 2015–2024. `docs/osf/prospero_draft.md` (Searches section, after the Date range line) and `docs/osf/preregistration_draft.md` (Eligibility Criteria, Publication period) now both state the 2015–2024 initial search range *and* an explicit commitment to a January-2025-onward update search across all five databases shortly before submission, with the 8,144/5,861/2026-instability data point cited as the rationale for why "later" captures more than "now."
+
+**Defense if challenged:** "We did not arbitrarily cap the search at 2024 out of inertia — we explicitly scoped what extending to mid-2026 would mean (22,406 hits, +131%; or 19,796 if the window were shifted instead of extended, +105%), found that the 2025–2026 surge alone (≈14,000 hits across 18 months) exceeds the entire prior decade, and determined that a partial pull today would be both incomplete and unstable due to Epub-ahead-of-print date reclassification. We therefore kept the validated 2015–2024/9,672 result and made an explicit, registered commitment to a pre-submission update search covering 2025 onward — the standard PRISMA mechanism for exactly this situation, which will capture the recent surge completely and with stable dates rather than partially and provisionally."
+
+---

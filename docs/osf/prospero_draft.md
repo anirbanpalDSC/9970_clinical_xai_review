@@ -139,7 +139,9 @@ The following databases will be searched. Search strings are in development and 
 - IEEE Xplore
 - ACM Digital Library
 
-**Date range:** January 2015 to December 2024 (inclusive). The 2015 lower boundary was selected because foundational XAI methods with clinical applicability (SHAP, LIME, GradCAM) emerged from 2016 onward; a 2015 start date captures the early adoption period without imposing an arbitrary exclusion of potential pre-cursor work.
+**Date range:** January 2015 to December 2024 (inclusive) for the initial search. The 2015 lower boundary was selected because foundational XAI methods with clinical applicability (SHAP, LIME, GradCAM) emerged from 2016 onward; a 2015 start date captures the early adoption period without imposing an arbitrary exclusion of potential pre-cursor work.
+
+**Planned search update:** A search update covering records published from January 2025 onward will be conducted across all five databases shortly before manuscript submission, following standard practice for systematic reviews where substantial time elapses between initial search and submission. A scoping check of the PubMed string alone (run 2026-06-09) found that 2025–2026-to-date already accounts for roughly as many hits as the entire 2015–2024 window combined — an update search close to submission, rather than a partial pull now, ensures this rapidly-growing recent literature is captured completely and with stable publication-date metadata (very recent records' "Date - Publication" fields are subject to Epub-ahead-of-print reclassification).
 
 **Language restriction:** English only.
 
