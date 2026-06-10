@@ -12,6 +12,7 @@ venv/
 # Data / exports
 *.csv.bak
 *.xlsx.bak
+data/searches/*.nbib
 
 # OS
 .DS_Store

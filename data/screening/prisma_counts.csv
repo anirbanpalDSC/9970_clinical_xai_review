@@ -1,5 +1,5 @@
 Stage,Metric,Count,Notes
-Identification,Records from database: PubMed,,
+Identification,Records from database: PubMed,9672,Search run 2026-06-07 using v1 rev 3 (final) string from docs/protocol/search_string_pubmed_v1.md; raw export saved as data/searches/pubmed_2026-06-07_v1-rev3_9672.txt
 Identification,Records from database: Embase,,
 Identification,Records from database: CINAHL,,
 Identification,Records from database: IEEE Xplore,,
@@ -7,7 +7,8 @@ Identification,Records from database: ACM Digital Library,,
 Identification,Records from other sources (hand search / citation tracking),,
 Identification,Total records identified,,Sum of all database + other counts
 Identification,Duplicates removed before screening,,
-Identification,Records after deduplication,,Total identified minus duplicates removed
+Identification,Retracted publications removed (pre-screening QC),11,Identified via MEDLINE RIN/PT-Retracted-Publication fields in PubMed export pulled 2026-06-08; PMIDs and retraction-notice references logged in data/screening/retracted_records_pubmed_2026-06-08.csv. Includes 1 likely false-positive search match (PMID 28946087, agricultural/enzymatic-activity paper unrelated to clinical XAI -- would have failed Gate 1 regardless of retraction status).
+Identification,Records after deduplication,,Total identified minus duplicates removed minus retracted publications removed
 Screening,Records screened (title/abstract),,Equal to records after deduplication
 Screening,Records excluded at title/abstract,,
 Screening,Records carried forward to full-text,,Records screened minus title/abstract excluded
