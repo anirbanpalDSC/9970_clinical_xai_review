@@ -1,5 +1,6 @@
 Stage,Metric,Count,Notes
-Identification,Records from database: PubMed,9672,Search run 2026-06-07 using v1 rev 3 (final) string from docs/protocol/search_string_pubmed_v1.md; raw export saved as data/searches/pubmed_2026-06-07_v1-rev3_9672.txt
+Identification,Records from database: PubMed (cross-domain v1 rev 3 -- SUPERSEDED 2026-06-10),9672,SUPERSEDED by the 2026-06-10 EM pivot (memos/decision_log.md) -- retained for audit trail. Search run 2026-06-07 using v1 rev 3 (final) cross-domain string from docs/protocol/search_string_pubmed_v1.md; raw export saved as data/searches/pubmed_2026-06-07_v1-rev3_9672.txt
+Identification,Records from database: PubMed (EM-narrowed v2 draft),234,DRAFT -- not yet formally executed/exported. 2026-06-10: Concept C (ED/triage/ESI/acuity/disposition) added to Concept A (XAI), date 2015-2024, English. A+C = 234 hits (recommended); A+B+C = 213 hits (alternative, see docs/protocol/search_string_pubmed_v1.md). Pending A+C vs A+B+C decision, EM-specific recall benchmark, and formal execution before this becomes the Identification count.
 Identification,Records from database: Embase,,
 Identification,Records from database: CINAHL,,
 Identification,Records from database: IEEE Xplore,,
@@ -10,12 +11,12 @@ Identification,Duplicates removed before screening,,
 Identification,Retracted publications removed (pre-screening QC),11,Identified via MEDLINE RIN/PT-Retracted-Publication fields in PubMed export pulled 2026-06-08; PMIDs and retraction-notice references logged in data/screening/retracted_records_pubmed_2026-06-08.csv. Includes 1 likely false-positive search match (PMID 28946087, agricultural/enzymatic-activity paper unrelated to clinical XAI -- would have failed Gate 1 regardless of retraction status).
 Identification,Records after deduplication,,Total identified minus duplicates removed minus retracted publications removed
 Screening,Records screened (title/abstract),,Equal to records after deduplication
-Screening,Records excluded at title/abstract,,
+Screening,Records excluded at title/abstract,,Reason codes TA-E1..TA-E5 per docs/protocol/screening_criteria.md (Issue #17); breakdown to be logged in data/screening/ta_exclusion_reasons.csv once T/A screening runs
 Screening,Records carried forward to full-text,,Records screened minus title/abstract excluded
 Eligibility,Full-text reports assessed for eligibility,,Equal to records carried forward
-Eligibility,Full-text excluded: E1 Not clinical AI application,,
+Eligibility,Full-text excluded: E1 Not clinical AI application,,Redefined for EM scope (2026-06-10 pivot) as "wrong ED decision point/setting" per docs/protocol/inclusion_boundary.md v2 Gate 1 (excludes pre-hospital EMS, inpatient, ICU, operational/admin ED models) or not an AI/ML study; see docs/protocol/screening_criteria.md (Issue #17) for T/A-to-full-text code mapping
 Eligibility,Full-text excluded: E2 No XAI component,,
-Eligibility,Full-text excluded: E3 XAI not evaluated,,
+Eligibility,Full-text excluded: E3 XAI not evaluated,,Redefined for EM scope (2026-06-10 pivot) per docs/protocol/inclusion_boundary.md v2 Gate 3: no empirical evaluation of the XAI/explanation method at ALL (none of the 5 RQ2 levels). Note this is broader than issue #18's original "no human evaluation (purely technical)" framing -- under v2, computational/fidelity-only evaluation of the explanation method is a valid Gate-3 pass (RQ2 level 1), not an E3 exclusion. See docs/protocol/screening_criteria.md (Issue #17).
 Eligibility,Full-text excluded: E4 Wrong publication type,,
 Eligibility,Full-text excluded: E5 Insufficient extraction detail,,
 Eligibility,Full-text excluded: E6 Duplicate report,,

@@ -1,13 +1,31 @@
 # PROSPERO Registration Draft — Clinical XAI Systematic Review (9970)
 
 **Issue:** #19
-**Status:** Draft — ready for portal entry
+**Status:** DEPRIORITIZED 2026-06-10 — see Status Note below. Not submitted to portal.
 **Portal:** https://www.crd.york.ac.uk/prospero/
-**Registration number:** Pending (record after portal submission)
-**OSF pre-registration:** https://osf.io/e3ymp/files/3f4am (filed 2026-05-24)
+**Registration number:** Not applicable (submission not pursued — see Status Note)
+**OSF pre-registration:** https://osf.io/e3ymp/files/3f4am (filed 2026-05-24; v2 EM-pivot update pending)
 
 Copy each section below directly into the corresponding PROSPERO form field.
 Fields are ordered to match the PROSPERO submission form sequence.
+
+---
+
+## Status Note (2026-06-10) — PROSPERO Deprioritized
+
+On 2026-06-10 the review pivoted back to the original proposal's scope: an **Emergency-Medicine/ED-only XAI scoping review** (RQ1–RQ3, regulatory-readiness framing) following **PRISMA-ScR/JBI scoping review methodology** (Tricco et al. 2018; Peters et al. 2020). Full rationale in `memos/decision_log.md` (2026-06-10 entry) and the updated registration in `docs/osf/preregistration_draft.md` (v2).
+
+As a result, this PROSPERO draft is **out of date** in several respects and is retained for reference only:
+
+- **Methodology mismatch:** PROSPERO is designed for systematic reviews with confirmatory hypothesis testing. This review is now a **scoping review** with narrative synthesis organised by RQ1–RQ3; H1–H6 (Field 24) are repositioned as supplementary/exploratory analyses, not pre-registered confirmatory tests.
+- **Scope mismatch:** Fields 15, 18–23 describe a cross-domain clinical XAI review (all clinical specialties). The current scope is EM/ED-only — initial patient intake, acuity/triage (ESI), and immediate disposition decisions (`docs/protocol/inclusion_boundary.md` v2).
+- **Database mismatch:** Field 16 lists 5 databases including CINAHL. The current scope uses 4 databases (PubMed, Embase, IEEE Xplore, ACM Digital Library); CINAHL is shelved.
+- **Schema/field mismatch:** Fields 24–26 reference extraction schema v1.2 (33 columns). The current schema is v1.3 (43 columns), with new RQ1/RQ2/RQ3-aligned fields.
+- **Field 5 ("Stage of the review")** was already factually outdated before this pivot — the PubMed cross-domain search had executed (9,672 hits, 2026-06-07) despite the field stating "search not yet executed."
+
+**Decision:** Per the 2026-06-10 decision log entry, **OSF is the primary and sufficient registration record** for this review. PROSPERO portal submission is **not pursued** for now. This draft may be revisited and updated for portal submission in Phase 3 (weeks 7–8) if time permits — PROSPERO does accept scoping review registrations, so submission remains an option, just not a Phase 1 priority.
+
+Anyone consulting this document should treat `docs/osf/preregistration_draft.md` (v2, EM-pivot) as authoritative for current scope, RQs, methodology, eligibility criteria, databases, and schema version.
 
 ---
 
@@ -387,3 +405,4 @@ After registration is published (10-21 days):
 | Version | Date | Changes |
 |---------|------|---------|
 | Draft v1 | 2026-05-26 | Initial draft. All mandatory PROSPERO fields completed. Ready for portal entry. Issue #19. |
+| Draft v1 + status note | 2026-06-10 | Added Status Note documenting deprioritization following the EM-pivot decision (`memos/decision_log.md`, 2026-06-10). Form fields below NOT updated — retained as-is for audit trail of the cross-domain draft. OSF (`docs/osf/preregistration_draft.md` v2) is now the authoritative registration record. Portal submission deferred to Phase 3 if time permits. |

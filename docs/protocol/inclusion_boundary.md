@@ -1,9 +1,9 @@
-# Inclusion Boundary — Clinical vs Medical vs Healthcare AI
+# Inclusion Boundary — Emergency Department XAI Scoping Review (EM-Only Scope)
 
 **Issue:** #7
-**Status:** Resolved 2026-05-23
+**Status:** Revised 2026-06-10 — rewritten for EM/ED-only scope per the pivot to the original proposal scope
 **Applies to:** Title/abstract screening, full-text screening, extraction
-**Decision log entry:** 2026-05-23
+**Decision log entries:** 2026-05-23 (original cross-domain version), 2026-06-10 (this revision)
 
 ---
 
@@ -13,37 +13,50 @@ A paper is within scope if it passes all three gates in sequence.
 
 ---
 
-### Gate 1 — Clinical domain
+### Gate 1 — Emergency Department Encounter Scope
 
-The AI system operates in a clinical or medical domain: diagnosis, prognosis, treatment recommendation, risk stratification, patient monitoring, clinical image analysis, or pathology.
+The predictive model's **decision point** occurs during the **initial ED encounter**, in one of three categories:
+
+(a) **Initial patient intake** — e.g., chief-complaint screening, initial vitals-based risk flagging at ED arrival
+(b) **Acuity / triage scoring** — e.g., ESI assignment, or an equivalent acuity scale (CTAS, MTS, ATS, etc. — not restricted to ESI)
+(c) **Immediate disposition** — admit / discharge / transfer / ICU-admit decisions made *at the point of ED care*
 
 **Exclude without further review:**
-- Administrative healthcare AI (scheduling, bed management, billing, coding, staffing optimisation)
-- Consumer-facing health AI (fitness apps, wellness wearables) without clinical prescription or oversight
-- Drug discovery or preclinical research AI (molecular screening, protein folding, biomarker discovery)
-- Population-level public health analytics without individual patient decision output
+- **Pre-hospital / EMS triage models** — decision point occurs before ED arrival, even if patients are subsequently seen in the ED.
+- **Inpatient ward deterioration/monitoring models** — decision point occurs after ward admission, even if the derivation/validation cohort was drawn from ED-admitted patients.
+- **ICU-specific management, mortality, or prognosis models** — decision point occurs in the ICU, even if the population originates in the ED.
+- **Operational/administrative ED models** (e.g., crowding, throughput, staffing prediction) — not a patient-level intake/acuity/disposition decision.
+
+**Operational distinction for screeners — decision point vs. population origin:**
+
+> Many models are derived or validated using ED-admitted patient cohorts but are intended to support a decision made *outside* the ED (e.g., a "30-day inpatient mortality" model used by the inpatient team after admission). The deciding question is always: **where and when is the model's output acted upon?** If the action is taken during the initial ED encounter — by ED staff, on an ED patient, before admission/discharge/transfer is finalized — Gate 1 passes. If the action is taken later, by a different team, in a different setting, Gate 1 fails, regardless of where the underlying data came from.
+>
+> Note that the *predicted outcome* may itself be a future event (e.g., 30-day readmission risk computed at ED discharge to inform the discharge decision itself) — this still passes Gate 1, because the **action point** is in the ED.
 
 ---
 
-### Gate 2 — Individual patient care decision
+### Gate 2 — Explainable / Interpretable AI Method
 
-The AI output is used to inform a decision about an individual patient's care, diagnosis, treatment, or monitoring.
+The study applies, evaluates, or proposes:
 
-**Exclude:** AI used purely as clinical trial infrastructure — patient eligibility screening algorithms, randomisation engines, or endpoint prediction for trial management — unless the AI is itself the clinical intervention being evaluated.
+- a **post-hoc explanation method** (feature attribution e.g. SHAP/LIME, counterfactual, example-based/case-based, rule-based/decision-rule extraction) applied to a predictive model for a Gate-1 decision, **or**
+- an **inherently interpretable model** (e.g., logistic regression, decision tree, rule list) where the paper explicitly evaluates or discusses the model's interpretability as a contribution — not merely uses an interpretable model incidentally with no discussion of its interpretability.
 
-**Clinical trial sub-rule:**
-> Include if the trial evaluates the AI tool as a clinical decision support intervention delivered to clinicians for individual patient decisions.
-> Exclude if AI is used to operate the trial (select participants, randomise, predict trial endpoints) but is not the intervention being studied.
+**Exclude:** Studies of predictive models for Gate-1 decisions with **no interpretability/explanation component at all** (pure black-box performance papers).
 
 ---
 
-### Gate 3 — Clinician in the loop
+### Gate 3 — Empirical Evaluation Component
 
-A clinician — physician, nurse, radiologist, pathologist, pharmacist, or equivalent licensed clinical professional — is involved at any stage of the decision pathway. Involvement includes: reviewing, validating, acting on, or retaining the right to override the AI output.
+The study reports at least one of the five evaluation levels from RQ2's taxonomy, **applied to the explanation method itself** (not only to the underlying predictive model's accuracy):
 
-**Exclude:** Fully automated systems where no clinician sees, reviews, or can override the AI output at any point in the clinical pathway.
+1. Computational / fidelity metrics
+2. Proxy tasks
+3. Simulated-user studies
+4. Clinician-in-the-loop studies
+5. Real-world deployment evaluation
 
-**Conditional include:** Asynchronous review qualifies. A clinician who reviews AI-flagged cases in batch (e.g., a radiologist reviewing AI-prioritised worklist) satisfies Gate 3 — real-time presence is not required.
+**Exclude:** Review articles, editorials, commentaries, and opinion pieces with no underlying empirical study; protocol-only papers; conference abstracts without full proceedings.
 
 ---
 
@@ -51,17 +64,13 @@ A clinician — physician, nurse, radiologist, pathologist, pharmacist, or equiv
 
 ```mermaid
 flowchart TD
-    A[Paper under review] --> B{"Gate 1 — Clinical domain?<br/>Diagnosis · prognosis · treatment ·<br/>risk · monitoring · imaging · pathology"}
-    B -->|No| X1["EXCLUDE<br/>Administrative / consumer /<br/>drug discovery / population analytics"]
-    B -->|Yes| C{"Gate 2 — Individual patient decision?<br/>AI output informs care for a specific patient"}
-    C -->|No| X2["EXCLUDE<br/>Population analytics or<br/>trial infrastructure only"]
-    C -->|Yes| T{"Clinical trial setting?"}
-    T -->|Not a trial| D
-    T -->|Trial evaluates AI as clinical intervention| D
-    T -->|AI runs the trial — not the intervention| X3["EXCLUDE<br/>Trial infrastructure"]
-    D{"Gate 3 — Clinician in the loop?<br/>Any review · validation · override<br/>at any stage of the pathway"}
-    D -->|No — fully automated end-to-end| X4["EXCLUDE<br/>No clinician involvement"]
-    D -->|Yes| INCL["INCLUDE<br/>Proceeds to full-text screening"]
+    A[Paper under review] --> B{"Gate 1 — ED-encounter decision point?<br/>Initial intake · acuity/ESI scoring ·<br/>immediate disposition (admit/discharge/transfer)"}
+    B -->|No — decision point is pre-hospital EMS,<br/>inpatient ward, ICU, or operational/admin| X1["EXCLUDE<br/>Wrong care setting / decision point<br/>(even if population originates in ED)"]
+    B -->|Yes| C{"Gate 2 — Explainable/interpretable AI method?<br/>Post-hoc (feature attribution, counterfactual,<br/>example-based, rule-based) OR inherently<br/>interpretable model evaluated for interpretability"}
+    C -->|No| X2["EXCLUDE<br/>No XAI/interpretability component"]
+    C -->|Yes| D{"Gate 3 — Empirical evaluation component?<br/>Computational/fidelity · proxy task ·<br/>simulated user · clinician-in-the-loop · deployment"}
+    D -->|No — review/commentary/<br/>opinion/protocol only| X3["EXCLUDE<br/>No empirical evaluation"]
+    D -->|Yes| INCL["INCLUDE<br/>Proceeds to full-text screening / extraction"]
 ```
 
 ---
@@ -70,31 +79,40 @@ flowchart TD
 
 | Paper type | Gate 1 | Gate 2 | Gate 3 | Decision | Rationale |
 |------------|--------|--------|--------|----------|-----------|
-| SHAP explanations for ICU mortality prediction, reviewed by intensivist | Pass | Pass | Pass | **Include** | Standard case |
-| Automated diabetic retinopathy screening — ophthalmologist reviews AI-flagged cases in batch | Pass | Pass | Pass | **Include** | Asynchronous review satisfies Gate 3 |
-| Automated diabetic retinopathy screening — results sent directly to patient, no physician review | Pass | Pass | Fail | **Exclude** | No clinician in loop at any stage |
-| AI scheduling system for outpatient clinic | Fail | — | — | **Exclude** | Administrative, Gate 1 |
-| Apple Watch AFib detection app | Fail | — | — | **Exclude** | Consumer-facing, no clinical oversight |
-| AI for drug candidate screening | Fail | — | — | **Exclude** | Drug discovery, Gate 1 |
-| NLP to extract trial eligibility from EHR — used only to select trial participants | Pass | Fail | — | **Exclude** | Trial infrastructure, Gate 2 sub-rule |
-| RCT evaluating whether clinicians use AI risk scores to guide treatment decisions | Pass | Pass | Pass | **Include** | Trial evaluates AI as clinical intervention |
-| Pathology image AI — pathologist confirms all results before report is issued | Pass | Pass | Pass | **Include** | Pathologist review satisfies Gate 3 |
-| AI predicting hospital readmission — used only for population risk management, no individual clinical action taken | Pass | Fail | — | **Exclude** | No individual patient care decision, Gate 2 |
-| AI-assisted drug dosing in ICU — physician reviews and approves every recommendation | Pass | Pass | Pass | **Include** | Standard clinical decision support |
-| AI clinical documentation (NLP for ICD coding, discharge summary auto-fill) | Fail | — | — | **Exclude** | Administrative — coder, not clinician, acts on output |
+| ED sepsis early-warning model with SHAP, used by ED physicians to decide immediate admission vs. discharge | Pass | Pass | Pass (clinician-in-the-loop) | **Include** | Standard case — decision point and action both in ED |
+| ESI acuity-prediction model with attention-based explanation, evaluated via nurse usability study on simulated triage vignettes | Pass | Pass | Pass (simulated-user) | **Include** | Acuity scoring is a Gate-1 category; simulated study is a valid RQ2 evaluation level |
+| Pre-hospital EMS stroke-triage model with counterfactual explanations, used by paramedics before ED arrival | Fail | — | — | **Exclude** | Decision point is pre-hospital/EMS, Gate 1 |
+| Sepsis deterioration model with SHAP for inpatient ward monitoring; derivation cohort is ED-admitted patients | Fail | — | — | **Exclude** | Decision point is inpatient ward, not the initial ED encounter — population origin doesn't matter |
+| ICU mortality-prediction model with LIME explanations, used for ICU triage after ED-to-ICU admission | Fail | — | — | **Exclude** | Decision point is ICU, Gate 1 |
+| ED-discharge 30-day-readmission risk model with feature-attribution explanation, output reviewed by ED physician at the point of the discharge decision | Pass | Pass | Pass | **Include** | Action point (discharge decision) is in the ED even though the predicted outcome (readmission) occurs later |
+| Pediatric febrile-infant ED risk-stratification tool using a decision-tree (rule-based) model, evaluated only via computational fidelity metrics, no clinician study | Pass | Pass | Pass (computational) | **Include** | Inherently interpretable model explicitly evaluated for interpretability; computational fidelity is a valid Gate-3/RQ2 evaluation level |
+| Novel counterfactual-explanation method demonstrated on a general ICU dataset (e.g., MIMIC-III), no ED-specific framing | Fail | — | — | **Exclude** | Not an ED-encounter decision (MIMIC-III is ICU-derived) |
+| Narrative review of XAI approaches for ED triage, no novel model or empirical evaluation | Pass | Pass (discusses methods) | Fail | **Exclude** | No empirical evaluation component, Gate 3; also excluded as a review article |
+| ED crowding/throughput-prediction model (operational) with SHAP explanation for hospital administrators | Fail | — | — | **Exclude** | Not a patient-level intake/acuity/disposition decision — operational/administrative use case |
+| ESI triage model with example-based (case-based) explanations, evaluated via clinician-in-the-loop study conducted in a simulation lab (not live ED workflow) | Pass | Pass | Pass | **Include** | All 3 gates pass; realism level (simulation vs. live deployment) is captured at extraction (EV/realism rubrics), not an exclusion criterion |
+| Multi-setting study: same XAI-augmented sepsis model deployed and separately evaluated at ED triage, on inpatient wards, and in the ICU | Pass (ED-triage component only) | Pass | Pass | **Include (ED-triage component only)** | Extract only the ED-triage decision/evaluation; document the inpatient/ICU components as out-of-scope in `Notes`. If results are not reported separately by setting, escalate as a borderline case for adjudication |
 
 ---
 
 ## Operational Notes for Screeners
 
-1. **Gate 3 uncertainty:** Check the Methods or Study Design section. If a physician, nurse, or other licensed clinician is described as reviewing or acting on AI output at any point, Gate 3 passes.
-2. **Wearables and remote monitoring:** Pass Gate 1 only if device data feeds into a clinician-reviewed system (e.g., cardiac telemetry reviewed by a cardiologist). Consumer wellness devices fail Gate 1.
-3. **Radiology AI with no radiologist review:** Apply the gate strictly — if no radiologist reviews the AI output before it affects patient care, fail Gate 3, regardless of regulatory clearance status.
-4. **AI for clinical documentation:** Fails Gate 1 unless NLP output is reviewed by a clinician and directly informs a subsequent care decision. Coder review does not count as clinician-in-loop.
-5. **Borderline cases:** Document in the decision log with paper title and reason. Do not leave borderline cases unrecorded.
+1. **Decision-point vs. population-origin (the central EM-scope distinction):** Always ask "where/when is the model's output acted upon?" — not "where did the data come from?" See the Gate 1 operational distinction above.
+2. **Acuity scale terminology:** ESI is the proposal's reference example, but other acuity/triage scales used in non-US ED settings (CTAS, MTS, ATS, etc.) are in scope under the "acuity scoring" category.
+3. **"Immediate disposition" scope:** Admit/discharge/transfer/ICU-admit decisions made *at* the point of ED care. Does **not** include downstream inpatient-team decisions made *after* the disposition decision itself.
+4. **Gate 2 interpretable-model threshold:** A paper merely "using logistic regression" does not automatically pass Gate 2 — the paper must explicitly frame or evaluate interpretability as relevant, otherwise Gate 2 fails ("no XAI/interpretability component").
+5. **Borderline cases:** Document in `memos/decision_log.md` with paper title and reasoning, per the project's standing convention. Per the proposal's specified workflow, borderline full-text cases are escalated to supervising faculty for adjudication (Issue #17).
 
 ---
 
-## PROSPERO Protocol Note
+## Registration Note
 
-This boundary definition applies to the Population and Eligibility Criteria sections of the PROSPERO registration. Update `docs/osf/prospero_draft.md` when the registration draft is written (Issue #8 or equivalent).
+This boundary definition applies to the Population/Context and Eligibility Criteria sections of the OSF pre-registration (`docs/osf/preregistration_draft.md`). Per the 2026-06-10 pivot decision (`memos/decision_log.md`), PROSPERO registration (`docs/osf/prospero_draft.md`, Issue #19) is deprioritised — OSF is the registration record required by the project proposal.
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| v1 | 2026-05-23 | Initial 3-gate cross-domain inclusion rule (clinical domain / individual decision / clinician-in-loop). Issue #7. |
+| v2 — EM-only | 2026-06-10 | Rewritten for EM/ED-only scope per pivot to the original proposal. New 3-gate rule: ED-encounter decision point (intake / ESI-acuity / immediate disposition, explicitly excluding EMS / inpatient / ICU / operational use cases) → explainable-or-interpretable AI method → empirical evaluation component. Cross-domain v1 retained in git history. |

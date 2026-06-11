@@ -1,191 +1,197 @@
-# OSF Pre-Registration Draft - Clinical XAI Systematic Review (9970)
+# OSF Pre-Registration Draft - Explainable AI in Emergency Department Triage and Disposition: A Scoping Review (9970)
 
-**Title:** Explainability in Clinical AI: A Systematic Review of Evaluation Methodology and Ecological Validity
+**Title:** Beyond Fidelity: Evaluating the Validity of Explainable AI in Emergency Department Triage and Disposition - A Scoping Review (PRISMA-ScR)
 **Date drafted:** 2026-05-24
-**Status:** Draft - for OSF submission before search execution
+**Revised:** 2026-06-10 (pivot back to original proposal scope - EM/ED-only)
+**Status:** Draft - for OSF update before search execution
 **Contributors:** Anirban Pal
 **OSF project:** https://osf.io/e3ymp/files/3f4am
-**PROSPERO registration:** Pending (Issue #19)
+**Registration:** OSF (primary, filed 2026-05-24, update pending). PROSPERO (Issue #19) deprioritised - see `docs/osf/prospero_draft.md`.
+**Methodology:** JBI scoping review methodology (Peters et al., 2020) + PRISMA-ScR reporting (Tricco et al., 2018). Narrative synthesis - not confirmatory hypothesis testing.
 
 
 ## 1. Background and Rationale
 
-Explainable AI (XAI) systems for clinical decision support have proliferated rapidly, accompanied by claims that explanations improve clinician trust, decision quality, and ultimately patient outcomes. However, the methods used to evaluate these claims vary enormously - from computational proxy metrics applied without any human participants, to questionnaire studies with lay participants, to rare deployment-embedded trials with licensed clinicians in active clinical workflows.
+Explainable AI (XAI) systems are increasingly proposed for emergency department (ED) decision support - including initial patient intake, acuity/triage scoring (e.g., the Emergency Severity Index, ESI), and immediate disposition decisions - on the premise that explanations help clinicians understand, calibrate trust in, and appropriately act on model outputs under severe time and cognitive constraints.
 
-This variation is not merely methodological diversity. It reflects a structural gap between what clinical XAI papers claim and what they demonstrate. Key distinctions - between explanation plausibility and trust calibration, between participant validity and outcome validity, between workflow realism and ecological validity - are rarely made explicit in the primary literature, creating heterogeneity that makes cross-study synthesis unreliable without a principled evaluation framework.
+This review organises these claims under an **interpretability validity** framework spanning three constructs:
 
-This review applies a pre-specified extraction schema and a set of pre-registered hypotheses to characterise this gap systematically across the clinical XAI literature published between 2015 and 2024.
+- **Interpretability** - the degree to which an explanation supports clinician understanding and decision-making under ED time/cognitive constraints.
+- **Trust calibration** - alignment between clinician reliance on model outputs and the model's actual performance, avoiding over-trust and under-trust. This review applies a sharper distinction, developed during the protocol-design phase (`memos/conceptual_distinctions.md`, Issue #3), between trust calibration and **explanation plausibility**: a paper can demonstrate that an explanation *looks* convincing without demonstrating that clinician trust actually tracks model accuracy.
+- **Evaluation validity** - the extent to which a study's design establishes a credible link between explanation outputs and downstream human decision behaviour. This review applies the 4-dimension ecological validity rubric (`EV_Participant` / `EV_Task` / `EV_Environment` / `EV_Outcome`, `data/coding/ecological_validity_rubric.md`, Issue #5) as a more granular operationalisation of this construct than a single undifferentiated "evaluation validity" dimension.
+
+**Interpretability validity** is the extent to which evaluation practices in EM clinical XAI provide credible evidence that explanations are meaningful, usable, and appropriately calibrate clinician trust in real ED decision-making.
+
+This review is scoped to the **initial ED encounter** - patient intake, acuity/triage scoring, and immediate disposition decisions - per `docs/protocol/inclusion_boundary.md` (v2). It is intended as scaffolding for empirical, clinician-in-the-loop studies planned in later phases of this research program.
 
 
-## 2. Review Question
+## 2. Review Questions
 
-**Primary question:** What evaluation methods have been used to assess XAI systems in clinical AI, and to what extent do they achieve ecological validity?
+**RQ1 - Methods and justification:** Which post-hoc explanation methods (feature attribution, counterfactual, example-based, rule-based) are deployed in EM clinical XAI studies, and what forms of justification - coded inductively as computational, cognitive, or workflow-based - are provided for their selection?
 
-**Secondary questions:**
-1. What is the relationship between clinician involvement in XAI design and the ecological validity of the resulting evaluation?
-2. What proportion of trust-related claims in clinical XAI papers are supported by evidence of trust calibration (rather than explanation plausibility)?
-3. Are XAI method types systematically associated with clinical domain, evaluation design, and workflow realism?
+**RQ2 - Evaluation rigor:** How do current clinical XAI studies in EM evaluate explanation effectiveness across levels of human involvement (computational metrics, proxy tasks, simulated users, clinician-in-the-loop experiments, real-world deployment), and what does this distribution reveal about the rigor of existing evaluation practices?
+
+**RQ3 - Regulatory readiness:** What evaluation evidence do current EM-focused XAI studies provide that would satisfy interpretability-validation expectations emerging in regulatory frameworks (FDA AI/ML-based Software as a Medical Device guidance; EU AI Act Article 13), and where are the most consequential evidentiary gaps?
+
+"Regulatory-relevant evidence" (RQ3) is operationalised as evaluation demonstrating at least one of:
+1. Clinician comprehension of explanation outputs;
+2. Appropriate trust calibration under varying model performance conditions;
+3. Transparency of model uncertainty / failure modes;
+4. Safe and effective use within realistic clinical workflows.
+
+These four criteria map directly to the `Reg_Comprehension`, `Reg_TrustCalibration`, `Reg_UncertaintyTransparency`, and `Reg_WorkflowSafety` extraction columns (Section 6).
 
 
 ## 3. Eligibility Criteria
 
+Per the three-gate EM-only inclusion boundary in `docs/protocol/inclusion_boundary.md` (v2, revised 2026-06-10):
+
 ### Inclusion
 
-- **Population/Context:** Clinical AI systems targeting individual patient-level decisions in any clinical domain.
-- **Intervention:** Any XAI method applied to, or integrated with, a clinical AI system.
-- **Study types:** Any empirical study reporting an evaluation of the XAI component (human-participant studies, proxy-metric-only studies, and deployment studies are all eligible). Method papers with no systematic clinical evaluation are eligible but will be coded `Study_Design: MethodPaper`.
-- **Publication period:** 2015–2024 (inclusive) for the initial search. A search update covering January 2025 onward will be conducted across all five databases shortly before manuscript submission (see `docs/osf/prospero_draft.md`, Searches section, for rationale).
+- **Population/Context (Gate 1):** Adult or pediatric studies evaluating predictive models used for decisions occurring during the **initial ED encounter** - initial patient intake, acuity/triage scoring (e.g., ESI or an equivalent acuity scale), or immediate disposition (admit/discharge/transfer/ICU-admit) decisions made at the point of ED care.
+- **Intervention (Gate 2):** A post-hoc explanation method (feature attribution, counterfactual, example-based/case-based, or rule-based) applied to the predictive model, OR an inherently interpretable model explicitly evaluated for its interpretability.
+- **Study types (Gate 3):** Any empirical study reporting at least one of the five RQ2 evaluation levels (computational/fidelity, proxy task, simulated user, clinician-in-the-loop, deployment). Method papers presenting a novel XAI method with an EM clinical demonstration are eligible and coded `Study_Design: MethodPaper`.
+- **Publication period:** 2015-2024 (inclusive) for the initial search. A search update covering January 2025 onward will be conducted shortly before manuscript submission (see `docs/protocol/search_string_pubmed_v1.md`).
 - **Language:** English.
 
 ### Exclusion
 
-- XAI applied to non-clinical AI systems (administrative, financial, operational) with no individual patient decision in the loop.
-- XAI applied to population-level or public health decisions (no individual clinician decision required).
-- Papers where no licensed clinician is plausibly in the decision loop (fully automated systems without clinical oversight).
-- Review articles, editorials, commentaries, and opinion pieces (no primary empirical data).
-- Conference abstracts without full-text proceedings.
+- Models whose primary decision point occurs **outside** the initial ED encounter - pre-hospital EMS triage, inpatient ward monitoring, or ICU management - even if the study population originates in the ED (Gate 1).
+- Operational/administrative ED models (crowding, throughput, staffing) with no patient-level intake/acuity/disposition decision (Gate 1).
+- Predictive models with no interpretability/explanation component (Gate 2).
+- Review articles, editorials, commentaries, opinion pieces, and protocol-only papers with no underlying empirical study (Gate 3); conference abstracts without full-text proceedings.
 
-**Three-gate inclusion boundary (documented in `docs/protocol/inclusion_boundary.md`):**
-1. Clinical domain gate: the AI system must target a clinical domain.
-2. Individual decision gate: the AI system must support an individual patient-level decision.
-3. Clinician loop gate: a licensed clinician must be plausibly in the decision loop.
+Full decision rule, decision flowchart, and 12 worked edge cases (including the decision-point-vs-population-origin distinction) are in `docs/protocol/inclusion_boundary.md`.
 
 
-## 4. Extraction Schema
+## 4. Databases and Search
 
-Full schema documented in `data/extraction/schema_v1.csv` and `data/extraction/schema_README.md`.
+Primary databases (per the original proposal): **PubMed/MEDLINE, Embase, IEEE Xplore, ACM Digital Library** (4 databases). CINAHL, included during the exploratory cross-domain phase, is shelved as a primary source under the EM-only scope (`memos/decision_log.md`, 2026-06-10) and may be used as a Phase 3 sensitivity check if time allows.
 
-Key columns relevant to hypothesis testing:
+PubMed search string (Concept A: XAI/interpretability terms, AND Concept C: ED/triage/ESI/acuity/disposition terms) is documented in `docs/protocol/search_string_pubmed_v1.md`. The EM-narrowed v2 draft returns 234 hits (2015-2024, English) - down from 9,672 for the cross-domain v1 rev 3 string - pending finalisation (A+C vs A+B+C) and an EM-specific recall benchmark. Embase/IEEE/ACM translations (Issue #22) will be re-derived from this v2 string once finalised.
 
-| Column | Role in synthesis |
-|--------|------------------|
-| `Clinician_Design` | Predictor in H1 |
-| `EV_Participant`, `EV_Task`, `EV_Environment`, `EV_Outcome` | Outcome in H1; dissociation test in H6 |
-| `XAI_Scope` | Predictor in H2a, H2b |
-| `Realism_Level` | Outcome in H2b; prevalence estimate in H5 |
-| `Trust_Claim` | Outcome in H3 |
-| `Domain`, `XAI_Method` | Variables in H4 |
+### Supplementary search
 
+- **Google Scholar:** forward and backward citation tracing of *included* studies (conducted after full-text review), plus grey literature / preprint discovery (arXiv, SSRN).
+- **Elicit:** semantic natural-language search per research question (RQ1-RQ3), with queries, dates, and result counts logged.
+- **Provenance tracking:** each included study is tagged with its discovery source (primary database vs. supplementary source).
 
-## 5. Pre-Registered Synthesis Hypotheses
-
-Full specification - rationale, extraction fields, analysis, falsification conditions - is in `memos/synthesis_hypotheses.md`. Summaries below.
-
-### H1 - Clinician Co-Design and Ecological Validity
-
-Papers with `Clinician_Design: Yes` will have a higher mean composite ecological validity score (EV_Participant + EV_Task + EV_Environment + EV_Outcome, range 0–12) than papers with `Clinician_Design: No`.
-
-**Analysis:** Mann-Whitney U test (one-tailed). Secondary: dimension-by-dimension comparison with Bonferroni correction.
-
-### H2a - Local Methods Dominate
-
-Local explanation methods (`XAI_Scope: Local`) will constitute > 50% of included papers.
-
-**Analysis:** One-sample proportion test (one-tailed, H₀: proportion ≤ 0.50).
-
-### H2b - Local Methods and Lower Workflow Realism
-
-Among papers with a single explanation scope, `XAI_Scope: Local` papers will have a lower median `Realism_Level` than `XAI_Scope: Global` papers.
-
-**Analysis:** Mann-Whitney U test (one-tailed).
-
-### H3 - Trust Claims Predominantly Reflect Plausibility
-
-Among papers with `Trust_Claim ≠ None`, > 50% will be coded `Plausibility` or `Both` (plausibility demonstrated, calibration not).
-
-**Analysis:** One-sample proportion test (one-tailed, H₀: proportion ≤ 0.50).
-
-### H4 - Domain-Method Coupling
-
-XAI method type (visual saliency vs feature attribution) will be significantly associated with clinical domain (imaging vs tabular/EHR).
-
-**Analysis:** Fisher's exact test on 2×2 contingency table (imaging vs tabular × visual saliency vs feature attribution). Two-tailed (no directional claim on the overall association).
-
-### H5 - Deployment-Embedded Evaluations Are Rare
-
-Fewer than 10% of included papers will be coded `Realism_Level: 4`.
-
-**Analysis:** One-sample proportion test (one-tailed, H₀: proportion ≥ 0.10). Secondary: time trend analysis comparing proportion at Level 4 in Year ≤ 2020 vs Year > 2020.
-
-### H6 - Participant Validity and Outcome Validity Are Dissociated
-
-Among papers with `EV_Participant ≥ 2` (real clinicians), the modal `EV_Outcome` score will be 1 (self-report), not 2 or 3.
-
-**Analysis:** Frequency distribution of EV_Outcome restricted to EV_Participant ≥ 2 papers. Secondary: Fisher's exact test on (EV_Participant 0–1 vs 2–3) × (EV_Outcome 0–1 vs 2–3) across all papers.
+Full plan to be documented in `docs/protocol/supplementary_search_plan.md` (to be created).
 
 
-## 6. Analysis Plan
+## 5. Screening
 
-### 6.1 Descriptive Analysis
+- **Tool:** Rayyan, for deduplication and title/abstract + full-text screening.
+- **Title/abstract IRR:** 15% random re-screen after a 2-week washout period; intra-rater Cohen's kappa reported. Borderline cases escalated to the supervising faculty member for adjudication. Full criteria and EM-specific exclusion taxonomy to be documented in `docs/protocol/screening_criteria.md` (Issue #17, to be created).
+- **Full-text screening:** against the three-gate inclusion boundary (`docs/protocol/inclusion_boundary.md` v2).
 
-Before testing any hypothesis, report:
-- Total included papers (N), with breakdown by year, domain, XAI method, study design
-- Frequency distributions of all categorical columns
-- Median and IQR for all ordinal columns (Realism_Level, EV dimensions)
-- Inter-rater reliability (Cohen's κ) for all categorical/ordinal columns from pilot coding (target κ > 0.70 on all columns before full extraction)
-
-### 6.2 Confirmatory Analyses
-
-Run all six hypotheses as specified above. All tests will be reported regardless of significance. Significance threshold: α = 0.05 (corrected for multiple comparisons within H1 secondary analysis only - Bonferroni correction on the four EV dimension tests).
-
-### 6.3 Exploratory Analyses
-
-Any analyses conducted beyond the six pre-registered hypotheses will be explicitly labelled exploratory in the manuscript and will not be used to support primary conclusions.
+Note: the title/abstract-stage IRR design (intra-rater kappa, single reviewer with re-screen) is distinct from the extraction-stage IRR design (two reviewers, inter-rater kappa, Section 8).
 
 
-## 7. Inter-Rater Reliability Protocol
+## 6. Extraction Schema
+
+Full schema documented in `data/extraction/schema_v1.csv` (v1.3, 43 columns) and `data/extraction/schema_README.md`.
+
+### New columns added for the EM pivot (2026-06-10)
+
+| Column | RQ | Role |
+|--------|----|------|
+| `Method_Justification_Type`, `Method_Justification_Notes` | RQ1 | Inductive coding of method-selection justification: Computational / Cognitive / Workflow / Mixed / NotReported |
+| `Method_Interface_Isolated` | RQ1/RQ2 | Whether explanation-method effects are isolated from interface/presentation effects |
+| `DoshiVelez_Category`, `VilonLongo_Category` | RQ2/RQ3 | Framework classification against Doshi-Velez & Kim (2017) and Vilone & Longo (2021); the Vilone & Longo controlled vocabulary will be finalised during the 5-paper extraction pilot (Section 8) |
+| `Reg_Comprehension`, `Reg_TrustCalibration`, `Reg_UncertaintyTransparency`, `Reg_WorkflowSafety`, `Reg_Notes` | RQ3 | The four regulatory-relevant-evidence criteria (Section 2) |
+
+### Retained columns from the exploratory phase (preserved as upgrades, see Section 7.4)
+
+| Column | Role |
+|--------|------|
+| `Eval_Type` | RQ2 - 6-type evaluation taxonomy mapped to Doshi-Velez & Kim (2017)'s 3-category framework (`memos/research_master_memo.md`, Issue #8) |
+| `Realism_Level`, `Realism_Notes` | RQ2 - workflow realism rubric (Issue #4) |
+| `EV_Participant`, `EV_Task`, `EV_Environment`, `EV_Outcome`, `EV_Notes` | RQ2 (supplementary) - 4-dimension ecological validity rubric (Issue #5) |
+| `Trust_Claim`, `Trust_Only` | RQ3 - trust calibration vs. explanation plausibility (Issue #3) |
+| `QR_Participant` ... `QR_Reporting`, `QR_Notes` | Supplementary quality/risk-of-bias rubric (Issue #20) |
+| `Tags` | 21-tag semantic vocabulary (Issue #13) |
+
+
+## 7. Synthesis Plan
+
+This review uses **narrative synthesis organised by research question** (JBI scoping review methodology, Peters et al. 2020; PRISMA-ScR reporting, Tricco et al. 2018) - not confirmatory hypothesis testing.
+
+### 7.1 RQ1 - Methods and Justification
+
+Charted table of XAI method families (feature attribution / counterfactual / example-based / rule-based / inherently interpretable) by frequency, year, and EM decision category (intake / acuity / disposition). Inductive thematic coding of `Method_Justification_Type` and `Method_Justification_Notes`, with representative quotations illustrating each justification category (computational, cognitive, workflow-based).
+
+### 7.2 RQ2 - Evaluation Rigor
+
+Distribution of `Eval_Type` / `DoshiVelez_Category` across the five evaluation levels, cross-tabulated with EM decision category and XAI method family. The 4-D ecological validity rubric and workflow realism rubric (Issues #4/#5) provide a secondary, more granular lens on the same question - e.g., among clinician-in-the-loop studies, what proportion also achieve `EV_Environment >= 2` (realistic ED workflow conditions)?
+
+### 7.3 RQ3 - Regulatory Readiness
+
+For each of the four regulatory-relevant-evidence criteria (`Reg_Comprehension`, `Reg_TrustCalibration`, `Reg_UncertaintyTransparency`, `Reg_WorkflowSafety`), report the proportion of included studies providing that form of evidence, and characterise the most consequential gaps with reference to FDA AI/ML guidance and EU AI Act Article 13. The trust-calibration-vs-plausibility distinction (`Trust_Claim`, `Trust_Only`) directly informs the `Reg_TrustCalibration` assessment.
+
+### 7.4 Supplementary / Exploratory Analyses
+
+The 6 hypotheses originally specified during the cross-domain protocol-design phase (`memos/synthesis_hypotheses.md`, H1-H6) are **repositioned as supplementary, exploratory analyses** feeding the RQ2 narrative synthesis - not pre-registered confirmatory tests with their own significance thresholds. Where the EM-narrowed corpus supports it (adequate cell counts), these analyses (e.g., H1's clinician-co-design vs. ecological-validity comparison, H3's trust-claim composition) are reported descriptively alongside the RQ1-RQ3 narrative, explicitly labelled exploratory. Where cell counts are inadequate, the analysis is omitted and the omission is documented per the Deviations Protocol (Section 9).
+
+The 5-dimension QR1-QR5 quality/risk-of-bias rubric (Issue #20) similarly feeds a sensitivity check: the RQ2/RQ3 narrative is repeated restricted to studies with `QS_Total >= 7`, to assess whether quality moderates the findings.
+
+Meta-analysis is not planned - not appropriate for a scoping review of heterogeneous evaluation designs.
+
+
+## 8. Inter-Rater Reliability - Extraction
 
 Before full extraction:
 1. Two reviewers independently code 5 seed papers on all schema columns.
-2. Calculate Cohen's κ for each categorical/ordinal column.
-3. Target: κ > 0.70 on all columns before proceeding to full extraction.
+2. Calculate Cohen's kappa for each categorical/ordinal column.
+3. Target: kappa > 0.70 on all columns before proceeding to full extraction.
 4. Discrepancies resolved by discussion; resolution logged in `memos/decision_log.md`.
 
-Seed paper selection: draw from included papers after full-text screening. Choose papers spanning at least three domains and two realism levels.
+Seed paper selection: draw from included papers after full-text screening, spanning all three EM decision categories (intake / acuity / disposition) and at least two evaluation levels.
+
+This protocol (two reviewers, inter-rater kappa, 5-paper pilot) is distinct from the title/abstract-screening IRR protocol (Section 5: 15% re-screen, intra-rater kappa, faculty adjudication, Issue #17).
 
 Full protocol documented in `data/extraction/schema_README.md`.
 
 
-## 8. Deviations Protocol
+## 9. Deviations Protocol
 
-If any hypothesis cannot be tested as specified (e.g., insufficient cell counts for H4, no papers at EV_Participant ≥ 2 for H6), document the deviation in `memos/decision_log.md` before running the analysis. Report all tests, including underpowered ones. Do not drop a hypothesis post-hoc.
+If any planned analysis (an RQ1-RQ3 charted table, or a supplementary H1-H6/QR analysis) cannot be conducted as specified - e.g., insufficient cell counts for a supplementary hypothesis, or a regulatory-evidence criterion never observed in the corpus - document the deviation in `memos/decision_log.md` before finalising that section of the synthesis. Report what *can* be concluded from the available data; do not silently drop a planned analysis.
 
 Any deviation from this pre-registered plan will be disclosed in the Methods section of the manuscript.
 
 
-## 9. Timeline
+## 10. Timeline
 
-| Milestone | Target |
-|-----------|--------|
-| Pre-registration filed (OSF) | Before search execution |
-| PROSPERO registration submitted (Issue #19) | Before search execution |
-| Search executed (Issue #22) | After pre-registration confirmed |
-| Title/abstract screening | After search |
-| Full-text screening | After title/abstract screening |
-| Pilot extraction / IRR (5 seed papers) | After full-text screening |
-| Full extraction | After IRR confirmed (κ > 0.70) |
-| Analysis | After extraction complete |
-| Manuscript | After analysis |
+| Phase | Weeks | Activities |
+|-------|-------|------------|
+| Phase 1 | 1-3 | Protocol/registration finalisation (this pivot, OSF update); EM-narrowed search execution across 4 databases; Rayyan deduplication; title/abstract screening (incl. 15% re-screen IRR); 5-paper extraction pilot |
+| Phase 2 | 4-6 | Full-text screening; full extraction; RQ1-RQ3 narrative synthesis; supplementary analyses; manuscript drafting begins |
+| Phase 3 | 7-8 | Manuscript drafting/revision; PRISMA-ScR flow diagram; January-2025-onward search update; submission to faculty |
 
 
-## 10. Related Protocol Documents
+## 11. Related Protocol Documents
 
 | Document | Purpose |
 |----------|---------|
-| `docs/protocol/inclusion_boundary.md` | Three-gate inclusion decision rule (Issue #7) |
+| `docs/protocol/inclusion_boundary.md` (v2) | EM-only three-gate inclusion decision rule (Issue #7) |
+| `docs/protocol/search_string_pubmed_v1.md` | PubMed search string - Concept A/B/C, EM-narrowed v2 (Issues #15, #22) |
 | `docs/protocol/xai_method_taxonomy.md` | XAI method controlled vocabulary (Issue #6) |
+| `docs/protocol/screening_criteria.md` | Title/abstract screening criteria + IRR design (Issue #17) |
+| `docs/protocol/supplementary_search_plan.md` | Rayyan/Elicit/Google Scholar/provenance plan (Issue #23) |
 | `data/coding/workflow_realism_rubric.md` | Workflow realism rubric (Issue #4) |
 | `data/coding/eval_type_taxonomy.md` | Evaluation type taxonomy (Issue #8) |
 | `data/coding/ecological_validity_rubric.md` | Ecological validity rubric (Issue #5) |
-| `data/extraction/schema_v1.csv` | Extraction schema (Issue #10) |
-| `memos/synthesis_hypotheses.md` | Full hypothesis specifications (Issue #9) |
+| `data/extraction/schema_v1.csv` | Extraction schema v1.3 (Issue #10) |
+| `memos/synthesis_hypotheses.md` | H1-H6, repositioned as supplementary (Issue #9) |
 | `memos/conceptual_distinctions.md` | Trust calibration vs plausibility (Issue #3) |
 | `memos/terminology_instability.md` | XAI terminology conflict log (Issue #2) |
 | `memos/tag_vocabulary.md` | Semantic tag controlled vocabulary (Issue #13) |
+| `memos/decision_log.md` | 2026-06-10 EM-pivot decision and all prior decisions |
 
 
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
-| Draft v1 | 2026-05-24 | Initial draft. 6 hypotheses. Pre-registered before search execution. |
+| Draft v1 | 2026-05-24 | Initial draft. Cross-domain scope, 6 confirmatory hypotheses. Pre-registered before search execution. |
+| Draft v2 - EM pivot | 2026-06-10 | Reverted to original proposal scope: EM/ED-only (initial encounter - intake / acuity-ESI / immediate disposition), RQ1-RQ3 with regulatory framing (FDA AI/ML guidance, EU AI Act Article 13), JBI scoping review (Peters 2020) + PRISMA-ScR (Tricco 2018) methodology, narrative synthesis by RQ. H1-H6 and QR1-QR5 repositioned as supplementary/exploratory. Database scope reverted to 4 (PubMed/Embase/IEEE/ACM); CINAHL shelved. Extraction schema -> v1.3 (10 new columns). See `memos/decision_log.md`, 2026-06-10. |
