@@ -51,7 +51,7 @@ Per the three-gate EM-only inclusion boundary in `docs/protocol/inclusion_bounda
 - **Population/Context (Gate 1):** Adult or pediatric studies evaluating predictive models used for decisions occurring during the **initial ED encounter** - initial patient intake, acuity/triage scoring (e.g., ESI or an equivalent acuity scale), or immediate disposition (admit/discharge/transfer/ICU-admit) decisions made at the point of ED care.
 - **Intervention (Gate 2):** A post-hoc explanation method (feature attribution, counterfactual, example-based/case-based, or rule-based) applied to the predictive model, OR an inherently interpretable model explicitly evaluated for its interpretability.
 - **Study types (Gate 3):** Any empirical study reporting at least one of the five RQ2 evaluation levels (computational/fidelity, proxy task, simulated user, clinician-in-the-loop, deployment). Method papers presenting a novel XAI method with an EM clinical demonstration are eligible and coded `Study_Design: MethodPaper`.
-- **Publication period:** 2015-2024 (inclusive) for the initial search. A search update covering January 2025 onward will be conducted shortly before manuscript submission (see `docs/protocol/search_string_pubmed_v1.md`).
+- **Publication period:** 2015/01/01 through the search-execution date (inclusive), executed as a single search. A small top-up search covering records published/indexed between initial execution and manuscript submission will be conducted in Phase 3 (see `docs/protocol/search_string_pubmed_v1.md` and `memos/decision_log.md`, 2026-06-10).
 - **Language:** English.
 
 ### Exclusion
@@ -68,7 +68,7 @@ Full decision rule, decision flowchart, and 12 worked edge cases (including the 
 
 Primary databases (per the original proposal): **PubMed/MEDLINE, Embase, IEEE Xplore, ACM Digital Library** (4 databases). CINAHL, included during the exploratory cross-domain phase, is shelved as a primary source under the EM-only scope (`memos/decision_log.md`, 2026-06-10) and may be used as a Phase 3 sensitivity check if time allows.
 
-PubMed search string (Concept A: XAI/interpretability terms, AND Concept C: ED/triage/ESI/acuity/disposition terms) is documented in `docs/protocol/search_string_pubmed_v1.md`. The EM-narrowed v2 draft returns 234 hits (2015-2024, English) - down from 9,672 for the cross-domain v1 rev 3 string - pending finalisation (A+C vs A+B+C) and an EM-specific recall benchmark. Embase/IEEE/ACM translations (Issue #22) will be re-derived from this v2 string once finalised.
+PubMed search string (Concept A: XAI/interpretability terms, AND Concept B: clinical/CDS context terms, AND Concept C: ED/triage/ESI/acuity/disposition terms) is documented in `docs/protocol/search_string_pubmed_v1.md` (v2 FINAL, 2026-06-10). The EM-narrowed A+B+C string returns 213 hits for 2015-2024 and 497 hits for 2015-2026/06/10 (English) - down from 9,672/22,406 for the equivalent cross-domain v1 rev 3 windows - with the date range extended to the search-execution date per `memos/decision_log.md` (2026-06-10). Pending an EM-specific recall benchmark and formal execution. Embase/IEEE/ACM translations (Issue #22) have been re-derived from this v2 string (Concept C added, A+B+C structure, extended date range).
 
 ### Supplementary search
 
@@ -166,7 +166,7 @@ Any deviation from this pre-registered plan will be disclosed in the Methods sec
 |-------|-------|------------|
 | Phase 1 | 1-3 | Protocol/registration finalisation (this pivot, OSF update); EM-narrowed search execution across 4 databases; Rayyan deduplication; title/abstract screening (incl. 15% re-screen IRR); 5-paper extraction pilot |
 | Phase 2 | 4-6 | Full-text screening; full extraction; RQ1-RQ3 narrative synthesis; supplementary analyses; manuscript drafting begins |
-| Phase 3 | 7-8 | Manuscript drafting/revision; PRISMA-ScR flow diagram; January-2025-onward search update; submission to faculty |
+| Phase 3 | 7-8 | Manuscript drafting/revision; PRISMA-ScR flow diagram; small pre-submission top-up search (records since initial execution); submission to faculty |
 
 
 ## 11. Related Protocol Documents
@@ -195,3 +195,4 @@ Any deviation from this pre-registered plan will be disclosed in the Methods sec
 |---------|------|---------|
 | Draft v1 | 2026-05-24 | Initial draft. Cross-domain scope, 6 confirmatory hypotheses. Pre-registered before search execution. |
 | Draft v2 - EM pivot | 2026-06-10 | Reverted to original proposal scope: EM/ED-only (initial encounter - intake / acuity-ESI / immediate disposition), RQ1-RQ3 with regulatory framing (FDA AI/ML guidance, EU AI Act Article 13), JBI scoping review (Peters 2020) + PRISMA-ScR (Tricco 2018) methodology, narrative synthesis by RQ. H1-H6 and QR1-QR5 repositioned as supplementary/exploratory. Database scope reverted to 4 (PubMed/Embase/IEEE/ACM); CINAHL shelved. Extraction schema -> v1.3 (10 new columns). See `memos/decision_log.md`, 2026-06-10. |
+| Draft v2.1 | 2026-06-10 | Search string finalised as A+B+C (`docs/protocol/search_string_pubmed_v1.md` v2 FINAL: 213 hits 2015-2024 / 497 hits 2015-2026/06/10); publication-period date range extended from fixed 2015-2024 + deferred January-2025 update to a single search covering 2015 through the search-execution date, with a small Phase 3 top-up (Sections 3, 4, 10). Embase/IEEE/ACM translations (Issue #22) re-derived with Concept C. See `memos/decision_log.md`, 2026-06-10. |

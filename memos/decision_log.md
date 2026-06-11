@@ -314,3 +314,43 @@ The conceptual upgrades developed during the exploratory phase — the trust-cal
 **Defense if challenged:** "This is not scope creep in a new direction — it is a return to the originally approved, graded proposal after an exploratory phase that (productively) over-built several constructs beyond what the proposal specified. Rather than discard that work, the more rigorous trust-calibration/plausibility distinction and 4-dimension ecological validity rubric are retained and applied as upgrades to the EM-only corpus the proposal specifies. The pivot is driven by a realistic 8-week single-reviewer capacity assessment against the grading rubric — particularly the 25%-weighted Analysis & Synthesis criterion, which rewards argument over hypothesis-test reporting — and by the timeliness of the regulatory-readiness framing (EU AI Act Article 13 is a 2024 regulation), which gives the narrower EM scope a stronger publication hook than the broader cross-domain framing had."
 
 ---
+
+## 2026-06-10 — EM-narrowed v2 PubMed string finalized as A+B+C; date range extended to "2015 through search-execution date"
+
+**Decision:** Two open items from the EM-pivot's `search_string_pubmed_v1.md` Next Steps were resolved:
+1. **A+B+C** (not A+C) is adopted as the final v2 EM-narrowed structure, retaining Concept B for consistency with the cross-domain string's validated two-concept design.
+2. The date range is extended from the proposal's fixed **2015/01/01–2024/12/31** to **2015/01/01 through the search-execution date** (a rolling "to present" window), executed as a single search rather than splitting into a 2015-2024 main search plus a deferred 2025+ update.
+
+**Investigation (PubMed, A+B+C, English, live E-utilities, run 2026-06-10):**
+
+| Period | Hits |
+|---|---|
+| 2015-2024 (proposal's registered window) | 213 |
+| 2025 | 139 |
+| 2026 Jan 1 - Jun 10 (partial year) | 171 |
+| 2015-2026/06/10 (full extension to "now") | 497 (+133%) |
+
+A spot-check of three 2026-dated PMIDs (42266581, 42260815, 42257858) confirmed genuinely recent epub/pubdate values (May-June 2026), not forward-dated placeholders.
+
+**Relationship to the 2026-06-09 decision ("Date range kept at 2015-2024; 2025+ deferred to a planned pre-submission search update"):** That entry considered and rejected extending the *cross-domain* (Concept A+B, 9,672-hit) search to "now" (22,406 hits, +131%), for two reasons specific to that moment: (1) the cross-domain string had already been executed and exported on 2026-06-07 — extending would mean re-pulling 2.3x the records (~56 efetch batches) under a 2-day deadline; (2) a partial mid-2026 pull would need re-verification later regardless, due to Epub-ahead-of-print date instability for very recent records.
+
+Neither reason transfers cleanly to the EM-narrowed v2 string:
+- **No sunk export to preserve.** The EM-narrowed string has not yet been formally executed/exported under either date range — "extend now" and "extend later" both mean a *first* execution, not a re-pull. There is no 2.3x-rework penalty.
+- **The corpus-size jump is much smaller in absolute terms.** 213 -> 497 (+284 records) is a manageable addition for single-reviewer T/A screening (`docs/protocol/screening_criteria.md`), unlike 9,672 -> 22,406 (+12,734).
+- **The Epub-ahead-of-print instability concern is real but unavoidable either way.** Any search executed "close to now" — whether its lower bound is 2015 or 2025 — will include very-recent records whose `Date - Publication` field could be reclassified before formal execution. This is not a reason to exclude 2025-2026 from the *initial* search; it is a reason to re-run the finalized query (with the date range's upper bound set to the actual execution date) at execution time rather than relying on this 2026-06-10 design-time snapshot.
+
+The 2026-06-09 entry's core methodological point — run the search close to submission to capture the most complete, stable corpus — is honored here too: extending the *initial* execution's window to "now" means the corpus is as current as possible at first execution, and the Phase 3 "search update" becomes a small top-up (records published/indexed between initial execution and submission) rather than an ~18-month catch-up pass covering more than half the eligible literature.
+
+**Rationale:**
+1. At the original (213-hit) window, the most recent 18 months (2025 + partial 2026 = 310 records) alone exceed the entire 2015-2024 corpus (213) — deferring this majority of the eligible literature to a lighter Phase-3 pass would be inconsistent with how the 2015-2024 corpus is screened, and is especially awkward given RQ3's regulatory-readiness framing (FDA AI/ML guidance and EU AI Act Article 13 are themselves recent; the most relevant evidence is likely concentrated in the most recent literature).
+2. A+B+C retained over A+C (213 vs. 234 at 2015-2024): Concept B was already precision-tuned and recall-validated as part of the cross-domain string (2026-06-07 entry); keeping it preserves that validated design rather than introducing an untested 2-concept structure for the EM-narrowed corpus. The 21-record difference is within the tolerance of the T/A-stage sensitivity-favouring rule (`docs/protocol/screening_criteria.md` Section 3).
+
+**Alternatives considered:**
+- Apply the 2026-06-09 decision unchanged (keep 2015-2024 + plan a January-2025-onward update) — rejected: as argued above, the rationale that justified deferral for the cross-domain string (sunk export, 2.3x rework, 2-day deadline) does not apply to a string that has not been executed yet; deferring would mean over half the eligible EM-narrowed corpus is screened under a different, later, lighter-touch process.
+- A+C (234 hits, the EM-pivot entry's original recommendation) instead of A+B+C (213 hits) — superseded by user decision (2026-06-10): A+B+C retains the validated Concept B and is adopted as the final structure.
+
+**Impact:** `docs/protocol/search_string_pubmed_v1.md` updated: new "Date Range Decision" section with the table above, A+B+C promoted to "FINAL" (A+C retained as a documented rejected alternative), Next Steps renumbered. `data/screening/prisma_counts.csv` EM-narrowed PubMed row updated to A+B+C / extended range (497, design-time snapshot, pending formal execution). `docs/osf/preregistration_draft.md` Section 3 (Publication period) and Section 10 (Phase 3 timeline) updated to replace "2015-2024 + January 2025 update" with "2015 through search-execution date + small pre-submission top-up". Embase/IEEE/ACM translations (Issue #22) re-derived with Concept C added and restructured to A+B+C with the extended date range.
+
+**Defense if challenged:** "The 2025-2026 surge finding from 2026-06-09 (cross-domain string) recurs at EM-narrowed scale: the most recent 18 months contain more eligible-looking records (310) than the entire prior decade (213). Unlike the cross-domain case, the EM-narrowed string had not yet been executed, so extending its date range to 'now' is a first-execution design choice, not a costly re-pull — and it keeps the bulk of the most-recent, most regulation-relevant literature in the same screening process as the rest of the corpus, with only a small top-up search needed before submission."
+
+---

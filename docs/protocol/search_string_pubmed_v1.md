@@ -1,9 +1,9 @@
 # PubMed Search String — Clinical XAI Review (9970)
 
 **Issue:** #15 (cross-domain v1); extended under Issue #22 / 2026-06-10 EM pivot (Concept C)
-**Status:** v1 rev 3 (cross-domain, 9,672 hits) is **SUPERSEDED** by the 2026-06-10 pivot back to the original EM/ED-only proposal scope (`memos/decision_log.md`). A new Concept C (Emergency Department / triage / ESI / acuity / disposition terms) has been added and ANDed against Concepts A and B; the EM-narrowed string returns **234 hits (A+C, recommended)** or **213 hits (A+B+C)**. Cross-domain v1 rev 3 retained below for audit trail. EM-narrowed string is DRAFT pending: (1) A+C vs A+B+C decision, (2) a new EM-specific recall benchmark, (3) formal execution/export.
+**Status:** v1 rev 3 (cross-domain, 9,672 hits) is **SUPERSEDED** by the 2026-06-10 pivot back to the original EM/ED-only proposal scope (`memos/decision_log.md`). A new Concept C (Emergency Department / triage / ESI / acuity / disposition terms) has been added and ANDed against Concepts A and B. **Final v2 string: A+B+C, date range extended to "present"** (decision recorded 2026-06-10 — see Date Range Decision below). Live-verified via E-utilities on 2026-06-10: **213 hits** (A+B+C, 2015/01/01–2024/12/31) and **497 hits** (A+B+C, 2015/01/01–2026/06/10). Cross-domain v1 rev 3 retained below for audit trail. EM-narrowed v2 string design is FINALIZED; pending (1) a new EM-specific recall benchmark and (2) formal execution/export at the actual search-start date.
 **Database:** MEDLINE via PubMed
-**Date range filter:** 2015/01/01 – 2024/12/31
+**Date range filter:** 2015/01/01 – search execution date (rolling; live-verified through 2026/06/10 = 497 hits, see Date Range Decision)
 **Language filter:** English
 
 ---
@@ -125,6 +125,34 @@ OR "Emergency Service, Hospital"[Mesh] OR "Triage"[Mesh])
 
 ---
 
+## Date Range Decision (2026-06-10)
+
+The original proposal's date range (2015/01/01–2024/12/31) was set when the cross-domain v1 string was finalized (2026-06-07). At that time no EM-narrowed search had yet been run, and the preregistration draft (Section 10) planned a separate "January 2025 onward" search update for Phase 3, shortly before manuscript submission.
+
+**Live E-utilities check (2026-06-10) of the A+B+C string, year by year:**
+
+| Period | Hits |
+|---|---|
+| 2020 | 12 |
+| 2021 | 28 |
+| 2022 | 45 |
+| 2023 | 50 |
+| 2024 | 78 |
+| 2025 | 139 |
+| 2026 (Jan 1 – Jun 10, partial year) | 171 |
+| **2015–2024 total** | **213** |
+| **2015–2026/06/10 total** | **497** |
+
+**Finding:** the EM+XAI literature is growing exponentially (roughly doubling year-over-year since 2022). The 18 months from January 2025 to June 2026 alone contain **284 records — more than the entire 2015–2024 corpus (213)**. Spot-checking a sample of 2026-dated records (PMIDs 42266581, 42260815, 42257858) confirms these are genuinely recent publications (epub/pubdate May–June 2026), not forward-dated "ahead of print" artifacts.
+
+**Decision: extend the date range to "2015/01/01 through the search execution date", executed as a single search now, rather than deferring 2025+ to a separate Phase 3 update.** Deferring the bulk of the most recent — and, given RQ3's regulatory-readiness framing, arguably most relevant — literature to a lighter later pass would be methodologically inconsistent with how the 2015–2024 corpus is screened. A corpus of ~497 records (as of 2026-06-10) remains within the scope of single-reviewer T/A screening (`docs/protocol/screening_criteria.md`).
+
+**Implication for Phase 3:** the previously-planned "January 2025 onward search update" becomes a much smaller top-up search — only records published/indexed between this search's execution date and shortly before manuscript submission — consistent with standard PRISMA-ScR practice of re-running searches close to submission.
+
+**Note:** the 497-hit figure is a 2026-06-10 snapshot for design purposes. Re-run the A+B+C string with the date range's upper bound set to the actual search-execution date (item 9 of Next Steps); the count will be similar but not identical (a handful of additional records will likely be indexed between 2026-06-10 and execution).
+
+---
+
 ## Full Combined String — Cross-Domain v1 rev 3 (SUPERSEDED 2026-06-10 — retained for audit trail; see EM-Narrowed string below for current scope)
 
 ```
@@ -156,19 +184,11 @@ AND English[Language]
 
 ---
 
-## Full Combined String — EM-Narrowed (v2 draft, 2026-06-10 — current scope)
+## Full Combined String — EM-Narrowed (v2 FINAL, 2026-06-10 — current scope)
 
-**(Concept A) AND (Concept C) AND (date) AND (language) — recommended, 234 hits:**
+**FINAL: (Concept A) AND (Concept B) AND (Concept C) AND (date) AND (language) — A+B+C, 213 hits (2015–2024) / 497 hits (2015–2026/06/10, live-verified):**
 
-```
-("explainable artificial intelligence"[tiab] OR "explainable AI"[tiab] OR "XAI"[tiab] OR "interpretable machine learning"[tiab] OR "interpretability"[tiab] OR "model interpretability"[tiab] OR "explainability"[tiab] OR "explainable model*"[tiab] OR "SHAP"[tiab] OR "Shapley additive explanation*"[tiab] OR "Shapley value*"[tiab] OR "LIME"[tiab] OR "local interpretable model-agnostic"[tiab] OR "Grad-CAM"[tiab] OR "gradient-weighted class activation"[tiab] OR "class activation map*"[tiab] OR "counterfactual explanation*"[tiab] OR "feature attribution"[tiab] OR "rule extraction"[tiab] OR "prototype-based explanation"[tiab] OR "prototype explanation*"[tiab] OR "case-based explanation*"[tiab] OR "interpretable AI"[tiab] OR "interpretable artificial intelligence"[tiab] OR "explainable deep learning"[tiab])
-AND
-("emergency department"[tiab] OR "emergency room"[tiab] OR "emergency medicine"[tiab] OR "emergency severity index"[tiab] OR "ESI"[tiab] OR "Triage"[tiab] OR "acuity scor*"[tiab] OR "acuity assessment"[tiab] OR "acuity level*"[tiab] OR "acuity classification"[tiab] OR "disposition decision*"[tiab] OR "ED disposition"[tiab] OR "discharge disposition"[tiab] OR "patient intake"[tiab] OR "Emergency Service, Hospital"[Mesh] OR "Triage"[Mesh])
-AND ("2015/01/01"[Date - Publication] : "2024/12/31"[Date - Publication])
-AND English[Language]
-```
-
-**Alternative — (Concept A) AND (Concept B) AND (Concept C) AND (date) AND (language) — 213 hits** (3-concept structure, 21 fewer records than A+C):
+Replace `<SEARCH-EXECUTION-DATE>` with the actual date the search is run (e.g., `2026/06/10` as of this writing).
 
 ```
 ("explainable artificial intelligence"[tiab] OR "explainable AI"[tiab] OR "XAI"[tiab] OR "interpretable machine learning"[tiab] OR "interpretability"[tiab] OR "model interpretability"[tiab] OR "explainability"[tiab] OR "explainable model*"[tiab] OR "SHAP"[tiab] OR "Shapley additive explanation*"[tiab] OR "Shapley value*"[tiab] OR "LIME"[tiab] OR "local interpretable model-agnostic"[tiab] OR "Grad-CAM"[tiab] OR "gradient-weighted class activation"[tiab] OR "class activation map*"[tiab] OR "counterfactual explanation*"[tiab] OR "feature attribution"[tiab] OR "rule extraction"[tiab] OR "prototype-based explanation"[tiab] OR "prototype explanation*"[tiab] OR "case-based explanation*"[tiab] OR "interpretable AI"[tiab] OR "interpretable artificial intelligence"[tiab] OR "explainable deep learning"[tiab])
@@ -176,13 +196,23 @@ AND
 ("clinical decision support"[tiab] OR "clinical decision support system*"[tiab] OR "CDSS"[tiab] OR "computer-aided diagnos*"[tiab] OR "computer aided diagnos*"[tiab] OR "diagnostic algorithm*"[tiab] OR "predictive model*"[tiab] OR "risk prediction model*"[tiab] OR "clinical"[tiab] OR "clinician*"[tiab] OR "physician*"[tiab] OR "radiolog*"[tiab] OR "patholog*"[tiab] OR "nurse*"[tiab] OR "diagnosis"[tiab] OR "diagnostic"[tiab] OR "prognosis"[tiab] OR "treatment"[tiab] OR "patient care"[tiab] OR "hospital*"[tiab] OR "Decision Support Systems, Clinical"[Mesh] OR "Physicians"[Mesh] OR "Clinical Decision-Making"[Mesh] OR "Diagnosis, Computer-Assisted"[Mesh] OR "Patient Care"[Mesh])
 AND
 ("emergency department"[tiab] OR "emergency room"[tiab] OR "emergency medicine"[tiab] OR "emergency severity index"[tiab] OR "ESI"[tiab] OR "Triage"[tiab] OR "acuity scor*"[tiab] OR "acuity assessment"[tiab] OR "acuity level*"[tiab] OR "acuity classification"[tiab] OR "disposition decision*"[tiab] OR "ED disposition"[tiab] OR "discharge disposition"[tiab] OR "patient intake"[tiab] OR "Emergency Service, Hospital"[Mesh] OR "Triage"[Mesh])
+AND ("2015/01/01"[Date - Publication] : "<SEARCH-EXECUTION-DATE>"[Date - Publication])
+AND English[Language]
+```
+
+**Decision (2026-06-10): A+B+C is the final v2 structure** (per `memos/decision_log.md`). Concept B is retained for consistency with the cross-domain design's validated two-concept structure (Concept A AND Concept B already underwent the precision-tuning and recall validation documented in Revision note 3) and as an additional layer of clinical-context specificity. The ~9% reduction relative to A+C (213 vs. 234 at the 2015–2024 window) is an acceptable trade-off: any Gate-1-relevant record dropped by Concept B but caught by a broader A+C search would, per the T/A-stage sensitivity-favouring rule (`docs/protocol/screening_criteria.md` Section 3), need to clearly fail a gate to be excluded — Concept B's terms (`clinical`, `diagnosis`, `treatment`, `patient care`, etc.) are broad enough that a genuinely in-scope ED/XAI paper failing to match any of them in title/abstract is unlikely.
+
+**Rejected alternative — (Concept A) AND (Concept C) AND (date) AND (language) — A+C, 234 hits (2015–2024):**
+
+```
+("explainable artificial intelligence"[tiab] OR "explainable AI"[tiab] OR "XAI"[tiab] OR "interpretable machine learning"[tiab] OR "interpretability"[tiab] OR "model interpretability"[tiab] OR "explainability"[tiab] OR "explainable model*"[tiab] OR "SHAP"[tiab] OR "Shapley additive explanation*"[tiab] OR "Shapley value*"[tiab] OR "LIME"[tiab] OR "local interpretable model-agnostic"[tiab] OR "Grad-CAM"[tiab] OR "gradient-weighted class activation"[tiab] OR "class activation map*"[tiab] OR "counterfactual explanation*"[tiab] OR "feature attribution"[tiab] OR "rule extraction"[tiab] OR "prototype-based explanation"[tiab] OR "prototype explanation*"[tiab] OR "case-based explanation*"[tiab] OR "interpretable AI"[tiab] OR "interpretable artificial intelligence"[tiab] OR "explainable deep learning"[tiab])
+AND
+("emergency department"[tiab] OR "emergency room"[tiab] OR "emergency medicine"[tiab] OR "emergency severity index"[tiab] OR "ESI"[tiab] OR "Triage"[tiab] OR "acuity scor*"[tiab] OR "acuity assessment"[tiab] OR "acuity level*"[tiab] OR "acuity classification"[tiab] OR "disposition decision*"[tiab] OR "ED disposition"[tiab] OR "discharge disposition"[tiab] OR "patient intake"[tiab] OR "Emergency Service, Hospital"[Mesh] OR "Triage"[Mesh])
 AND ("2015/01/01"[Date - Publication] : "2024/12/31"[Date - Publication])
 AND English[Language]
 ```
 
-**Recommendation: adopt A+C (234 hits) as the v2 string.** Every Concept C term (emergency department, triage, ESI, acuity scoring, disposition) already presupposes a clinical/medical context — the same reasoning the original design used to justify NOT layering a redundant generic-AI requirement onto Concept A (`Design Rationale` above). Adding Concept B costs 21 records (9% of the A+C set) for no clear precision benefit; at this corpus size, the marginal screening cost of the extra 21 records is trivial compared to the recall risk of an unnecessary third AND constraint.
-
-**Spot-check (top 15 of 234, A+C, 2026-06-10):** Titles span genuinely ED/triage-relevant ML+XAI papers — e.g. "Leveraging machine learning and rule extraction for enhanced transparency in emergency department length of stay prediction"; "Deep learning-based Emergency Department In-hospital Cardiac Arrest Score (Deep EDICAS)..."; "Machine learning outperforms the Canadian Triage and Acuity Scale (CTAS)..."; "Improving triage performance in emergency departments using machine learning and natural language processing: a systematic review" — alongside several expected to fail Gate 1 at screening (inpatient rehabilitation discharge destination, palliative-care timing, post-stroke epilepsy prediction). This is the expected mix for a sensitivity-favouring search awaiting gate-based screening.
+**Spot-check (top 15 of 234, A+C, 2026-06-10):** Titles span genuinely ED/triage-relevant ML+XAI papers — e.g. "Leveraging machine learning and rule extraction for enhanced transparency in emergency department length of stay prediction"; "Deep learning-based Emergency Department In-hospital Cardiac Arrest Score (Deep EDICAS)..."; "Machine learning outperforms the Canadian Triage and Acuity Scale (CTAS)..."; "Improving triage performance in emergency departments using machine learning and natural language processing: a systematic review" — alongside several expected to fail Gate 1 at screening (inpatient rehabilitation discharge destination, palliative-care timing, post-stroke epilepsy prediction). This is the expected mix for a sensitivity-favouring search awaiting gate-based screening. **A+B+C (213) is a strict subset of A+C (234)** — every A+B+C hit also satisfies A+C — so this spot-check remains qualitatively representative of the final A+B+C string; the 21 records in A+C but not A+B+C are the ones lacking any Concept B term in title/abstract.
 
 **For context — Concept C alone (no XAI requirement), date+language only: 151,954 hits.** Confirms Concept C terms are individually broad (as expected — "emergency department" and "triage" are common terms), and that essentially all of the precision in the EM-narrowed string comes from the AND with Concept A, mirroring the original two-concept design philosophy.
 
@@ -205,12 +235,14 @@ AND English[Language]
 1. ~~Run this string in PubMed; record total hit count here.~~ Done — cross-domain v1 rev 3 returned **9,672 hits** (2015–2024, English) — **SUPERSEDED** by the EM pivot below.
 2. ~~Issue #16 — validate recall against seed papers (cross-domain).~~ Done via an independent citation-chased benchmark (see Revision note 3) — both MEDLINE-indexed benchmark papers are retrieved by the cross-domain string. **This benchmark is non-EM and does not validate the EM-narrowed string** (item 7 below).
 3. ~~Log the cross-domain string, hit count, and the database-coverage finding in `memos/decision_log.md`~~ Done (2026-06-07/2026-06-09 entries).
-4. ~~Translate cross-domain string to other databases (Embase, CINAHL, IEEE Xplore, ACM Digital Library) per Issue #22~~ Done (2026-06-09), but **superseded** — these drafts need Concept C added under the EM pivot (item 8 below); CINAHL translation shelved per the EM-pivot database-scope decision.
+4. ~~Translate cross-domain string to other databases (Embase, CINAHL, IEEE Xplore, ACM Digital Library) per Issue #22~~ Done (2026-06-09), but was **superseded** — re-derived with Concept C under item 8.
 5. ~~Run each of the four cross-domain draft translations live~~ Superseded — see item 8.
-6. **(EM pivot, 2026-06-10)** Decide A+C (234 hits, recommended) vs A+B+C (213 hits) as the v2 EM-narrowed string; record the decision in `memos/decision_log.md`.
-7. Assemble a new EM-specific recall benchmark (citation-chase from EM/triage XAI papers, or from the proposal's own background reading) and validate the v2 string against it — the existing cross-domain benchmark does not transfer (item 2 above).
-8. Once the v2 string is finalized and benchmark-validated: (a) formally execute and export (raw export to `data/searches/`), updating `data/screening/prisma_counts.csv`'s EM-narrowed PubMed row; (b) re-derive Embase/IEEE/ACM translations (Issue #22) by adding Concept C to the existing drafts.
-9. Log the final v2 string, hit count, and benchmark validation result in `memos/decision_log.md`.
+6. ~~Decide A+C vs A+B+C as the v2 EM-narrowed string~~ Done (2026-06-10) — **A+B+C** chosen, retaining Concept B for consistency with the validated cross-domain two-concept design. See decision rationale above and `memos/decision_log.md`.
+7. ~~Decide the date range~~ Done (2026-06-10) — extended from a fixed 2015–2024 window to **"2015/01/01 through search-execution date"**, folding the previously-planned Phase 3 "January 2025 onward" update into the initial execution. Live-verified 2026-06-10: 497 hits. See Date Range Decision above and `memos/decision_log.md`.
+8. ~~Re-derive Embase/IEEE/ACM translations (Issue #22) by adding Concept C and restructuring to A+B+C with the extended date range~~ Done (2026-06-10) — see `search_string_embase_v1.md`, `search_string_ieee_v1.md`, `search_string_acm_v1.md`. CINAHL translation remains shelved per the EM-pivot database-scope decision.
+9. Assemble a new EM-specific recall benchmark (citation-chase from EM/triage XAI papers, or from the proposal's own background reading) and validate the A+B+C string against it — the existing cross-domain benchmark does not transfer (item 2 above).
+10. Once benchmark-validated: formally execute all four database searches on the same date (raw exports to `data/searches/`), setting the date range's upper bound to that execution date; update `data/screening/prisma_counts.csv`'s Identification rows.
+11. Log the final v2 string, hit counts, and benchmark validation result in `memos/decision_log.md`.
 
 ---
 
@@ -223,3 +255,4 @@ AND English[Language]
 | v1 rev 2 | 2026-06-07 | Fixed duplicate `AND AND` syntax error and `"prototype-based explanation*"` phrase-index rejection; diagnosed 36-hit result as a filter artifact (Review/Systematic-Review/Aged 65+ filters stacked in PubMed UI), not a string defect. |
 | v1 rev 3 | 2026-06-07 | Diagnosed 15,385-hit over-breadth to 5 generic ML/stats term-groups in Concept A (confirmed via Concept-A-alone test: 70,946 hits); removed them, yielding 9,672 hits (37% reduction). Validated recall against an independently citation-chased benchmark (4 papers passing all 3 inclusion gates; 2 indexed in MEDLINE) — both indexed papers retrieved by the final string, confirming zero recall loss. Documented a database-coverage finding (4/6 benchmark candidates not indexed in MEDLINE) that empirically justified the Issue #22 multi-database plan. **SUPERSEDED 2026-06-10 by the EM pivot — retained for audit trail.** |
 | v2 — EM pivot (draft) | 2026-06-10 | Added Concept C (Emergency Department / triage / ESI / acuity / disposition terms) per the pivot to the original proposal scope (`memos/decision_log.md`). EM-narrowed string returns **234 hits (A+C, recommended)** or **213 hits (A+B+C)**. Identified a phrase-index drop affecting two prototype-explanation term variants (affects both v1 rev 3 and v2 identically). Pending: A+C vs A+B+C decision, new EM-specific recall benchmark, formal execution/export. |
+| v2 — final (A+B+C, date-extended) | 2026-06-10 | **A+B+C** chosen as the final structure (Concept B retained for consistency with the validated cross-domain design). Date range extended from a fixed 2015–2024 window to "2015/01/01 through search-execution date", based on a live E-utilities check showing exponential growth (213 hits 2015–2024 vs. 497 hits 2015–2026/06/10 — the most recent 18 months alone contain more candidate records than the prior decade); folds the planned Phase 3 "January 2025 onward" update into a single initial execution. Embase/IEEE/ACM translations re-derived with Concept C added and restructured to A+B+C (Issue #22). Pending: EM-specific recall benchmark, formal execution/export. |
