@@ -354,3 +354,60 @@ The 2026-06-09 entry's core methodological point — run the search close to sub
 **Defense if challenged:** "The 2025-2026 surge finding from 2026-06-09 (cross-domain string) recurs at EM-narrowed scale: the most recent 18 months contain more eligible-looking records (310) than the entire prior decade (213). Unlike the cross-domain case, the EM-narrowed string had not yet been executed, so extending its date range to 'now' is a first-execution design choice, not a costly re-pull — and it keeps the bulk of the most-recent, most regulation-relevant literature in the same screening process as the rest of the corpus, with only a small top-up search needed before submission."
 
 ---
+
+## 2026-06-11 — EM-specific recall benchmark validates A+B+C v2 FINAL string (6/8); one term-list gap documented, not remediated
+
+**Decision:** The EM-narrowed A+B+C v2 FINAL PubMed string (`docs/protocol/search_string_pubmed_v1.md`, 213 hits 2015-2024 / 497 hits 2015-2026/06/11) is **validated** against a new EM-specific recall benchmark and **remains unchanged**. Next Steps item 9 is complete.
+
+**Investigation:** The cross-domain benchmark used to validate the original Concept A/B string (Cao/Kunaprayoon/Ren, Tosun, Kumar, Gu — Revision note 3, 2026-06-07) does not transfer to the EM-narrowed scope (none of the four pass `inclusion_boundary.md` v2 Gate 1). `references/bib/foundational.bib` was checked and ruled out (general XAI-theory papers only). A new benchmark was assembled via an independent PubMed query using a deliberately *broader* term set than Concept A (bare `"feature importance"[tiab]`, `"explainable"[tiab]`, `"interpretable"[tiab]`, etc.) ANDed with EM/triage/disposition terms (653 hits); the top 30 were screened for clinical-XAI relevance, yielding 8 candidates checked against the live A+B+C idlist (497 PMIDs):
+
+| PMID | Retrieved? | Gate 1 (abstract-level) | Notes |
+|---|---|---|---|
+| 38708185 | Yes | Pass (acuity/triage scoring) | via "interpretable machine learning" |
+| 38102476 | Yes | Pass (risk stratification at triage) | via "SHAP" |
+| 39176941 | **No** | Pass (disposition outcome) | Concept A = 0 — "feature importance" only |
+| 40242564 | Yes | **Fail** (CT-scan-ordering decision) | correct retrieval, Gate-1 exclusion |
+| 37578440 | **No** | Pass (admission/disposition) | Concept A = 0 — "permutation feature importance" only |
+| 36634916 | Yes | Pass (admission prediction) | via "SHAP" — author-keyword (OT) field, not visible in abstract |
+| 39176843 | Yes | **Fail** (length-of-stay = operational) | correct retrieval, Gate-1 exclusion |
+| 40102847 | Yes | **Fail** (wait-time = operational) | correct retrieval, Gate-1 exclusion |
+
+**Recall: 6/8 (75%).** Per-concept diagnosis (Concept A/B/C tested individually AND'd with `[uid]`) confirmed both misses are isolated entirely to Concept A (B=1, C=1 for both) — root cause: Concept A has no bare "feature importance"[tiab] term (removed in Revision note 3, 2026-06-07, specifically for over-broadening — it inflated Concept A alone to 70,946 hits). Of the two misses, PMID 39176941 used "feature importance" for exploratory feature selection only (plausibly fails Gate 2/3 regardless); PMID 37578440 used "permutation feature importance" — a recognized model-agnostic feature-attribution technique, and the more plausible Gate-2 pass of the two, but unrecoverable by this string.
+
+A secondary finding: PMID 36634916 was retrieved despite no Concept A term appearing in its visible title/abstract — diagnosis traced this to `"SHAP"[tiab]` matching the MEDLINE "Other Term" (author-keyword) field (`OT - SHAP`), confirming PubMed's `[tiab]`/"Title/Abstract" search extends to author keywords. A third finding: 3/8 candidates (40242564, 39176843, 40102847) are correctly retrieved by A+B+C but fail Gate 1 of `inclusion_boundary.md` v2 (CT-scan-ordering and two operational/throughput models) — confirming the string is appropriately recall-oriented relative to the inclusion boundary, with screening doing the precision work as designed.
+
+**Rationale for not remediating the "feature importance" gap:** Adding a bare `"feature importance"[tiab]` term to Concept A would risk reproducing the exact over-broadening Revision note 3 removed it to avoid — "feature importance" is reported in the large majority of tabular-ML papers regardless of any XAI framing. Against a confirmed cost of 1-2 records out of an EM-narrowed corpus of 497, re-opening a string already finalized and live-verified (213/497 hits) for a precision risk of this magnitude is not justified.
+
+**Alternatives considered:**
+- Add `"feature importance"[tiab]` (or a narrower variant such as `"permutation feature importance"[tiab]`) back to Concept A. Rejected: even the narrower "permutation feature importance" phrasing risks non-trivial over-broadening (it is a standard reporting phrase in any ML paper using scikit-learn's `permutation_importance` or similar, regardless of XAI framing) for a benefit of at most 1 record in this benchmark; and the string is already FINAL with a live-verified hit count.
+- Treat the 2 misses as disqualifying and re-open the A+C vs. A+B+C / term-list decisions. Rejected: per-concept diagnosis shows the misses are isolated to a single, well-understood, previously-documented term-list trade-off (Known Limitations item 2, Revision note 3) — not a structural flaw in the A+B+C design.
+
+**Impact:** `docs/protocol/search_string_pubmed_v1.md` updated: new "EM-Specific Recall Benchmark (2026-06-11)" section (methodology, 8-candidate table, 4 findings, decision); new Known Limitations item 8 ("feature importance"/"permutation feature importance" gap, with citation-chase mitigation at full-text screening); Next Steps item 9 marked done; Version History updated (new "v2 — recall-benchmarked" row); status line updated. No changes to the search string itself, hit counts, or `data/screening/prisma_counts.csv`.
+
+**Defense if challenged:** "An independently-assembled 8-paper EM-XAI benchmark — using a deliberately broader candidate-finding query than the search string itself — shows 75% recall, with both misses traced via per-concept diagnosis to a single, previously-documented Concept A trade-off (the same 'feature importance' over-broadening that Revision note 3 removed on 2026-06-07 after it inflated Concept A alone to 70,946 hits). One of the two misses likely wouldn't pass Gate 2/3 regardless; the other is a single-record cost against a corpus of 497. The benchmark also surfaced a recall *strength* (author-keyword indexing under [tiab]) and confirmed the string's sensitivity-favouring design works as intended (3/8 candidates correctly retrieved despite failing the inclusion boundary's Gate 1). Re-opening a finalized, live-verified string for a 1-2 record gain is not warranted; the gap is documented and a citation-chase mitigation is specified for full-text screening."
+
+---
+
+## 2026-06-10 (addendum, logged 2026-06-11) — PubMed search formally executed (497 records)
+
+**Decision/Event:** The A+B+C v2 FINAL PubMed string was formally executed on 2026-06-10 with date range 2015/01/01–2026/06/10 (English). Returned **497 records**, exactly matching the live-verified design-time snapshot from the same date. Raw export saved as `data/searches/pubmed-explainabl-set.nbib`.
+
+**Impact:** `data/screening/prisma_counts.csv` PubMed Identification row updated from "DRAFT — not yet formally executed" to the formal count (497), pointing at the export file. `docs/protocol/search_string_pubmed_v1.md` status line, Full Combined String section, Date Range Decision note, Next Steps items 10–11, and Version History updated to record the execution.
+
+**Remaining for Next Steps item 10:** Embase, IEEE Xplore, and ACM Digital Library searches still need to be formally executed, using the same 2026/06/10 date-range upper bound for consistency, with `prisma_counts.csv` updated per database as each is completed.
+
+---
+
+## 2026-06-18 — IEEE Xplore search formally executed (161 records); 10-wildcard Command Search cap discovered and fixed
+
+**Decision/Event:** The A+B+C v2 IEEE Xplore string (`docs/protocol/search_string_ieee_v1.md`) was run against live Command Search on 2026-06-18 and rejected with the error "Limit the total number of wildcards to 10" — the original translation carried 22 wildcarded (`*`) terms (7 in Concept A, 12 in Concept B, 3 in Concept C), more than double IEEE Xplore's per-query cap.
+
+**Fix:** 16 of the 22 wildcarded terms have small, predictable suffix sets (2-3 word forms, e.g. `"explainable model*"` → `"explainable model" OR "explainable models"`) and were manually enumerated as explicit `OR` clauses — no recall loss, since the variant sets are exhaustively known. The remaining 6 — single-word stems with unpredictable/numerous suffix forms (`computer-aided diagnos*`, `computer aided diagnos*`, `radiolog*`, `patholog*`, `nurse*`, `hospital*`) — kept the wildcard, since manually enumerating every plausible form (e.g. radiology/radiologist/radiologists/radiological) would itself risk missing a variant. This reduced the query to 6 wildcards, under the cap.
+
+**Result:** the wildcard-limit-compliant string was run live 2026-06-18, date range 2015–2026/06/18, Command Search ("Full Text & Metadata" scope, Option 1) — **161 records**. Raw export saved as `data/searches/ieee_export_2026-06-18.csv`.
+
+**Impact:** `docs/protocol/search_string_ieee_v1.md` updated: new "Wildcard-Limit Fix (2026-06-18)" section with the corrected string and rationale; Known Limitations item 7 added (10-wildcard cap, also a risk for the untested Option 2); Next Steps items 1, 3, 4 marked done; Version History updated. `data/screening/prisma_counts.csv` IEEE Xplore Identification row updated (161, pointing at the raw export).
+
+**Remaining for Next Steps item 10 (PubMed protocol doc):** Embase and ACM Digital Library searches still need to be formally executed. Both translation docs (`search_string_embase_v1.md`, `search_string_acm_v1.md`) use the same wildcard-truncation pattern as the original IEEE draft — check each platform's wildcard/syntax limits before running, in case a similar fix is needed.
+
+---
