@@ -1,0 +1,32 @@
+{
+  "search_method": "OpenAlex API (https://api.openalex.org/works) -- substituted for ACM Digital Library's native Advanced Search UI after the bracket-nested field-query syntax documented in docs/protocol/search_string_acm_v1.md returned 0 results, including for single-term control queries (see memos/decision_log.md, 2026-06-22).",
+  "execution_date": "2026-06-22",
+  "filters_applied": {
+    "publisher_restriction": "primary_location.source.host_organization:P4310319798 (OpenAlex publisher ID for Association for Computing Machinery, confirmed via /publishers?search=... lookup; 166,548 total ACM works indexed)",
+    "language": "en",
+    "publication_year": "2015-2026",
+    "concept_fields": "title_and_abstract.search.exact (unstemmed, literal phrase + wildcard truncation), three OR-groups ANDed together (Concept A, Concept B, Concept C), using the same wildcard-fixed term lists as docs/protocol/search_string_acm_v1.md"
+  },
+  "request_url": "https://api.openalex.org/works?filter=primary_location.source.host_organization:P4310319798,language:en,publication_year:2015-2026,title_and_abstract.search.exact:%3Cconcept-A-OR-list%3E,title_and_abstract.search.exact:%3Cconcept-B-OR-list%3E,title_and_abstract.search.exact:%3Cconcept-C-OR-list%3E",
+  "diagnostic_breakdown": {
+    "concept_A_alone": 773,
+    "concept_C_alone": 32,
+    "concept_A_AND_concept_C": 1,
+    "concept_A_AND_concept_B_AND_concept_C": 1
+  },
+  "result_count": 1,
+  "results": [
+    {
+      "openalex_id": "https://openalex.org/W3184815793",
+      "doi": "https://doi.org/10.1145/3453166",
+      "title": "Triage of 2D Mammographic Images Using Multi-view Multi-task Convolutional Neural Networks",
+      "publication_year": 2021,
+      "screening_note": "Matched on 'Triage' (Concept C) + interpretability/XAI terms (Concept A) + radiology/diagnostic terms (Concept B). This is an image-triage/prioritization paper in a radiology/mammography screening workflow, not an ED patient-encounter disposition decision -- likely to fail Gate 1 of the EM inclusion boundary (docs/protocol/inclusion_boundary.md v2) at full-text screening. Retained here as a search-string hit for PRISMA Identification accounting regardless of its expected screening outcome."
+    }
+  ],
+  "coverage_check": {
+    "total_ACM_works_2015_2026_in_openalex": 64974,
+    "ACM_works_with_abstract_present_2015_2026": 63606,
+    "abstract_coverage_pct": 97.9
+  }
+}

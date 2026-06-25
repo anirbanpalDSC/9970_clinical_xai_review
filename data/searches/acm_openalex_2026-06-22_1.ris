@@ -1,0 +1,16 @@
+TY  - JOUR
+TI  - Triage of 2D Mammographic Images Using Multi-view Multi-task Convolutional Neural Networks
+AU  - Kyono, Trent
+AU  - Gilbert, Fiona J.
+AU  - van der Schaar, Mihaela
+T2  - ACM Transactions on Computing for Healthcare
+PY  - 2021
+VL  - 2
+IS  - 3
+SP  - 1
+EP  - 24
+DO  - 10.1145/3453166
+AB  - With an aging and growing population, the number of women receiving mammograms is increasing. However, existing techniques for autonomous diagnosis do not surpass a well-trained radiologist. Therefore, to reduce the number of mammograms that require examination by a radiologist, subject to preserving the diagnostic accuracy observed in current clinical practice, we develop Man and Machine Mammography Oracle (MAMMO)-a clinical decision support system capable of determining whether its predicted diagnoses require further radiologist examination. We first introduce a novel multi-view convolutional neural network (CNN) trained using multi-task learning (MTL) to diagnose mammograms and predict the radiological assessments known to be associated with cancer. MTL improves diagnostic performance and triage efficiency while providing an additional layer of model interpretability. Furthermore, we introduce a novel triage network that takes as input the radiological assessment and diagnostic predictions of the multi-view CNN and determines whether the radiologist or CNN will most likely provide the correct diagnosis. Results obtained on a dataset of over 7,000 patients show that MAMMO reduced the number of diagnostic mammograms requiring radiologist reading by 42.8% while improving the overall diagnostic accuracy in comparison to readings done by radiologists alone.
+PB  - Association for Computing Machinery
+N1  - Identified via OpenAlex API (methodology substitution for ACM Digital Library's native search -- see docs/protocol/search_string_acm_v1.md and memos/decision_log.md, 2026-06-22). Search-string hit for Concepts A+B+C (EM-narrowed clinical XAI scoping review); likely to fail Gate 1 of the EM inclusion boundary at full-text screening (image-triage in a radiology workflow, not an ED patient-encounter disposition decision).
+ER  -

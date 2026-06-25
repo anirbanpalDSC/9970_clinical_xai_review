@@ -1,7 +1,7 @@
 # Embase Search String v1 (rev 2 — EM-narrowed) — Clinical XAI Scoping Review (9970)
 
 **Issue:** #22
-**Status:** DRAFT / UNTESTED — v2, EM-narrowed (A+B+C). Translated from `search_string_pubmed_v1.md` v2 FINAL (A+B+C: 213 hits 2015-2024 / 497 hits 2015-2026/06/10, live-verified via E-utilities). Supersedes the original v1 cross-domain draft (A+B only, translated from the now-superseded 9,672-hit PubMed cross-domain string). Not yet run against live Embase — hit counts, Emtree term existence, and date/language filter syntax all require live verification.
+**Status:** **DROPPED FROM PRIMARY SEARCH (2026-06-22) — no institutional access.** UNO (reviewer's institution) does not subscribe to Embase; UNMC subscribes but the reviewer has no authorized access path. Primary database scope reduced from 4 to 3 (PubMed, IEEE Xplore, ACM Digital Library) — see `memos/decision_log.md` (2026-06-22) and `docs/osf/preregistration_draft.md` (Draft v2.2). This document and string are retained for the audit trail and in case access becomes available later, but will not be executed under the current plan. Everything below reflects the v2, EM-narrowed (A+B+C) string with the wildcard-limit pre-fix applied (2026-06-18, see Known Limitations item 7), translated from `search_string_pubmed_v1.md` v2 FINAL (A+B+C: 213 hits 2015-2024 / 497 hits 2015-2026/06/10, live-verified via E-utilities). Never run against live Embase.
 **Database:** Embase (Embase.com / OvidSP — syntax below targets **Embase.com**; flag platform-specific differences if your institution provides Ovid Embase instead)
 **Date range filter (target):** 2015/01/01 through search-execution date (rolling "to present" window — see `memos/decision_log.md`, 2026-06-10. PubMed reference snapshot taken 2026-06-10: A+B+C = 497 hits)
 **Language filter (target):** English
@@ -27,17 +27,19 @@ Concept A and B retain the same translation choices and caveats as the original 
 ```
 ('explainable artificial intelligence':ti,ab,kw OR 'explainable AI':ti,ab,kw OR 'XAI':ti,ab,kw
 OR 'interpretable machine learning':ti,ab,kw OR 'interpretability':ti,ab,kw OR 'model interpretability':ti,ab,kw
-OR 'explainability':ti,ab,kw OR 'explainable model*':ti,ab,kw
-OR 'SHAP':ti,ab,kw OR 'Shapley additive explanation*':ti,ab,kw OR 'Shapley value*':ti,ab,kw
+OR 'explainability':ti,ab,kw OR 'explainable model':ti,ab,kw OR 'explainable models':ti,ab,kw
+OR 'SHAP':ti,ab,kw OR 'Shapley additive explanation':ti,ab,kw OR 'Shapley additive explanations':ti,ab,kw OR 'Shapley value':ti,ab,kw OR 'Shapley values':ti,ab,kw
 OR 'LIME':ti,ab,kw OR 'local interpretable model-agnostic':ti,ab,kw
-OR 'Grad-CAM':ti,ab,kw OR 'gradient-weighted class activation':ti,ab,kw OR 'class activation map*':ti,ab,kw
-OR 'counterfactual explanation*':ti,ab,kw
+OR 'Grad-CAM':ti,ab,kw OR 'gradient-weighted class activation':ti,ab,kw OR 'class activation map':ti,ab,kw OR 'class activation maps':ti,ab,kw OR 'class activation mapping':ti,ab,kw
+OR 'counterfactual explanation':ti,ab,kw OR 'counterfactual explanations':ti,ab,kw
 OR 'feature attribution':ti,ab,kw
 OR 'rule extraction':ti,ab,kw
-OR 'prototype-based explanation':ti,ab,kw OR 'prototype explanation*':ti,ab,kw OR 'case-based explanation*':ti,ab,kw
+OR 'prototype-based explanation':ti,ab,kw OR 'prototype explanation':ti,ab,kw OR 'prototype explanations':ti,ab,kw OR 'case-based explanation':ti,ab,kw OR 'case-based explanations':ti,ab,kw
 OR 'interpretable AI':ti,ab,kw OR 'interpretable artificial intelligence':ti,ab,kw
 OR 'explainable deep learning':ti,ab,kw)
 ```
+
+**Wildcard-limit pre-fix (2026-06-18):** all 7 wildcarded terms in this block (`explainable model*`, `Shapley additive explanation*`, `Shapley value*`, `class activation map*`, `counterfactual explanation*`, `prototype explanation*`, `case-based explanation*`) had small, predictable suffix sets (2-3 word forms) and were enumerated explicitly as a precaution — see Known Limitations item 7 below.
 
 Translation notes carried over unchanged from v1: double quotes -> single quotes (`'...'`), `[tiab]` -> `:ti,ab,kw`, `*` truncation unchanged, optional unverified Emtree candidate `'explainable artificial intelligence'/exp`. **Do not add `'machine learning'/exp` or `'artificial intelligence'/exp`** — see v1 history for the over-broadening (70,946 hits) this caused in PubMed Concept A.
 
@@ -46,16 +48,18 @@ Translation notes carried over unchanged from v1: double quotes -> single quotes
 ## Concept B — Clinical / Medical Context (unchanged from v1)
 
 ```
-('clinical decision support':ti,ab,kw OR 'clinical decision support system*':ti,ab,kw OR 'CDSS':ti,ab,kw
+('clinical decision support':ti,ab,kw OR 'clinical decision support system':ti,ab,kw OR 'clinical decision support systems':ti,ab,kw OR 'CDSS':ti,ab,kw
 OR 'computer-aided diagnos*':ti,ab,kw OR 'computer aided diagnos*':ti,ab,kw
-OR 'diagnostic algorithm*':ti,ab,kw OR 'predictive model*':ti,ab,kw OR 'risk prediction model*':ti,ab,kw
-OR 'clinical':ti,ab,kw OR 'clinician*':ti,ab,kw OR 'physician*':ti,ab,kw OR 'radiolog*':ti,ab,kw
+OR 'diagnostic algorithm':ti,ab,kw OR 'diagnostic algorithms':ti,ab,kw OR 'predictive model':ti,ab,kw OR 'predictive models':ti,ab,kw OR 'risk prediction model':ti,ab,kw OR 'risk prediction models':ti,ab,kw
+OR 'clinical':ti,ab,kw OR 'clinician':ti,ab,kw OR 'clinicians':ti,ab,kw OR 'physician':ti,ab,kw OR 'physicians':ti,ab,kw OR 'radiolog*':ti,ab,kw
 OR 'patholog*':ti,ab,kw OR 'nurse*':ti,ab,kw OR 'diagnosis':ti,ab,kw OR 'diagnostic':ti,ab,kw
 OR 'prognosis':ti,ab,kw OR 'treatment':ti,ab,kw OR 'patient care':ti,ab,kw OR 'hospital*':ti,ab,kw
 OR 'clinical decision support system'/exp OR 'doctor'/exp
 OR 'decision making'/exp OR 'computer assisted diagnosis'/exp
 OR 'patient care'/exp)
 ```
+
+**Wildcard-limit pre-fix (2026-06-18):** of the 12 wildcarded terms originally in this block, 6 with small/predictable suffix sets (`clinical decision support system*`, `diagnostic algorithm*`, `predictive model*`, `risk prediction model*`, `clinician*`, `physician*`) were enumerated explicitly. The remaining 6 — single-word stems with unpredictable/numerous suffix forms (`computer-aided diagnos*`, `computer aided diagnos*`, `radiolog*`, `patholog*`, `nurse*`, `hospital*`) — keep the wildcard, since manually enumerating every plausible form would itself risk missing a variant. See Known Limitations item 7 below.
 
 MeSH -> Emtree mapping table (unchanged from v1, still unverified — see Next Steps):
 
@@ -74,11 +78,13 @@ MeSH -> Emtree mapping table (unchanged from v1, still unverified — see Next S
 ```
 ('emergency department':ti,ab,kw OR 'emergency room':ti,ab,kw OR 'emergency medicine':ti,ab,kw
 OR 'emergency severity index':ti,ab,kw OR 'ESI':ti,ab,kw OR 'Triage':ti,ab,kw
-OR 'acuity scor*':ti,ab,kw OR 'acuity assessment':ti,ab,kw OR 'acuity level*':ti,ab,kw OR 'acuity classification':ti,ab,kw
-OR 'disposition decision*':ti,ab,kw OR 'ED disposition':ti,ab,kw OR 'discharge disposition':ti,ab,kw
+OR 'acuity score':ti,ab,kw OR 'acuity scores':ti,ab,kw OR 'acuity scoring':ti,ab,kw OR 'acuity assessment':ti,ab,kw OR 'acuity level':ti,ab,kw OR 'acuity levels':ti,ab,kw OR 'acuity classification':ti,ab,kw
+OR 'disposition decision':ti,ab,kw OR 'disposition decisions':ti,ab,kw OR 'ED disposition':ti,ab,kw OR 'discharge disposition':ti,ab,kw
 OR 'patient intake':ti,ab,kw
 OR 'hospital emergency service'/exp OR 'triage'/exp)
 ```
+
+**Wildcard-limit pre-fix (2026-06-18):** all 3 wildcarded terms in this block (`acuity scor*`, `acuity level*`, `disposition decision*`) had small, predictable suffix sets and were enumerated explicitly. See Known Limitations item 7 below.
 
 **Translation notes:**
 - Free-text terms translated with the same `[tiab]` -> `:ti,ab,kw` convention as Concepts A and B.
@@ -100,14 +106,16 @@ OR 'hospital emergency service'/exp OR 'triage'/exp)
 ```
 
 ```
-('explainable artificial intelligence':ti,ab,kw OR 'explainable AI':ti,ab,kw OR 'XAI':ti,ab,kw OR 'interpretable machine learning':ti,ab,kw OR 'interpretability':ti,ab,kw OR 'model interpretability':ti,ab,kw OR 'explainability':ti,ab,kw OR 'explainable model*':ti,ab,kw OR 'SHAP':ti,ab,kw OR 'Shapley additive explanation*':ti,ab,kw OR 'Shapley value*':ti,ab,kw OR 'LIME':ti,ab,kw OR 'local interpretable model-agnostic':ti,ab,kw OR 'Grad-CAM':ti,ab,kw OR 'gradient-weighted class activation':ti,ab,kw OR 'class activation map*':ti,ab,kw OR 'counterfactual explanation*':ti,ab,kw OR 'feature attribution':ti,ab,kw OR 'rule extraction':ti,ab,kw OR 'prototype-based explanation':ti,ab,kw OR 'prototype explanation*':ti,ab,kw OR 'case-based explanation*':ti,ab,kw OR 'interpretable AI':ti,ab,kw OR 'interpretable artificial intelligence':ti,ab,kw OR 'explainable deep learning':ti,ab,kw)
+('explainable artificial intelligence':ti,ab,kw OR 'explainable AI':ti,ab,kw OR 'XAI':ti,ab,kw OR 'interpretable machine learning':ti,ab,kw OR 'interpretability':ti,ab,kw OR 'model interpretability':ti,ab,kw OR 'explainability':ti,ab,kw OR 'explainable model':ti,ab,kw OR 'explainable models':ti,ab,kw OR 'SHAP':ti,ab,kw OR 'Shapley additive explanation':ti,ab,kw OR 'Shapley additive explanations':ti,ab,kw OR 'Shapley value':ti,ab,kw OR 'Shapley values':ti,ab,kw OR 'LIME':ti,ab,kw OR 'local interpretable model-agnostic':ti,ab,kw OR 'Grad-CAM':ti,ab,kw OR 'gradient-weighted class activation':ti,ab,kw OR 'class activation map':ti,ab,kw OR 'class activation maps':ti,ab,kw OR 'class activation mapping':ti,ab,kw OR 'counterfactual explanation':ti,ab,kw OR 'counterfactual explanations':ti,ab,kw OR 'feature attribution':ti,ab,kw OR 'rule extraction':ti,ab,kw OR 'prototype-based explanation':ti,ab,kw OR 'prototype explanation':ti,ab,kw OR 'prototype explanations':ti,ab,kw OR 'case-based explanation':ti,ab,kw OR 'case-based explanations':ti,ab,kw OR 'interpretable AI':ti,ab,kw OR 'interpretable artificial intelligence':ti,ab,kw OR 'explainable deep learning':ti,ab,kw)
 AND
-('clinical decision support':ti,ab,kw OR 'clinical decision support system*':ti,ab,kw OR 'CDSS':ti,ab,kw OR 'computer-aided diagnos*':ti,ab,kw OR 'computer aided diagnos*':ti,ab,kw OR 'diagnostic algorithm*':ti,ab,kw OR 'predictive model*':ti,ab,kw OR 'risk prediction model*':ti,ab,kw OR 'clinical':ti,ab,kw OR 'clinician*':ti,ab,kw OR 'physician*':ti,ab,kw OR 'radiolog*':ti,ab,kw OR 'patholog*':ti,ab,kw OR 'nurse*':ti,ab,kw OR 'diagnosis':ti,ab,kw OR 'diagnostic':ti,ab,kw OR 'prognosis':ti,ab,kw OR 'treatment':ti,ab,kw OR 'patient care':ti,ab,kw OR 'hospital*':ti,ab,kw OR 'clinical decision support system'/exp OR 'doctor'/exp OR 'decision making'/exp OR 'computer assisted diagnosis'/exp OR 'patient care'/exp)
+('clinical decision support':ti,ab,kw OR 'clinical decision support system':ti,ab,kw OR 'clinical decision support systems':ti,ab,kw OR 'CDSS':ti,ab,kw OR 'computer-aided diagnos*':ti,ab,kw OR 'computer aided diagnos*':ti,ab,kw OR 'diagnostic algorithm':ti,ab,kw OR 'diagnostic algorithms':ti,ab,kw OR 'predictive model':ti,ab,kw OR 'predictive models':ti,ab,kw OR 'risk prediction model':ti,ab,kw OR 'risk prediction models':ti,ab,kw OR 'clinical':ti,ab,kw OR 'clinician':ti,ab,kw OR 'clinicians':ti,ab,kw OR 'physician':ti,ab,kw OR 'physicians':ti,ab,kw OR 'radiolog*':ti,ab,kw OR 'patholog*':ti,ab,kw OR 'nurse*':ti,ab,kw OR 'diagnosis':ti,ab,kw OR 'diagnostic':ti,ab,kw OR 'prognosis':ti,ab,kw OR 'treatment':ti,ab,kw OR 'patient care':ti,ab,kw OR 'hospital*':ti,ab,kw OR 'clinical decision support system'/exp OR 'doctor'/exp OR 'decision making'/exp OR 'computer assisted diagnosis'/exp OR 'patient care'/exp)
 AND
-('emergency department':ti,ab,kw OR 'emergency room':ti,ab,kw OR 'emergency medicine':ti,ab,kw OR 'emergency severity index':ti,ab,kw OR 'ESI':ti,ab,kw OR 'Triage':ti,ab,kw OR 'acuity scor*':ti,ab,kw OR 'acuity assessment':ti,ab,kw OR 'acuity level*':ti,ab,kw OR 'acuity classification':ti,ab,kw OR 'disposition decision*':ti,ab,kw OR 'ED disposition':ti,ab,kw OR 'discharge disposition':ti,ab,kw OR 'patient intake':ti,ab,kw OR 'hospital emergency service'/exp OR 'triage'/exp)
+('emergency department':ti,ab,kw OR 'emergency room':ti,ab,kw OR 'emergency medicine':ti,ab,kw OR 'emergency severity index':ti,ab,kw OR 'ESI':ti,ab,kw OR 'Triage':ti,ab,kw OR 'acuity score':ti,ab,kw OR 'acuity scores':ti,ab,kw OR 'acuity scoring':ti,ab,kw OR 'acuity assessment':ti,ab,kw OR 'acuity level':ti,ab,kw OR 'acuity levels':ti,ab,kw OR 'acuity classification':ti,ab,kw OR 'disposition decision':ti,ab,kw OR 'disposition decisions':ti,ab,kw OR 'ED disposition':ti,ab,kw OR 'discharge disposition':ti,ab,kw OR 'patient intake':ti,ab,kw OR 'hospital emergency service'/exp OR 'triage'/exp)
 AND [2015-<SEARCH-EXECUTION-DATE>]/py
 AND [english]/lim
 ```
+
+Wildcard count: 0 (Concept A) + 6 (Concept B: `computer-aided diagnos*`, `computer aided diagnos*`, `radiolog*`, `patholog*`, `nurse*`, `hospital*`) + 0 (Concept C) = 6 total, pre-applied to stay under any wildcard cap Embase.com may enforce (discovered on IEEE Xplore — 10-wildcard limit on Command Search; Embase's limit, if any, is unconfirmed — see Known Limitations item 7).
 
 **Date range note:** `<SEARCH-EXECUTION-DATE>` is a placeholder — substitute the actual date the search is run (e.g., `[2015-2026]/py` if Embase's `/py` syntax only supports year granularity; check whether a finer-grained date-of-publication range is available via the Limits sidebar for the partial current year). This rolling-to-present range was decided 2026-06-10 (`memos/decision_log.md`) — re-run at the actual execution date and record the count obtained then, not the 2026-06-10 PubMed reference snapshot (497).
 
@@ -123,13 +131,14 @@ AND [english]/lim
 4. **Embase indexes conference proceedings and abstracts more heavily than MEDLINE** — expect a higher proportion of conference-abstract-only records, which may need a publication-type flag at screening (E4 in `docs/protocol/screening_criteria.md`).
 5. **No EM-specific retrievability benchmark exists yet** (see Design Rationale) — the two MEDLINE-indexed benchmark papers carried over from v1 were validated against the cross-domain A+B string, not A+B+C.
 6. **Rolling date range** — `/py` is a publication-year filter; if Embase requires full-year granularity (i.e., cannot express "through 2026-06-10" and only "through 2026"), the live-executed count will include all of 2026 to date, including ahead-of-print 2026 records that could later be reclassified — consistent with the Epub-ahead-of-print caveat discussed for the PubMed string in `memos/decision_log.md` (2026-06-10 entry).
+7. **Wildcard cap unconfirmed for Embase.com (pre-fix applied 2026-06-18)** — IEEE Xplore's Command Search rejected the equivalent translation at 22 wildcards (limit: 10; see `docs/protocol/search_string_ieee_v1.md`). As a precaution, this string was pre-emptively reduced from 22 to 6 wildcarded terms (16 enumerated as explicit word-form `OR` clauses) before its first live run, in case Embase.com enforces a similar limit. If the live run still errors on wildcard count, the 6 remaining terms (`computer-aided diagnos*`, `computer aided diagnos*`, `radiolog*`, `patholog*`, `nurse*`, `hospital*`) are the ones to further reduce.
 
 ---
 
 ## Next Steps
 
 1. Confirm Embase.com vs. Ovid Embase platform for institutional access.
-2. Run the Full Combined String (A+B+C, with `<SEARCH-EXECUTION-DATE>` substituted for the actual execution date) live; record the raw hit count here and in `data/screening/prisma_counts.csv` (row "Records from database: Embase").
+2. Run the Full Combined String (A+B+C, with `<SEARCH-EXECUTION-DATE>` substituted for the actual execution date) live; record the raw hit count here and in `data/screening/prisma_counts.csv` (row "Records from database: Embase"). Watch for a wildcard-count error per Known Limitations item 7.
 3. Resolve the 7 Emtree candidates (5 from Concept B, 2 from Concept C) via Map Term/thesaurus browser; update both mapping tables with confirmed labels and re-run if any candidate is missing or substantially changes the count.
 4. Compare the resulting hit count against the PubMed A+B+C reference (213 @ 2015-2024 / 497 @ 2015-2026/06/10) — large deviations in either direction warrant the precision checks in Known Limitations items 3 and 6.
 5. Once stable, log the final string, hit count, and any deviations from this draft in `memos/decision_log.md`.
@@ -142,3 +151,4 @@ AND [english]/lim
 |---------|------|---------|
 | v1 draft (UNTESTED) | 2026-06-09 | Initial field-syntax translation from PubMed cross-domain v1 rev 3 (9,672 hits, A+B only). Concept A and B free-text terms converted to `:ti,ab,kw`; 5 MeSH terms mapped to unverified Emtree candidates. Not yet run live. |
 | v2 draft (UNTESTED, EM-narrowed) | 2026-06-10 | EM pivot: Concept C (ED/triage/ESI/acuity/disposition, free text + 2 Emtree candidates) added; restructured to A+B+C; date range extended from fixed 2015-2024 to rolling "2015 through search-execution date" per `memos/decision_log.md` (2026-06-10). Translated from PubMed v2 FINAL (A+B+C: 213 hits @ 2015-2024 / 497 hits @ 2015-2026/06/10). Not yet run live. |
+| v2 — wildcard-limit pre-fix (UNTESTED) | 2026-06-18 | Pre-emptively applied the same wildcard reduction discovered on IEEE Xplore (10-wildcard cap): 22 wildcarded terms reduced to 6 by enumerating 16 predictable word-form variants explicitly, keeping the wildcard only on 6 single-word stems with unpredictable suffixes. Not yet run live; Embase.com's actual wildcard limit (if any) remains unconfirmed. |

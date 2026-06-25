@@ -411,3 +411,55 @@ A secondary finding: PMID 36634916 was retrieved despite no Concept A term appea
 **Remaining for Next Steps item 10 (PubMed protocol doc):** Embase and ACM Digital Library searches still need to be formally executed. Both translation docs (`search_string_embase_v1.md`, `search_string_acm_v1.md`) use the same wildcard-truncation pattern as the original IEEE draft — check each platform's wildcard/syntax limits before running, in case a similar fix is needed.
 
 ---
+
+## 2026-06-18 — Wildcard-limit fix pre-applied to Embase and ACM Digital Library strings (neither yet run live)
+
+**Decision:** Rather than wait for Embase.com and ACM DL to reject the original 22-wildcard translations the way IEEE Xplore did (entry immediately above), the same reduction was pre-emptively applied to both drafts before their first live run: 16 of 22 wildcarded terms enumerated as explicit word-form `OR` clauses, retaining the wildcard only on the 6 single-word stems with unpredictable suffix forms (`computer-aided diagnos*`, `computer aided diagnos*`, `radiolog*`, `patholog*`, `nurse*`, `hospital*`).
+
+**Embase-specific note:** the fix applies cleanly — each concept block is a single `:ti,ab,kw`-tagged OR-list, so the wildcard count is 6 in the full combined string, same as the corrected IEEE string. Embase.com's actual wildcard limit (if any) remains unconfirmed.
+
+**ACM-specific note — multiplier risk identified:** ACM's combined string nests each concept block inside three field brackets (`[Title: (...)] OR [Abstract: (...)] OR [Keyword: (...)]`), so Concept B's 6 retained wildcards are repeated once per field — **18 wildcard occurrences in the full combined string, not 6**. If ACM DL enforces a cap counted across the whole query (rather than per bracket), this string could still be rejected. `docs/protocol/search_string_acm_v1.md` Next Steps now recommend building the query incrementally (one field/concept at a time via "View Query Syntax") rather than pasting the full combined string on the first attempt, and dropping `nurse*`/`hospital*` to bare non-wildcard forms first if a wildcard error appears (cheapest precision loss of the 6).
+
+---
+
+## 2026-06-22 — ACM Digital Library execution paused (0-result syntax failure); proceeding to Embase
+
+**Decision/Event:** Attempted to run the wildcard-fixed ACM string live at dl.acm.org/search/advanced — the full bracket-nested combined string returned **0 results**. Diagnosed via minimal fragments: `[Title: "machine learning"]` (single bracketed term, no OR) and `[Title: "machine learning"] OR [Title: "deep learning"]` (OR across two brackets) both *also* returned 0, despite "machine learning" being a near-certain high-volume ACM title term. This rules out a translation/term problem and points to either (a) the hand-typed bracket syntax not being valid raw input for that search box at all (it may be a UI-only display format for queries built through the Advanced Search form, not literal paste-able syntax), or (b) a more basic access/field-name issue. Recommended next diagnostic (not yet run): build a single-field/single-term search through the Advanced Search **form** (dropdown + text box, not the raw query box) to get ACM to generate its own correct syntax, rather than continuing to guess.
+
+**Decision:** Pause ACM execution rather than continue guessing syntax variants. **This is a deferral, not a drop** — ACM is one of the 4 primary databases named in the OSF pre-registration (`docs/osf/preregistration_draft.md` Section 4: PubMed/Embase/IEEE/ACM) and is flagged in its own protocol doc as the most important of the four for recall validation (Kumar et al./Gu et al. benchmarks) — dropping it would require amending the registration. Proceeding to execute Embase next (PubMed and IEEE are already done) while the ACM syntax issue remains open.
+
+**Impact:** No file changes yet to `search_string_acm_v1.md` Status line (still DRAFT/UNTESTED) — leaving it as-is since nothing about the string's content changed, only the open question of correct platform syntax. `prisma_counts.csv` ACM row remains blank. Revisit ACM once Embase is executed and logged.
+
+---
+
+## 2026-06-22 — Embase dropped from primary search: no institutional access
+
+**Decision/Event:** Before executing the Embase string, confirmed institutional access. UNO (the reviewer's home institution) does not subscribe to Embase. UNMC (University of Nebraska Medical Center) does, but the reviewer is a UNO student with no enrollment, affiliation, joint program, or other authorized path to UNMC's license, and no librarian-mediated/interlibrary search route was available within the Phase 1 timeline. Considered and rejected two alternatives: (a) substituting an accessible database UNO does subscribe to (e.g. Scopus, Web of Science) in Embase's slot — rejected for now in favor of (b) simply dropping to 3 primary databases and documenting the gap, rather than introducing a new untranslated/unvalidated search string under time pressure.
+
+**Decision:** Reduce primary database scope from 4 to **3: PubMed/MEDLINE, IEEE Xplore, ACM Digital Library**. Embase is logged as a documented protocol deviation, not a silent drop — to be reported as a limitation in the manuscript's methods/limitations section (loss of Emtree-indexed and conference-abstract-heavy coverage relative to MEDLINE/IEEE/ACM).
+
+**Impact:** `docs/osf/preregistration_draft.md` Section 4 updated (deviation note + new "Draft v2.2" Version History row); `docs/protocol/search_string_embase_v1.md` status line updated to reflect the string is retained for the audit trail but will not be executed. `data/screening/prisma_counts.csv` Embase Identification row updated from blank to explicitly "N/A — dropped" with the access-constraint reason, rather than left blank/ambiguous.
+
+**Remaining:** ACM Digital Library execution still open (syntax issue, see entry above). Once resolved, primary search Identification will be complete across the 3 databases (PubMed: 497, IEEE: 161, ACM: pending).
+
+---
+
+## 2026-06-22 — ACM Digital Library executed via OpenAlex API (methodology substitution; 1 record)
+
+**Decision/Event:** Continued diagnosing the 0-result failure of ACM's native Advanced Search bracket syntax (entry above) with two minimal control-term fragments: `[Title: "machine learning"]` (single bracketed term) and `[Title: "machine learning"] OR [Title: "deep learning"]` (OR across two brackets). **Both returned 0 results**, despite "machine learning" being a near-certain high-volume ACM title term. This ruled out a translation/term-list problem and pointed to either (a) the bracket notation being a UI-only display format for queries built through ACM's form-based Advanced Search builder, not literal paste-able syntax, or (b) a more basic access issue. After 3 failed attempts, further guessing at ACM's native syntax was abandoned.
+
+**Substitution:** ACM Digital Library has no official public search API (unlike PubMed's E-utilities or IEEE Xplore's Metadata API). Used the **OpenAlex API** (api.openalex.org) instead — a free, public scholarly index covering ACM's catalog — restricted to ACM as publisher via its OpenAlex ID (`P4310319798`, confirmed via the `/publishers` lookup endpoint, not guessed). This is a different system than ACM's own search engine (OpenAlex indexes metadata/abstracts via Crossref-deposited data), so it is logged as a documented methodology substitution rather than presented as equivalent to the originally planned native search.
+
+**Verification before trusting the result:** confirmed boolean OR (pipe-separated), AND-across-concepts, wildcard truncation (via the unstemmed `.search.exact` field), year-range, and language filters each work correctly via small live test queries before assembling the full A+B+C string. Checked abstract coverage for the searched corpus: 63,606/64,974 (97.9%) of ACM works (2015-2026) have an indexed abstract — low but non-zero recall risk from the ~2% without one.
+
+**Result:** **1 record** (DOI 10.1145/3453166, "Triage of 2D Mammographic Images Using Multi-view Multi-task Convolutional Neural Networks," 2021), using the same wildcard-fixed term lists from `docs/protocol/search_string_acm_v1.md`, 2015-2026, English. Diagnostic breakdown: Concept A alone (any ACM paper) = 773; Concept C alone = 32; A+C = 1; A+B+C = 1 — Concept C (EM-specific terms) is the binding constraint, not Concept B, consistent with the protocol doc's own prediction that ACM's CS/HCI-heavy corpus might yield "a plausible and informative null result" once EM-narrowed. The single hit is a radiology/mammography image-triage paper, not an ED patient-disposition paper — very likely to fail Gate 1 of the EM inclusion boundary at full-text screening, meaning ACM's practical contribution to the final included set may be zero even though 1 record counts toward PRISMA Identification.
+
+**Impact:** `docs/protocol/search_string_acm_v1.md` updated with a full "Methodology Substitution (2026-06-22)" section (diagnostic fragments, OpenAlex query, verification steps, result, diagnostic breakdown), status line, Next Steps, and Version History. `docs/osf/preregistration_draft.md` Section 4 and Version History updated (Draft v2.2) to log this as a second documented protocol deviation alongside the Embase drop. `data/screening/prisma_counts.csv` ACM row updated to 1, pointing at the raw export `data/searches/acm_openalex_2026-06-22_1.json`.
+
+**Primary search Identification is now complete across all 3 in-scope databases: PubMed (497), IEEE Xplore (161), ACM Digital Library (1) = 659 records before deduplication.** Embase remains formally out of scope (no institutional access). Next: deduplication in Rayyan, then title/abstract screening.
+
+---
+
+**Impact:** `docs/protocol/search_string_embase_v1.md` and `docs/protocol/search_string_acm_v1.md` updated in parallel — both concept blocks (A/B/C), Full Combined String sections, status lines, Known Limitations (new item: Embase #7, ACM #8), Next Steps, and Version History. Neither string has been run live yet; both remain DRAFT/UNTESTED pending the platform-confirmation and execution steps already listed in each doc's Next Steps.
+
+---
