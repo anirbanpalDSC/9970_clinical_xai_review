@@ -460,6 +460,74 @@ A secondary finding: PMID 36634916 was retrieved despite no Concept A term appea
 
 ---
 
+## 2026-06-26 — Rayyan import format fix; deduplication run (659 -> 650); stale retraction-QC count flagged
+
+**Format fix:** Rayyan's import does not accept CSV. `data/searches/ieee_export_2026-06-18.csv` (161 records) was converted to RIS (`ieee_export_2026-06-18.ris`) via a small Node script (RFC4180-aware CSV parser; maps Document Title/Authors/Publication Title/Abstract/DOI/Author Keywords etc. to standard RIS tags). Verified 1:1 record conversion (161 `TY`/`ER` pairs in, 161 records out) before upload. The original CSV is retained in `data/searches/` for the audit trail; the `.ris` file is what was actually imported into Rayyan.
+
+**Import mistake caught and corrected:** first Rayyan import reported 9,834 articles, not the expected 659. Diagnosed via arithmetic: 9,672 + 161 + 1 = 9,834 — the superseded cross-domain PubMed export (`pubmed_2026-06-07_v1-rev3_9672.nbib`) had been uploaded instead of the correct EM-narrowed one (`pubmed-explainabl-set.nbib`, 497 records), the two files having similar names in the same folder. The bad batch was deleted and re-uploaded with the correct file; total confirmed at 659 before dedup.
+
+**Deduplication:** run in Rayyan 2026-06-26 across the merged `source:pubmed` (497) + `source:ieee` (161) + `source:acm` (1) corpus. **659 -> 650 records (9 duplicates merged)**, with multi-source labels preserved on surviving merged records per `docs/protocol/supplementary_search_plan.md`.
+
+**Stale data caught:** `data/screening/prisma_counts.csv`'s existing "Retracted publications removed (pre-screening QC)" row (11) was computed 2026-06-08 against the now-superseded 9,672-record cross-domain export — it does not apply to the current 497/650-record EM-narrowed corpus and must not be subtracted from 650. Flagged in `prisma_counts.csv` as needing re-verification rather than silently reusing or silently dropping the row.
+
+**Impact:** `data/screening/prisma_counts.csv` updated: Total records identified (659), Duplicates removed before screening (9), Records after deduplication (650, pending the retraction-QC re-check). Retraction QC row marked stale/needs re-verification rather than given a number.
+
+**Next:** re-run retracted-publication QC against the current 650-record corpus (same MEDLINE RIN/PT-Retracted-Publication method as the 2026-06-08 check, applied to the right corpus this time), then begin title/abstract screening per `docs/protocol/screening_criteria.md` and `docs/protocol/inclusion_boundary.md` v2.
+
+---
+
+## 2026-06-26 (same day) — Retraction QC re-run on current corpus: 0 retracted records (corrects stale 11)
+
+**Decision/Event:** Re-ran the retracted-publication pre-screening QC against `data/searches/pubmed-explainabl-set.nbib` (the current 497-record EM-narrowed PubMed export), using the same method as the 2026-06-08 check: scanned for `PT - Retracted Publication` (0/696 `PT` lines matched, across categories like Journal Article, Review, Validation Study, etc.), `RIN -` / Retraction-In field (0 matches), case-insensitive "retract" text search (0 matches), and `STAT` field anomalies (none — only standard MEDLINE/In-Process/PubMed-not-MEDLINE/Publisher values). Cross-checked that none of the original 11 retracted PMIDs from the 2026-06-08 check (against the superseded 9,672-record cross-domain export) appear in the current corpus at all, confirming they don't carry over.
+
+**Result: 0 retracted publications** in the current 650-record (post-dedup) corpus. This corrects the stale "11" placeholder flagged in the entry above.
+
+**Scope limitation noted:** this check only covers PubMed's structured retraction metadata (MEDLINE `PT`/`RIN` fields) — it does not cover the 161 IEEE or 1 ACM records, which have no equivalent structured retraction field. Given the small non-PubMed count, this is treated as a reasonable scope limit rather than a gap requiring further tooling, but is worth a one-line mention in the manuscript's limitations.
+
+**Impact:** `data/screening/prisma_counts.csv` updated — "Retracted publications removed" row corrected from the stale placeholder to 0 (with full method documented), "Records after deduplication" confirmed at 650 (no further subtraction needed).
+
+**Identification stage is now complete and clean: 650 records carried forward to title/abstract screening.**
+
+---
+
+## 2026-06-26 (same day) — Title/abstract screening started in Rayyan; criteria setup confirmed
+
+**Event:** The TA-E1–TA-E5 exclusion codes and their inclusion-criteria counterparts (`docs/protocol/screening_criteria.md` Sections 3–4) were entered into Rayyan's "Screening criteria" panel. Confirmed Rayyan auto-numbers these in entry order as native criterion IDs `E1`–`E5` (exclusion) and `I1`–`I4` (inclusion) — verified directly against the panel, matching `TA-E1`→`E1` through `TA-E5`→`E5` exactly. No separate "Labels" feature exists in this Rayyan version; the `E#` criterion selected at decision time is the per-record exclusion-reason audit trail.
+
+**Decision:** Rayyan's "Use with AI tools" toggle (AI-suggested Include/Exclude decisions) was found enabled by default on the inclusion criteria. Turned off before screening began, to keep screening fully manual — single reviewer, intra-rater IRR (15% re-screen, 2-week washout, Cohen's kappa per Section 5) — consistent with the registered protocol. No AI-assisted screening is in use; if this changes later, it needs its own decision-log entry and a protocol-deviation note (AI-assisted screening is reported differently under PRISMA-ScR than manual single-reviewer screening).
+
+**Impact:** `docs/protocol/screening_criteria.md` Section 4a added documenting both the criterion-ID mapping and the AI-tools decision. **Title/abstract screening of the 650-record deduplicated corpus begins 2026-06-26** — this is the date the 2-week IRR washout period (Section 5) counts from; the 15% re-screen cannot start before 2026-07-10.
+
+---
+
 **Impact:** `docs/protocol/search_string_embase_v1.md` and `docs/protocol/search_string_acm_v1.md` updated in parallel — both concept blocks (A/B/C), Full Combined String sections, status lines, Known Limitations (new item: Embase #7, ACM #8), Next Steps, and Version History. Neither string has been run live yet; both remain DRAFT/UNTESTED pending the platform-confirmation and execution steps already listed in each doc's Next Steps.
+
+---
+
+## 2026-07-03 — Title/abstract screening of full 650-record corpus complete
+
+**Decision/Event:** Title/abstract screening of the entire deduplicated 650-record corpus (begun 2026-06-26, per the entry above) is complete in Rayyan, single reviewer (ANIRBAN), blind mode on. Exported via Rayyan's "…" → Export menu as CSV (`data/screening/rayyan_ta_export_2026-07-03.csv`) and parsed: all 650 records have a recorded decision, none unscreened.
+
+**Result:** Include: 40. Maybe/Borderline: 64 (9.8% of corpus — under the 10% threshold in `docs/protocol/screening_criteria.md` Section 6 that would flag a possible inclusion-boundary clarity issue). Exclude: 546. Records carried forward to full-text (Include + Maybe): 104.
+
+**Gap identified:** the CSV export's `notes` field only encodes the Include/Exclude/Maybe decision (`RAYYAN-INCLUSION: {"ANIRBAN"=>"..."}`) — it does **not** include the per-record `TA-E1`–`TA-E5` reason code selected in Rayyan's criteria panel at decision time, despite that criterion selection being the intended reason-code audit trail per Section 4a. **Decision: deferred** — proceeding to full-text retrieval for the 104 carried-forward records without the reason-code breakdown for now; `data/screening/ta_exclusion_reasons.csv` remains unpopulated. If needed later for PRISMA reporting/manuscript, revisit whether Rayyan has a reasons-inclusive export mode or whether reason codes must be pulled per-record from the UI.
+
+**Impact:** `data/screening/prisma_counts.csv` updated with real counts (Records screened: 650; excluded at T/A: 546; carried forward to full-text: 104), replacing the previously blank placeholder rows. Full per-record decisions saved to `data/screening/ta_decisions_2026-07-03.csv`. The 64 Maybe/Borderline records extracted to `data/screening/ta_borderline_list_2026-07-03.csv` as a faculty-adjudication worksheet (Section 6) — `gate_in_question`/`ambiguity_note` columns are blank for most records since this batch was screened directly in Rayyan (not via per-abstract gate-by-gate review), and `faculty_decision`/`faculty_rationale` columns are pending adjudication.
+
+**Next:** (1) Faculty adjudication of the 64 Borderline records (Section 6) — decision and rationale to be logged here per record or in aggregate once complete. (2) IRR re-screen (Section 5): 15% random sample, blinded, re-screened no sooner than 2 weeks after each record's original decision — since primary screening ran 2026-06-26 to 2026-07-03, the safest single start date covering the whole sample is **2026-07-17** (2 weeks after the last screening date), though the protocol technically allows starting the earliest-screened portion from 2026-07-10. (3) Full-text retrieval for the 104 Include + adjudicated-Include Maybe records (Section 7).
+
+---
+
+## 2026-07-03 — Faculty adjudication of Borderline records delegated to sole reviewer (protocol deviation)
+
+**Decision:** `docs/protocol/screening_criteria.md` Section 6 specifies that T/A Borderline records are "reviewed with the supervising faculty member," with the faculty adjudication decision and rationale logged here. The supervising faculty member is not available to review the 64 Borderline records individually and has verbally consented for the reviewer (Anirban) to evaluate and decide them alone, without a per-record faculty sign-off session.
+
+**Rationale:** Faculty availability constraint; faculty has delegated adjudication authority to the sole reviewer rather than holding up Phase 1 progress.
+
+**Alternatives considered:** (a) Wait for faculty availability before adjudicating — rejected, no timeline given and would block full-text retrieval indefinitely. (b) Async faculty review of the CSV without a live session — not what was agreed; faculty explicitly consented to the reviewer deciding, not to reviewing asynchronously.
+
+**Impact:** The 64 Borderline records in `data/screening/ta_borderline_list_2026-07-03.csv` will be adjudicated by the sole reviewer, applying the full three-gate inclusion boundary (`docs/protocol/inclusion_boundary.md` v2) at the level of detail available in title/abstract, same as initial T/A screening. This converts what the registered protocol frames as a two-person check into a single-reviewer decision for this batch. The IRR re-screen (Section 5) remains the only reliability check on this reviewer's screening judgment overall; no additional second-opinion mechanism applies specifically to the Borderline batch.
+
+**Defense if challenged:** Faculty supervisor explicitly delegated adjudication authority due to unavailability (verbal consent, 2026-07-03); this is disclosed here as a documented deviation from the registered Section 6 procedure, consistent with how other deviations in this log (Embase drop, ACM substitution) are handled — decided, justified, and logged rather than silently absorbed. Recommend a brief line in the manuscript's limitations noting Borderline-case adjudication was single-reviewer rather than two-person, consistent with the single-reviewer T/A screening design overall.
 
 ---

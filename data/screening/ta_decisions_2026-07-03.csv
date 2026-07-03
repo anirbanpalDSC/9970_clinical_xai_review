@@ -1,0 +1,651 @@
+key,title,year,decision,doi,pubmed_id
+rayyan-601300058,A Human-Centered Approach to Interpretable Machine Learning in Clinical Decision Support Systems,2025,Included,10.1109/ICAIIHI67124.2025.11403473,
+rayyan-601300059,Exploring the Advancements of AI Enabled Clinical Decision Support Systems for Patient Triage in Healthcare,2024,Included,10.1109/HealthCom60970.2024.10880833,
+rayyan-601300060,Interpretable Machine Learning-Based Triage For Decision Support in Emergency Care,2023,Included,10.1109/ICOEI56765.2023.10125918,
+rayyan-601300061,Predicting Post-stroke Hospital Discharge Disposition Using Interpretable Machine Learning Approaches,2019,Excluded,10.1109/BigData47090.2019.9006592,
+rayyan-601300062,Evidence-Based Reasoning in Medical Assessment: Collaborating with Physicians in Practicing Argument Development and Evidence Marshalling,2024,Maybe,10.1109/EHB64556.2024.10805601,
+rayyan-601300063,Interpretable Machine Learning for Early Detection of Critical Outcomes in the Emergency Department,2025,Included,10.1109/CBMS65348.2025.00128,
+rayyan-601300064,A Review on the Role of Generative AI and Large Language Models in Telemedicine Diagnosis and Clinical Triage,2026,Excluded,10.1109/CIPHER70417.2026.11523731,
+rayyan-601300065,AI-Based Clinical Decision Support System for Mitochondrial Assessment in IVF,2026,Excluded,10.1109/WcCST67302.2026.11495775,
+rayyan-601300066,Consistency of XAI Models against Medical Expertise: An Assessment Protocol,2024,Included,10.1109/ICHI61247.2024.00116,
+rayyan-601300067,Explainable AI and Augmented Reality in Transesophageal Echocardiography (TEE) Imaging,2024,Maybe,10.1109/AIxVR59861.2024.00051,
+rayyan-601300068,Emergency Department Triage Hospitalization Prediction Based on Machine Learning and Rule Extraction,2023,Included,10.1109/IEEECONF58974.2023.10405176,
+rayyan-601300069,Early and Accurate Diagnosis of Ectopic Pregnancy: A SHAP-Based Explainable Machine Learning Approach,2026,Excluded,10.1109/ACCESS.2026.3692735,
+rayyan-601300070,AI-Powered E-Triage Systems: Enhancing Healthcare Efficiency Through Intelligent Clinical Decision Support,2026,Excluded,10.1109/ICAIII69475.2026.11521349,
+rayyan-601300072,An Automated Approach for Timely Diagnosis and Prognosis of Coronavirus Disease,2021,Excluded,10.1109/IJCNN52387.2021.9533786,
+rayyan-601300073,Triage Level Prediction Using Machine Learning with Tree-Based Gradient Boosting Algorithms,2025,Included,10.1109/CHILECON66915.2025.11476096,
+rayyan-601300074,Early Prediction of In-Hospital Mortality in Emergency Departments Using Ensemble Machine Learning,2026,Included,10.1109/IRASET68627.2026.11538552,
+rayyan-601300075,Using Data Mining to Predict Hospital Admissions From the Emergency Department,2018,Excluded,10.1109/ACCESS.2018.2808843,
+rayyan-601300076,Emergency Department Triage Classification: A Comparative Study with Explainable AI for Small-Data Environments,2026,Included,10.1109/ICAISET66439.2026.11541334,
+rayyan-601300077,Assessment of Hematological Predictors via Explainable Artificial Intelligence in the Prediction of Acute Myocardial Infarction,2023,Included,10.1109/ACCESS.2023.3321509,
+rayyan-601300078,Tuberculosis Detection Based on Multiple Model Ensemble in Chest X-ray Image,2022,Excluded,10.1109/ICOT56925.2022.10008144,
+rayyan-601300079,Development and Validation of an Explainable Deep Learning Model to Predict Adverse Event During Hospital Admission in Patients with Sepsis,2022,Maybe,10.1109/SNPD54884.2022.10051794,
+rayyan-601300080,"The Role of Artificial Intelligence in Mental Health Support: Present Implementations, Innovative Tools, and Research Horizons",2025,Excluded,10.1109/WorldSUAS66815.2025.11198878,
+rayyan-601300081,Integrating Deep Learning and Explainable AI for Non-Invasive Prediction of EGFR and KRAS Mutations in NSCLC: A Novel Radiogenomic Approach,2024,Excluded,10.1109/NeuroNT62606.2024.10585441,
+rayyan-601300082,Challenges and Opportunities in Quantum-Enhanced XAI for Medical and Healthcare Systems,2025,Excluded,10.1109/ISCC65549.2025.11326106,
+rayyan-601300083,Explainable NLP Model for Predicting Patient Admissions at Emergency Department Using Triage Notes,2023,Included,10.1109/BigData59044.2023.10386753,
+rayyan-601300084,Medico Assistant: An AI-Driven Real-Time Multi-Modal Triage System,2025,Maybe,10.1109/ICECONF65644.2025.11379660,
+rayyan-601300085,Real-Time Multi-Class Brain Haemorrhage Detection with Visual Explanations using Grad-CAM,2025,Excluded,10.1109/ICSCSS64956.2025.11501099,
+rayyan-601300086,Improving Emergency Triage in Crisis Situations: a Hybrid GAN-Boosting Approach With Machine Learning,2025,Included,10.1109/AMCAI66110.2025.11474368,
+rayyan-601300087,Sparse Embedding for Interpretable Hospital Admission Prediction,2019,Maybe,10.1109/EMBC.2019.8856800,
+rayyan-601300088,Multimodal AI for Chest Disease Diagnosis: Integrating Medical Imaging and Clinical Data,2026,Excluded,10.1109/AKGEC68790.2026.11485739,
+rayyan-601300089,Exploring the Ethical Challenges of Large Language Models in Emergency Medicine: A Comparative International Review,2024,Excluded,10.1109/BIBM62325.2024.10822376,
+rayyan-601300090,Explainable AI for Medical Image Analysis in Medical Cyber-Physical Systems: Enhancing Transparency and Trustworthiness of IoMT,2025,Excluded,10.1109/JBHI.2023.3336721,
+rayyan-601300091,XAI Driven Intelligent IoMT Secure Data Management Framework,2026,Excluded,10.1109/JBHI.2024.3408215,
+rayyan-601300092,Deep Learning in Healthcare,2025,Excluded,10.1109/ICICIS65613.2025.11371175,
+rayyan-601300093,Decompensation Prediction for Hospitalized COVID-19 Patients,2022,Excluded,10.1109/ICHI54592.2022.00088,
+rayyan-601300094,Explainable AI-Enabled Wearable Sensors for Real-Time Thrombotic Event Early Warning in Connected Health Environments,2026,Excluded,10.1109/TCE.2026.3673947,
+rayyan-601300095,Call2Care: Real-Time Voice and Call Recording-Based Symptom-to-Disease Diagnosis,2026,Excluded,10.1109/ICIPTM69057.2026.11465438,
+rayyan-601300096,Early Risk Prediction for Emergency Department Triage using Machine Learning Techniques,2026,Maybe,10.1109/ICAUC68182.2026.11440947,
+rayyan-601300097,Explainable Machine Learning-Based Analysis for Identifying Risk Factors of Chronic Obstructive Pulmonary Disease,2025,Excluded,10.1109/ICDH67620.2025.00020,
+rayyan-601300098,Dual Ontology-enhanced Clinical Decision Learning for First-admission Mortality Prediction,2026,Excluded,10.1109/JBHI.2025.3621475,
+rayyan-601300099,PLEX: Perturbation-Free Local Explanations for LLM-Based Text Classification,2025,Excluded,10.1109/JSTSP.2025.3633593,
+rayyan-601300100,Machine Learning Models Predict Fatal Myocardial Infarction Within 10-Years Follow-Up Utilizing Explainable AI,2023,Excluded,10.1109/BIBE60311.2023.00059,
+rayyan-601300102,Explainable Profiling of Sleep Disorders to Support Trustworthy Clinical Interventions,2025,Excluded,10.1109/ICDMW69685.2025.00275,
+rayyan-601300104,Predicting 30-Day All-Cause Hospital Readmission Using Multimodal Spatiotemporal Graph Neural Networks,2023,Maybe,10.1109/JBHI.2023.3236888,
+rayyan-601300105,Machine Learning in Healthcare: Transforming Patient Outcome Prediction and Decision Support,2025,Excluded,10.1109/ICAIIHI67124.2025.11403079,
+rayyan-601300106,"MediHealth AI: An Integrated Framework for Automated Health Report Analysis, Symptom Triage, and Conversational Assistance",2025,Excluded,10.1109/ICIDCA66325.2025.11280587,
+rayyan-601300107,Deep Learning for Detection and Localization of B-Lines in Lung Ultrasound,2023,Maybe,10.1109/JBHI.2023.3282596,
+rayyan-601300108,A Review of CAM-Based Visual Explanation on Diabetic Retinopathy,2026,Excluded,10.1109/ACCESS.2026.3656888,
+rayyan-601300109,Video Summarization and Fracture Detection in Pediatric Wrist Ultrasound Using Deep Reinforcement Learning,2025,Excluded,10.1109/EMBC58623.2025.11251547,
+rayyan-601300110,Automated Risk Assessment of COVID-19 Patients at Diagnosis Using Electronic Healthcare Records,2021,Excluded,10.1109/BHI50953.2021.9508512,
+rayyan-601300111,EventScore: An Automated Real-time Early Warning Score for Clinical Events,2022,Excluded,10.1109/ICHI54592.2022.00038,
+rayyan-601300112,Explainable Tuberculosis Detection from Chest X-Rays Using SHAP-Pruned CNN Features and Gradient-Boosted Classification,2025,Excluded,10.1109/GCAT66372.2025.11368471,
+rayyan-601300113,TeleXAI-R: A Real-Time Explainable AI Model for Remote Patient Risk Stratification Using IoT-Integrated Consumer Devices,2026,Excluded,10.1109/TCE.2025.3644166,
+rayyan-601300114,ADAM-1: An AI Reasoning and Bioinformatics Model for Alzheimer’s Disease Detection and Microbiome-Clinical Data Integration,2025,Excluded,10.1109/ACCESS.2025.3599857,
+rayyan-601300115,Explainable AI for Automated Emergency Triage of Brain CT Pathologies: A Multi-Level Classification Framework,2026,Excluded,10.1109/ICAIII69475.2026.11521149,
+rayyan-601300116,Enhanced Tuberculosis Detection using a Dual-Path Vision Model with Feature-Space Augmentation and Progressive Fine-Tuning,2025,Excluded,10.1109/CICN67655.2025.11367832,
+rayyan-601300117,Cardiovascular Disease Risk Prediction Model Based on Fast-Tunable Optimized Stacked Ensemble Learning Architecture,2025,Excluded,10.1109/IAECST68792.2025.11415016,
+rayyan-601300118,An Interpretable Machine Learning Framework for ICU Mortality Risk Prediction in COVID-19 Patients,2026,Excluded,10.1109/ICIPCN67432.2026.11438713,
+rayyan-601300119,Explainable Machine Learning for Early Assessment of COVID-19 Risk Prediction in Emergency Departments,2020,Excluded,10.1109/ACCESS.2020.3034032,
+rayyan-601300120,Predicting Avoidable Emergency Department Visits Using the NHAMCS Dataset,2021,Excluded,10.1109/ICHI52183.2021.00072,
+rayyan-601300121,ViT-ResNet Contrastive Adaptation for Pneumonia Detection,2025,Excluded,10.1109/BDAI66031.2025.11325577,
+rayyan-601300122,Emergency Department Forecasting: COVID-19 Impact on Machine Learning Models,2025,Excluded,10.1109/CHILECON66915.2025.11476362,
+rayyan-601300123,Machine Learning-based Stroke Detection using CT and MRI Imaging,2026,Excluded,10.1109/ICICT68280.2026.11511102,
+rayyan-601300124,Reinforcement Learning for Intelligent Healthcare Systems: Optimizing Patient Treatment and Resource Allocation in Dynamic Clinical Environments,2025,Excluded,10.1109/CISCON66933.2025.11337850,
+rayyan-601300125,Explainable AI Chatbot for Animal Behavioral and Medical Triage,2026,Excluded,10.1109/IDCIoT67589.2026.11455757,
+rayyan-601300126,Implementation and Testing of an Experimental Near-Real-Time Patient Bedside Monitor Datastream Analysis and Alerting System in a Live Emergency Department,2024,Excluded,10.1109/UEMCON62879.2024.10754726,
+rayyan-601300127,Structural Self-Supervision for Label-Free Aortic Dissection Triage on Non-Contrast CT,2026,Excluded,10.1109/ISBI61048.2026.11515850,
+rayyan-601300128,An Overview of Artificial Intelligence in Neuro-Oncology: Early Tumor Detection,2025,Excluded,10.1109/DECoN67170.2025.11447916,
+rayyan-601300129,"Development and Deployment of an Open, Modular, Near-Real-Time Patient Monitor Datastream Conduit Toolkit to Enable Healthcare Multimodal Data Fusion in a Live Emergency Department Setting for Experimental Bedside Clinical Informatics Research",2019,Excluded,10.1109/LSENS.2018.2880140,
+rayyan-601300130,Explainable Symptom-Based Chronic Disease Assessment Using Hybrid Rule-Based and Machine Learning Techniques,2026,Excluded,10.1109/ICIPTM69057.2026.11465933,
+rayyan-601300131,A new machine learning technique for predicting traumatic injuries outcomes based on the vital signs,2019,Maybe,10.23919/IConAC.2019.8895012,
+rayyan-601300132,Predicting Patient Discharge Disposition in Acute Neurological Care,2021,Excluded,10.1109/SSCI50451.2021.9659904,
+rayyan-601300133,PathFinder: A Multi-Modal Multi-Agent System for Medical Diagnostic Decision-Making Applied to Histopathology,2025,Excluded,10.1109/ICCV51701.2025.02175,
+rayyan-601300134,Artificial Intelligence in Demand and Capacity Modelling of Healthcare Systems,2026,Excluded,10.1109/JBHI.2026.3703213,
+rayyan-601300135,Cross-Regional and Interpretable Marine Mucilage Monitoring Using Spectral Indices and SHAP,2025,Excluded,10.1109/JURSE60372.2025.11076015,
+rayyan-601300136,AI-Driven Assistance for Rapid Dermatology Triage,2025,Maybe,10.1109/ICoICI65217.2025.11252685,
+rayyan-601300138,Transfer Learning for Automated COVID-19 B-Line Classification in Lung Ultrasound,2022,Excluded,10.1109/EMBC48229.2022.9871894,
+rayyan-601300139,Multiclass Eye Disease Classification on Fundus Images Using EfficientNet-B3 and Grad-CAM,2025,Excluded,10.1109/CENIM67940.2025.11326202,
+rayyan-601300140,Explainable Intelligent Multi-Feature Fusion BTB Model for Teleconsultation in 6G-Enabled Healthcare Systems,2026,Excluded,10.1109/MCOMSTD.2026.3673852,
+rayyan-601300141,AI and IoT-Integrated Smart Devices for Enhanced Vision Screening and Diagnosis in Eye Care,2024,Excluded,10.1109/SCOPES64467.2024.10991151,
+rayyan-601300142,"Advances and Challenges in AI-Powered Medical Chatbots: Leveraging LLMs, CNNs, and Multimodal Systems for Clinical Applications",2025,Excluded,10.1109/IDICAIHEI65991.2025.11378806,
+rayyan-601300143,Testing the Generalizability of an Automated Method for Explaining Machine Learning Predictions on Asthma Patients’ Asthma Hospital Visits to an Academic Healthcare System,2020,Excluded,10.1109/ACCESS.2020.3032683,
+rayyan-601300144,Multimodal Deep Learning for Pediatric Mild Traumatic Brain Injury Detection,2023,Excluded,10.1109/BHI58575.2023.10313520,
+rayyan-601300145,Integrating Cognitive Science and AI for Skin Disorder Detection,2026,Excluded,10.1109/IMED68921.2026.11484317,
+rayyan-601300146,Explainable Deep Learning Approach for Binary Kidney Stone Detection in CT Imaging Using MobileNetV2,2025,Excluded,10.1109/STI69347.2025.11367555,
+rayyan-601300147,"AI-Driven Diagnostics and Predictive Maintenance in NPI Service Engineering: A Comprehensive Survey of Methods, Applications, and Future Directions",2025,Excluded,10.1109/ICON-SONICS67145.2025.11309261,
+rayyan-601300148,Glaucoma Screening on Retinal Fundus Images with Deep Learning,2026,Excluded,10.1109/IMCET69180.2026.11503786,
+rayyan-601300149,BioBridge: Unified Bio-Embedding With Bridging Modality in Code-Switched EMR,2024,Excluded,10.1109/ACCESS.2024.3467251,
+rayyan-601300150,Intelligent Symptom Conversations: New Frontiers in AI-Powered Preliminary Healthcare Diagnosis,2025,Excluded,10.1109/ICFT66708.2025.11336630,
+rayyan-601300151,Optimizing the dynamic administration regimen of prophylactic enoxaparin in critically ill patients using reinforcement learning,2025,Excluded,10.1109/JBHI.2025.3607685,
+rayyan-601300152,Ai-Augmented Multi-Cloud Serverless Framework for Explainable Outbreak Management in Healthcare,2025,Excluded,10.1109/UEMCON67449.2025.11267652,
+rayyan-601300153,Telemedicine as a Driver of Equitable Healthcare Delivery in Low-Resource and Rural Communities,2026,Excluded,10.1109/ICBDML68582.2026.11544463,
+rayyan-601300154,Towards Explainable AI in Cardiac Diagnostic: Attention-Based Interpretation of Brugada Syndrome,2025,Excluded,10.1109/ICoAILO66760.2025.11155988,
+rayyan-601300155,"DFU-XAI: Explainable DFU Classification with Efficientnet-B3, A Grad-CAM-Enhanced Deep Learning Framework",2026,Excluded,10.1109/ICMCSI67283.2026.11412809,
+rayyan-601300156,An Explainable Decision Support Framework for Differential Diagnosis Between Mild COVID-19 and Other Similar Influenzas,2024,Excluded,10.1109/ACCESS.2024.3405071,
+rayyan-601300157,AG-STDF: Anatomy-Guided ECG Spatiotemporal Dynamical Fusion for Screening Coronary Microvascular Dysfunction,2026,Excluded,10.1109/TBME.2026.3698945,
+rayyan-601300158,Identification of COVID-19 from Other Upper Respiratory Tract Infections Using Random Undersampling and LIME-based XAI Model,2023,Excluded,10.1109/ICCCNT56998.2023.10307102,
+rayyan-601300159,AI-driven Models with Effective Feature Selection Accurately Predict ICU Admission after Laparoscopic Cholecystectomy,2024,Excluded,10.1109/BIBM62325.2024.10821955,
+rayyan-601300160,Bone Fracture Detection Using Deep Learning: A Review,2026,Excluded,10.1109/IDCIoT67589.2026.11455710,
+rayyan-601300161,AI-Driven Chatbots: Bridging the Gap between Patients and Healthcare Providers,2025,Excluded,10.1109/NETCRYPT65877.2025.11102533,
+rayyan-601300162,CLARA NET-A Framework of Clinically-Explainable Deep Learning for Supporting Multiclass Diagnosis of Brain Tumor from Single-Modality MRI Data,2025,Excluded,10.1109/ICETEG66194.2025.11473011,
+rayyan-601300163,Advanced Multi-Scale Vision Transformer With Neural Architecture Search for Thyroid Cancer Diagnosis Using Ultrasound Images,2026,Excluded,10.1109/ACCESS.2026.3694108,
+rayyan-601300164,Hybrid CNN-BiLSTM with Attention Mechanism and Ensemble Learning for Multi-Symptom Disease Prediction: A Comparative Analysis,2026,Excluded,10.1109/QPAIN69676.2026.11546314,
+rayyan-601300165,ASIST TBI: A Hybrid Vision Transformer and CNN Based Tool for Predicting Neurosurgical Intervention in Acute Traumatic Brain Injury,2025,Excluded,10.1109/CICT67193.2025.11398984,
+rayyan-601300166,Plataforma Web con Machine Learning para la Detección Temprana de Anemia Infantil en Hospitales Públicos del Perú,2025,Excluded,10.1109/CIMPS69356.2025.11419710,
+rayyan-601300167,AI Mobile Health Applications: Real-Time Monitoring and Support,2025,Excluded,10.1109/3ict68299.2025.11442234,
+rayyan-601300168,GraphAE: Plant-informed Graph Autoencoder for ICS Anomaly Detection with SHAP-based Explanations,2026,Excluded,10.1109/ICAIC67076.2026.11395672,
+rayyan-601300169,GaP-Aug: Gamma Patch-Wise Correction Augmentation Method for Respiratory Sound Classification,2024,Excluded,10.1109/ICASSP48485.2024.10447967,
+rayyan-601300170,"""DAKSHAAB"": An AI-Driven Chatbot for Patient Triage Using Bio-Bert",2024,Excluded,10.1109/ICCCSMD63546.2024.11015165,
+rayyan-601300171,Uncertainty-Aware and Explainable Feature-Level Ensembles for CT-Based Kidney Stone Detection,2026,Excluded,10.1109/QPAIN69676.2026.11546296,
+rayyan-601300172,A Data-Driven Approach to Forecasting Emergency Attendance During Easter and Labour Day Holidays,2025,Excluded,10.1109/CHILECON66915.2025.11476199,
+rayyan-601300173,Towards Non-Invasive Blood Group Prediction: Fingerprint Recognition with Advanced Deep Learning,2025,Excluded,10.1109/ICATC68823.2025.11407830,
+rayyan-601300174,Advances in Neuroimaging Techniques for Detection and Monitoring Intracranial Hemorrhage,2025,Excluded,10.1109/REACS67479.2025.11413546,
+rayyan-601300175,Brain Stroke Classification Using YOLOv8,2025,Excluded,10.1109/ACIT68900.2025.11510558,
+rayyan-601300176,A Cardiovascular Disease Recognition Method Based on Feature Fusion and Self-Supervised Learning,2025,Excluded,10.1109/ICCWAMTIP68645.2025.11352671,
+rayyan-601300177,Prediction of ICU admission for COVID-19 patients: a Machine Learning approach based on Complete Blood Count data,2021,Excluded,10.1109/CBMS52027.2021.00065,
+rayyan-601300178,"Clinical vs. Ultrasound for PCOS Detection: A Calibrated, Leakage-Safe, Real-Time Benchmark",2025,Excluded,10.1109/ICCIT68739.2025.11552594,
+rayyan-601300179,Explainable AI Cloud Security Framework with Automating SIEM Event Management,2026,Excluded,10.1109/ICSI70302.2026.11544238,
+rayyan-601300180,An Enhanced Random Forest Model for Predicting Serum Creatinine in Chronic Kidney Disease,2025,Excluded,10.1109/ICCIT68739.2025.11490451,
+rayyan-601300181,Interpretable Summaries of Black Box Incident Triaging with Subgroup Discovery,2021,Excluded,10.1109/DSAA53316.2021.9564164,
+rayyan-601300182,XFMP: A Benchmark for Explainable Fine-Grained Abnormal Behavior Recognition on Medical Personal Protective Equipment,2024,Excluded,10.1109/TCSVT.2024.3405998,
+rayyan-601300183,SA-UCA-CNN: A Single-Model Framework for Patient-Level CXR Triage with Style Alignment and Uncertainty Calibration,2025,Excluded,10.1109/ICISCAE66104.2025.11307708,
+rayyan-601300184,Dense Pixel-Labeling For Reverse-Transfer And Diagnostic Learning On Lung Ultrasound For Covid-19 And Pneumonia Detection,2021,Excluded,10.1109/ISBI48211.2021.9433826,
+rayyan-601300185,Explainable Temporal Attention for Anomaly Detection in Medical Time-Series Data,2026,Excluded,10.1109/IE69249.2026.11539025,
+rayyan-601300186,"Sustainable AI for Medical Imaging: A Federated, Edge-based Approach to Chest X-ray Triage",2025,Excluded,10.1109/CMSS66566.2025.11182494,
+rayyan-601300187,AI-Enhanced Telehealth Platforms: A Comprehensive Analysis of Automated Triage and Personalized Care Systems,2025,Excluded,10.1109/ICSC65596.2025.11139916,
+rayyan-601300188,Blood Alcohol Concentration Screening at Emergency Room: Designing a Classification Model Using Machine Learning,2023,Excluded,10.1109/ICTS58770.2023.10330879,
+rayyan-601300189,Multi-modal Machine Learning for CCTA Referral Decision: Integrating Opportunistic Coronary Calcium Screening from LDCT with Clinical Data,2025,Excluded,10.1109/AIxMHC65380.2025.00015,
+rayyan-601300190,Towards Balancing Preference and Performance through Adaptive Personalized Explainability,2024,Excluded,,
+rayyan-601300191,Visual Acuity Classification Using Ensemble Machine Learning Algorithms: With Explainable Approach,2023,Excluded,10.1109/ICT4DA59526.2023.10302234,
+rayyan-601300192,Pneumonia Detection Using a Hybrid CNN and Swin Transformer Architecture,2026,Excluded,10.1109/ICAISS68683.2026.11526235,
+rayyan-601300193,Temporal Decomposition and Attention-Based Deep Learning for Magnetocardiography Signal Denoising,2025,Excluded,10.1109/TIM.2025.3571116,
+rayyan-601300194,LGAF-Net: A Local-Global Attention Fusion Network for Efficient Medical Image Classification,2025,Excluded,10.1109/ICoDT269104.2025.11360692,
+rayyan-601300195,Artificial Intelligence for Public Health,2019,Excluded,10.1109/BIBM47256.2019.8983112,
+rayyan-601300196,PneumoDetect: AI-Assisted Chest Radiograph Analyzer,2026,Excluded,10.1109/AIMLA67915.2026.11522463,
+rayyan-601300197,TrioXpert: An Automated Incident Management Framework for Microservice System,2025,Excluded,10.1109/ASE63991.2025.00267,
+rayyan-601300198,Monkeypox Skin-Lesion Detection with a Modified VGG16 and a Lightweight Custom CNN,2025,Excluded,10.1109/ICTBIG68706.2025.11323728,
+rayyan-601300199,Calibrated Margin-Weighted Soft Voting Ensemble for Early Diagnosis of Coronary Artery Disease,2026,Excluded,10.1109/I5CPS67958.2026.11452542,
+rayyan-601300200,A Governance-First Architecture for Trustworthy Machine Learning: Multi-Dimensional Experimental Evaluation Across Healthcare and Insurance Domains,2026,Maybe,10.1109/AIEI69164.2026.11497556,
+rayyan-601300201,Machine learning based SpO2 prediction from PPG signal's characteristics features,2022,Excluded,10.1109/MeMeA54994.2022.9856498,
+rayyan-601300202,Comparative Analysis of Psychometric data for assessing mental health testing needs using Machine Learning Models,2025,Excluded,10.1109/ICAIIHI67124.2025.11403838,
+rayyan-601300203,EfficientNet-Based Deep Learning for Diabetic Retinopathy Classification Highlighting Overfitting and Severity Class Limitations,2025,Excluded,10.1109/GITCON65266.2025.11379692,
+rayyan-601300204,A Secure and Explainable Dialogue System for Adaptive Symptom Assessment in Medical Chatbots,2026,Excluded,10.1109/ICESIC67389.2026.11496570,
+rayyan-601300205,Guiding the Last Centimeter: Novel Anatomy-Aware Probe Servoing for Standardized Imaging Plane Navigation in Robotic Lung Ultrasound,2025,Excluded,10.1109/TASE.2024.3448241,
+rayyan-601300206,SYMPTOM: SYMptom-Level Prediction of Target Outcomes in Major Depressive Disorder (MDD) Using Transformers on Mental Health Narratives,2025,Excluded,10.1109/BIBE66822.2025.00124,
+rayyan-601300207,Multiclass Prediction of Bug Resolution Time Using Context-Aware Machine Learning Models,2025,Excluded,10.1109/ETCM67548.2025.11304484,
+rayyan-601300208,MobileNetV3-Large for Retinopathy Severity and Edema Risk from Fundus Images and Clinical Captions,2025,Excluded,10.1109/DASA68193.2025.11499102,
+rayyan-601300209,"Deep Learning for Forecasting Patient Visits: A Comparative Study of CNNs, xLSTM, and Transformers",2025,Excluded,10.1109/MeMeA65319.2025.11068057,
+rayyan-601300210,Martingale Stopping Rule Application in Bayesian A/B Testing With Batch Data,2025,Excluded,10.1109/ACCESS.2025.3577906,
+rayyan-601300212,"Artificial Intelligence-Enabled Pharmacovigilance: Architectures, Applications, and Challenges for Digital Drug Safety Surveillance",2026,Excluded,10.1109/IMED68921.2026.11484263,
+rayyan-601300213,Predicting Child Malnutrition Rates in Khunti Jharkhand Using AI Models,2025,Excluded,10.1109/OCIT66168.2025.11400124,
+rayyan-601300214,Developing Composite Metrics for Cybersecurity Incident Impact and Response using Feature Engineering and Predictive Modeling,2025,Excluded,10.1109/ICSCSA66339.2025.11170981,
+rayyan-601300215,Vision Transformer-based OCT Retinal Disease Classification,2025,Excluded,10.1109/ISPDS67367.2025.11391114,
+rayyan-601300216,Drone Assisted Remote Wellness Monitoring Using RGB Camera,2026,Excluded,10.1109/ISDFS69419.2026.11459053,
+rayyan-601300217,IEEE Standard for Performance and Safety Evaluation of Artificial Intelligence Based Medical Devices: Terminology,2023,Excluded,10.1109/IEEESTD.2023.10117469,
+rayyan-601300218,Interpretable Machine Learning for Emergency Department Triage: A Systematic Literature Review,2025,Included,10.1109/ICTS67612.2025.11369580,
+rayyan-601300219,Triage of 2D Mammographic Images Using Multi-view Multi-task Convolutional Neural Networks,2021,Excluded,10.1145/3453166,
+rayyan-601300220,The role of AI in emergency department triage: An integrative systematic review.,2025,Included,10.1016/j.iccn.2025.104058,40306071
+rayyan-601300221,Artificial intelligence-enhanced electrocardiography for accurate diagnosis and management of cardiovascular diseases.,2024,Excluded,10.1016/j.jelectrocard.2024.01.006,38301492
+rayyan-601300222,Human-computer collaboration for skin cancer recognition.,2020,Excluded,10.1038/s41591-020-0942-0,32572267
+rayyan-601300223,The Medicine Revolution Through Artificial Intelligence: Ethical Challenges of Machine Learning Algorithms in Decision-Making.,2024,Excluded,10.7759/cureus.69405,39411643
+rayyan-601300224,An interpretable machine learning model based on optimal feature selection for identifying CT abnormalities in patients with mild traumatic brain injury.,2025,Excluded,10.1016/j.eclinm.2025.103192,40242564
+rayyan-601300225,Artificial Intelligence in Dermatology: A Primer.,2020,Excluded,10.1016/j.jid.2020.02.026,32229141
+rayyan-601300226,Artificial Intelligence in Emergency Trauma Care: A Preliminary Scoping Review.,2024,Maybe,10.2147/MDER.S467146,38803707
+rayyan-601300227,Explainable artificial intelligence in emergency medicine: an overview.,2023,Maybe,10.15441/ceem.23.145,38012816
+rayyan-601300228,Artificial intelligence and machine learning in prehospital emergency care: A scoping review.,2023,Included,10.1016/j.isci.2023.107407,37609632
+rayyan-601300229,Implementing Symptom-Based Predictive Models for Early Diagnosis of Pediatric Respiratory Viral Infections.,2025,Excluded,10.3390/v17040546,40284989
+rayyan-601300230,Predictive models for secondary epilepsy in patients with acute ischemic stroke within one year.,2024,Excluded,10.7554/eLife.98759,39540824
+rayyan-601300231,Deep Learning for the Assessment of Facial Nerve Palsy: Opportunities and Challenges.,2023,Excluded,10.1055/s-0043-1769805,37290452
+rayyan-601300232,Artificial Intelligence in Radiology: Transforming Cancer Detection and Diagnosis.,2025,Excluded,10.7759/cureus.96518,41393619
+rayyan-601300233,Early prediction of hospital admission of emergency department patients.,2023,Excluded,10.1111/1742-6723.14169,36634916
+rayyan-601300234,Artificial Intelligence in Thyroid Cytopathology: Diagnostic and Technical Insights.,2025,Excluded,10.3390/cancers17213525,41228318
+rayyan-601300235,"AI and machine learning in resuscitation: Ongoing research, new concepts, and key challenges.",2023,Excluded,10.1016/j.resplu.2023.100435,37547540
+rayyan-601300236,Augmented Decisions: AI-Enhanced Accuracy in Glaucoma Diagnosis and Treatment.,2025,Excluded,10.3390/jcm14186519,41010723
+rayyan-601300237,Artificial intelligence and machine learning on diagnosis and classification of hip fracture: systematic review.,2022,Excluded,10.1186/s13018-022-03408-7,36456982
+rayyan-601300238,"AI Methods Tailored to Influenza, RSV, HIV, and SARS-CoV-2: A Focused Review.",2025,Excluded,10.3390/pathogens14080748,40872258
+rayyan-601300239,Implementation considerations for the adoption of artificial intelligence in the emergency department.,2024,Included,10.1016/j.ajem.2024.05.020,38820809
+rayyan-601300240,Machine learning decision support model for discharge planning in stroke patients.,2024,Excluded,10.1111/jocn.16999,38358023
+rayyan-601300241,Emergency department risk model: timely identification of patients for outpatient care coordination.,2024,Maybe,10.37765/ajmc.2024.89542,38748915
+rayyan-601300242,Exploring Hospital Overcrowding with an Explainable Time-to-Event Machine Learning Approach.,2024,Excluded,10.3233/SHTI240505,39176833
+rayyan-601300243,Artificial intelligence in emergency medicine: a narrative review.,2026,Maybe,10.1016/j.ajem.2026.01.028,41616395
+rayyan-601300244,AI-driven multi-modal framework for prognostic modeling in glioblastoma: Enhancing clinical decision support.,2025,Excluded,10.1016/j.compmedimag.2025.102628,40816104
+rayyan-601300245,Artificial Intelligence (AI) and Emergency Medicine: Balancing Opportunities and Challenges.,2025,Excluded,10.2196/70903,40802997
+rayyan-601300246,Using artificial intelligence and predictive modelling to enable learning healthcare systems (LHS) for pandemic preparedness.,2024,Excluded,10.1016/j.csbj.2024.05.014,38831762
+rayyan-601300247,Machine learning-based stratification of mild cognitive impairment in Parkinson's disease: a multicenter cross-sectional analysis.,2025,Excluded,10.1186/s12911-025-03215-0,41094519
+rayyan-601300248,The applicability of artificial intelligence in managing emergency patients: An umbrella review.,2025,Included,10.1016/j.ienj.2025.101710,41242110
+rayyan-601300249,Machine Learning-Augmented Triage for Sepsis: Real-Time ICU Mortality Prediction Using SHAP-Explained Meta-Ensemble Models.,2025,Included,10.3390/biomedicines13061449,40564166
+rayyan-601300250,A machine-learning-based prediction of non-home discharge among acute heart failure patients.,2024,Excluded,10.1007/s00392-023-02209-0,37131097
+rayyan-601300251,Lymphoma triage from H&E using AI for improved clinical management.,2024,Excluded,10.1136/jcp-2023-209186,37945334
+rayyan-601300252,Improved interpretable machine learning emergency department triage tool addressing class imbalance.,2024,Included,10.1177/20552076241240910,38708185
+rayyan-601300253,Clinical Applications of Artificial Intelligence in Uveal Melanoma.,2025,Excluded,10.21873/anticanres.17817,41151907
+rayyan-601300254,Machine and Deep Learning Models for Hypoxemia Severity Triage in CBRNE Emergencies.,2024,Excluded,10.3390/diagnostics14232763,39682671
+rayyan-601300255,Machine-learning prediction models for any blood component transfusion in hospitalized dengue patients.,2024,Excluded,10.1016/j.htct.2023.09.2365,37996385
+rayyan-601300256,Advancements in Artificial Intelligence in Emergency Medicine in Taiwan: A Narrative Review.,2024,Maybe,10.6705/j.jacme.202403_14(1).0002,38487757
+rayyan-601300257,FAIM: Fairness-aware interpretable modeling for trustworthy machine learning in healthcare.,2024,Maybe,10.1016/j.patter.2024.101059,39569213
+rayyan-601300258,Artificial intelligence for predicting shockable rhythm during cardiopulmonary resuscitation: In-hospital setting.,2024,Maybe,10.1016/j.resuscitation.2024.110325,39029581
+rayyan-601300259,"Multimodal artificial intelligence in ophthalmology: Applications, challenges, and future directions.",2026,Excluded,10.1016/j.survophthal.2025.07.003,40683606
+rayyan-601300260,Point-of-Care Electroencephalography in Acute Neurological Care: A Narrative Review.,2025,Excluded,10.3390/neurolint17040048,40278419
+rayyan-601300261,Emergency Department Length of Stay Classification Based on Ensemble Methods and Rule Extraction.,2024,Excluded,10.3233/SHTI240783,39176843
+rayyan-601300262,Clinician Perspectives on Decision Support and AI-based Decision Support in a Pediatric ED.,2024,Included,10.1542/hpeds.2023-007653,39318354
+rayyan-601300263,"AI Predictive Model of Mortality and Intensive Care Unit Admission in the COVID-19 Pandemic: Retrospective Population Cohort Study of 12,000 Patients.",2025,Excluded,10.2196/70674,40638909
+rayyan-601300264,Deep learning identifies cardiac coupling between mother and fetus during gestation.,2022,Excluded,10.3389/fcvm.2022.926965,35966548
+rayyan-601300265,Severity and mortality prediction models to triage Indian COVID-19 patients.,2022,Excluded,10.1371/journal.pdig.0000020,36812530
+rayyan-601300266,An integrated language-vision foundation model for conversational diagnostics and triaging in primary eye care.,2025,Excluded,10.1016/j.xcrm.2025.102476,41349528
+rayyan-601300267,Explainable Machine Learning Models for Rapid Risk Stratification in the Emergency Department: A Multicenter Study.,2024,Included,10.1093/jalm/jfad094,38102476
+rayyan-601300268,Assessment of Machine Learning-Based Medical Directives to Expedite Care in Pediatric Emergency Medicine.,2022,Maybe,10.1001/jamanetworkopen.2022.2599,35294539
+rayyan-601300269,Improving triage performance in emergency departments using machine learning and natural language processing: a systematic review.,2024,Included,10.1186/s12873-024-01135-2,39558255
+rayyan-601300270,AutoScore-Ordinal: an interpretable machine learning framework for generating scoring models for ordinal outcomes.,2022,Excluded,10.1186/s12874-022-01770-y,36333672
+rayyan-601300271,Machine learning-based improvement of an online rheumatology referral and triage system.,2022,Excluded,10.3389/fmed.2022.954056,35935756
+rayyan-601300272,Development and validation of AI-based triage support algorithms for prevention of intradialytic hypotension.,2023,Excluded,10.1007/s40620-023-01741-6,37707692
+rayyan-601300273,Development and Validation of a Model to Quantify Injury Severity in Real Time.,2023,Excluded,10.1001/jamanetworkopen.2023.36196,37812422
+rayyan-601300274,Smart emergency care: a narrative review of predictive machine learning models.,2025,Excluded,10.21037/atm-25-83,41211108
+rayyan-601300275,Leveraging Machine Learning and Artificial Intelligence in Cancer Diagnostics Imaging: A Systematic Review.,2025,Excluded,10.7759/cureus.98540,41492615
+rayyan-601300276,Deep learning for precise diagnosis and subtype triage of drug-resistant tuberculosis on chest computed tomography.,2024,Excluded,10.1002/mco2.487,38469547
+rayyan-601300277,Risk factors and machine learning model for predicting hospitalization outcomes in geriatric patients with dementia.,2022,Excluded,10.1002/trc2.12351,36204350
+rayyan-601300278,"Ensuring fair, safe, and interpretable artificial intelligence-based prediction tools in a real-world oncological setting.",2023,Excluded,10.1038/s43856-023-00317-6,37349541
+rayyan-601300279,Explainable Deep Learning Model for Predicting Serious Adverse Events in Hospitalized Geriatric Patients Within 72 Hours.,2024,Excluded,10.2147/CIA.S460562,38883992
+rayyan-601300280,Development and validation of an interpretable machine learning model for predicting post-stroke epilepsy.,2024,Excluded,10.1016/j.eplepsyres.2024.107397,38976953
+rayyan-601300281,Artificial intelligence for sepsis management in the emergency department.,2026,Maybe,10.1186/s12879-026-12780-2,41680670
+rayyan-601300282,Interpretable machine learning models for prolonged Emergency Department wait time prediction.,2025,Included,10.1186/s12913-025-12535-w,40102847
+rayyan-601300283,The promise and limitations of artificial intelligence in CTPA-based pulmonary embolism detection.,2025,Excluded,10.3389/fmed.2025.1514931,40177281
+rayyan-601300284,AI-Powered Early Detection of Sepsis in Emergency Medicine.,2025,Maybe,10.3390/life15101576,41157249
+rayyan-601300285,Machine learning-based clinical prediction model and multi-omics integration for assessing pancreatic cancer risk in new-onset diabetes.,2026,Excluded,10.1186/s12967-026-07767-1,41618402
+rayyan-601300286,Personalized Case- and Evidence-Based TBI Prognosis with Small Language Models.,2025,Excluded,10.1109/bhi67747.2025.11269507,42111234
+rayyan-601300287,The application of machine learning for identifying frailty in older patients during hospital admission.,2024,Excluded,10.1186/s12911-024-02684-z,39334179
+rayyan-601300288,Artificial Intelligence in Prehospital Emergency Care: Advancing Triage and Destination Decisions for Time-Critical Conditions.,2025,Maybe,10.7759/cureus.91542,41049914
+rayyan-601300289,Unified ICH quantification and prognosis prediction in NCCT images using a multi-task interpretable network.,2023,Excluded,10.3389/fnins.2023.1118340,36998725
+rayyan-601300290,Computed tomography-based COVID-19 triage through a deep neural network using mask-weighted global average pooling.,2023,Excluded,10.3389/fcimb.2023.1116285,36936770
+rayyan-601300291,Predicting Discharge Destination From Inpatient Rehabilitation Using Machine Learning.,2025,Excluded,10.1097/PHM.0000000000002680,39787345
+rayyan-601300292,Developing a predictive model for septic shock risk in acute pancreatitis patients using interpretable machine learning algorithms.,2025,Excluded,10.1177/20552076251346361,40433305
+rayyan-601300293,Machine learning interpretability methods to characterize the importance of hematologic biomarkers in prognosticating patients with suspected infection.,2024,Included,10.1016/j.compbiomed.2024.109251,39393128
+rayyan-601300294,Deep learning referral suggestion and tumour discrimination using explainable artificial intelligence applied to multiparametric MRI.,2023,Excluded,10.1007/s00330-023-09710-0,37150781
+rayyan-601300295,Clinical factors associated with rapid treatment of sepsis.,2021,Excluded,10.1371/journal.pone.0250923,33956846
+rayyan-601300296,Explainable COVID-19 Detection Based on Chest X-rays Using an End-to-End RegNet Architecture.,2023,Excluded,10.3390/v15061327,37376626
+rayyan-601300297,Rapid Assessment of COVID-19 Mortality Risk with GASS Classifiers.,2023,Excluded,10.3390/biomedicines11030831,36979810
+rayyan-601300298,Explainable deep learning model to predict invasive bacterial infection in febrile young infants: A retrospective study.,2023,Excluded,10.1016/j.ijmedinf.2023.105007,36731394
+rayyan-601300299,Predicting acute clinical deterioration with interpretable machine learning to support emergency care decision making.,2023,Maybe,10.1038/s41598-023-40661-0,37604974
+rayyan-601300300,Study of Patient and Physician Attitudes Toward Automated Prognostic Models for Patients With Metastatic Cancer.,2023,Excluded,10.1200/CCI.23.00023,37478393
+rayyan-601300301,Exploring AI Approaches for Breast Cancer Detection and Diagnosis: A Review Article.,2025,Excluded,10.2147/BCTT.S550307,41141218
+rayyan-601300302,Predicting Acute Onset of Heart Failure Complicating Acute Coronary Syndrome: An Explainable Machine Learning Approach.,2023,Excluded,10.1016/j.cpcardiol.2022.101480,36336116
+rayyan-601300303,Salivary Molecular Spectroscopy with Machine Learning Algorithms for a Diagnostic Triage for Amelogenesis Imperfecta.,2024,Excluded,10.3390/ijms25179464,39273410
+rayyan-601300304,Artificial Intelligence to Predict Billing Code Levels of Emergency Department Encounters.,2025,Maybe,10.1016/j.annemergmed.2024.07.011,39320279
+rayyan-601300305,Benchmarking of Machine Learning classifiers on plasma proteomic for COVID-19 severity prediction through interpretable artificial intelligence.,2023,Excluded,10.1016/j.artmed.2023.102490,36868685
+rayyan-601300306,Machine Learning Identifies Variation in Timing of Palliative Care Consultations Among Traumatic Brain Injury Patients.,2024,Excluded,10.21203/rs.3.rs-4290808/v1,38746163
+rayyan-601300307,"The Prognostic Value of the CALLY Index in Sepsis: A Composite Biomarker Reflecting Inflammation, Nutrition, and Immunity.",2025,Excluded,10.3390/diagnostics15081026,40310418
+rayyan-601300308,Transforming nephrology through artificial intelligence: a state-of-the-art roadmap for clinical integration.,2026,Excluded,10.1093/ckj/sfag004,41704427
+rayyan-601300309,Using Explainable Artificial Intelligence Models (ML) to Predict Suspected Diagnoses as Clinical Decision Support.,2022,Excluded,10.3233/SHTI220529,35612150
+rayyan-601300310,Expanding the applications of artificial intelligence in emergency radiology: Advancing precision medicine and resource efficiency.,2026,Maybe,10.4329/wjr.v18.i1.117814,41640709
+rayyan-601300311,The clinician-AI interface: intended use and explainability in FDA-cleared AI devices for medical image interpretation.,2024,Excluded,10.1038/s41746-024-01080-1,38531952
+rayyan-601300312,Deep learning-based natural language processing for detecting medical symptoms and histories in emergency patient triage.,2024,Maybe,10.1016/j.ajem.2023.11.063,38096637
+rayyan-601300313,Pediatric Electrocardiogram-Based Deep Learning to Predict Secundum Atrial Septal Defects.,2025,Excluded,10.1007/s00246-024-03540-7,38953953
+rayyan-601300314,An Artificial Intelligence Model for Predicting Trauma Mortality Among Emergency Department Patients in South Korea: Retrospective Cohort Study.,2023,Excluded,10.2196/49283,37642984
+rayyan-601300315,Machine learning and LACE index for predicting 30-day readmissions after heart failure hospitalization in elderly patients.,2022,Excluded,10.1007/s11739-022-02996-w,35661313
+rayyan-601300316,"Artificial Intelligence in Stroke Care: A Narrative Review of Diagnostic, Predictive, and Workflow Applications.",2025,Excluded,10.7759/cureus.93430,41170263
+rayyan-601300317,Artificial intelligence in acute and critical care: current challenges and strategic solutions.,2026,Excluded,10.3389/fpubh.2026.1818726,42040067
+rayyan-601300318,Artificial Intelligence for Predicting Difficult Airways: A Review.,2025,Excluded,10.3390/jcm14238600,41375910
+rayyan-601300319,Explainable Artificial Intelligence for Ovarian Cancer: Biomarker Contributions in Ensemble Models.,2025,Excluded,10.3390/biology14111487,41300279
+rayyan-601300320,Machine Learning Model Reveals Determinators for Admission to Acute Mental Health Wards From Emergency Department Presentations.,2024,Excluded,10.1111/inm.13402,39209760
+rayyan-601300321,A machine-learning parsimonious multivariable predictive model of mortality risk in patients with Covid-19.,2021,Excluded,10.1038/s41598-021-99905-6,34707184
+rayyan-601300322,Detecting total hip arthroplasty dislocations using deep learning: clinical and Internet validation.,2022,Excluded,10.1007/s10140-022-02060-2,35608786
+rayyan-601300323,"Modernizing Colorectal Cancer Care With Artificial Intelligence: Real-Time Detection, Radiomics, and Digital Pathology.",2025,Excluded,10.7759/cureus.95178,41132477
+rayyan-601300324,Machine learning clinical decision support systems for surveillance: a case study on pertussis and RSV in children.,2023,Excluded,10.3389/fped.2023.1112074,37284288
+rayyan-601300325,Early Triage of Critically Ill Adult Patients With Mushroom Poisoning: Machine Learning Approach.,2023,Excluded,10.2196/44666,36943366
+rayyan-601300326,Assessment of Sepsis Risk at Admission to the Emergency Department: Clinical Interpretable Prediction Model.,2024,Included,10.3390/diagnostics14050457,38472930
+rayyan-601300327,Mind Meets Machine: A Narrative Review of Artificial Intelligence Role in Clinical Psychology Practice.,2025,Excluded,10.1002/cpp.70191,41346105
+rayyan-601300328,Prognostic Models in Heart Failure: Hope or Hype?,2025,Excluded,10.3390/jpm15080345,40863407
+rayyan-601300329,A Machine Learning-Based Guide for Repeated Laboratory Testing in Pediatric Emergency Departments.,2025,Maybe,10.3390/diagnostics15151885,40804850
+rayyan-601300330,Potentially inappropriate polypharmacy is an important predictor of 30-day emergency hospitalisation in older adults: a machine learning feature validation study.,2025,Excluded,10.1093/ageing/afaf156,40479613
+rayyan-601300331,Human-centred AI for emergency cardiac care: Evaluating RAPIDx AI with PROLIFERATE_AI.,2025,Maybe,10.1016/j.ijmedinf.2025.105810,39893766
+rayyan-601300332,A risk prediction model for efficient intubation in the emergency department: A 4-year single-center retrospective analysis.,2024,Excluded,10.1002/emp2.13190,38827500
+rayyan-601300334,Explainable Machine Learning Framework for Dynamic Monitoring of Disease Prognostic Risk: Retrospective Cohort Study.,2025,Excluded,10.2196/65585,41084807
+rayyan-601300335,Predicting Hemodynamic and Pulmonary Decompensation with Deep Neural Networks: Performance and Explainability.,2024,Excluded,10.1109/EMBC53108.2024.10782095,40039697
+rayyan-601300336,Artificial Intelligence-Driven Personalization in Breast Cancer Screening: From Population Models to Individualized Protocols.,2025,Excluded,10.3390/cancers17172901,40940998
+rayyan-601300337,Area Deprivation and Patient Complexity Predict Low-Value Healthcare Utilization in Persons With Heart Failure.,2025,Excluded,10.1097/NNR.0000000000000794,39616433
+rayyan-601300338,"LI-RADS-aligned artificial intelligence for liver cancer diagnosis: methods, evidence, and clinical readiness.",2025,Excluded,10.1007/s00261-025-05329-5,41417075
+rayyan-601300339,Explainable detection of myocardial infarction using deep learning models with Grad-CAM technique on ECG signals.,2022,Excluded,10.1016/j.compbiomed.2022.105550,35533457
+rayyan-601300340,Human performance evaluation of a pediatric artificial intelligence sepsis model.,2025,Excluded,10.1093/jamia/ocaf106,40694809
+rayyan-601300341,Interpretable machine learning for in-hospital mortality risk prediction in patients with ST-elevation myocardial infarction after percutaneous coronary interventions.,2024,Excluded,10.1016/j.compbiomed.2024.107953,38224666
+rayyan-601300342,Application of interpretable machine learning algorithms to predict acute kidney injury in patients with cerebral infarction in ICU.,2024,Maybe,10.1016/j.jstrokecerebrovasdis.2024.107729,38657830
+rayyan-601300343,Improving Risk Prediction of Methicillin-Resistant Staphylococcus aureus Using Machine Learning Methods With Network Features: Retrospective Development Study.,2024,Excluded,10.2196/48067,38875598
+rayyan-601300344,COVID-19 Risk Stratification and Mortality Prediction in Hospitalized Indian Patients: Harnessing clinical data for public health benefits.,2022,Excluded,10.1371/journal.pone.0264785,35298502
+rayyan-601300345,Predicting Asthma Exacerbations Using Machine Learning Models.,2025,Excluded,10.1007/s12325-024-03053-y,39556295
+rayyan-601300346,Prediction of hospitalization and waiting time within 24 hours of emergency department patients with unstructured text data.,2024,Excluded,10.1007/s10729-023-09660-5,37921927
+rayyan-601300347,"Artificial Intelligence in Traumatic Brain Injury: A Systematic Review of Prognostic, Diagnostic, and Monitoring Applications.",2025,Excluded,10.7759/cureus.96600,41393607
+rayyan-601300348,Machine learning prediction of hospital discharge disposition for inpatients with acute ischemic stroke following mechanical thrombectomy in the United States.,2024,Excluded,10.1016/j.jstrokecerebrovasdis.2023.107489,37980845
+rayyan-601300349,MOCRA: A multi-algorithm clinical decision support system for the early detection of ovarian cancer.,2025,Excluded,10.1186/s13048-025-01929-3,41422048
+rayyan-601300350,Syndromic surveillance of population-level COVID-19 burden with cough monitoring in a hospital emergency waiting room.,2024,Maybe,10.3389/fpubh.2024.1279392,38605877
+rayyan-601300351,Interpretable machine learning-derived nomogram model for early detection of diabetic retinopathy in type 2 diabetes mellitus: a widely targeted metabolomics study.,2022,Excluded,10.1038/s41387-022-00216-0,35931671
+rayyan-601300352,Machine Learning for Personalized Prediction of Electrocardiogram (EKG) Use in Emergency Care.,2025,Maybe,10.3390/jpm15080358,40863420
+rayyan-601300353,Explaining alerts from a pediatric risk prediction model using clinical text.,2025,Excluded,10.1093/jamia/ocaf121,40700686
+rayyan-601300354,Machine learning of microvolt-level 12-lead electrocardiogram can help distinguish takotsubo syndrome and acute anterior myocardial infarction.,2022,Maybe,10.1016/j.cvdhj.2022.07.001,36046427
+rayyan-601300355,Leveraging Machine Learning to Identify Subgroups of Misclassified Patients in the Emergency Department: Multicenter Proof-of-Concept Study.,2024,Excluded,10.2196/56382,39451101
+rayyan-601300356,Can a Deep Learning Algorithm Improve Detection of Occult Scaphoid Fractures in Plain Radiographs? A Clinical Validation Study.,2023,Excluded,10.1097/CORR.0000000000002612,36881548
+rayyan-601300357,"Artificial Intelligence in Colon Cancer: Advances, Challenges, and Future Perspectives.",2026,Excluded,10.21614/chirurgia.3240,41789607
+rayyan-601300358,Machine learning identifies ICU outcome predictors in a multicenter COVID-19 cohort.,2021,Maybe,10.1186/s13054-021-03720-4,34404458
+rayyan-601300359,Navigating extreme class imbalance in suicide risk prediction.,2025,Excluded,10.3389/fpsyt.2025.1679618,41601506
+rayyan-601300360,Clinically Interpretable Machine Learning Models for Early Prediction of Mortality in Older Patients with Multiple Organ Dysfunction Syndrome: An International Multicenter Retrospective Study.,2023,Excluded,10.1093/gerona/glac107,35657011
+rayyan-601300361,A COVID-19 Risk Assessment Decision Support System for General Practitioners: Design and Development Study.,2020,Excluded,10.2196/19786,32540845
+rayyan-601300362,"Integrating Feature Selection, Machine Learning, and SHAP Explainability to Predict Severe Acute Pancreatitis.",2025,Excluded,10.3390/diagnostics15192473,41095692
+rayyan-601300363,Machine learning-based triage model for elderly traumatic brain injury patients in Chinese emergency department.,2026,Maybe,10.3389/fneur.2026.1817051,42266581
+rayyan-601300364,Interpretable Machine Learning Models for Predicting Critical Outcomes in Patients with Suspected Urinary Tract Infection with Positive Urine Culture.,2024,Excluded,10.3390/diagnostics14171974,39272758
+rayyan-601300365,COVID-19 detection based on self-supervised transfer learning using chest X-ray images.,2023,Excluded,10.1007/s11548-022-02813-x,36538184
+rayyan-601300366,Deep Learning for Emergency Department Sustainability: Interpretable Prediction of Revisit.,2026,Included,10.3390/healthcare14040464,41753977
+rayyan-601300367,Personalised machine-learning decision support for suicidal thoughts and behaviours in the psychiatric emergency department.,2025,Excluded,10.1016/j.psychres.2025.116698,40840196
+rayyan-601300368,Development and validation of an interpretable machine learning scoring tool for estimating time to emergency readmissions.,2022,Excluded,10.1016/j.eclinm.2022.101315,35284804
+rayyan-601300369,COVID-19 severity analysis for clinical decision support based on machine learning approach.,2025,Excluded,10.1038/s41598-025-27277-2,41360833
+rayyan-601300370,"AI-Assisted Pneumonia Detection, Localisation and Report Generation from Chest X-rays.",2026,Excluded,10.64898/2026.03.20.26348879,41929300
+rayyan-601300371,Predictive modeling of hospital emergency department demand using artificial intelligence: A systematic review.,2026,Excluded,10.1016/j.ijmedinf.2025.106215,41401760
+rayyan-601300372,Patient-Representing Population's Perceptions of GPT-Generated Versus Standard Emergency Department Discharge Instructions: Randomized Blind Survey Assessment.,2024,Excluded,10.2196/60336,39094112
+rayyan-601300373,Prehospital Risk Stratification Using Unsupervised Machine Learning in STEMI.,2026,Excluded,10.1111/eci.70214,42029002
+rayyan-601300374,Establishing methodological standards for the development of artificial intelligence-based Clinical Decision Support in emergency medicine.,2025,Maybe,10.1007/s43678-024-00826-w,39918783
+rayyan-601300375,An interpretable deep-learning model for early prediction of sepsis in the emergency department.,2021,Maybe,10.1016/j.patter.2020.100196,33659912
+rayyan-601300376,XDL-ESI: Electrophysiological Sources Imaging via explainable deep learning framework with validation on simultaneous EEG and iEEG.,2024,Excluded,10.1016/j.neuroimage.2024.120802,39173694
+rayyan-601300377,Artificial Intelligence-powered tiered early warning framework addressing high false alarm rates for in-hospital mortality prediction.,2026,Excluded,10.1038/s41746-026-02522-8,41832244
+rayyan-601300378,Development of a Machine Learning-Based Prescriptive Tool to Address Racial Disparities in Access to Care After Penetrating Trauma.,2023,Excluded,10.1001/jamasurg.2023.2293,37610746
+rayyan-601300379,An explanatory machine learning framework for studying pandemics: The case of COVID-19 emergency department readmissions.,2022,Excluded,10.1016/j.dss.2022.113730,35068629
+rayyan-601300380,AI-Aided Triage for GSWH: Validating an Interpretable HCT-Based Mortality Model.,2026,Excluded,10.1177/08977151261429994,41805068
+rayyan-601300381,Artificial Intelligence in Oral and Maxillofacial Surgery: Integrating Clinical Innovation and Workflow Optimization.,2026,Excluded,10.3390/jcm15020427,41598365
+rayyan-601300382,Large Language Models Demonstrate Distinct Personality Profiles.,2025,Excluded,10.7759/cureus.84706,40551914
+rayyan-601300383,Diagnosis of Acute Central Dizziness With Simple Clinical Information Using Machine Learning.,2021,Excluded,10.3389/fneur.2021.691057,34322084
+rayyan-601300384,Using machine learning to assist decision making in the assessment of mental health patients presenting to emergency departments.,2024,Maybe,10.1177/20552076241287364,39534524
+rayyan-601300385,Early prediction of patient discharge disposition in acute neurological care using machine learning.,2022,Excluded,10.1186/s12913-022-08615-w,36284297
+rayyan-601300386,Deep significance clustering: a novel approach for identifying risk-stratified and predictive patient subgroups.,2021,Excluded,10.1093/jamia/ocab203,34571540
+rayyan-601300387,Foundation model of electronic medical records for adaptive risk estimation.,2025,Excluded,10.1093/gigascience/giaf107,41026508
+rayyan-601300388,Machine learning-based prediction of diabetic retinopathy using clinlabomics: a multi-center study.,2026,Excluded,10.1186/s12911-026-03524-y,42116016
+rayyan-601300389,Machine learning to predict hospital admission at triage in paediatric emergency care: A meta-analysis.,2026,Excluded,10.1007/s00431-026-06895-6,41912745
+rayyan-601300390,Analyzing the Interactions between Environmental Parameters and Cardiovascular Diseases Using Random Forest and SHAP Algorithms.,2023,Excluded,10.31083/j.rcm2411330,39076440
+rayyan-601300391,Development and Assessment of an Interpretable Machine Learning Triage Tool for Estimating Mortality After Emergency Admissions.,2021,Included,10.1001/jamanetworkopen.2021.18467,34448870
+rayyan-601300392,Grounded large language models for diagnostic prediction in real-world emergency department settings.,2025,Maybe,10.1093/jamiaopen/ooaf119,41127256
+rayyan-601300393,Machine Learning Models for Differentiating Causes of Dyspnea in Emergency Department Patients: A Retrospective Study.,2025,Maybe,10.2147/JMDH.S550659,41089741
+rayyan-601300394,Evaluation of the Need for Intensive Care in Children With Pneumonia: Machine Learning Approach.,2022,Excluded,10.2196/28934,35084358
+rayyan-601300395,Complete Blood Count and Monocyte Distribution Width-Based Machine Learning Algorithms for Sepsis Detection: Multicentric Development and External Validation Study.,2025,Excluded,10.2196/55492,40009841
+rayyan-601300396,Prospective and External Validation of Machine Learning Models for Short- and Long-Term Mortality in Acutely Admitted Patients Using Blood Tests.,2024,Excluded,10.3390/jcm13216437,39518575
+rayyan-601300397,Interpretable Deep Learning for OCT-Based Diagnosis of Vitreoretinal Lymphoma Versus Uveitis.,2026,Excluded,10.1167/tvst.15.2.30,41746131
+rayyan-601300398,AI innovations for ovarian and endometrial cancer diagnosis: Methodological challenges and engineering roadmap.,2026,Excluded,10.1016/j.critrevonc.2026.105298,41895354
+rayyan-601300399,Robust and Interpretable AI for Acute Appendicitis: A Simulation-to-Clinical Validation Pipeline.,2026,Excluded,10.1016/j.cmpb.2026.109467,42242041
+rayyan-601300400,Integrating machine learning and artificial intelligence in the management of Acinetobacter infections: a narrative review.,2026,Excluded,10.1007/s15010-026-02753-7,41851574
+rayyan-601300401,A review of the explainability and safety of conversational agents for mental health to identify avenues for improvement.,2023,Excluded,10.3389/frai.2023.1229805,37899961
+rayyan-601300402,Machine Learning Models to Predict Withdrawal of Life-Sustaining Therapy in Patients With Severe Traumatic Brain Injury.,2025,Excluded,10.1212/WNL.0000000000214249,41071965
+rayyan-601300403,Violence detection explanation via semantic roles embeddings.,2020,Excluded,10.1186/s12911-020-01237-4,33059690
+rayyan-601300404,Using explainable machine learning to identify patients at risk of reattendance at discharge from emergency departments.,2021,Excluded,10.1038/s41598-021-00937-9,34728706
+rayyan-601300405,"EVALUATION OF PROGNOSTIC RISK MODELS BASED ON AGE AND COMORBIDITY IN SEPTIC PATIENTS: INSIGHTS FROM MACHINE LEARNING AND TRADITIONAL METHODS IN A LARGE-SCALE, MULTICENTER, RETROSPECTIVE STUDY.",2025,Excluded,10.1097/SHK.0000000000002562,39965627
+rayyan-601300406,Characteristics and Admission Preferences of Pediatric Emergency Patients and Their Waiting Time Prediction Using Electronic Medical Record Data: Retrospective Comparative Analysis.,2023,Maybe,10.2196/49605,37910168
+rayyan-601300407,Machine learning enables early risk stratification of hymenopteran stings: evidence from a tropical multicenter cohort.,2025,Maybe,10.3389/fpubh.2025.1664606,41229473
+rayyan-601300408,"A study of ""left against medical advice"" emergency department patients: an optimized explainable artificial intelligence framework.",2024,Maybe,10.1007/s10729-024-09684-5,39138745
+rayyan-601300409,Radiogenomics: transforming lung cancer care through non-invasive imaging and genomic integration.,2025,Excluded,10.1007/s12032-025-03118-0,41236645
+rayyan-601300410,Trust Your Neighbors: Multimodal Patient Retrieval for TBI Prognosis.,2025,Excluded,10.1109/JBHI.2025.3622508,41359698
+rayyan-601300411,Using Machine Learning to Predict Mortality for COVID-19 Patients on Day 0 in the ICU.,2021,Maybe,10.3389/fdgth.2021.681608,35098205
+rayyan-601300412,MultiTask learning AI system to assist BCC diagnosis with dual explanation.,2026,Excluded,10.1038/s41598-026-40229-8,42156415
+rayyan-601300413,Enhanced diagnostic interpretation of the MoCA using machine learning.,2026,Excluded,10.3389/fnins.2026.1679649,41799879
+rayyan-601300414,"Identifying key risk factors for intentional self-harm, including suicide, among a cohort of people prescribed opioid agonist treatment: A predictive modelling study.",2025,Excluded,10.1111/add.70095,40415419
+rayyan-601300415,Machine learning-based mortality prediction models for emergency department patients: a comparative analysis.,2026,Excluded,10.3389/fmed.2026.1721101,41695176
+rayyan-601300416,Differentiation of Active Corneal Infections from Healed Scars Using Deep Learning.,2022,Excluded,10.1016/j.ophtha.2021.07.033,34352302
+rayyan-601300417,iMIL4PATH: A Semi-Supervised Interpretable Approach for Colorectal Whole-Slide Images.,2022,Excluded,10.3390/cancers14102489,35626093
+rayyan-601300418,Analysis of hematological indicators via explainable artificial intelligence in the diagnosis of acute heart failure: a retrospective study.,2024,Included,10.3389/fmed.2024.1285067,38633310
+rayyan-601300419,POTTER-ICU: An artificial intelligence smartphone-accessible tool to predict the need for intensive care after emergency surgery.,2022,Excluded,10.1016/j.surg.2022.03.023,35489978
+rayyan-601300421,Evaluation of techniques to improve a deep learning algorithm for the automatic detection of intracranial haemorrhage on CT head imaging.,2023,Excluded,10.1186/s41747-023-00330-3,37032417
+rayyan-601300422,Machine Learning-Based Prediction for High Health Care Utilizers by Using a Multi-Institutional Diabetes Registry: Model Training and Evaluation.,2024,Excluded,10.2196/58463,39418089
+rayyan-601300423,"The Role of Artificial Intelligence in Improving Diagnosis, Management, and Outcomes of Acute Myocardial Ischemia: A Systematic Review.",2025,Excluded,10.7759/cureus.98865,41523481
+rayyan-601300424,"Interpretable Deep Learning System for Identifying Critical Patients Through the Prediction of Triage Level, Hospitalization, and Length of Stay: Prospective Study.",2024,Excluded,10.2196/48862,38557661
+rayyan-601300425,An explainable machine learning approach for hospital emergency department visits forecasting using continuous training and multi-model regression.,2024,Maybe,10.1016/j.cmpb.2024.108033,38278030
+rayyan-601300426,Accurate prediction of sepsis from pediatric emergency department to PICU using a machine-learning model.,2025,Maybe,10.3389/fped.2025.1610187,41142005
+rayyan-601300427,Diagnostic triage in patients with central lumbar spinal stenosis using a deep learning system of radiographs.,2022,Excluded,10.3171/2021.11.SPINE211136,35061993
+rayyan-601300428,A pioneering artificial intelligence tool to predict treatment outcomes in ovarian cancer via diagnostic laparoscopy.,2025,Excluded,10.1038/s41598-025-98434-w,40281006
+rayyan-601300429,"Incorporating artificial intelligence into imaging for surveillance and diagnosis of liver cancer: Innovations, challenges, and clinical translation.",2026,Excluded,10.1097/HEP.0000000000001698,41616271
+rayyan-601300430,A Systematic Integration of Artificial Intelligence Models in Appendicitis Management: A Comprehensive Review.,2025,Excluded,10.3390/diagnostics15070866,40218216
+rayyan-601300431,Triage Data-Driven Prediction Models for Hospital Admission of Emergency Department Patients: A Systematic Review.,2025,Included,10.4258/hir.2025.31.1.23,39973034
+rayyan-601300432,EDT-MCFEF: a multi-channel feature fusion model for emergency department triage of medical texts.,2025,Included,10.3389/fpubh.2025.1591491,40606112
+rayyan-601300433,Clinicians' perspectives on the use of artificial intelligence to triage MRI brain scans.,2025,Excluded,10.1016/j.ejrad.2025.111921,39805194
+rayyan-601300434,Advancing medical AI through benchmarking and competition for specialty triage.,2026,Excluded,10.1038/s41746-026-02433-8,41760911
+rayyan-601300435,An effective multi-step feature selection framework for clinical outcome prediction using electronic medical records.,2025,Excluded,10.1186/s12911-025-02922-y,39962480
+rayyan-601300436,Predictive model for daily risk alerts in sepsis patients in the ICU: visualization and clinical analysis of risk indicators.,2025,Excluded,10.1093/pcmedi/pbaf003,40041421
+rayyan-601300437,Machine Learning-Based Prediction of Delayed Neurologic Sequelae in Carbon Monoxide Poisoning Using Automatically Extracted MR Imaging Features.,2025,Excluded,10.3174/ajnr.A8870,40506230
+rayyan-601300438,An Interpretable Machine Learning Framework for Analyzing the Interaction Between Cardiorespiratory Diseases and Meteo-Pollutant Sensor Data.,2025,Excluded,10.3390/s25154864,40808028
+rayyan-601300439,Lightweight interpretable AI model using multiple blood parameters for emergency diagnosis of acute appendicitis.,2026,Excluded,10.1016/j.ajem.2026.01.006,41570492
+rayyan-601300440,Machine learning outperforms the Canadian Triage and Acuity Scale (CTAS) in predicting need for early critical care.,2025,Excluded,10.1007/s43678-024-00807-z,39560909
+rayyan-601300441,Identification of avoidable patients at triage in a Paediatric Emergency Department: a decision support system using predictive analytics.,2024,Maybe,10.1186/s12873-024-01029-3,39155373
+rayyan-601300442,Reliable Prediction of Discharge Disposition Following Cervical Spine Surgery With Ensemble Machine Learning and Validation on a National Cohort.,2024,Excluded,10.1097/BSD.0000000000001520,38285429
+rayyan-601300443,An In-Hospital Mortality Prediction Model for Acute Pesticide Poisoning in the Emergency Department.,2025,Excluded,10.3390/toxics13100893,41150592
+rayyan-601300444,The three-dimensional weakly supervised deep learning algorithm for traumatic splenic injury detection and sequential localization: an experimental study.,2023,Excluded,10.1097/JS9.0000000000000380,36999810
+rayyan-601300445,Plaque-Level Machine Learning Prediction of Intraplaque Hemorrhage in Carotid Arteries Using Computed Tomography Angiography.,2026,Excluded,10.1007/s00062-026-01656-2,42020789
+rayyan-601300446,Covid-19 triage in the emergency department 2.0: how analytics and AI transform a human-made algorithm for the prediction of clinical pathways.,2023,Excluded,10.1007/s10729-023-09647-2,37428304
+rayyan-601300447,A Machine Learning Approach to Support Urgent Stroke Triage Using Administrative Data and Social Determinants of Health at Hospital Presentation: Retrospective Study.,2023,Excluded,10.2196/36477,36716097
+rayyan-601300448,Machine learning models predict coagulopathy in traumatic brain injury patients in ER.,2025,Excluded,10.3389/fneur.2025.1649869,41050269
+rayyan-601300449,"Overtriage, Undertriage, and Value of Care after Major Surgery: An Automated, Explainable Deep Learning-Enabled Classification System.",2023,Excluded,10.1097/XCS.0000000000000471,36648256
+rayyan-601300450,Predicting 30-Day All-Cause Hospital Readmission Using Multimodal Spatiotemporal Graph Neural Networks.,2023,Excluded,10.1109/JBHI.2023.3236888,37018684
+rayyan-601300451,Point-of-care ultrasound assessment of the abdominal aorta by physician assistant students: a pilot study.,2021,Excluded,10.1007/s10140-020-01844-8,32839890
+rayyan-601300452,Multimodal AI for early prediction of adverse clinical outcomes in acute pancreatitis.,2026,Excluded,10.1007/s00261-026-05588-w,42228172
+rayyan-601300453,Development and Validation of a Machine Learning Algorithm Predicting Emergency Department Use and Unplanned Hospitalization in Patients With Head and Neck Cancer.,2022,Maybe,10.1001/jamaoto.2022.1629,35771564
+rayyan-601300454,Development of a machine-learning algorithm to predict in-hospital cardiac arrest for emergency department patients using a nationwide database.,2022,Included,10.1038/s41598-022-26167-1,36526686
+rayyan-601300456,Research trends and ethical perspectives on explainable artificial intelligence in emergency medicine: a bibliometric analysis.,2026,Maybe,10.1186/s13049-025-01540-x,41491985
+rayyan-601300457,Integrating Social Determinants of Health in Machine Learning-Driven Decision Support for Diabetes Case Management: Protocol for a Sequential Mixed Methods Study.,2024,Excluded,10.2196/56049,39321449
+rayyan-601300458,Early auxiliary diagnosis model for chest pain triad based on artificial intelligence multimodal fusion.,2025,Excluded,10.1093/jamiaopen/ooaf114,41041626
+rayyan-601300459,A machine learning-based triage system for systemic EBV-positive T/NK cell lymphoproliferative diseases of childhood.,2026,Excluded,10.1172/jci.insight.180837,41729084
+rayyan-601300460,Human intention recognition for trauma resuscitation: An interpretable deep learning approach for medical process data.,2025,Excluded,10.1016/j.jbi.2024.104767,39746431
+rayyan-601300461,Predicting 1 year readmission for heart failure: A comparative study of machine learning and the LACE index.,2024,Excluded,10.1002/ehf2.14855,38778700
+rayyan-601300462,Machine learning detecting aggression among mood disorder patients visited in psychiatric emergency departments.,2026,Excluded,10.1016/j.jad.2025.121117,41483885
+rayyan-601300463,"Respiratory support status from EHR data for adult population: classification, heuristics, and usage in predictive modeling.",2022,Excluded,10.1093/jamia/ocac005,35092276
+rayyan-601300464,Direct assessment of health impacts on hospital admission from traffic intensity in Madrid.,2020,Excluded,10.1016/j.envres.2020.109254,32126373
+rayyan-601300465,Morpho-clinical insights into moderate-to-severe obstructive sleep apnea.,2025,Excluded,10.1016/j.rmed.2025.108392,41043792
+rayyan-601300466,Predicting frequent emergency department visits among children with asthma using EHR data.,2017,Excluded,10.1002/ppul.23735,28557381
+rayyan-601300467,XAIRE: An ensemble-based methodology for determining the relative importance of variables in regression tasks. Application to a hospital emergency department.,2023,Maybe,10.1016/j.artmed.2023.102494,36868688
+rayyan-601300468,Machine Learning Reveals Demographic Disparities in Palliative Care Timing Among Patients With Traumatic Brain Injury Receiving Neurosurgical Consultation.,2025,Excluded,10.1007/s12028-024-02172-2,39653977
+rayyan-601300469,Machine learning models for predicting risks of MACEs for myocardial infarction patients with different VEGFR2 genotypes.,2024,Excluded,10.3389/fmed.2024.1452239,39301488
+rayyan-601300470,Development and Validation of a Robust and Interpretable Early Triaging Support System for Patients Hospitalized With COVID-19: Predictive Algorithm Modeling and Interpretation Study.,2024,Excluded,10.2196/52134,38206673
+rayyan-601300471,Bayesian Networks in the Management of Hospital Admissions: A Comparison between Explainable AI and Black Box AI during the Pandemic.,2024,Excluded,10.3390/jimaging10050117,38786571
+rayyan-601300472,A urine-based point-of-care test for Factor Xa inhibitors in acute stroke management.,2025,Excluded,10.1016/j.jstrokecerebrovasdis.2025.108500,41274588
+rayyan-601300473,Higher hospital level does not improve 30-day survival after road traffic accidents.,2025,Excluded,10.1038/s41598-025-26519-7,41272162
+rayyan-601300474,Multimodal Machine Learning Approach for Diagnosing Atopic Dermatitis.,2025,Excluded,10.12688/f1000research.169102.2,41716356
+rayyan-601300475,Trauma outcome predictor: An artificial intelligence interactive smartphone tool to predict outcomes in trauma patients.,2021,Excluded,10.1097/TA.0000000000003158,33755641
+rayyan-601300476,Development and validation of a machine learning model to predict mortality risk in patients with COVID-19.,2021,Excluded,10.1136/bmjhci-2020-100235,33962987
+rayyan-601300477,Machine learning models to detect opioid misuse in emergency department patients at triage.,2026,Excluded,10.1016/j.ajem.2026.02.037,41785519
+rayyan-601300478,Early Warning Scores in Emergency Department Patients Aged 80 Years or Older.,2026,Excluded,10.1001/jamanetworkopen.2026.1532,41854615
+rayyan-601300479,Automated Triage System for Intensive Care Admissions during the COVID-19 Pandemic Using Hybrid XGBoost-AHP Approach.,2021,Excluded,10.3390/s21196379,34640700
+rayyan-601300480,Development and Asian-wide validation of the Grade for Interpretable Field Triage (GIFT) for predicting mortality in pre-hospital patients using the Pan-Asian Trauma Outcomes Study (PATOS).,2023,Excluded,10.1016/j.lanwpc.2023.100733,37283981
+rayyan-601300481,"Rapid triage for ischemic stroke: a machine learning-driven approach in the context of predictive, preventive and personalised medicine.",2022,Excluded,10.1007/s13167-022-00283-4,35719136
+rayyan-601300482,Machine learning prediction of positive urine cultures in an academic pediatric emergency department (ED).,2026,Maybe,10.1016/j.ajem.2026.02.036,41903287
+rayyan-601300483,Deep learning-based Emergency Department In-hospital Cardiac Arrest Score (Deep EDICAS) for early prediction of cardiac arrest and cardiopulmonary resuscitation in the emergency department.,2024,Maybe,10.1186/s13040-024-00407-8,39580434
+rayyan-601300484,AI based prediction of severe exacerbation in Asian bronchiectasis patients using the KMBARC registry.,2026,Excluded,10.1038/s41598-026-38968-9,41735386
+rayyan-601300485,Sample average treatment effect on the treated (SATT) analysis using counterfactual explanation identifies BMT and SARS-CoV-2 vaccination as protective risk factors associated with COVID-19 severity and survival in patients with multiple myeloma.,2023,Excluded,10.1038/s41408-023-00901-y,38057320
+rayyan-601300486,Artificial intelligence-assisted triage of pediatric supracondylar humerus fractures in emergency departments: A single-centre validation study.,2026,Maybe,10.1016/j.injury.2026.113159,41880886
+rayyan-601300487,Enhancing Performance of the National Field Triage Guidelines Using Machine Learning: Development of a Prehospital Triage Model to Predict Severe Trauma.,2024,Excluded,10.2196/58740,39348683
+rayyan-601300488,Patient Triage by Topic Modeling of Referral Letters: Feasibility Study.,2020,Excluded,10.2196/21252,33155985
+rayyan-601300489,Optimized explainable AI and digital twin for patient flow improvement in ICU during respiratory epidemics.,2026,Included,10.1186/s12911-026-03523-z,42069545
+rayyan-601300490,Early Prediction of Mortality for Septic Patients Visiting Emergency Room Based on Explainable Machine Learning: A Real-World Multicenter Study.,2024,Excluded,10.3346/jkms.2024.39.e53,38317451
+rayyan-601300491,Field Measures Are All You Need: Predicting Need for Surgery in Elderly Ground-Level Fall Patients via Machine Learning.,2023,Excluded,10.1177/00031348231177917,37218170
+rayyan-601300492,Preclinical identification of acute coronary syndrome without high sensitivity troponin assays using machine learning algorithms.,2024,Excluded,10.1038/s41598-024-60249-6,38684774
+rayyan-601300493,Accessible healing phase classification of diabetic foot ulcer.,2025,Excluded,10.1016/j.compbiomed.2025.111066,40945216
+rayyan-601300494,Automated Classification of Mitral and Tricuspid Regurgitation With Explainability and Real-World Practice Experience.,2026,Excluded,10.1161/JAHA.125.045851,41804879
+rayyan-601300495,Development and Validation of a Model to Predict Posttraumatic Stress Disorder and Major Depression After a Motor Vehicle Collision.,2021,Excluded,10.1001/jamapsychiatry.2021.2427,34468741
+rayyan-601300496,Lethality risk markers by sex and age-group for COVID-19 in Mexico: a cross-sectional study based on machine learning approach.,2023,Excluded,10.1186/s12879-022-07951-w,36631853
+rayyan-601300497,Machine learning-driven decision support for antibiotic optimization in typhoid fever based on patient profiles.,2026,Excluded,10.1186/s12911-026-03528-8,42121141
+rayyan-601300498,Artificial Intelligence-Based Multi-Stage System for Automated Angle's Classification of Malocclusion from Intraoral Images in Orthodontics.,2026,Excluded,10.1007/s10278-025-01826-7,41606231
+rayyan-601300499,SeqBoost: a sequential explainable model for predicting ED revisits within 72 hours.,2026,Excluded,10.1186/s12911-026-03582-2,42237282
+rayyan-601300500,A machine learning-based risk prediction framework for atypical hyperplasia and endometrial cancer in postmenopausal women.,2026,Excluded,10.1186/s12957-026-04424-1,42192437
+rayyan-601300501,Machine learning models powered by emergency medical services data enhance stroke triage in prehospital settings.,2026,Excluded,10.1038/s41598-026-37069-x,41634297
+rayyan-601300502,Leveraging machine learning and rule extraction for enhanced transparency in emergency department length of stay prediction.,2024,Excluded,10.3389/fdgth.2024.1498939,40012602
+rayyan-601300503,Development of a machine-learning based diagnosis procedure to distinguish aortic dissection from non-ST-elevation myocardial infarction.,2026,Excluded,10.1186/s12911-026-03452-x,41882701
+rayyan-601300504,Inter hospital external validation of interpretable machine learning based triage score for the emergency department using common data model.,2024,Included,10.1038/s41598-024-54364-7,38509133
+rayyan-601300505,Development and validation of interpretable machine learning models for triage patients admitted to the intensive care unit.,2025,Included,10.1371/journal.pone.0317819,39964993
+rayyan-601300506,A TyG-UHR-based machine learning model for screening lean MAFLD: development and external validation.,2026,Excluded,10.1186/s12938-026-01585-8,42116045
+rayyan-601300507,Development of BERT-based large language models for emergency department triage using real-world conversations.,2026,Maybe,10.1093/jamia/ocag007,41649331
+rayyan-601300508,Using machine learning methods to investigate the impact of comorbidities and clinical indicators on the mortality rate of COVID-19.,2025,Excluded,10.3389/fmedt.2025.1621158,41059076
+rayyan-601300509,Enhancing the prediction of hospital discharge disposition with extraction-based language model classification.,2026,Excluded,10.1038/s44401-025-00059-8,41522677
+rayyan-601300510,Episode- and Hospital-Level Modeling of Pan-Resistant Healthcare-Associated Infections (2020-2024) Using TabTransformer and Attention-Based LSTM Forecasting.,2025,Excluded,10.3390/diagnostics15172138,40941626
+rayyan-601300511,On-scene machine learning prediction model for massive transfusion in trauma and its association with in-hospital mortality.,2025,Excluded,10.1093/bjsopen/zraf167,41705531
+rayyan-601300512,Making Pre-screening for Alzheimer's Disease (AD) and Postoperative Delirium Among Post-Acute COVID-19 Syndrome (PACS) a National Priority: The Deep Neuro Study.,2023,Excluded,10.1007/978-3-031-31982-2_4,37486477
+rayyan-601300513,"Digital skin imaging applications, part I: Assessment of image acquisition technique features.",2022,Excluded,10.1111/srt.13163,35652379
+rayyan-601300514,Using explainable machine learning to characterise data drift and detect emergent health risks for emergency department admissions during COVID-19.,2021,Excluded,10.1038/s41598-021-02481-y,34837021
+rayyan-601300515,Multi expert integrated algorithm for kidney biopsy triage.,2026,Excluded,10.1038/s41746-026-02724-0,42185463
+rayyan-601300516,Leveraging Large-Scale Electronic Health Records and Interpretable Machine Learning for Clinical Decision Making at the Emergency Department: Protocol for System Development and Validation.,2022,Included,10.2196/34201,35333179
+rayyan-601300517,Multi-task AI models in dermatology: Overcoming critical clinical translation challenges for enhanced skin lesion diagnosis.,2025,Excluded,10.1111/jdv.20551,39918317
+rayyan-601300518,A Clustering-Based Machine Learning Approach for Mortality Prediction in Gastrointestinal Bleeding: Development and Validation.,2026,Excluded,10.1016/j.gastha.2026.100985,42205168
+rayyan-601300519,Early identification of high-risk patients admitted to emergency departments using vital signs and machine learning.,2025,Excluded,10.5847/wjem.j.1920-8642.2025.031,40135217
+rayyan-601300520,Prediction of Influenza Complications: Development and Validation of a Machine Learning Prediction Model to Improve and Expand the Identification of Vaccine-Hesitant Patients at Risk of Severe Influenza Complications.,2022,Excluded,10.3390/jcm11154342,35893436
+rayyan-601300521,Automated pneumothorax triaging in chest X-rays in the New Zealand population using deep-learning algorithms.,2022,Excluded,10.1111/1754-9485.13393,35224858
+rayyan-601300522,Automated vertigo diagnosis using video-oculography and artificial intelligence for clinic-based triage: Preliminary results.,2026,Excluded,10.1007/s10072-025-08781-9,41521318
+rayyan-601300523,Machine learning in early screening for high-grade cervical intraepithelial neoplasia using blood testing.,2025,Excluded,10.1186/s12911-025-03321-z,41413554
+rayyan-601300524,Generalizability of an Automatic Explanation Method for Machine Learning Prediction Results on Asthma-Related Hospital Visits in Patients With Asthma: Quantitative Analysis.,2021,Excluded,10.2196/24153,33856359
+rayyan-601300525,Using the National Trauma Data Bank (NTDB) and machine learning to predict trauma patient mortality at admission.,2020,Excluded,10.1371/journal.pone.0242166,33201935
+rayyan-601300526,Development and validation of an interpretable prehospital return of spontaneous circulation (P-ROSC) score for patients with out-of-hospital cardiac arrest using machine learning: A retrospective study.,2022,Excluded,10.1016/j.eclinm.2022.101422,35706500
+rayyan-601300527,Novel integration of governmental data sources using machine learning to identify super-utilization among U.S. counties.,2023,Excluded,10.1016/j.ibmed.2023.100093,37476591
+rayyan-601300528,"Emergency care capabilities in the Kingdom of Swaziland, Africa.",2017,Excluded,10.1016/j.afjem.2017.01.004,30456101
+rayyan-601300529,Predicting low birth weight in Bangladesh using interpretable machine learning models.,2026,Excluded,10.1186/s12884-026-09255-2,42192329
+rayyan-601300530,Predicting Emergency Visits and Hospital Admissions During Radiation and Chemoradiation: An Internally Validated Pretreatment Machine Learning Algorithm.,2018,Excluded,10.1200/CCI.18.00037,30652595
+rayyan-601300531,Evaluation and analysis of clinical outcome prediction for trauma patients based on machine learning.,2026,Excluded,10.1016/j.cjtee.2025.10.004,41667320
+rayyan-601300532,Using machine learning techniques for early prediction of tracheal intubation in patients with septic shock: a multi-center study in South Korea.,2025,Excluded,10.4266/acc.004776,40302563
+rayyan-601300533,Beyond black boxes: using explainable causal artificial intelligence to separate signal from noise in pharmacovigilance.,2026,Excluded,10.1007/s11096-025-02004-z,40889016
+rayyan-601300534,Smartphone pupillometry with machine learning differentiates ischemic from hemorrhagic stroke: A pilot study.,2025,Excluded,10.1016/j.jstrokecerebrovasdis.2024.108198,39674431
+rayyan-601300535,Prediction of oxygen requirement in patients with COVID-19 using a pre-trained chest radiograph xAI model: efficient development of auditable risk prediction models via a fine-tuning approach.,2022,Excluded,10.1038/s41598-022-24721-5,36476724
+rayyan-601300536,Attention-enhanced deep learning model for automated classification of hemorrhagic and ischemic stroke on CT imaging.,2026,Excluded,10.1186/s40001-025-03784-w,41776569
+rayyan-601300537,Validation of a machine learning model for predicting early deterioration in the emergency department.,2026,Maybe,10.1016/j.ajem.2026.05.007,42184774
+rayyan-601300538,Symptom Trajectories After an Emergency Department Visit for Potential Acute Coronary Syndrome.,2016,Excluded,10.1097/NNR.0000000000000167,27362513
+rayyan-601300539,AI-Enabled Sensor Technologies for Remote Arrhythmic Monitoring in High-Risk Cardiomyopathy Genotypes.,2026,Excluded,10.3390/s26072078,41977862
+rayyan-601300540,Early prediction of in-hospital deterioration after emergency department admission using machine learning models.,2026,Excluded,10.1186/s12873-025-01464-w,41491420
+rayyan-601300541,Neural network for natural language processing to determine treatment urgency in an ophthalmology emergency department.,2025,Excluded,10.1136/bjo-2025-327824,40819882
+rayyan-601300543,Enhancing tertiary cardiology triage with vectorcardiographic features: a machine learning approach using real-world data.,2026,Excluded,10.1016/j.clinsp.2025.100856,41512369
+rayyan-601300544,Predicting pathologic complete response in locally advanced rectal cancer patients after neoadjuvant therapy: a machine learning model using XGBoost.,2022,Excluded,10.1007/s00384-022-04157-z,35704090
+rayyan-601300545,Development and validation of an interpretable radiomic signature for preoperative estimation of tumor mutational burden in lung adenocarcinoma.,2024,Excluded,10.3389/fgene.2024.1367434,38660677
+rayyan-601300546,The Feasibility of Using Point-of-Care Ultrasound During Cardiac Arrest in Children: Rapid Apical Contractility Evaluation.,2023,Excluded,10.1097/PEC.0000000000002741,35470313
+rayyan-601300547,"An external validation study of the Score for Emergency Risk Prediction (SERP), an interpretable machine learning-based triage score for the emergency department.",2022,Excluded,10.1038/s41598-022-22233-w,36261457
+rayyan-601300548,Designing an explainable algorithm based on XGBoost and genetic algorithm for predicting hospitalization needs of COVID-19 patients.,2026,Excluded,10.1038/s41598-026-40120-6,41730967
+rayyan-601300549,Automatic Classification of the Korean Triage Acuity Scale in Simulated Emergency Rooms Using Speech Recognition and Natural Language Processing: a Proof of Concept Study.,2021,Maybe,10.3346/jkms.2021.36.e175,34254471
+rayyan-601300550,Deep learning model for body weight estimation from computed tomography scout images incorporating sex and height.,2026,Excluded,10.1007/s12194-026-01028-y,41739392
+rayyan-601300551,Deep Learning Model to Detect Diabetic Retinopathy in 45° Images Using Ground Truth from Ultra-Widefield Imaging.,2026,Excluded,10.1016/j.xops.2026.101132,42088785
+rayyan-601300552,Beyond Binary Cutoffs: An Explainable Machine Learning Framework for Individualized Diagnostic Reasoning in Suspected Urolithiasis.,2026,Excluded,10.3390/diagnostics16091313,42122016
+rayyan-601300553,Developing interpretable machine learning models to predict length of stay and disposition decision for adult patients in emergency departments.,2025,Excluded,10.1136/bmjhci-2024-101152,40578849
+rayyan-601300554,Predicting child and adolescent mental health emergency department revisits: a machine-learning approach compared to a clinician-derived baseline.,2025,Excluded,10.1186/s12911-025-03269-0,41327276
+rayyan-601300555,Early prognosis prediction in mechanically ventilated patients using machine learning for tertiary care hospital settings.,2026,Excluded,10.1007/s10877-025-01387-8,41307642
+rayyan-601300556,DML-LLM Hybrid Architecture for Fault Detection and Diagnosis in Sensor-Rich Industrial Systems.,2026,Excluded,10.3390/s26062008,41902177
+rayyan-601300557,Arthralgia and fever as dominant predictors of Chikungunya confirmation: an explainable artificial intelligence approach.,2026,Excluded,10.3389/fmed.2026.1814257,42051709
+rayyan-601300558,Leveraging ChatGPT for improved decision-making in interfacility transfers for plastic surgery emergencies based on United States guidelines.,2025,Maybe,10.1016/j.jpra.2025.04.011,40485859
+rayyan-601300559,An interpretable (1)⁸F-PSMA PET/CT-MRI model for optimizing prostate biopsy decisions.,2026,Excluded,10.1007/s00259-026-07947-7,42176196
+rayyan-601300560,Emergency Department Prediction of In-Hospital Mortality in Suspected Pulmonary Embolism: An Explainable Machine Learning Approach.,2026,Maybe,10.3390/jcm15041340,41753029
+rayyan-601300561,The Voice of Decompensation: An Explainable Machine Learning Approach to Assessing Heart Failure Severity.,2026,Excluded,10.1093/eurjcn/zvag003,41495965
+rayyan-601300562,Comparison of the Quality of Echocardiography Imaging Between the Left Lateral Decubitus and Supine Positions.,2022,Excluded,10.7759/cureus.31835,36579253
+rayyan-601300563,Shift-Specific Patterns of Nursing Workloads in the Emergency Department: AI Powered Analysis.,2026,Excluded,10.1111/jan.70648,42216443
+rayyan-601300564,Interpretable Machine Learning to Anticipate the Diagnostic Yield of EEG in the Emergency department. The EMINENCE study.,2026,Included,10.1007/s10916-026-02397-y,42062615
+rayyan-601300565,Prediction of Respiratory Decompensation in Patients Receiving Home Mechanical Ventilation: Machine Learning Model Development and Validation Study.,2025,Excluded,10.2196/78941,41468476
+rayyan-601300566,Advanced visualizations to interpret prescription drug monitoring program information.,2019,Excluded,10.1016/j.drugalcdep.2019.03.034,31276986
+rayyan-601300567,Development and validation of a clinlabomics-based machine-learning model for noninvasive risk stratification of moderate-to-severe OSA.,2026,Excluded,10.1016/j.ijmedinf.2026.106474,42119217
+rayyan-601300568,Machine learning-based on model for explain risk of 24-hour death in critically ill patients in the prehospital setting: A retrospective cohort study.,2026,Excluded,10.1371/journal.pone.0341860,41678452
+rayyan-601300569,Predicting Unplanned Intubations in Rib Fracture Patients: An Interpretable Machine Learning Approach.,2026,Excluded,10.1177/00031348251358446,40608905
+rayyan-601300570,Explainable machine learning for predicting disease flares in axial spondyloarthritis: A real-world electronic health record-based pilot study.,2026,Excluded,10.1177/20552076261433513,42078832
+rayyan-601300571,Multi-diagnosis multi-instance learning for auxiliary gene mutation diagnosis in whole slide images.,2026,Excluded,10.1016/j.prp.2026.156576,42235341
+rayyan-601300572,"Smart Lies and Sharp Eyes: Pragmatic Artificial Intelligence for Cancer Pathology: Promise, Pitfalls, and Access Pathways.",2026,Excluded,10.3390/cancers18030421,41681893
+rayyan-601300573,Development and Validation of a Machine Learning Approach for Automated Severity Assessment of COVID-19 Based on Clinical and Imaging Data: Retrospective Study.,2021,Excluded,10.2196/24572,33534723
+rayyan-601300574,Explainable blind image quality assessment with closed-loop semantic guidance and distortion diagnosis.,2026,Excluded,10.1038/s41598-026-51187-6,42106418
+rayyan-601300575,Evaluating spoken language as a biomarker for automated screening of cognitive impairment.,2025,Excluded,10.1038/s43856-025-01263-1,41388139
+rayyan-601300576,Validating quality standards in Palestinian emergency departments: An e-Delphi survey approach.,2025,Excluded,10.1371/journal.pone.0307632,39792830
+rayyan-601300577,A fuzzy-enhanced deep learning approach for early detection of Covid-19 pneumonia from portable chest X-ray images.,2022,Excluded,10.1016/j.neucom.2022.01.055,35079203
+rayyan-601300578,Subphenotyping of Mexican Patients With COVID-19 at Preadmission To Anticipate Severity Stratification: Age-Sex Unbiased Meta-Clustering Technique.,2022,Excluded,10.2196/30032,35144239
+rayyan-601300579,Development of an early prediction model for risk of influenza A and influenza B based on complete blood count examination.,2025,Excluded,10.1186/s12879-025-11502-4,40890653
+rayyan-601300580,Developing and validating a sequence-aware deep learning model for infection risk prediction in home care.,2026,Excluded,10.1016/j.ijmedinf.2026.106485,42172726
+rayyan-601300581,A Multi-mRNA Host-Response Molecular Blood Test for the Diagnosis and Prognosis of Acute Infections and Sepsis: Proceedings from a Clinical Advisory Panel.,2020,Excluded,10.3390/jpm10040266,33297498
+rayyan-601300582,What emotions reveal about patient safety: GPT-4-based sentiment and emotion analysis of 11056 German CIRS medical reports (2005-2024).,2025,Excluded,10.1136/bmjhci-2025-101741,41344915
+rayyan-601300583,Development and validation of an interpretable machine learning model for early prediction in patients with diabetes and sepsis.,2025,Excluded,10.1038/s41598-025-22488-z,41188325
+rayyan-601300584,Accuracy is not enough: explainable boosting machine model and identification of candidate biomarkers for real-time sepsis risk assessment in the emergency department.,2025,Maybe,10.1186/s12873-025-01402-w,41315982
+rayyan-601300585,An extended focused assessment with sonography in trauma ultrasound tissue-mimicking phantom for developing automated diagnostic technologies.,2023,Excluded,10.3389/fbioe.2023.1244616,38033814
+rayyan-601300586,Evaluating fairness of machine learning prediction of prolonged wait times in Emergency Department with Interpretable eXtreme gradient boosting.,2025,Excluded,10.1371/journal.pdig.0000751,40111994
+rayyan-601300587,"Chest x-ray automated triage: A semiologic approach designed for clinical implementation, exploiting different types of labels through a combination of four Deep Learning architectures.",2021,Excluded,10.1016/j.cmpb.2021.106130,34023576
+rayyan-601300588,A Roadmap for Foundational Research on Artificial Intelligence in Medical Imaging: From the 2018 NIH/RSNA/ACR/The Academy Workshop.,2019,Excluded,10.1148/radiol.2019190613,30990384
+rayyan-601300589,Predicting risk of early-onset sepsis in low-resource neonatal units using routine healthcare data: development and evaluation of multivariable statistical and machine learning models.,2025,Excluded,10.1136/bmjpo-2025-003617,41022643
+rayyan-601300590,Accelerometry and dual-scale neighborhood indicators for screening of MoCA-defined cognitive impairment: an interpretable machine-learning study.,2026,Excluded,10.3389/fpubh.2026.1777724,42007344
+rayyan-601300591,The effect of AI assistance timing on performance and user perceptions in pathological slide diagnosis.,2026,Excluded,10.1016/j.apergo.2025.104663,41138508
+rayyan-601300592,Integrating Medical Domain Knowledge for Early Diagnosis of Fever of Unknown Origin: An Interpretable Hierarchical Multimodal Neural Network Approach.,2023,Excluded,10.1109/JBHI.2023.3306041,37590111
+rayyan-601300593,Identification of key clinical features for pediatric respiratory syncytial virus infection using machine learning.,2026,Excluded,10.1186/s12887-026-06659-z,41761146
+rayyan-601300594,Intelligent model for stratification of acute radiation syndrome severity in humans.,2026,Excluded,10.1080/09553002.2025.2609858,41784608
+rayyan-601300595,Emergency department narratives for early risk stratification of serious disposition in older adults after falls: A survival modelling study with external validation.,2026,Maybe,10.1016/j.ijmedinf.2026.106481,42214283
+rayyan-601300596,Triage nurse prediction as a covariate in a machine learning prediction algorithm for hospital admission from the emergency department.,2021,Excluded,10.1016/j.ijmedinf.2021.104528,34305002
+rayyan-601300597,CDG-MACE score: an interpretable scoring model for risk stratification in emergency chest pain with normal ECG.,2026,Excluded,10.1088/1361-6579/ae601a,41985539
+rayyan-601300598,Machine Learning-Based Prediction Model for 30-Day Emergency Department Revisits in a Medically Underserved Tertiary Hospital: Formative Retrospective Cohort Study.,2026,Excluded,10.2196/87289,42213145
+rayyan-601300599,Random forest model improves annotation and discovery of variants of uncertain significance in Alzheimer's and other neurological disorders.,2025,Excluded,10.1101/2025.10.02.680068,41256702
+rayyan-601300600,Machine Learning Risk Stratification Approach Using Patient-Reported Outcomes for Forecasting Unplanned Health Care Use and Symptom Burden in Cancer Survivors.,2026,Excluded,10.1200/CCI-25-00389,42190150
+rayyan-601300601,Encoding of Demographic and Anatomical Information in Chest X-Ray-Based Severe Left Ventricular Hypertrophy Classifiers.,2025,Excluded,10.3390/biomedicines13092140,41007703
+rayyan-601300602,"Development of a personalized diagnostic model for kidney stone disease tailored to acute care by integrating large clinical, demographics and laboratory data: the diagnostic acute care algorithm - kidney stones (DACA-KS).",2018,Excluded,10.1186/s12911-018-0652-4,30119627
+rayyan-601300603,Red-flagging multimorbidity clusters for Alzheimer's disease risk using explainable machine learning: Evidence from a national emergency department sample.,2025,Excluded,10.1177/25424823251392474,41180962
+rayyan-601300604,Early-fusion hybrid CNN-transformer models for multiclass ovarian tumor ultrasound classification.,2025,Excluded,10.3389/frai.2025.1679310,41169737
+rayyan-601300605,Prioritizing Trust in Podiatrists' Preference for AI in Supportive Roles Over Diagnostic Roles in Health Care: Qualitative Interview and Focus Group Study.,2025,Excluded,10.2196/59010,39983118
+rayyan-601300606,Identifying Diabetic Macular Edema and Other Retinal Diseases by Optical Coherence Tomography Image and Multiscale Deep Learning.,2020,Excluded,10.2147/DMSO.S288419,33304104
+rayyan-601300607,"Artificial intelligence for risk-stratified breast cancer screening: a systematic review of evidence, clinical integration, and ethical implications in risk assessment tools.",2026,Excluded,10.1007/s11547-026-02217-w,42149286
+rayyan-601300608,The Case of the Lime-green Stool: A Case Report and Review of Occult Blood Testing in the Emergency Department.,2021,Excluded,10.5811/cpcem.2021.4.51656,34437038
+rayyan-601300609,"Predicting distal tibia fracture type using demographic, vehicle, and crash factors via a random forest classification algorithm.",2025,Excluded,10.1080/15389588.2025.2527849,40742882
+rayyan-601300610,A Predictive MRI Radiomics Model for Histologic Differentiation in Soft Tissue Sarcomas.,2026,Excluded,10.3390/cancers18101667,42193026
+rayyan-601300611,Intuitive Risk Equation for Post-Transplant Bloodstream Infection Prediction: A Symbolic Regression Approach.,2026,Excluded,10.3390/biomedicines14040840,42072381
+rayyan-601300612,Distinct Laboratory Test Result Profiles Between SARS-CoV-2 and Seasonable Influenza Infected Patients.,2022,Excluded,,36564060
+rayyan-601300613,Acute type A aortic dissection rupture factors prediction using a hybrid ensemble model with feature selection and data augmentation.,2025,Excluded,10.1038/s41598-025-30529-w,41350571
+rayyan-601300614,Development and validation of a prediction model for respiratory complications and in-hospital mortality in trauma patients.,2026,Excluded,10.1038/s41598-026-48072-7,41957205
+rayyan-601300615,Human-AI collaboration for prehospital trauma triage: Designing the On Scene Injury Severity Prediction (OSISP) model as a clinical decision support system.,2025,Excluded,10.1177/20552076251403207,41393842
+rayyan-601300616,SHIELD: An AI Framework for Skeletal Health Intelligence and Early Lesion Detection to Improve Orthopedic Referrals.,2026,Excluded,10.1007/s10916-026-02373-6,41973301
+rayyan-601300617,Predicting emergency department disposition using machine learning and large language models to support proactive capacity management: a multicenter retrospective study.,2026,Maybe,10.1186/s12873-026-01487-x,41680681
+rayyan-601300618,Flagging high-risk comorbidities in Alzheimer's disease emergency department visits: A machine learning analysis of mortality outcomes.,2026,Excluded,10.1177/13872877251409332,41527759
+rayyan-601300619,AI for predicting exacerbations in KIDs with asthma (AIRE-KIDS).,2026,Excluded,10.1038/s41746-026-02824-x,42225895
+rayyan-601300620,Measurement properties and clinical interpretability of a Japanese-language version of the remote check system in cochlear implant users.,2026,Excluded,10.1016/j.anl.2026.04.012,42119171
+rayyan-601300621,An interpretable weighted ensemble based on routinely collected clinical data for the accurate prediction of axillary lymph node metastasis.,2026,Excluded,10.21037/qims-2025-1-2525,41972059
+rayyan-601300622,Digital Eye: Deep Learning for Detecting Physeal Fractures of the Pediatric Distal Radius.,2026,Excluded,10.1016/j.jposna.2025.100291,41488804
+rayyan-601300623,Individual Survey Items in Emergency Department Patient Experience Surveys Have Limited Ability to Distinguish Unique Aspects of Care.,2026,Excluded,10.1016/j.annemergmed.2025.09.034,41251651
+rayyan-601300624,In-Hospital Mortality Prediction of Patients Requiring Extracorporeal Membrane Oxygenation Using Composite Lactate Metrics and Weight-of-Evidence Modeling.,2026,Excluded,10.1097/XCS.0000000000001900,41773717
+rayyan-601300625,Using a Neural Network Architecture for the Prediction of Neurologic Outcome for Out-of-Hospital Cardiac Arrests Using Hospital Level Variables and Novel Physiologic Markers.,2025,Excluded,10.3390/bioengineering12020124,40001644
+rayyan-601300626,Data-driven decision support in hospital resource planning: an artificial intelligence-based model proposal for emergency department demand.,2026,Included,10.1016/j.ijmedinf.2026.106483,42143518
+rayyan-601300627,Evaluating the Accuracy of the Frysian Questionnaire for Differentiation of Musculoskeletal Complaints for Triage of Musculoskeletal Diseases: Algorithm Development and Validation Study.,2025,Excluded,10.2196/77345,41248315
+rayyan-601300628,Novel machine learning fusion architectures integrating electrocardiogram representations: applications to acute coronary event detection.,2026,Excluded,10.1093/ehjdh/ztag062,42169732
+rayyan-601300629,Advancing skin cancer detection through deep learning and fusion of patient metadata and skin lesion images.,2026,Excluded,10.1038/s41598-025-26392-4,41530207
+rayyan-601300630,Clinical Literature Analysis and Review using Interpretive Transparency (CLARITY): An Exploratory Scaffold for Educational Engagement With Artificial Assistance (AI)-Assisted Evidence Synthesis in Rehabilitation.,2026,Excluded,10.1016/j.apmr.2026.02.003,41747878
+rayyan-601300631,Beyond NIHSS and neuroimaging: an interpretable gradient boosting model for predicting in-hospital mortality in ICU patients with acute ischemic stroke.,2026,Maybe,10.1038/s41598-026-51727-0,42092094
+rayyan-601300632,Construction and interpretability evaluation of a prediction model for radiographic pneumonia in children at outpatient and emergency departments.,2026,Maybe,10.1016/j.ijmedinf.2026.106440,42000696
+rayyan-601300633,A Patient-Level Simulation Tool to Inform Data-Driven Pain Treatment Decisions and Policy in the US Military Health System.,2026,Excluded,10.1016/j.jval.2026.01.021,41679644
+rayyan-601300634,Application of Artificial Intelligence to Analyze Blood Biochemical Parameters for Remote Patient Monitoring: Opportunities and Limitations.,2026,Excluded,10.2174/011871529X452443260217074900,41926299
+rayyan-601300635,Routine Laboratory Tests Predict 72-h Fatality in Patients With D-Dimer Levels ≥ 2 μg/mL: A Retrospective Cohort Study Comparing Statistical and Machine Learning Models.,2025,Excluded,10.1002/jcla.70091,40899738
+rayyan-601300636,Exploring the Feasibility of a Deep Learning Algorithm for Postoperative Outcome Assessment in Unilateral Cleft Lip Repair: A Pilot Study.,2026,Excluded,10.1097/SCS.0000000000012199,41263442
+rayyan-601300637,Head-to-Head Comparison of 2 Artificial Intelligence Computer-Aided Triage Solutions for Detecting Intracranial Hemorrhage on Noncontrast Head CT.,2026,Excluded,10.3174/ajnr.A8986,40957692
+rayyan-601300638,Explainable machine learning for predicting mechanical ventilation in Alzheimer's patients with pneumonia: a SHAP-guided XGBoost nomogram based on MIMIC-IV.,2026,Excluded,10.1038/s41598-026-48214-x,41974983
+rayyan-601300639,Symptom-based diagnostic models for common respiratory viral infections: a machine learning and natural language processing study.,2026,Excluded,10.1016/j.idm.2026.04.006,42182951
+rayyan-601300640,Integration of Nitrogen Oxides Into a Triage-Based Index for Predicting Adverse Outcomes in ST-Segment Elevation Myocardial Infarction Patients.,2026,Excluded,10.1016/j.jemermed.2025.12.002,41581298
+rayyan-601300641,Should we leave paediatric emergency triage to artificial intelligence? A comparison of ChatGPT 4o and Grok 3.,2026,Included,10.3389/fped.2026.1739217,41782959
+rayyan-601300642,Interpretable laboratory-data model for risk stratification of elevated NT-proBNP and its deployment in diagnostic support middleware.,2026,Excluded,10.1177/00045632261438009,41844342
+rayyan-601300643,Can images crowdsourced from the internet be used to train generalizable joint dislocation deep learning algorithms?,2022,Excluded,10.1007/s00256-022-04077-7,35624310
+rayyan-601300644,Natural language processing to intercept rheumatoid and psoriatic arthritis from clinical notes in the Emergency Department.,2026,Included,10.1177/1759720X261431361,41948113
+rayyan-601300645,Automated identification of chest radiographs with referable abnormality with deep learning: need for recalibration.,2020,Excluded,10.1007/s00330-020-07062-7,32661584
+rayyan-601300646,MultiDentNet: a unified deep learning framework for multi-class dental condition screening and preliminary oral lesion triage.,2026,Excluded,10.1038/s41598-026-52264-6,42129243
+rayyan-601300647,Multimodal deep learning with anatomically constrained attention for screening MRI-detectable TMJ abnormalities from panoramic images.,2026,Excluded,10.1038/s41746-026-02378-y,41577795
+rayyan-601300648,Automated Echocardiographic Detection of Congenital Heart Disease Using Artificial Intelligence.,2026,Excluded,10.64898/2026.01.24.26344771,41646737
+rayyan-601300649,"Development and temporal validation of an interpretable point score for in-hospital mortality in CLL/SLL using the U.S. National Inpatient Sample, 2016-2022.",2026,Excluded,10.1016/j.leukres.2026.108199,41865503
+rayyan-601300650,"Novel Piperidine and 3,4-dihydro-2H-pyrrole Alkaloids from Tilia platyphyllos and Tilia cordata Flowers.",2021,Excluded,10.1055/a-1340-0099,33434940
+rayyan-601300651,Development and multi-center validation of a school-home integrated machine learning model for early screening of attention-deficit/hyperactivity disorder in school-aged children.,2026,Excluded,10.1016/j.jad.2026.121247,41620184
+rayyan-601300652,Development and evaluation of machine learning models for the detection of emergency department patients with opioid misuse from clinical notes.,2026,Excluded,10.1093/jamiaopen/ooag042,41937806
+rayyan-601300653,Surgically Oriented Ultrasound-Based AI of Median Nerve Morphology as a Decision Support for Carpal Tunnel Release: A Calibrated ConvNeXt-CBAM Framework With Supervised Contrastive Warm-Up.,2026,Excluded,10.62713/aic.4332,41537208
+rayyan-601300654,'Better Ear' Self-Perception Aligns with Audiometry: Insights from Machine-Learning Modeling.,2026,Excluded,10.4103/nah.nah_248_25,41800690
+rayyan-601300655,Uncertainty-Aware Explainable AI for Pancreatic Cysts: Identifying Deep Learning Vulnerabilities and Ensuring Safe Clinical Triage in IPMN Management.,2026,Excluded,10.21203/rs.3.rs-9096790/v1,41890858
+rayyan-601300656,"Interpretable Machine Learning for Emergency Department Triage: Clinical Insights from 133,198 Patients Using the Korean Triage and Acuity Scale (KTAS).",2026,Included,10.3390/diagnostics16060954,41897687
+rayyan-601300657,Integrating the interpretable machine learning Score For Emergency Risk Prediction (SERP) with emergency department triage to better predict 30-Day mortality.,2026,Maybe,10.15441/ceem.25.253,41928701
+rayyan-601300658,A multimodal deep learning model for predicting impending rupture in symptomatic abdominal aortic aneurysms using CTA and clinical data.,2026,Excluded,10.3389/fcvm.2026.1771669,42022533
+rayyan-601300659,Development and validation of a machine learning model for colorectal cancer status classification using NHANES data: A cross-sectional study.,2026,Excluded,10.1097/MD.0000000000049114,42260815
+rayyan-601300660,Development and temporal validation of machine learning models for predicting clinically relevant medication reconciliation discrepancies at the emergency department: A single-center retrospective study.,2026,Excluded,10.1016/j.ijmedinf.2026.106309,41628517
+rayyan-601300661,Empirical Comparison of Causal Machine Learning and Post-Hoc AI Interpretability Models for Risk Factor Analysis: An Application to Medical Specialty Choice.,2026,Excluded,10.3233/SHTI260654,42175322
+rayyan-601300662,Evaluating the clinical safety of large language models in oral cancer-related patient communication: a repeated-prompt observational study.,2026,Excluded,10.1186/s12903-026-08530-0,42087133
+rayyan-601300663,Injury incidence and patterns associated with electric scooter accidents in a major metropolitan city.,2021,Excluded,10.1016/j.clinimag.2021.02.005,33609855
+rayyan-601300664,Rapid prediction of cerebral edema on CT scan after traumatic brain injury.,2026,Excluded,10.1136/tsaco-2025-002021,41971763
+rayyan-601300665,Machine learning and dose response effect models: an integrated approach to analyze the association between environmental variables and Cuneo Emergency Department admissions for Acute Otitis Media (2007-2015).,2026,Excluded,10.1007/s00484-026-03226-0,42154319
+rayyan-601300666,Evaluation of the efficacy of a self-training programme in focus cardiac ultrasound with simulator.,2019,Excluded,10.1016/j.acvd.2019.06.001,31350012
+rayyan-601300667,"Prediction of hospital admission from the emergency department: Clinician involvement, intended use, and interpretability.",2021,Excluded,10.1016/j.ijmedinf.2021.104585,34601239
+rayyan-601300668,Noninvasive prescreening of pediatric adenoid hypertrophy using quantified MFCC statistics and clinical features: development and external validation.,2026,Excluded,10.3389/fbioe.2026.1740863,41725952
+rayyan-601300669,Explainable prediction of MDR/RR-TB in tuberculosis-diabetes mellitus multimorbidity: a machine learning model developed and validated in a dual-center study.,2026,Excluded,10.1186/s12879-026-13480-7,42062970
+rayyan-601300670,Development and Validation of a Novel Deep Learning-Based Model for Detection of Diabetic Kidney Disease from Retinal Imaging Using a Weighted Loss Method.,2026,Excluded,10.2147/OPTH.S586474,42028097
+rayyan-601300671,FibroAgent: An Agentic AI Tool for Liver Fibrosis Screening and Clinical Decision Support in Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD).,2026,Excluded,10.7759/cureus.106372,42083670
+rayyan-601300672,Large Language Model Automated Extraction of Clinical Signs and Symptoms From Emergency Department Reports for Machine Learning Prediction Models: Development and Validation Study.,2026,Excluded,10.2196/81500,42076868
+rayyan-601300673,Comparative performance of manual triage systems and ML models in predicting clinical outcomes among patients transported to the emergency department by emergency medical services.,2026,Maybe,10.1186/s12873-026-01595-8,42032461
+rayyan-601300674,Motorized scooter injuries in the era of scooter-shares: A review of the national electronic surveillance system.,2019,Excluded,10.1016/j.ajem.2019.03.049,30952603
+rayyan-601300675,A Simple Gain-Based Evaluation of the Video Head Impulse Test Reliably Detects Normal Vestibulo-Ocular Reflex Indicative of Stroke in Patients With Acute Vestibular Syndrome.,2021,Excluded,10.3389/fneur.2021.741859,34777209
+rayyan-601300676,Assessment of the Technical Interpretability of Prehospital ECGs Performed by Medical and Nonmedical Teams in a French Emergency Medical System: A Descriptive Pilot Study.,2026,Excluded,10.1155/emmi/7380174,42170007
+rayyan-601300677,Associations of blood cell indices with the risk of ankylosing spondylitis: A retrospective case-control and machine learning modeling study.,2026,Excluded,10.1177/20503121261424338,41727886
+rayyan-601300678,"A complete blood count-based machine learning model for rapid differentiation of aplastic anemia, immune thrombocytopenia, and myelodysplastic syndromes in routine clinical practice.",2026,Excluded,10.1016/j.plabm.2026.e00526,41867472
+rayyan-601300679,Preoperative deep vein thrombosis in tibial plateau fractures: development and internal validation of an interpretable multivariable machine-learning diagnostic model.,2026,Excluded,10.3389/fmed.2026.1730477,41767515
+rayyan-601300680,Comparative predictive performance of anticholinergic burden scales for anticholinergic-related hospitalisation and emergency department visits in older adults: a population-based study of model development and temporal validation.,2026,Excluded,10.1007/s11096-026-02145-9,41995941
+rayyan-601300681,Application of convolutional neural networks for distal radio-ulnar fracture detection on plain radiographs in the emergency room.,2021,Excluded,10.15441/ceem.20.091,34237817
+rayyan-601300682,"Feasibility of using a transition diabetes team to commence injectable therapies postdischarge from a tertiary hospital: a pilot, randomised controlled trial.",2019,Excluded,10.1136/bmjopen-2018-023583,31542730
+rayyan-601300683,Leveraging Large Language Models for Automating Outpatients' Message Classifications of Electronic Medical Records.,2025,Excluded,10.3390/healthcare13233052,41373269
+rayyan-601300684,Performance of machine learning algorithms in predicting the need for surgical fixation in pediatric craniomaxillofacial trauma.,2026,Excluded,10.1016/j.ijom.2025.10.005,41111021
+rayyan-601300685,Determining the Need for Computed Tomography Scan Following Blunt Chest Trauma through Machine Learning Approaches.,2021,Excluded,10.22037/aaem.v9i1.1060,33681820
+rayyan-601300686,Does Provider Identity at Triage Improve Machine Learning Prediction of Hospital Admission? A Comparative Analysis of Ten Supervised Classifiers with SHAP Explainability.,2026,Excluded,10.3390/jpm16040204,42042571
+rayyan-601300687,Development of a deep learning based framework for classification of Indian venomous snakes integrated with explainable artificial intelligence for primary and emergency care providers.,2026,Excluded,10.1371/journal.pntd.0014147,42247465
+rayyan-601300688,Multimodal Learning with Privileged Report Supervision for Generalizable Tuberculosis Detection on Chest Radiographs.,2026,Excluded,10.1007/s10916-026-02368-3,41957286
+rayyan-601300689,From T-cell sensitization to molecular-intelligent stratification: a roadmap for precision diagnosis of latent tuberculosis infection.,2026,Excluded,10.1128/cmr.00258-25,41910258
+rayyan-601300690,"Integrated molecular and clinical profiling of primary mitochondrial oxidative phosphorylation disorders in an Indian cohort: Insights from genetics, neuroimaging, and machine learning.",2026,Excluded,10.1016/j.mito.2026.102150,41850596
+rayyan-601300691,Predicting orchiectomy in testicular torsion using hybrid machine learning and explainable AI: a web-based clinical decision support system.,2026,Excluded,10.1007/s00345-026-06448-4,42257858
+rayyan-601300692,Posttraumatic stress disorder (PTSD) in a sample of patients evaluated for acute coronary syndrome: A factor analysis of the PTSD checklist for DSM-5 (PCL-5).,2025,Excluded,10.1016/j.jad.2024.10.007,39374739
+rayyan-601300693,Context-Guided Mixture-of-Experts with Multimodal LLMs for Lesion Detection in Buccal Mucosa Images.,2026,Excluded,10.1016/j.identj.2026.109575,42030750
+rayyan-601300694,Identification of a potential fibromyalgia diagnosis using random forest modeling applied to electronic medical records.,2015,Excluded,10.2147/jpr.s8256,26089700
+rayyan-601300695,"Adolescent help-seeking on a psychological support hotline: latent classes, predictors, and distal outcomes.",2025,Excluded,10.3389/fpsyt.2025.1723286,41561999
+rayyan-601300696,Optimized CNN-based facial analysis for depression detection: Managing mental disorder in education.,2026,Excluded,10.1016/j.brainresbull.2026.111829,41845968
+rayyan-601300697,An Explainable AI Tool (FibroX) for Detecting Advanced Liver Fibrosis in Adults With Type 2 Diabetes: Protocol for a Pilot Crossover Trial.,2026,Excluded,10.2196/90456,41974444
+rayyan-601300698,Which explanations do clinicians prefer? A comparative evaluation of XAI understandability and actionability in predicting the need for hospitalization.,2025,Excluded,10.1186/s12911-025-03045-0,40671048
+rayyan-601300699,Clinically Deployable Handwriting Biomarkers of Parkinson's Disease via Multiscale Attention and Bayesian-Genetic Optimization.,2026,Excluded,10.1002/brb3.71457,42050861
+rayyan-601300700,Zero-Shot Lung Disease Detection Using Radiological Symptomatic Descriptors and Pretrained Neural Networks.,2026,Excluded,10.1007/s10278-026-01914-2,41912958
+rayyan-601300701,Diagnostic accuracy of Dual-Energy CT in detecting traumatic vertebral bone marrow edema: a prospective comparative study with MRI in the context of a level I trauma center.,2025,Excluded,10.1007/s00234-025-03763-2,40982062
+rayyan-601300702,Simulation of various randomization strategies for a clinical trial in sickle cell disease.,2016,Excluded,10.1080/10245332.2015.1101966,26868369
+rayyan-601300703,Data Assimilation Substitutes for Biological Complexity in Hybrid Influenza Forecasting Models.,2026,Excluded,10.64898/2026.05.19.26353597,42245047
+rayyan-601300704,Morphology-guided attention networks for explainable skin cancer detection under clinical uncertainty.,2026,Excluded,10.3389/fonc.2026.1804329,42022332
+rayyan-601300705,Determination of the cardiac drug amiodarone and its N-desethyl metabolite in sludge samples.,2015,Excluded,10.1016/j.chroma.2015.03.024,25846262
+rayyan-601300706,Serious injury prediction in motor vehicle crashes: a nonlinear modeling approach using trainable B-spline functions.,2026,Excluded,10.1080/15389588.2026.2655342,42102299
+rayyan-601300707,Exploring the potential of XAI methods in generating clinically meaningful explanations for glycemia prediction in diabetes patients.,2026,Excluded,10.1186/s12911-026-03420-5,41832504
+rayyan-601300708,MSAT: a FAERS-informed heterogeneous graph neural network for pharmacovigilance prediction of Chinese materia medica-associated adverse drug reactions.,2026,Excluded,10.3389/fphar.2026.1774128,41836021
+rayyan-601300709,Automated detection of C-shaped canals in mandibular second molars from panoramic radiographs: comparing single and ensemble convolutional neural networks within a 2-stage pipeline.,2026,Excluded,10.1007/s00784-026-06868-x,42020627
+rayyan-601300710,Applying User-Centered Design to Develop a Prescriber Feedback Tool in Acute Outpatient Care Settings at the Veterans Health Administration.,2026,Excluded,10.1055/a-2866-4361,42119699
+rayyan-601300711,"Negative-control-anchored urinary microbiome profiling with absolute 16S quantification: a pilot study in newly diagnosed, treatment-naive bladder cancer and healthy individuals.",2026,Excluded,10.1093/femsle/fnag020,41700712
+rayyan-601300712,Recommendations for assessing appearance concerns related to plexiform and cutaneous neurofibromas in neurofibromatosis 1 clinical trials.,2024,Excluded,10.1177/17407745231205577,38140900
+rayyan-601300713,Development and validation of an interpretable machine learning model for retrospective identification of suspected infection for sepsis surveillance: a multicentre cohort study.,2025,Excluded,10.1016/j.eclinm.2025.103401,40823498
+rayyan-601300714,Early prediction of renal replacement therapy within 24 hours after septic shock recognition in the emergency department using machine learning: a retrospective analysis of a prospectively collected multicenter registry.,2026,Excluded,10.1186/s12873-026-01558-z,41896754
+rayyan-601300715,,2020,Excluded,10.25302/06.2020.ME.131007682,41118475
+rayyan-601300716,A Machine Learning Approach to Predicting Radiographic Outcomes of Nonsurgically Treated Distal Radius Fractures.,2026,Excluded,10.5435/JAAOS-D-25-01150,41490406

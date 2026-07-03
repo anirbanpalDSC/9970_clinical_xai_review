@@ -82,6 +82,16 @@ A record excluded at T/A under `TA-E1`/`TA-E2`/`TA-E5` would, if it had reached 
 
 ---
 
+## 4a. Rayyan Implementation Notes (2026-06-26)
+
+The TA-E1–TA-E5 exclusion codes (Section 4) and their inclusion-criteria counterparts (Section 3) were entered into Rayyan's "Screening criteria" panel and confirmed to auto-number in entry order as native Rayyan criterion IDs `E1`–`E5` (exclusion) and `I1`–`I4` (inclusion) respectively — i.e., Rayyan's `E1` = `TA-E1`, `E2` = `TA-E2`, etc. This mapping was verified directly against the Exclusion criteria tab order, not assumed.
+
+Rayyan's per-record exclusion reason is recorded by selecting the matching `E#` criterion at the point of decision — there is no separate "Labels" feature in this Rayyan version; the criterion selection itself is the reason-code audit trail.
+
+Rayyan's "Use with AI tools" toggle (AI-suggested Include/Exclude decisions based on the criteria) was found **enabled by default** on the inclusion criteria and was **turned off** before screening began, to keep screening fully manual (single reviewer, intra-rater IRR per Section 5) and consistent with the registered protocol. No AI-assisted screening is in use.
+
+---
+
 ## 5. Inter-Rater Reliability Protocol (Title/Abstract Stage)
 
 Per the original proposal's design, T/A screening uses an **intra-rater** reliability check (single reviewer, re-screen), distinct from the **inter-rater** (two-reviewer) protocol used at the extraction stage.
@@ -126,3 +136,4 @@ Full-text exclusions are recorded using the E1-E6 codes in `data/screening/prism
 | Version | Date | Changes |
 |---------|------|---------|
 | Draft v1 | 2026-06-10 | Initial draft, created as part of the EM-pivot (`memos/decision_log.md`, 2026-06-10, "What changes" - Issue #17). Specifies the conservative T/A-stage application of the v2 inclusion boundary, a text-based decision tree (Section 3), an EM-specific T/A exclusion taxonomy mapped to full-text E1-E6 codes, and the proposal's intra-rater IRR design (15% re-screen, 2-week washout, Cohen's kappa, faculty adjudication for borderline cases). |
+| Draft v1.1 | 2026-06-26 | Added Section 4a documenting the Rayyan implementation: TA-E1-TA-E5 confirmed to map 1:1 to Rayyan's auto-numbered native criterion IDs E1-E5; Rayyan's AI-assisted screening toggle was found enabled by default and turned off to keep screening manual per the registered protocol. See `memos/decision_log.md`, 2026-06-26. |
