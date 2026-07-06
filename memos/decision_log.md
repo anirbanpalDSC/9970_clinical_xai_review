@@ -531,3 +531,53 @@ A secondary finding: PMID 36634916 was retrieved despite no Concept A term appea
 **Defense if challenged:** Faculty supervisor explicitly delegated adjudication authority due to unavailability (verbal consent, 2026-07-03); this is disclosed here as a documented deviation from the registered Section 6 procedure, consistent with how other deviations in this log (Embase drop, ACM substitution) are handled — decided, justified, and logged rather than silently absorbed. Recommend a brief line in the manuscript's limitations noting Borderline-case adjudication was single-reviewer rather than two-person, consistent with the single-reviewer T/A screening design overall.
 
 ---
+
+## 2026-07-03 — Gate 1 boundary clarification: in-ED treatment/procedural decisions are out of scope
+
+**Decision:** During Borderline re-adjudication, encountered a record (rayyan-601300258, "AI for predicting shockable rhythm during CPR: In-hospital setting") where the population and setting are unambiguously ED, but the decision point — real-time shock/no-shock prediction during active resuscitation — does not fit any of Gate 1's three named categories (intake, acuity/triage scoring, immediate disposition). `docs/protocol/inclusion_boundary.md` did not previously address this case explicitly; its exclusion list covered EMS/inpatient/ICU/operational settings but not "occurs in the ED, but is a treatment/procedural decision rather than intake/triage/disposition."
+
+**Clarification:** Gate 1's three categories are exhaustive, not illustrative — an ED-encounter decision point that is real-time treatment/procedural/management (resuscitation, medication dosing, imaging acquisition for diagnosis, physiologic monitoring during active care) fails Gate 1 even though it occurs during the ED encounter on an ED patient, because it is none of (a) intake, (b) acuity/triage scoring, or (c) immediate disposition.
+
+**Rationale:** The original EM-pivot (2026-06-10) scoped Gate 1 specifically to intake/triage/disposition decision-support — the ED-flow/throughput decision points central to the review's motivating literature — not to the much broader universe of AI-assisted treatment/procedural decisions made during ED care (which is a distinct literature, e.g., resuscitation AI, point-of-care diagnostic AI). Extending Gate 1 to any decision merely "occurring in the ED" would substantially and unintentionally broaden scope beyond the registered protocol.
+
+**Alternatives considered:** (a) Treat "occurs during active ED care" as sufficient for Gate 1 pass — rejected as inconsistent with the registered protocol's explicit three-category structure and likely scope creep. (b) Escalate every such case individually as Borderline without a general rule — rejected as inefficient and inconsistent given this is expected to recur (other resuscitation/procedural-AI records in the same corpus).
+
+**Impact:** `docs/protocol/inclusion_boundary.md` updated to v2.1: new explicit Gate 1 exclusion bullet, a new edge-case table row (shockable-rhythm/CPR example), and a Version History entry. `C:\Users\anirb\.claude\projects\...\memory\project_screening_falsepositive_patterns.md` updated with this pattern for consistent application across the remaining Borderline batch. rayyan-601300258 itself is excluded under this clarification (Gate 1 fail) — see `data/screening/ta_borderline_list_2026-07-03.csv`.
+
+**Defense if challenged:** This is a scope clarification grounded in the original EM-pivot's stated intent (ED-flow decision points: intake/triage/disposition), not a post-hoc narrowing to reach a preferred result — it was triggered by an actual boundary gap discovered during adjudication and is applied consistently to all subsequent records with the same shape, not selectively.
+
+---
+
+## 2026-07-03 — Gate 1 boundary clarification v2.2: patient-level predictions consumed administratively fail Gate 1
+
+**Decision:** During Borderline re-adjudication, encountered a record (rayyan-601300617, "Predicting emergency department disposition using machine learning and large language models to support proactive capacity management") where the prediction target is individual-patient ED disposition (admit vs. discharge) — a Gate-1(c)-shaped outcome — but the paper explicitly and repeatedly frames the output as being acted on by "hospital decision-makers" for "proactive bed allocation, staffing coordination, and surge management," predicted "before physician evaluation," never framed as feeding back to the treating clinician's own decision for that patient.
+
+**Clarification:** The decision-point-vs-population-origin test (already in `inclusion_boundary.md`) turns on *who acts on the output and toward what end*, not on the granularity of the prediction target. A patient-level prediction that is aggregated/routed into an administrative capacity-management workflow is an operational use — the same category as the existing "operational/administrative ED models" exclusion (crowding/throughput/staffing) — even though the underlying target variable (disposition) would pass Gate 1 if it were actually returned to the treating clinician.
+
+**Rationale:** Without this clarification, any capacity-forecasting paper built on a per-patient ML model (a common and growing pattern — using individual predictions and rolling them up for bed/staffing planning) would pass Gate 1 on target-variable inspection alone, which would substantially and unintentionally broaden scope to include operational-research papers that happen to use patient-level features, contradicting the review's EM-pivot intent (ED-flow decision-support literature, not hospital operations research).
+
+**Alternatives considered:** (a) Treat any patient-level disposition-shaped target as sufficient for Gate 1 pass regardless of stated use — rejected, scope creep into operations-research literature. (b) Escalate every such case individually — rejected as inefficient given this is expected to recur (capacity-forecasting-via-per-patient-ML is a common paper design).
+
+**Impact:** `docs/protocol/inclusion_boundary.md` updated to v2.2: new explicit Gate 1 exclusion bullet, a new edge-case table row (ML+LLM ED disposition-for-capacity-management example), and a Version History entry. `project_screening_falsepositive_patterns.md` updated with this pattern. rayyan-601300617 itself is excluded under this clarification (Gate 1 fail).
+
+**Defense if challenged:** Same grounding as the v2.1 clarification — this refines application of an already-registered test (decision-point-vs-population-origin) to a fact pattern the original protocol text didn't explicitly anticipate, rather than introducing a new criterion; applied prospectively and consistently, not to reach a preferred result on this specific record.
+
+---
+
+## 2026-07-03 (through 2026-07-06) — Borderline adjudication complete: all 64 records resolved
+
+**Decision/Event:** Adjudication of the 64 T/A Maybe/Borderline records (delegated to the sole reviewer per the 2026-07-03 faculty-delegation entry above) is complete. Each record was assessed one at a time: the ta-screener subagent gave a gate-by-gate recommendation against `docs/protocol/inclusion_boundary.md`, and the reviewer made the final call. Full per-record rationale is in `data/screening/ta_borderline_list_2026-07-03.csv`.
+
+**Result:**
+- **Exclude: 40** — TA-E1 (wrong ED decision point/setting) 25, TA-E4 (wrong publication type/no empirical component) 7, TA-E2 (not an EM/ED clinical context) 5, TA-E3 (no XAI component) 2, TA-E5 (not an AI/ML study) 1.
+- **Include / forward to full-text: 24** — 20 resolved to Include outright, 4 kept as genuine Borderline pending full-text confirmation on a specific narrow question (each flagged in the CSV's `faculty_rationale` column).
+
+**Two protocol boundary clarifications emerged during this pass and were formalized in `docs/protocol/inclusion_boundary.md`** (both already logged in their own entries above, 2026-07-03): v2.1 (in-ED treatment/procedural/diagnostic decisions — CPR, test-ordering, diagnostic differentiation — are not intake/triage/disposition and fail Gate 1 even in an ED population) and v2.2 (patient-level predictions consumed administratively for capacity/staffing planning fail Gate 1 regardless of prediction-target granularity). These were applied retroactively and consistently across all subsequent records once identified, not selectively.
+
+**Pattern observed across the batch:** a substantial share of the original bulk "Maybe" calls reversed cleanly to Exclude once walked gate-by-gate against the full protocol text — recurring shapes were: (1) ICU-admission-and-after decision points misread as ED-adjacent due to population origin (records with "emergency" in a combined ICU/EM department name, or ED-admitted cohorts followed into the ICU); (2) bare "triage" keyword matches in non-ED domains (dermatology) or non-triage senses (orthopedic operative/non-operative routing, diagnostic differentiation); (3) review/narrative-review/bibliometric/consensus-guideline papers with no underlying empirical model; (4) operational/administrative models (crowding, billing-code prediction, visit forecasting, capacity management) mistaken for patient-level decisions. This is consistent with the bulk T/A pass having been done at speed across the full 650-record corpus without per-record gate notes, versus this adjudication pass applying the full three-gate boundary explicitly to each ambiguous case.
+
+**Impact:** `data/screening/prisma_counts.csv` Screening-stage rows updated to final counts: 586 excluded at T/A (546 bulk + 40 adjudicated), 64 carried forward to full-text (40 bulk Include + 24 adjudicated). `data/screening/ta_borderline_list_2026-07-03.csv` is the complete audit trail for this batch.
+
+**Next:** (1) IRR 15% re-screen (Section 5 of `docs/protocol/screening_criteria.md`) — safest uniform start date 2026-07-17. (2) Full-text retrieval and screening for the 64 records carried forward (Section 7), applying the full inclusion boundary (now v2.2) decisively, including resolving the specific open questions flagged for the 4 records still marked genuinely Borderline and the ~8 Include-with-a-full-text-check-flag records.
+
+---
