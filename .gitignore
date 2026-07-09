@@ -14,6 +14,9 @@ venv/
 *.xlsx.bak
 data/searches/*.nbib
 
+# Full-text PDFs (copyrighted/paywalled content, no redistribution rights)
+data/extraction/fulltext_pdfs/
+
 # OS
 .DS_Store
 Thumbs.db
