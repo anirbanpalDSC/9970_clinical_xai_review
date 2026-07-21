@@ -116,6 +116,11 @@ Before applying E6, search for the same corresponding author and overlapping dat
 ### Rule 6 — Non-English supplementary material
 If key Methods detail is in a non-English supplementary document that cannot be machine-translated reliably, apply E5. Document the field gaps.
 
+### Rule 7 — Review/wrong-publication-type vs. Gate failure
+Review articles, editorials, commentaries, protocol-only papers, and abstract-only submissions will trivially fail Gates 1–3 (Section 3, F1) simply by not themselves deploying, testing, or implementing a clinical AI system — this is a consequence of their format, not a substantive finding about clinical domain fit. If a paper's Gate 1–3 failures stem solely from its being this kind of publication, code **E4**, not E1, even though the numeric tie-break rule (Section 4) would otherwise select E1 as the lower-numbered code. Reserve E1 for primary empirical studies that fail on substantive domain, decision-point, or clinician-involvement grounds despite being an eligible study type. This rule is an explicit exception to the numeric priority tie-break, added because strict application would make E4 practically unusable for its intended purpose (PRISMA-reportable review/wrong-publication-type exclusions).
+
+If a review also contains a genuine embedded primary study (e.g., a novel analysis presented alongside the review), evaluate that embedded component against F1–F5 separately.
+
 ---
 
 ## 6. Piloting Protocol
@@ -159,3 +164,4 @@ Required columns for `data/screening/fulltext_exclusions.csv` (create at screeni
 | Version | Date | Changes |
 |---------|------|---------|
 | v1 | 2026-05-26 | Initial criteria. Five inclusion criteria (F1–F5), six exclusion codes (E1–E6), six borderline rules, piloting protocol. Issue #18. |
+| v1.1 | 2026-07-10 | Added Rule 7 (Review/wrong-publication-type vs. Gate failure), an explicit exception to the numeric E-code tie-break: papers that fail Gates 1–3 solely because they are reviews/editorials/protocol-only/abstract-only papers are coded E4, not E1, since E1 would otherwise make E4 structurally unusable. Surfaced during the 10-paper full-text pilot (`rayyan-601300218`). See `memos/decision_log.md`, 2026-07-10. |

@@ -1,0 +1,2929 @@
+1. BMC Infect Dis. 2026 Jun 11. doi: 10.1186/s12879-026-13802-9. Online ahead of 
+print.
+
+Machine learning-based prediction of bronchiolitis in children under two years: 
+a multicenter study within a single metropolitan area.
+
+Nopour R(1), Barzegari S(2), Shanbehzadeh M(3), Mahmoudvand Z(4).
+
+Author information:
+(1)Social Determinants of Health Research Center, Semnan University of Medical 
+Sciences, Semnan, Iran. nopour.r70@gmail.com.
+(2)Department of Paramedicine, Amol School of Paramedical Sciences, Mazandaran 
+University of Medical Sciences, Sari, Iran.
+(3)Department of Health Information Technology, School of Allied Medical 
+Sciences, Ilam University of Medical Sciences, Ilam, Iran.
+(4)Department of Health Information Technology, School of Allied Medical 
+Sciences, Mazandaran University of Medical Sciences, Sari, Iran.
+
+BACKGROUND: Bronchiolitis is a leading cause of hospitalization in infants, yet 
+early and accurate risk prediction remains a clinical challenge. Traditional 
+models often lack the complexity to capture nonlinear interactions or the 
+transparency required for clinical trust.
+OBJECTIVE: This multicenter study aimed to develop, validate, and interpret 
+machine learning (ML) models for predicting bronchiolitis risk in children under 
+two years of age using clinical and socioeconomic determinants.
+METHODS: In this retrospective study, data from 1,260 children (529 with 
+bronchiolitis and 731 without) were collected at 5 pediatric centers within a 
+single metropolitan area, from January 2023 through December 2024. Seventeen 
+predictors were analyzed. After rigorous preprocessing and K-NN imputation, 
+eight ML algorithms, including four base learners and four ensemble methods, 
+were developed. Model performance was evaluated using AUC and metrics derived 
+from confusion matrices. Clinical utility was assessed via Decision Curve 
+Analysis (DCA) and calibration plots. Explainable AI (XAI) was implemented using 
+Shapley Additive exPlanations (SHAP) to interpret model decisions.
+RESULTS: XGBoost achieved an AUC of 0.863 [0.828-0.897] in the test set, 
+demonstrating higher predictive performance than base learners such as NB (AUC: 
+0.583 [0.529-0.638]). DCA and calibration plots confirmed that XGBoost provides 
+superior net benefit and calibration performance across a range of threshold 
+probabilities. SHAP analysis identified overcrowding, severe acute malnutrition, 
+and maternal smoking as the most influential predictors, highlighting the 
+critical role of socioeconomic and environmental factors in disease 
+susceptibility.
+CONCLUSION: The integration of XGBoost with SHAP values provides a robust, 
+transparent, and clinically actionable framework for early prediction of 
+bronchiolitis based on variables available at initial clinical presentation. By 
+identifying high-risk infants through interpretable AI, this model supports 
+early triage and optimized resource allocation, fostering the transition toward 
+precision pediatric medicine.
+CLINICAL TRIAL NUMBER: Not applicable.
+
+© 2026. The Author(s).
+
+DOI: 10.1186/s12879-026-13802-9
+PMID: 42277719
+
+Conflict of interest statement: Declarations. Ethics approval and consent to 
+participate: This study was approved by the ethics committee of the Mazandaran 
+University of Medical Sciences (IR.MAZUMS.REC.1405.023). Ethical approval was 
+obtained from the investigators’ affiliated institution (Mazandaran University 
+of Medical Sciences), although data collection was conducted at collaborating 
+pediatric centers in Tehran. All methods were carried out in accordance with 
+relevant guidelines and regulations. Informed consent was obtained from all 
+subjects and/or their legal guardian(s). Consent for publication: Not 
+applicable. Competing interests: The authors declare no competing interests.
+
+
+2. BMC Med Inform Decis Mak. 2026 Jun 11. doi: 10.1186/s12911-026-03624-9. Online
+ ahead of print.
+
+A methodological framework for integrating generalisable deep learning and 
+radiomics fusion model for early lung cancer detection across multi-centre 
+imaging datasets.
+
+Tshivhula N(1), Mbunge E(2), Makaba T(2).
+
+Author information:
+(1)Center for Applied Data Science, University of Johannesburg, Johannesburg, 
+2006, South Africa. ndivhotshivhula@gmail.com.
+(2)Department of Applied Information Systems, University of Johannesburg, 
+Johannesburg, South Africa.
+
+Early detection of lung cancer remains one of the most effective strategies for 
+improving survival; however, diagnostic performance is limited by variability in 
+imaging protocols, scanner settings, lesion characteristics, and inter-reader 
+interpretation. Deep learning (DL) models enable automated feature 
+representation from medical images, while radiomics provides interpretable 
+handcrafted biomarkers that capture tumour morphology, intensity, texture, and 
+heterogeneity. When integrated into a clinical decision support system (CDSS), 
+these approaches have the potential to augment radiologist decision-making, 
+reduce false positives, and improve triage of indeterminate pulmonary nodules. 
+However, both approaches continue to face challenges related to reproducibility, 
+explainability, and generalisability across multi-centre imaging datasets. This 
+systematic review followed PRISMA 2020 guidelines and synthesised evidence on 
+CT-, LDCT-, spectral CT-, and PET/CT-based radiomics, DL, and DL-radiomics 
+fusion models for early lung cancer detection and classification. Following 
+revised searches across Scopus, PubMed/MEDLINE, IEEE Xplore, and Google Scholar, 
+and subsequent eligibility screening, the retained core detection and 
+classification studies were organised into three analytical categories: 
+radiomics-only models, DL-only models, and DL-radiomics fusion models. Reported 
+performance metrics, validation strategies, imaging modalities, fusion 
+approaches, and centre designs were compared to identify methodological patterns 
+and sources of heterogeneity. Fusion models generally outperformed 
+radiomics-only and DL-only approaches across benign-malignant nodule 
+classification, lung cancer classification, invasive adenocarcinoma prediction, 
+ground-glass nodule assessment, and histological subtyping. Late and hybrid 
+fusion strategies were more robust than early feature concatenation, 
+particularly when handcrafted radiomics, deep features, and clinical variables 
+(e.g., smoking history, spiculation, tumour stage, PET/CT indicators) were 
+combined. However, the evidence base is constrained by retrospective designs, 
+small samples, inconsistent segmentation and harmonisation, limited prospective 
+validation, and incomplete reporting of calibration, decision-curve analysis, 
+and external performance. Formal statistical pooling was not appropriate given 
+the heterogeneity in outcomes, imaging protocols, feature pipelines, model 
+architectures, and validation strategies. To address these gaps, this review 
+proposes a methodological framework integrating multi-centre harmonisation, 
+robust feature engineering, mathematically defined fusion strategies, domain 
+generalisation, explainability, calibration, and clinical utility assessment to 
+support reproducible and clinically meaningful CDSS for early lung cancer 
+detection.
+
+© 2026. The Author(s).
+
+DOI: 10.1186/s12911-026-03624-9
+PMID: 42277832
+
+Conflict of interest statement: Declarations. Ethics approval and consent to 
+participate: Ethical clearance was obtained from the University of 
+Johannesburg’s Faculty of Science Ethics Committee (Ethical approval: 
+SCIISREC3/7 8pt2). Informed consent requirements were managed in accordance with 
+the ethics approval conditions and applicable regulations. Consent for 
+publication: Not applicable. Competing interests: The authors declare no 
+competing interests.
+
+
+3. IEEE J Biomed Health Inform. 2026 Jun 12;PP. doi: 10.1109/JBHI.2026.3703213. 
+Online ahead of print.
+
+Artificial Intelligence in Demand and Capacity Modelling of Healthcare Systems.
+
+Ribeiro C, Fan Y, Mullins C, Williamson S, Beard J, Kourtessis P, Mporas I.
+
+The increasing complexity of healthcare systems management requires the 
+development of advanced methodologies to support efficient resource allocation, 
+service delivery, and strategic planning. Artificial intelligence has emerged as 
+an important tool in this domain, offering capabilities to model demand, predict 
+capacity requirements, and inform operational decisions through data-driven 
+insights. This article provides a comprehensive scoping review of AI-based 
+approaches for demand and capacity modelling in healthcare systems. 
+Specifically, it examines AI methods applied to key demand prediction tasks, 
+including outpatient activity, emergency department attendances, hospital 
+admissions and readmissions, and length of stay, as well as capacity planning 
+for beds, workforce, equipment, and other critical resources. The review reports 
+trends in AI models design, learning paradigms, performance reporting, and data 
+usage, and highlights the relationship between demand modelling and downstream 
+capacity predictions. In addition, the paper analyses data infrastructure 
+requirements, commonly used datasets, and the growing role of explainable AI in 
+supporting transparency and trust. Despite recent advances in the field, the 
+integration of AI into healthcare systems faces significant challenges, 
+including concerns related to privacy, ethics, data quality, interpretability, 
+bias, scalability, policy variation, and data interoperability. Addressing these 
+challenges is essential to develop sustainable, fair and resilient healthcare 
+systems. Our review highlights the current state and gaps in the literature, and 
+proposes future directions for advancing the use of AI in healthcare management 
+systems are reviewed.
+
+DOI: 10.1109/JBHI.2026.3703213
+PMID: 42284167
+
+
+4. Sci Rep. 2026 Jun 15. doi: 10.1038/s41598-026-56569-4. Online ahead of print.
+
+Explainable AI for diabetic retinopathy detection using vision transformers.
+
+Rahaman M(#)(1), Muni MA(#)(2), Tasnim S(#)(3), Juthi SS(#)(4), Islam R(#)(5), 
+Ahmed KR(6).
+
+Author information:
+(1)Department of College of Technology and Engineering, Westcliff University, 
+Irvine, CA, USA.
+(2)MBBS (RU), FCPS Part-2 (Gastroenterology), MRCP Part-1 (UK), Shaheed Ziaur 
+Rahman Medical College, Bogura, Bangladesh.
+(3)Department of Health Services Management, University of La Verne, La Verne, 
+USA.
+(4)Residential Behavior Specialist, Anderson Center for Autism, 64 C Janet 
+Drive, Poughkeepsie, NY, USA.
+(5)International American University, Los Angeles, California, USA.
+(6)Miyan Research Institute, International University of Business Agriculture 
+and Technology, Dhaka, Bangladesh. khandakarrabbiahmed@gmail.com.
+(#)Contributed equally
+
+The heterogeneous acquisition, variability of orientation, and subtle lesions 
+continue to challenge the screening of diabetic retinopathy through color fundus 
+photographs. We formulate DR grading as a binary triage task (No-DR vs DR) and 
+propose the All-ViT Hybrid framework, integrating complementary pretrained 
+transformer backbones within a stability-oriented training schedule (head-only 
+warm-up, partial unfreezing), optimized using AdamW with OneCycle scheduling, 
+class-weighted cross-entropy, and mixed precision. Preprocessing includes 
+luminance-space CLAHE and retinal field-of-view masking, and data splitting is 
+performed using stratified sampling to preserve class balance. We perform 
+post-hoc threshold tuning and test-time augmentation (optional), which is 
+available for operating-point control and robustness. Over the competitive 
+baselines (ConvNeXt, MobileNetV3-Large, EfficientNet-B0, DenseNet201), All-ViT 
+Hybrid has an Accuracy of 0.9754, F1 of 0.9761, Precision of 0.9658, Recall of 
+0.9866, and measures of agreement κ of 0.9509, MCC of 0.9511, and Jaccard of 
+0.9532. Compared to the best baseline, F1 achieves a gain of +1.11 percentage 
+points, an improvement in accuracy of +1.13, and a recall improvement of +0.81 
+percentage points without compromising controllable precision and these 
+experiments were conducted on the APTOS 2019 Blindness Detection dataset. These 
+visualizations provide qualitative interpretability and are not quantitatively 
+validated against lesion-level annotations due to dataset limitations. These 
+findings suggest that integrating complementary transformer representations 
+within a unified fusion pipeline provides strong and threshold-adjustable 
+performance for DR triage under real-world variability. The framework remains 
+modular and extensible, with potential applicability to larger input 
+resolutions, multi-class grading, and multi-modal clinical settings. The future 
+research program will test external generalization and probability calibration 
+across devices and centers.
+
+© 2026. The Author(s).
+
+DOI: 10.1038/s41598-026-56569-4
+PMID: 42297880
+
+Conflict of interest statement: Declarations. Competing interests: The authors 
+declare no competing interests.
+
+
+5. Langenbecks Arch Surg. 2026 Jun 16;411(1):165. doi:
+10.1007/s00423-026-04098-z.
+
+Towards clinically interpretable machine learning in emergency surgery: feature 
+importance and insights across clinical time points in abdominal pain cases.
+
+Henn J(#)(1)(2), Hatterscheidt S(#)(3)(4), Nesic S(5), Nowak S(6), Block 
+W(6)(7)(8), Röttgen J(3)(4), Gräff I(9), Kalff JC(3)(4), Sprinkart AM(6), Buness 
+A(5), Matthaei H(3)(4).
+
+Author information:
+(1)Department of General, Visceral, Vascular and Transplant Surgery, University 
+Hospital Bonn, Bonn, Germany. jonas.henn@ukbonn.de.
+(2)Bonn Surgical Technology Center (BOSTER), University Hospital Bonn, Bonn, 
+Germany. jonas.henn@ukbonn.de.
+(3)Department of General, Visceral, Vascular and Transplant Surgery, University 
+Hospital Bonn, Bonn, Germany.
+(4)Bonn Surgical Technology Center (BOSTER), University Hospital Bonn, Bonn, 
+Germany.
+(5)Core Unit for Bioinformatics Data Analysis, University Hospital Bonn, Bonn, 
+Germany.
+(6)Department of Diagnostic and Interventional Radiology, University Hospital 
+Bonn, Bonn, Germany.
+(7)Department of Radiotherapy and Radiation Oncology, University Hospital Bonn, 
+Bonn, Germany.
+(8)Department of Neuroradiology, University Hospital Bonn, Bonn, Germany.
+(9)Department of Clinical Acute and Emergency Medicine, University Hospital 
+Bonn, Bonn, Germany.
+(#)Contributed equally
+
+PURPOSE: Machine learning (ML) may support decision-making for acute abdominal 
+pain (AAP), but limited interpretability hinders adoption. We evaluated a 
+random-forest classifier for predicting urgent abdominal surgery and examined 
+how predictive value and feature importance evolve across clinical timepoints.
+METHODS: In this retrospective single-center study, we included adults 
+presenting with AAP to the emergency department. The outcome was urgent 
+abdominal surgery within 24 h. Features were grouped into stepwise sets. For 
+each feature set, models were trained in 20 random 80/20 train-test splits with 
+randomized hyperparameter search. Performance was summarized by AUC ROC and AUC 
+PR, and interpretability by permutation importance and SHapley Additive 
+exPlanations (SHAP).
+RESULTS: Among 1,350 patients (median age 43 years, 682 (50.5%) females), 276 
+(20.4%) underwent urgent surgery. The final model achieved a median AUC ROC of 
+0.83. Discrimination increased stepwise from basic data (0.53), symptoms (0.61), 
+pain history (0.66), vital signs (0.68), laboratory values (0.76), and physical 
+examination (0.83). Computed tomography added only marginal improvement (0.83). 
+Feature importance shifted from symptoms to vital signs and subsequently 
+laboratory markers, particularly c-reactive Protein, white blood cell count, and 
+prothrombin time, complemented by guarding. SHAP analyses confirmed these trends 
+by consistently linking abnormal laboratory or clinical values to operative 
+outcomes.
+CONCLUSION: Interpretable ML enables pre-imaging risk stratification for urgent 
+surgery in AAP. Near-final discrimination is achieved after laboratory testing 
+and physical examination, while computed tomography adds limited value at 
+population level. Timepoint-specific feature contribution may facilitate 
+integration of ML into surgical decision-making.
+
+© 2026. The Author(s).
+
+DOI: 10.1007/s00423-026-04098-z
+PMCID: PMC13272239
+PMID: 42303803 [Indexed for MEDLINE]
+
+Conflict of interest statement: Declarations. Ethical approval: The study was 
+conducted in accordance with the Declaration of Helsinki and approved by the 
+Ethics Committee of the University Hospital Bonn (163/23-EP). No dedicated 
+informed consent was required for this retrospective study according to local 
+legislation. Competing interests: JCK is an associate Editor of Langenbeck’s 
+Archives of Surgery. Besides this, the authors declare that they have no 
+competing interests.
+
+
+6. J Imaging Inform Med. 2026 Jun 18. doi: 10.1007/s10278-026-02057-0. Online
+ahead  of print.
+
+Deep Learning vs. Traditional Machine Learning in the Diagnosis of Cutaneous 
+Drug Eruptions: A Comparative Study with Explainable AI on Whole-Slide Images.
+
+Türkmen Dedeoğlu A(1), Yanık H(2), Uysal E(3), Fikir G(4), Değirmenci E(5), 
+Türsen Ü(6), Yuyucu Karabulut Y(7).
+
+Author information:
+(1)Department of Pathology, Mersin City Training and Research Hospital, Mersin, 
+Turkey.
+(2)Department of Information Systems and Technologies, School of Applied 
+Technology and Management, Mersin, Turkey.
+(3)Computer Engineering, Mersin University, Mersin, Turkey.
+(4)Department of Pathology, Faculty of Medicine, Mersin University, Mersin, 
+Turkey.
+(5)Department of Electrical and Electronics Engineering, Faculty of Engineering, 
+Mersin University, Mersin, Turkey.
+(6)Department of Dermatology, Faculty of Medicine, Mersin University, Mersin, 
+Turkey.
+(7)Department of Pathology, Faculty of Medicine, Mersin University, Mersin, 
+Turkey. yykarabulut@yahoo.com.tr.
+
+Histopathological diagnosis of cutaneous drug eruptions (CDEs) presents a 
+challenge in dermatopathology due to morphological overlap and high 
+inter-observer variability. This retrospective study systematically compares the 
+diagnostic performance of modern convolutional neural networks (ConvNeXt, ResNet 
+152, EfficientNet), hierarchical vision transformers (Swin Transformer), and 
+traditional machine learning algorithms (HGBT, XGBoost) on whole-slide images 
+(WSIs) of CDEs and validates decisions using explainable artificial intelligence 
+(XAI). We analyzed 443 WSIs collected between 2014 and 2024, encompassing three 
+diagnostic classes: CDE (n = 194), Atopic Dermatitis (n = 187), and 
+histologically normal skin controls (n = 62), thereby better reflecting 
+real-world clinical diagnostic challenges. Following controlled data 
+augmentation to 600 images (200 per class), all models were evaluated on a 
+held-out 20% test set (n = 120) using accuracy, sensitivity, specificity, 
+precision, and F1-score across all three classes. Each WSI was processed as a 
+single resized (512 × 512 pixels) sample; no sub-patch tessellation or 
+patch-level aggregation was performed. Gradient-weighted Class Activation 
+Mapping (Grad-CAM) was applied to visualize the histological regions influencing 
+model decisions. ConvNeXt emerged as the highest-performing model, achieving the 
+highest accuracy rate (88.98%) and demonstrating strong multi-class differential 
+diagnosis capability. ResNet 152 and Hybrid Feature Fusion models also achieved 
+highly competitive results (86.44% accuracy). ConvNeXt demonstrated a 
+statistically significant advantage over traditional methods and legacy 
+architectures (p < 0.05). Histogram-Based Gradient Enhancement Classification 
+Tree (HGBT) and XGBoost were effective among traditional models, with accuracies 
+of 77.97% and 77.12%, respectively. Grad-CAM confirmed that models focused on 
+clinically meaningful histological features, including basal vacuolar 
+degeneration and eosinophilic infiltration. These findings suggest that advanced 
+deep learning architectures, particularly ConvNeXt, may assist pathologists as a 
+decision-support and triage tool in multi-class CDE diagnosis; ensemble methods 
+offer a viable alternative in resource-constrained settings. Pending external 
+validation, these XAI-supported models have the potential to provide 
+transparent, reproducible diagnostic assistance in dermatopathology.
+
+© 2026. The Author(s) under exclusive licence to Society for Imaging Informatics 
+in Medicine.
+
+DOI: 10.1007/s10278-026-02057-0
+PMID: 42315700
+
+Conflict of interest statement: Declarations. Ethics Approval: This study was 
+approved by the Institutional Ethics Committee of Mersin University Faculty of 
+Medicine (Document No: E-59760191-3558834). All procedures were performed in 
+accordance with the ethical standards of the institutional and/or national 
+research committee and with the 1964 Helsinki Declaration and its later 
+amendments. As this is a retrospective analysis using fully anonymized, archival 
+histopathological specimens obtained from the routine diagnostic archive of 
+Mersin University Faculty of Medicine Department of Pathology, with no patient 
+contact, no collection of new biological material, and no access to personally 
+identifiable information, the Institutional Ethics Committee waived the 
+requirement for individual informed consent in accordance with applicable 
+institutional and national regulations governing research on anonymized archival 
+material. Consent for Publication: The authors affirm that all whole-slide 
+images (WSIs) utilized in this study, including those presented in the figures, 
+are fully anonymized. No identifying individual participant information is 
+included in this manuscript. Consent to Participate: Because this study analyzed 
+only fully anonymized, archival histopathological specimens, with no patient 
+contact and no access to personally identifiable information, the requirement 
+for individual informed consent to participate was waived by the Institutional 
+Ethics Committee of Mersin University Faculty of Medicine in accordance with 
+applicable institutional and national regulations governing research on 
+anonymized archival material. Competing interests: The authors declare no 
+competing interests.
+
+
+7. Indian J Pediatr. 2026 Jun 19. doi: 10.1007/s12098-026-06289-4. Online ahead
+of  print.
+
+Artificial Intelligence in Pediatric Imaging: A Primer for Pediatric Clinicians.
+
+Gupta A(1), Agrawal A(2), Sammer M(3), Saxena AK(4).
+
+Author information:
+(1)Department of Pediatric and Onco-Radiology, AIIMS, New Delhi, 110029, India.
+(2)Teleradiology Solutions, 12 B Sriram Road, Civil Lines, Delhi, 110054, India. 
+anjali.agrawal@telradsol.com.
+(3)Texas Children's Department of Radiology, AI & Innovation, Baylor College of 
+Medicine, Houston, TX, USA.
+(4)Department of Radio Diagnosis and Imaging, Post Graduate Institute of Medical 
+Education and Research, Sector-12, Chandigarh, 160012, India.
+
+Artificial intelligence (AI) is reshaping healthcare, and radiology is at the 
+forefront for adoption. Increasing demand for imaging, complex protocols, 
+quantitative image analysis, and workforce shortages drive AI development. 
+However, clinical translation in pediatric imaging still lags its use in general 
+radiology. Only a small number of approved tools carry explicit pediatric 
+indications, and these focus on narrow tasks. In chest imaging, deep learning 
+models can detect pneumonia, tuberculosis, and misplaced lines or tubes, though 
+performance depends on pediatric-specific training and local validation. 
+Automated bone age assessment is among the earliest and most widely adopted 
+applications. Neuroimaging benefits include reduced acquisition times, lower 
+contrast doses, and rapid triage of critical findings. Cardiovascular 
+applications support congenital heart disease detection and functional 
+assessment, while oncology applications are being explored for tumor 
+characterization and segmentation for therapy planning. Beyond interpretation, 
+AI can enhance workflow triage, structured reporting, and patient communication. 
+Despite these advances, barriers remain for AI adoption. These include scarcity 
+of pediatric datasets, limited prospective validation, workflow integration 
+challenges, interpretability concerns, and complex ethical and legal issues 
+unique to children. Integration with hospital systems is uneven, and routine 
+monitoring and support are often missing. Pediatricians and surgeons should work 
+with radiologists and data scientists to define use cases, curate datasets, 
+validate performance, and set ethical guardrails. Future progress will depend on 
+collaborative data sharing, robust validation, clinician engagement, 
+child-centred guidelines, and human-centred design to ensure safe, equitable, 
+and meaningful adoption.
+
+© 2026. The Author(s), under exclusive licence to Dr. K C Chaudhuri Foundation.
+
+DOI: 10.1007/s12098-026-06289-4
+PMID: 42319740
+
+Conflict of interest statement: Declarations. Conflict of Interest: None.
+
+
+8. J Voice. 2026 Jun 20:S0892-1997(26)00264-X. doi: 10.1016/j.jvoice.2026.05.040.
+ Online ahead of print.
+
+Differentiating Etiologies of Dysphonia: A Machine Learning Approach With 
+Multidomain Acoustic Features.
+
+Au YC(1), Ng ML(2).
+
+Author information:
+(1)Speech Science Laboratory, Faculty of Education, University of Hong Kong, 
+Hong Kong, China. Electronic address: auandrew@connect.hku.hk.
+(2)Speech Science Laboratory, Faculty of Education, University of Hong Kong, 
+Hong Kong, China.
+
+OBJECTIVES: The present study aims to develop and evaluate the feasibility of 
+automatic categorical differentiation of pathological voice disorders (organic, 
+functional, and neurologic) using machine learning (ML) models based on 
+multidomain acoustic features from connected speech.
+METHODS: A total of 584 pathological recordings obtained from the Advanced Voice 
+Function Assessment Databases were analyzed. Twenty-nine prespecified acoustic 
+features covering multiple domains including prosodic, perturbation, 
+harmonicity, and cepstral-spectral domains, were extracted. Three classifiers, 
+including Random Forest, Extreme Gradient Boosting (XGBoost), and CatBoost, plus 
+a soft-voting ensemble, were trained with stratified 5-fold cross-validation on 
+an 80% development split and evaluated on a 20% external hold-out set. 
+Performance metrics including accuracy, precision (positive predictive value 
+[PPV]), recall/sensitivity, specificity, F1, per-class indices, and confusion 
+matrices, were assessed. Feature importance (XGBoost) was summarized via Weight, 
+Gain, and Cover to support physiologic interpretability.
+RESULTS: Results indicated that XGBoost yielded the best overall performance 
+(accuracy = 0.82, PPV = 0.80, sensitivity = 0.70, specificity = 0.91, F1 = 
+0.73), followed by CatBoost (accuracy = 0.79, F1 = 0.66) and the ensemble 
+(accuracy = 0.79, F1 = 0.66); random forest showed lower sensitivity (0.55) and 
+F1 (0.60). Across models, organic dysphonia achieved the highest F1 (0.86-0.87), 
+neurologic was moderate (F1 ≈ 0.70-0.72), and functional was most challenging 
+(F1 = 0.42-0.60). Feature importance was dominated by cepstral-spectral 
+measures, particularly cepstral peak prominence smoothed, cepstral spectral 
+index of dysphonia, and harmonics-to-noise ratio, indicating that indices 
+related to signal periodicity and glottal closure-related structure help were 
+influential in the etiologic classification task.
+CONCLUSION: Gradient-boosting ML, XGBoost in particular, enables clinically 
+meaningful multiclass differentiation of voice disorder etiologies from 
+sentence-level acoustics. The prominence of cepstral-spectral predictors 
+provides physiologically plausible markers for objective assessment. ML-assisted 
+acoustics can complement perceptual and laryngoscopic evaluation for triage and 
+longitudinal monitoring; improving sensitivity for functional dysphonia will 
+likely require task diversity, multimodal features, and larger, multilingual 
+validation cohorts.
+
+Copyright © 2026 The Authors. Published by Elsevier Inc. All rights reserved.
+
+DOI: 10.1016/j.jvoice.2026.05.040
+PMID: 42323234
+
+Conflict of interest statement: Declaration of Competing Interest The authors 
+declare that they have no known competing financial interests or personal 
+relationships that could have appeared to influence the work reported in this 
+paper.
+
+
+9. JAMIA Open. 2026 Jun 19;9(3):ooag065. doi: 10.1093/jamiaopen/ooag065. 
+eCollection 2026 Jun.
+
+Explainable AI for mental health emergency returns: integrating large language 
+models with predictive modeling.
+
+Ahmed A(1)(2), Saleem M(1), Alzeen M(1), Birur B(3), Fargason RE(3), Burk 
+BG(3)(4), Alhassan A(3), Al-Garadi MA(5).
+
+Author information:
+(1)Department of Health Services Administration, School of Health Professions, 
+University of Alabama at Birmingham, Birmingham, AL 35233, United States.
+(2)Department of Biomedical Informatics and Data Science, Heersink School of 
+Medicine, University of Alabama at Birmingham, Birmingham, AL 35233, United 
+States.
+(3)Department of Psychiatry and Behavioral Neurobiology, University of Alabama 
+at Birmingham, Birmingham, AL 35233, United States.
+(4)Department of Pharmacy, University of Alabama at Birmingham, Birmingham, AL 
+35233, United States.
+(5)Department of Biomedical Informatics, School of Medicine, Vanderbilt 
+University Medical Center, Nashville, TN 37203, United States.
+
+OBJECTIVE: Emergency department (ED) returns for mental health (MH) conditions 
+pose a substantial burden on healthcare systems. Traditional machine learning 
+(ML) models have shown promise in predicting ED returns but often fall short in 
+clinical interpretability. This study evaluates whether integrating Large 
+Language Models (LLMs) with ML methods can enhance both predictive performance 
+and interpretability.
+METHODS: We conducted a retrospective analysis of 42 464 ED visits involving 27 
+904 unique MH patients at an academic medical center in the deep south 
+(2018-2022). Two primary outcomes were assessed: (1) 30-day ED return 
+prediction, and (2) interpretability of model outputs. We employed LLaMA 3 (8B) 
+for few-shot classification of chief complaints and social determinants of 
+health (SDoH) features, including tobacco, alcohol, substance use, exercise, and 
+home environment. These LLM-derived features were integrated into an XGBoost 
+model. Model explanation was enhanced using a novel LLM-SHAP hybrid framework.
+RESULTS: The LLM-based chief complaint classifier achieved 0.882 accuracy, 0.95 
+precision, 0.88 recall, and 0.86 F1-score, outperforming traditional models. 
+SDoH classifiers reached F1-scores ranging from 0.67 to 0.96 across different 
+categories. Incorporating LLM-extracted features into XGBoost improved AUC from 
+0.74 to 0.76 and AUC-PR from 0.58 to 0.61. The LLM-SHAP framework provided 
+enhanced contextualized explanations for risk predictions, improving 
+interpretability at both patient and population levels.
+CONCLUSION: Integrating LLMs with traditional ML models modestly improved 
+predictive performance but substantially enhanced interpretability. This hybrid 
+approach offers a promising path toward more actionable and explainable clinical 
+decision support tools in emergency psychiatry.
+
+© The Author(s) 2026. Published by Oxford University Press on behalf of the 
+American Medical Informatics Association.
+
+DOI: 10.1093/jamiaopen/ooag065
+PMCID: PMC13278837
+PMID: 42327624
+
+Conflict of interest statement: The authors certify no financial or 
+non-financial conflicts of interest related to the subject matter of this 
+manuscript.
+
+
+10. Arch Microbiol. 2026 Jun 22;208(9):450. doi: 10.1007/s00203-026-05005-2.
+
+Integrative single-cell profiling and explainable AI identify monocyte-metabolic 
+signatures as diagnostic biomarkers and candidate therapeutic targets in 
+tuberculosis.
+
+Huang C(#)(1), Yi X(#)(2), Li X(3), Chen Y(1), Cai Z(4), Ding S(5).
+
+Author information:
+(1)Department of Laboratory Medicine, Gutian County Hospital, Gutian, 352200, 
+China.
+(2)Department of Laboratory Medicine, Ninghua County General Hospital, Ninghua 
+County, Fujian Province, China.
+(3)The People's Hospital of Chuxiong Yi Autonomous Prefecture, Chuxiong, 675000, 
+China.
+(4)Department of Medical Laboratory, Siyang Hospital, Siyang, 223700, China. 
+zihancai001@163.com.
+(5)Department of Laboratory Medicine, Gutian County Hospital, Gutian, 352200, 
+China. 2227839256@qq.com.
+(#)Contributed equally
+
+Tuberculosis (TB) remains a formidable global health threat, yet rapid and 
+accurate diagnostic biomarkers capturing host immune-metabolic dysregulation 
+remain elusive. Here, we aimed to map the TB immune microenvironment and 
+engineer a reliable, explainable diagnostic signature targeting the 
+macrophage-associated immune-metabolic axis. Utilizing single-cell RNA 
+sequencing (scRNA-seq) as an exploratory discovery tool, we initially dissected 
+the intercellular communication network in TB. We then deployed an exhaustive 
+consensus machine learning framework, comprising 113 algorithm combinations, 
+across multiple transcriptomic cohorts to pinpoint core diagnostic features. The 
+optimal model was interpreted using SHapley Additive exPlanations (SHAP) and 
+prospectively evaluated by enzyme-linked immunosorbent assay (ELISA) in an 
+independent pilot clinical cohort. Furthermore, network pharmacology and 
+molecular docking were leveraged to identify potential small-molecule 
+modulators. scRNA-seq analysis highlighted a myeloid-biased immune 
+reprogramming, wherein activated monocytes act as key inflammatory orchestrators 
+through adhesion and migration signaling. Our large-scale machine learning 
+screening identified an optimal glmBoost + RF ensemble model underpinned by a 
+6-gene mitochondrial-macrophage signature (IL1B, ATG3, CYBB, MX1, RPS27A, RPS3), 
+achieving consistent diagnostic discrimination (AUC > 0.79) across independent 
+cohorts. Pilot clinical ELISA validation confirmed the systemic elevation of 
+IL1B, ATG3, CYBB, and MX1 proteins in TB patients. Furthermore, computational 
+molecular docking models suggested that the candidate phytochemicals galangin 
+and kaempferol exhibit strong theoretical binding affinities within the 
+catalytic pockets of IL1B and ATG3. We derived and provided preliminary 
+validation for an AI-based, explainable 6-gene signature reflecting monocyte 
+immune-metabolic reprogramming in TB. This signature not only demonstrates 
+translational potential as a triage diagnostic biomarker, but also unveils 
+candidate targets for further experimental investigation for host-directed 
+therapeutics.
+
+© 2026. The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, 
+part of Springer Nature.
+
+DOI: 10.1007/s00203-026-05005-2
+PMID: 42329418 [Indexed for MEDLINE]
+
+Conflict of interest statement: Declarations. Conflict of interest: The authors 
+declare no competing interests. Ethical approval and consent to participate: 
+This study was conducted in accordance with the Declaration of Helsinki and was 
+approved by the by the Ethics Committee of Siyang Hospital with the approval 
+number HY2024005.Written informed consent was obtained from all individual 
+participants included in the study. Consent for publication: Not applicable. 
+Clinical trial number: Not applicable. Artificial intelligence (AI) and large 
+language models (LLM) use disclosure: The authors utilized AI-assisted 
+technologies strictly for grammatical editing to improve the readability of the 
+manuscript. AI was not used in data generation, analysis, or drawing scientific 
+conclusions. The authors take full responsibility for the content of the 
+publication. Reporting Guidelines: This study was reported in accordance with 
+the TRIPOD + AI (Transparent Reporting of a multivariable prediction model of 
+Individual Prognosis Or Diagnosis) and STARD (Standards for Reporting of 
+Diagnostic Accuracy Studies) guidelines to ensure methodological transparency 
+and rigor.
+
+
+11. BMJ Open. 2026 Jun 22;16(6):e116956. doi: 10.1136/bmjopen-2026-116956.
+
+Diagnostic yield of electroencephalographyin the emergency department: protocol 
+for the EMINENCE-M multicentre retrospective observational study.
+
+Scarpino M(1), Piccardi B(2), Nencioni A(3), Nazerian P(3), Lettieri F(4), 
+Grassi E(5), Marra E(6), Mannini A(6), Maiorelli A(1), Liuzzi P(7), Grippo A(1), 
+The Eminence Study Group(3).
+
+Author information:
+(1)Neurophysiopathology Unit, Careggi University Hospital, Florence, Italy.
+(2)Stroke Unit, Careggi University Hospital, Florence, Italy.
+(3)Emergency Department, Careggi University Hospital, Florence, Italy.
+(4)Azienda USL Toscana Centro, Ospedale San Jacopo, Pistoia, Italy.
+(5)Azienda USL Toscana Centro, Ospedale Santo Stefano, Prato, Italy.
+(6)IRCCS Fondazione Don Carlo Gnocchi ETS, Florence, Italy.
+(7)IRCCS Fondazione Don Carlo Gnocchi ETS, Florence, Italy 
+liuzzi.piergiuseppe@gmail.com.
+
+INTRODUCTION: Emergency EEG (emEEG) is increasingly used in the emergency 
+department (ED), but its diagnostic yield remains uncertain. This protocol 
+describes a multicentre observational study aiming to evaluate emEEG findings 
+and their relationship with diagnostic pathways and therapeutic management of 
+patients admitted to the ED.
+METHODS AND ANALYSIS: This multicentre retrospective study will analyse emEEGs 
+performed on patients admitted to the ED of some Italian teaching and community 
+hospitals over a 1-year period with a target sample size of 3850 patients. The 
+diagnostic yield of emEEG will be evaluated by assessing abnormal and 
+epileptiform findings and the relationship between emEEG findings and subsequent 
+clinical decisions, including confirmation or revision of the initial diagnostic 
+suspicion, decisions regarding home discharge or hospitalisation and medication 
+changes. EEG will be classified according to the terminology of the American 
+Clinical Neurophysiology Society. Clinical and instrumental data will be 
+respectively reviewed by emergency physicians and 
+neurologists/neurophysiologists. In particular, via traditional biostatistics 
+and interpretable machine learning models, the study will evaluate the 
+diagnostic yield of emEEG and its association with subsequent clinical 
+management across defined clinical scenarios in the ED.
+ETHICS AND DISSEMINATION: This first large-scale multicentre protocol will 
+provide valuable insights for emergency department (ED) clinicians in selecting 
+appropriate candidates for an emergency EEG (emEEG), supporting ethically sound, 
+proportionate use of this resource in a time- and risk-critical setting. By 
+clarifying diagnostic yield and its relationship with subsequent clinical 
+decisions, the study is expected to generate robust evidence to guide emEEG 
+ordering, reduce unnecessary testing and delays, and promote safer, more 
+equitable decision-making (including appropriate home discharge) while 
+minimising potential harms from misdiagnosis or overtreatment. The study has 
+been approved by the Ethics Committee Regione Toscana - Area Vasta Centro (n. 
+27241). Findings will be disseminated through peer-reviewed publications, 
+conference presentations and engagement with relevant clinical societies to 
+inform international recommendations and facilitate translation into ED 
+practice. Furthermore, developed models will be made openly available for 
+external and public validation.
+
+© Author(s) (or their employer(s)) 2026. Re-use permitted under CC BY-NC. No 
+commercial re-use. See rights and permissions. Published by BMJ Group.
+
+DOI: 10.1136/bmjopen-2026-116956
+PMCID: PMC13288865
+PMID: 42331575 [Indexed for MEDLINE]
+
+Conflict of interest statement: Competing interests: None declared.
+
+
+12. J Ultrasound Med. 2026 Jun 23. doi: 10.1002/jum.70342. Online ahead of print.
+
+Accuracy of Key Sonographic Markers for Juxta-Articular Fractures: A Prospective 
+Study Using Explainable Machine Learning.
+
+Fu X(1), Liu L(2), Sun H(2)(3), Sun C(4), Yang Q(5), Dou M(2), Shi D(6), Hu 
+J(2), He Z(7), Zhou G(5), Jin S(2), Lv F(2).
+
+Author information:
+(1)Department of Ultrasound Medicine, The Eighth People's Hospital of Shanghai, 
+Shanghai, China.
+(2)Department of Ultrasonography, The Third Medical Center of Chinese PLA 
+General Hospital, Beijing, China.
+(3)Department of Ultrasound, Tianjin Rehabilitation and Convalescent Center of 
+Chinese People's Liberation Army, Tianjin, China.
+(4)Department of Ultrasound, Shanghai YangZhi Rehabilitation Hospital (Shanghai 
+Sunshine Rehabilitation Center), School of Medicine, Tongji University, 
+Shanghai, China.
+(5)School of Biological Science and Medical Engineering, Southeast University, 
+Nanjing, China.
+(6)Department of Ultrasound Medicine, Peking University Third Hospital, Beijing, 
+China.
+(7)Department of Radiology, The Eighth People's Hospital of Shanghai, Shanghai, 
+China.
+
+OBJECTIVES: To systematically evaluate sonographic features of long bone 
+juxta-articular fractures and identify key diagnostic predictors using machine 
+learning-based feature selection.
+METHODS: This prospective single-center diagnostic accuracy study enrolled 121 
+patients with clinically suspected juxta-articular fractures. Ten predefined 
+sonographic features were assessed, with computed tomography (CT) serving as the 
+reference standard. Key features were identified using shapley additive 
+explanations (SHAP), and the 3 top-ranked features were used to construct a 
+decision tree-based sonographic triad model, hereafter referred to as the 
+sonographic triad model. This model generated a final binary ultrasound 
+diagnosis for each suspected fracture site. Agreement between the final binary 
+ultrasound diagnosis and CT was quantified using Cohen's κ with 95% confidence 
+intervals (CIs). Inter-observer and intra-observer agreement was evaluated using 
+blinded dual-reader review across the cohort. Diagnostic performance was 
+quantified by sensitivity, specificity, predictive values, and the area under 
+the receiver operating characteristic curve (AUC).
+RESULTS: Analysis of 209 suspected juxta-articular fracture sites revealed that 
+subcutaneous soft-tissue edema (88.5%), cortical separation (50.7%), and 
+heterogeneous intra-articular effusion (56.9%) were the most prevalent findings. 
+The SHAP analysis identified a specific predictive triad. The 3 primary 
+predictors were subperiosteal hematoma (43.8% contribution), arc-shaped fracture 
+end (28.3%), and heterogeneous intra-articular effusion (26.6%). These 3 
+features collectively accounted for 98.7% of the total feature importance and 
+demonstrated high reproducibility, with good inter-observer agreement 
+(κ = 0.833-0.980) and excellent intra-observer agreement (κ = 0.987-1.000). The 
+final binary ultrasound diagnosis generated by the sonographic triad model 
+demonstrated near-perfect agreement with CT at the suspected fracture-site level 
+(κ = 0.904, 95% CI: 0.847-0.962). In addition, the sonographic triad model 
+achieved excellent diagnostic performance, with a sensitivity of 93.0%, 
+specificity of 97.2%, positive predictive value (PPV) of 96.8%, negative 
+predictive value (NPV) of 93.8%, and an AUC of 0.966.
+CONCLUSIONS: The sonographic triad model, based on subperiosteal hematoma, 
+arc-shaped fracture end, and heterogeneous intra-articular effusion, 
+demonstrated high diagnostic accuracy and strong concordance with CT for 
+suspected juxta-articular long-bone fractures. This radiation-free and rapid 
+approach may assist early screening and triage.
+
+© 2026 The Author(s). Journal of Ultrasound in Medicine published by Wiley 
+Periodicals LLC on behalf of American Institute of Ultrasound in Medicine.
+
+DOI: 10.1002/jum.70342
+PMID: 42334241
+
+
+13. BMC Nurs. 2026 Jun 23. doi: 10.1186/s12912-026-04902-7. Online ahead of
+print.
+
+Census rate as a pragmatic indicator of emergency department crowding: a 
+multicentre prospective observational comparison with CEDOCS against 
+frontline-perceived workload.
+
+Paris F(1), Hamaide J(2), Moumneh T(3), Garrouste V(4).
+
+Author information:
+(1)Emergency Department, Geneva University Hospitals, Geneve, 1205, Switzerland.
+(2)Emergency Department, Centre Hospitalier Universitaire d'Orléans, 14 avenue 
+de l'hôpital, Orleans, 45100, France.
+(3)Emergency Department, Centre Hospitalier Régional Universitaire de Tours, 
+Tours, 37000, France.
+(4)Emergency Department, Centre Hospitalier Universitaire d'Orléans, 14 avenue 
+de l'hôpital, Orleans, 45100, France. vincent.garrouste@chu-orleans.fr.
+
+BACKGROUND: Emergency department (ED) crowding affects patient flow, care 
+timeliness, staff well-being, and frontline workload. Although several crowding 
+metrics are available, their interpretability across EDs of different sizes 
+remains uncertain. We compared Census Rate (CR) and the Community Emergency 
+Department Overcrowding Scale (CEDOCS) against frontline-perceived workload 
+across three French EDs.
+METHODS: We conducted a multicentre prospective observational study from 15 to 
+28 May 2023 in one university hospital and two community hospitals. Twice daily, 
+operational variables were recorded and eligible frontline staff completed a 
+6-point staff workload assessment (SWA). The primary outcome was the association 
+between SWA and each crowding metric. Spearman's rank correlation was 
+prespecified as the primary analysis, with Pearson correlations and linear 
+regression as sensitivity analyses. Overlapping dependent correlations were 
+compared using Williams' test. Additional exploratory analyses examined 
+empirical CR tertiles.
+RESULTS: Eighty-four site-time observations were expected, of which 81 had 
+complete data for the main analyses. CR showed a strong association with SWA 
+(Spearman's ρ = 0.744, 95% CI 0.619 to 0.832; p < 0.001), whereas the 
+association for CEDOCS was more moderate (ρ = 0.471, 95% CI 0.289 to 0.616; 
+p < 0.001). The association between CR and SWA was significantly stronger than 
+that between CEDOCS and SWA (difference in correlations 0.273, 95% CI 0.116 to 
+0.438; Williams' t = 4.728, df = 78; p < 0.001). In community hospitals, both 
+metrics performed similarly, whereas CR showed a clearer advantage overall. 
+Empirical CR tertiles were significantly associated with SWA and were used for 
+exploratory interpretation within this dataset.
+CONCLUSIONS: Across EDs of different sizes, CR showed a stronger association 
+with frontline-perceived workload than CEDOCS. These findings suggest the 
+potential value of CR as a simple and interpretable crowding metric to support 
+shared situational awareness and workload-informed discussions, pending 
+validation in broader settings and nurse-specific studies.
+
+© 2026. The Author(s).
+
+DOI: 10.1186/s12912-026-04902-7
+PMID: 42337765
+
+Conflict of interest statement: Declarations. Ethics approval and consent to 
+participate: This study received a favorable opinion from the Groupe Éthique 
+d’Aide à la Recherche Clinique pour les protocoles de recherche non soumis au 
+Comité de Protection des Personnes (Ethics Committee in Human Research), Tours 
+University Hospital, France (project No. 2024 105; February 11, 2025). This 
+study was conducted in accordance with the Declaration of Helsinki and with 
+relevant French guidelines and regulations. Participation was voluntary and the 
+questionnaire was anonymous. All participants were informed about the study 
+before participation, and completion of the questionnaire was considered as 
+implied informed consent to participate. Consent for publication: Not 
+applicable. Use of generative AI and AI-assisted technologies in the writing 
+process: Generative AI tools were used only for language editing after 
+completion of the scientific content; all outputs were reviewed and revised by 
+the authors. Competing interests: The authors declare no competing interests.
+
+
+14. J Burn Care Res. 2026 Jun 24:irag105. doi: 10.1093/jbcr/irag105. Online ahead
+of  print.
+
+Artificial Intelligence and Algorithmic Bias in Burn Care: A Literature Review 
+of Ethical Challenges.
+
+Khorsandi J(1), Ahmed AB(1), Mirharooni J(2), Kahen M(1), Ahdout J(3), Franzoni 
+D(4), MacDavid J(4).
+
+Author information:
+(1)Kirk Kerkorian School of Medicine at University of Nevada Las Vegas, Las 
+Vegas, NV 89106, USA.
+(2)Florida International University Herbert Wertheim College of Medicine, Miami, 
+FL 33199, USA.
+(3)Touro University Nevada, Las Vegas, NV 89014, USA. Department of Medicine.
+(4)Department of Plastic and Reconstructive Surgery, University of Nevada Las 
+Vegas, Las Vegas, NV 89106, USA.
+
+Artificial intelligence (AI) is increasingly integrated into burn care for 
+triage, burn-depth assessment, prognostic scoring, pain management, and 
+telemedicine-enabled resource allocation. These tools promise greater efficiency 
+and precision, yet raise substantial ethical concerns regarding transparency, 
+accountability, and bias. This narrative review synthesizes literature from 2010 
+to 2025 on AI, predictive modeling, and digital tools in burn care, supplemented 
+by evidence from critical care, emergency medicine, radiology, dermatology, and 
+oncology. Systematic searches of PubMed, Embase, and Scopus identified studies 
+that reported algorithm development or deployment and discussed or allowed 
+inference about equity, fairness, or interpretability. Across medical domains, 
+algorithms frequently misclassified outcomes for racial and ethnic minorities, 
+socioeconomically disadvantaged patients, women, older adults, and individuals 
+with complex comorbidities, while burn-specific models rarely evaluated subgroup 
+performance or reported demographic composition. Common problems included 
+unrepresentative datasets, opaque modeling pipelines, and the absence of formal 
+bias audits. Ethical analyses were fragmented and seldom grounded in established 
+frameworks of biomedical ethics or AI governance. This review argues that 
+current trajectories risk embedding and amplifying inequities in an already 
+vulnerable burn population. It proposes concrete strategies for 
+fairness-oriented design, reporting, validation, and post-deployment monitoring, 
+emphasizing justice, nonmaleficence, transparency, accountability, and 
+stakeholder engagement. Responsible adoption of AI in burn care will require 
+moving beyond technical performance alone toward explicit attention to equity 
+and ethical safeguards throughout the model life cycle.
+
+© The Author(s) 2026. Published by Oxford University Press on behalf of the 
+American Burn Association.
+
+DOI: 10.1093/jbcr/irag105
+PMID: 42340329
+
+
+15. PLOS Digit Health. 2026 Jun 25;5(6):e0001500. doi:
+10.1371/journal.pdig.0001500.  eCollection 2026 Jun.
+
+A conceptual agentic AI architecture for MASLD-associated significant fibrosis 
+in primary care.
+
+Njei B(1)(2)(3)(4)(5), Kanmounye US(6).
+
+Author information:
+(1)Section of Digestive Diseases, Department of Medicine, Yale University, New 
+Haven, Connecticut, United States of America of America.
+(2)VA Connecticut Healthcare, West Haven, Connecticut, United States of America 
+of America.
+(3)Engelhardt School of Global Health and Bioethics, Euclid University, Bangui, 
+Central African Republic.
+(4)Ohio University Heritage College of Osteopathic Medicine, Athens, Ohio, 
+United States of America of America.
+(5)Yale Liver Center, Yale New Haven Health, New Haven, Connecticut, United 
+States of America of America.
+(6)Research Department, Association of Future African Neurosurgeons, Yaounde, 
+Cameroon.
+
+Metabolic dysfunction-associated steatotic liver disease (MASLD) is highly 
+prevalent yet often underdiagnosed or undertreated in primary care due to 
+asymptomatic early disease, uneven uptake of non‑invasive tests, limited 
+elastography access, competing clinical priorities, and persistent challenges in 
+sustaining lifestyle modification even after risk is recognized. This opinion 
+introduces ATLAS‑Liver (Adaptive Triage and Learning Agent Suite for Liver 
+disease) as a conceptual reference architecture, not a validated system, for how 
+agentic artificial intelligence (AI) could support guideline‑aligned MASLD 
+pathways by integrating risk estimation, explainability, calibration and 
+fairness monitoring, curated guideline retrieval, and clinician‑retained 
+decision authority within routine workflows. ATLAS‑Liver distinguishes between 
+currently feasible components (e.g., probabilistic models using routine EHR 
+data, local explanation layers with appropriate caveats, subgroup calibration 
+checks, and version‑controlled guideline repositories) and aspirational elements 
+such as dynamic retrieval‑augmented guidance, continuous drift surveillance, and 
+automated agent‑level disagreement resolution. The framework is intended to 
+complement established sequential pathways such as FIB‑4 followed by 
+elastography rather than replace them, offering potential value through improved 
+workflow integration, transparency, follow‑through coordination, and equity 
+monitoring. We situate ATLAS‑Liver within emerging work on AI agents in chronic 
+liver disease while emphasizing its primary‑care orientation and 
+governance‑focused design. We outline key implementation considerations as well 
+as patient‑facing needs such as explanation formats, communication preferences, 
+and support for lifestyle adherence. We acknowledge substantial limitations 
+including lack of empirical validation. ATLAS‑Liver is offered as a 
+hypothesis‑generating framework to guide responsible exploration of agentic AI 
+in primary care MASLD pathways.
+
+Copyright: © 2026 Njei, Kanmounye. This is an open access article distributed 
+under the terms of the Creative Commons Attribution License, which permits 
+unrestricted use, distribution, and reproduction in any medium, provided the 
+original author and source are credited.
+
+DOI: 10.1371/journal.pdig.0001500
+PMCID: PMC13298771
+PMID: 42348555
+
+Conflict of interest statement: The authors have declared that no competing 
+interests exist.
+
+
+16. Eur J Oncol Nurs. 2026 Jun 18;83:103248. doi: 10.1016/j.ejon.2026.103248.
+Online  ahead of print.
+
+Development and validation of an interpretable model for pre-chemotherapy triage 
+of fatigue-pain-sleep disturbance burden in lung cancer.
+
+Zhu B(1), Luo Y(2), Xi R(3), Qian Q(4), Zhang L(5), Mao D(6), Chen X(7), Liu 
+X(8), Miao J(9), Zhang L(10).
+
+Author information:
+(1)School of Nursing, Southern Medical University, Guangzhou, Guangdong, 510515, 
+China. Electronic address: zbx809021704@163.com.
+(2)School of Nursing, Southern Medical University, Guangzhou, Guangdong, 510515, 
+China. Electronic address: luoyuanyuanur@163.com.
+(3)School of Nursing, Southern Medical University, Guangzhou, Guangdong, 510515, 
+China. Electronic address: 2915479696@qq.com.
+(4)School of Nursing, Southern Medical University, Guangzhou, Guangdong, 510515, 
+China. Electronic address: 3359125178@qq.com.
+(5)Nursing Department, CHINA-JAPAN FRIENDSHIP HOSPITAL, Beijing, 100029, China. 
+Electronic address: 15333481217@163.com.
+(6)The First Affiliated Hospital of Soochow University, Suzhou, Jiangsu, 215006, 
+China. Electronic address: mdm110825@163.com.
+(7)School of Nursing, Southern Medical University, Guangzhou, Guangdong, 510515, 
+China. Electronic address: 1354363699@qq.com.
+(8)School of Nursing, Southern Medical University, Guangzhou, Guangdong, 510515, 
+China. Electronic address: 2071615769@qq.com.
+(9)Department of Medical Oncology, Nanfang Hospital, Southern Medical 
+University, Guangzhou, Guangdong, 510515, China. Electronic address: 
+bojunnfhoc2@163.com.
+(10)School of Nursing, Southern Medical University, Guangzhou, Guangdong, 
+510515, China. Electronic address: zhanglili_gzsmu@163.com.
+
+PURPOSE: The aim of the study is to develop an interpretable machine learning 
+model that can effectively identify patients at risk of high fatigue-pain-sleep 
+disturbance (FPS) burden before chemotherapy.
+METHODS: A two-centre observational study was conducted in two tertiary 
+hospitals. Candidate predictors were assessed approximately two weeks before 
+chemotherapy initiation, whereas fatigue, pain, and sleep disturbance outcomes 
+were assessed after chemotherapy completion. Pre-chemotherapy demographic, 
+clinical, laboratory, and patient-reported variables were collected, and latent 
+profile analysis (LPA) of post-chemotherapy FPS identified symptom-burden 
+subgroups. Machine-learning models were trained in one hospital-based 
+development cohort and validated in an independent institutional cohort from a 
+second hospital; performance was assessed with discrimination, calibration, and 
+clinical-utility metrics, and the best model was interpreted using Shapley 
+Additive Explanations (SHAP).
+RESULTS: A total of 1444 patients were included for model development and 
+independent institutional validation. The macro area under the receiver 
+operating characteristic curve (ROC-AUC) of four candidate models in 
+institutional validation ranged from 0.761 to 0.821. The Multi-XGBoost model 
+showed the best discrimination in the independent institutional validation 
+cohort (micro AUC = 0.853; macro AUC = 0.821), with classification results 
+summarised by the confusion matrix.
+CONCLUSION: The interpretable machine-learning model developed and evaluated 
+through independent institutional validation demonstrated good predictive 
+performance. This model may help oncology nurses and clinicians identify 
+high-risk patients before chemotherapy and support earlier, risk-stratified 
+symptom-management planning.
+
+Copyright © 2026 Elsevier Ltd. All rights reserved.
+
+DOI: 10.1016/j.ejon.2026.103248
+PMID: 42349032
+
+Conflict of interest statement: Conflicts of Interest The authors declare no 
+conflicts of interest.
+
+
+17. Diagnostics (Basel). 2026 Jun 17;16(12):1887. doi:
+10.3390/diagnostics16121887.
+
+Development of a Machine Learning-Based Triage Score for Medication-Related 
+Osteonecrosis of the Jaw in Osteoporosis Patients Undergoing Tooth Extraction.
+
+Jeong HO(1), Ryu CW(1), Park SM(1).
+
+Author information:
+(1)Department of Oral and Maxillofacial Surgery, College of Dentistry, Dankook 
+University, Cheonan 31116, Republic of Korea.
+
+Background/Objectives: Medication-related osteonecrosis of the jaw (MRONJ) is a 
+serious complication in osteoporosis patients undergoing tooth extraction. This 
+study aimed to develop and evaluate an interpretable, machine learning-derived 
+triage score for rapid risk stratification at the initial dental visit. Methods: 
+This retrospective study included 850 osteoporosis patients (443 MRONJ, 407 
+controls) in the derivation cohort and 559 independent multicenter MRONJ cases 
+for external evaluation. A reference random forest model identified a 
+hierarchical feature structure, which was translated into an additive 
+integer-weighted scoring system through systematic hyperparameter optimization. 
+Structural tipping points were identified using isotonic regression and first 
+discrete derivative analysis. Internal performance was further characterized by 
+sensitivity, specificity, PPV, NPV, calibration slope and intercept, the 
+Hosmer-Lemeshow test, decision curve analysis, bootstrap optimism correction, 
+and subgroup analyses. External evaluation assessed three-tier distribution 
+concordance and case capture rates with non-inferiority testing. Results: The 
+reference random forest achieved an AUC of 0.792. The final MRONJ triage score 
+(range 0-17) incorporated six binary predictors with mutually exclusive drug 
+route categories. The triage score preserved discriminative performance (AUC 
+0.772; ΔAUC = 0.020; p = 0.149). Two tipping points at scores 7 and 14 defined 
+three risk tiers: low (0-6; 20.9%), moderate (7-13; 55.3%), and high (≥14; 
+83.5%). At the moderate-risk threshold (≥7), the score achieved sensitivity 
+90.3% (95% CI 87.2-92.7%) and specificity 45.0% (40.2-49.8%); at the high-risk 
+threshold (≥14), specificity rose to 91.4% and PPV to 83.1%. Calibration was 
+adequate (slope 0.994; intercept 0.0006; Hosmer-Lemeshow p = 0.381), and 
+decision curve analysis demonstrated higher net benefit than reference 
+strategies across all clinically relevant threshold probabilities. The bootstrap 
+optimism-corrected AUC was 0.778, and discriminative performance remained stable 
+across age, route, duration, and site subgroups (AUC range 0.70-0.79). In the 
+external cohort, the case capture rate at the ≥7 threshold was non-inferior 
+(83.4% vs. 88.0%; Δ = -4.6%; margin -10%). Conclusions: The MRONJ triage score 
+demonstrated stable discrimination and reproducible case capture in an 
+independent multicenter cohort. By relying on six variables obtainable at the 
+initial dental visit, this framework may have the potential to reduce 
+unnecessary tertiary referrals and support safer clinical decision-making, 
+although this benefit was not directly demonstrated and requires confirmation in 
+prospective implementation studies.
+
+DOI: 10.3390/diagnostics16121887
+PMCID: PMC13298390
+PMID: 42351546
+
+Conflict of interest statement: The authors declare no conflicts of interest.
+
+
+18. J Clin Med. 2026 Jun 15;15(12):4640. doi: 10.3390/jcm15124640.
+
+Sequential Helical-Axial-Helical Triple-Rule-Out CT Angiography: Technical 
+Feasibility and Territory-Specific Image Quality in the Emergency Department.
+
+Kim YJ(1), An GY(2), Cha SJ(2), Ko SM(2).
+
+Author information:
+(1)Department of Human Health Convergence, Graduate School, Kangwon National 
+University, Samcheok 25913, Republic of Korea.
+(2)Department of Radiology, Wonju Severance Christian Hospital, Wonju College of 
+Medicine, Yonsei University, Wonju 26426, Republic of Korea.
+
+Background/Objectives: Triple-rule-out CT angiography (TRO-CTA) enables 
+simultaneous evaluation of coronary, pulmonary, and aortic causes of acute chest 
+pain, but conventional single-acquisition protocols may compromise vascular 
+enhancement because of conflicting contrast timing requirements. This study 
+evaluated whether a physiology-based sequential helical-axial-helical 
+acquisition strategy could provide consistent tri-territory enhancement in 
+emergency settings. Methods: In this retrospective single-center study, 71 
+consecutive evaluable emergency department patients (mean age, 66.6 ± 17.0 
+years; 33 women) with undifferentiated acute chest pain underwent TRO-CTA using 
+a structured sequential protocol (pulmonary, coronary, and aortic phases) guided 
+by individualized test-bolus timing. Objective image quality was assessed using 
+vascular attenuation, signal-to-noise ratio (SNR), and contrast-to-noise ratio 
+(CNR); subjective image quality was independently graded by two radiologists. 
+Results: Mean vascular attenuation exceeded predefined diagnostic thresholds in 
+all territories (pulmonary 546.7 ± 237.8 HU [95% CI, 490.4-603.0]; coronary 
+438.8 ± 113.9 HU [95% CI, 411.9-465.8]; aortic 604.3 ± 190.9 HU [95% CI, 
+559.2-649.5]). Diagnostic interpretability was achieved in all three territories 
+in every technically analyzable examination without repeat contrast-enhanced 
+imaging. Median subjective image-quality scores were 5 (IQR, 4-5) for pulmonary, 
+4.5 (IQR, 4-5) for coronary, and 4 (IQR, 4-5) for aortic phases; interobserver 
+agreement was good to excellent. Mean total DLP was 461.5 ± 122.5 mGy·cm. 
+Conclusions: A sequential physiology-based TRO-CTA strategy is technically 
+feasible in a tertiary emergency setting and provides consistent tri-territory 
+enhancement. Because this was a single-arm technical validation study, 
+prospective comparative and outcome-based studies are required to confirm its 
+clinical impact.
+
+DOI: 10.3390/jcm15124640
+PMCID: PMC13302582
+PMID: 42355808
+
+Conflict of interest statement: The authors declare no conflicts of interest.
+
+
+19. J Clin Med. 2026 Jun 17;15(12):4719. doi: 10.3390/jcm15124719.
+
+Explainable Lightweight AI for the Identification of Right-Sided Cardiac 
+Dysfunction in a Saudi Arabian Diabetic Cohort.
+
+Hasan U(1), Algeffari M(2)(3), Alhasson HF(4), Nayeem MA(5).
+
+Author information:
+(1)Department of Electrical and Computer Engineering, School of Engineering and 
+Physical Sciences, North South University, Dhaka 1229, Bangladesh.
+(2)Department of Family and Community Medicine, College of Medicine, Qassim 
+University, Buraydah 51452, Saudi Arabia.
+(3)Abdullah Al-Othaim Diabetes Center, Medical City, Qassim University, Buraydah 
+52571, Saudi Arabia.
+(4)Department of Information Technology, College of Computer, Qassim University, 
+Buraydah 51452, Saudi Arabia.
+(5)Department of Computer Engineering, College of Computer, Qassim University, 
+Buraydah 51452, Saudi Arabia.
+
+Background: Tricuspid valve dysfunction is historically underdiagnosed, and 
+right-sided cardiac abnormalities are clinically important in high-risk diabetic 
+populations. Diabetes may promote right-sided dysfunction through 
+cardiometabolic remodeling, diastolic dysfunction, and elevated pulmonary 
+pressures. This study introduces an explainable, lightweight artificial 
+intelligence framework to infer extreme right heart phenotypes from left-sided 
+echocardiographic and systemic clinical markers. Methods: We retrospectively 
+analyzed an existing clinical dataset of approximately 370 Saudi Arabian 
+individuals with diabetes mellitus. Seven baseline machine learning classifiers 
+were evaluated using leak-aware preprocessing. To reduce optimism bias, models 
+were validated with a True Nested Cross-Validation protocol. Probabilistic 
+calibration, parameter reduction, and computational efficiency were prioritized 
+for clinical triage, and SHapley Additive exPlanations (SHAP) supported 
+transparent decision-making. Results: Random Forest was selected for its balance 
+of discrimination and calibration. Under True Nested Cross-Validation, it 
+achieved an AUC-ROC of 0.8602, AUC-PR of 0.8343, accuracy of 0.8075, sensitivity 
+of 0.7733, specificity of 0.8239, Brier Score of 0.1281, Calibration Slope of 
+1.1720, and Observed/Expected Ratio of 0.8522. Feature ablation indicated a 
+holistic cardiometabolic severity signal, with left atrial dimensions, diastolic 
+dysfunction grade, and diuretic use as primary predictors. The model required 
+205.00 kilobytes of storage and 14.1956 milliseconds for inference. Conclusions: 
+Left-sided cardiac markers combined with systemic indicators can flag concurrent 
+severe right-sided abnormalities. This lightweight framework is a promising 
+triage-oriented screening prototype for prioritizing echocardiographic 
+assessment in high-risk diabetic patients during routine clinical visits without 
+requiring specialized hardware; however, until prospective external validation 
+is completed, this study must strictly be viewed as hypothesis-generating.
+
+DOI: 10.3390/jcm15124719
+PMCID: PMC13301155
+PMID: 42355887
+
+Conflict of interest statement: The authors declare no conflicts of interest.
+
+
+20. Sensors (Basel). 2026 Jun 22;26(12):3949. doi: 10.3390/s26123949.
+
+Comprehensive Review of Nystagmus and Vertigo Diagnostics: From Pathological 
+Foundations to AI-Driven Telemedicine.
+
+Balasubramanian K(1), Danesh A(2)(3), Pandya A(1)(4).
+
+Author information:
+(1)Department of Electrical Engineering and Computer Science, College of 
+Engineering and Computer Science, Florida Atlantic University, Boca Raton, FL 
+33431, USA.
+(2)Hearing, Tinnitus, Balance Research Laboratory, Department of Communication 
+Sciences and Disorders, Schmidt College of Medicine, Florida Atlantic 
+University, Boca Raton, FL 33431, USA.
+(3)Department of Biomedical Sciences, Schmidt College of Medicine, Florida 
+Atlantic University, Boca Raton, FL 33431, USA.
+(4)Department of Biomedical Engineering, College of Engineering and Computer 
+Science, Florida Atlantic University, Boca Raton, FL 33431, USA.
+
+Nystagmus, the involuntary rhythmic oscillation of the eyes, is a critical 
+diagnostic marker in vestibular medicine, distinguishing life-threatening 
+central disorders such as stroke from benign peripheral conditions including 
+Benign Paroxysmal Positional Vertigo (BPPV). Despite its clinical importance, 
+accurate nystagmus assessment has long been constrained by expensive infrared 
+video-oculography equipment such as videonystagmography, specialist dependency, 
+and the episodic nature of vestibular symptoms that are often resolved before a 
+clinical encounter. This review synthesizes approximately 50 papers published 
+between 1952 and 2026 across four thematic domains: AI-driven nystagmus 
+analysis, clinical medicine, smartphone and portable hardware innovations, and 
+telemedicine and remote monitoring. On the AI front, classical machine learning 
+models achieve up to 98.77% nystagmus recognition accuracy using ensemble 
+methods, while deep learning frameworks spanning CNNs, U-Nets, LSTMs, and 
+optical flow networks demonstrate clinical-grade slow-phase velocity measurement 
+equivalent to gold standard video-oculography on standard smartphone RGB video. 
+Large language and vision models including GPT-4V and Gemini 2.0 show 
+early-stage promise as zero-shot triage tools but currently fall well below 
+specialist-level diagnostic accuracy. Concurrently, portable hardware 
+innovations ranging from 3D-printed goggle systems to ARKit-based smartphone 
+applications are narrowing the accessibility gap, while telemedicine frameworks 
+enable ictal recording and cloud-based specialist review outside the clinic. 
+Across all domains, the common barriers to clinical translation are dataset 
+scarcity for rare BPPV subtypes, sensitivity to ambient conditions, and the 
+absence of explainable AI mechanisms. This review maps the current state of the 
+field and identifies multimodal data fusion, prospective clinical validation, 
+and interpretable AI as the critical next steps toward equitable, specialist 
+independent vestibular diagnostics.
+
+DOI: 10.3390/s26123949
+PMCID: PMC13306757
+PMID: 42356922 [Indexed for MEDLINE]
+
+Conflict of interest statement: The authors declare no conflicts of interest.
+
+
+21. Neuroradiology. 2026 Jun 26. doi: 10.1007/s00234-026-04095-5. Online ahead of
+ print.
+
+Deep learning in acute ischemic stroke imaging: a systematic review of CT- and 
+MRI-based segmentation, triage, and prognostic modeling.
+
+Kunduracioglu I(1), Ince S(2), Bayram B(3), Kilicarslan S(4), Veziroglu E(5), 
+Pacal I(6)(7)(8).
+
+Author information:
+(1)Department of Computer Engineering, Igdir University, Igdir, Turkey. 
+ismail.kunduracioglu@igdir.edu.tr.
+(2)Department of Radiology, Van Education and Research Hospital, Van, Turkey.
+(3)The Department of Neurology, Van Education and Research Hospital, Van, 
+Turkey.
+(4)Department of Software Engineering, Bandırma Onyedi Eylül University, 
+Bandirma, Turkey.
+(5)Department of Computer Technologies, Dumlupinar University, Kütahya, Turkey.
+(6)Department of Computer Engineering, Igdir University, Igdir, Turkey.
+(7)Department of Electronics and Information Technologies, Nakhchivan State 
+University, Nakhichivan, Azerbaijan.
+(8)Department of Computer Engineering, Faculty of Engineering and Natural 
+Sciences, Fenerbahce University, Istanbul, Turkey.
+
+BACKGROUND: Acute ischemic stroke is a time-critical neurological emergency in 
+which imaging directly influences diagnosis, treatment eligibility, 
+tissue-at-risk estimation, workflow prioritization, and outcome prediction. Deep 
+learning has become increasingly prominent in stroke imaging; however, its 
+clinical role differs substantially between computed tomography (CT) and 
+magnetic resonance imaging (MRI).
+OBJECTIVE: This PRISMA-guided systematic review evaluated peer-reviewed studies 
+published between January 2023 and March 2026 that applied deep learning to 
+acute ischemic stroke imaging.
+METHODS: Searches across major biomedical, engineering, and clinical databases 
+identified 91 eligible studies. Extracted data included imaging modality, 
+dataset source, clinical task, model architecture, validation strategy, and 
+reported performance metrics.
+RESULTS: MRI-based studies predominantly addressed lesion segmentation and 
+tissue characterization using DWI, ADC, FLAIR, and multimodal MRI. In this 
+setting, U-Net-derived architectures, self-configuring frameworks, 
+attention-based models, and selected CNN-Transformer hybrids frequently achieved 
+strong Dice and IoU values on benchmark datasets, particularly ISLES 2015 and 
+ISLES 2022. CT-based studies followed a different clinical direction, with 
+greater emphasis on emergency triage, hemorrhage exclusion, large-vessel 
+occlusion detection, stroke classification, ASPECTS-related assessment, and 
+CTP-based core-penumbra estimation. High retrospective accuracy or AUC values in 
+CT studies should be interpreted cautiously, since image-level classification 
+performance does not establish reliable voxel-level lesion delineation, 
+especially on NCCT, where early ischemic changes remain subtle and difficult to 
+segment.
+CONCLUSION: Across both modalities, technical progress remains ahead of clinical 
+validation. External testing, patient-level separation, standardized reporting, 
+scanner robustness, interpretability, and prospective workflow evaluation are 
+still inconsistently addressed. The field now requires a shift from isolated 
+benchmark performance toward clinically interpretable, externally validated, and 
+prognosis-aware systems that can support real-time neuroradiology 
+decision-making.
+
+© 2026. The Author(s).
+
+DOI: 10.1007/s00234-026-04095-5
+PMID: 42360458
+
+Conflict of interest statement: Declarations. Ethical approval: This study is a 
+systematic review of previously published literature and did not involve the 
+collection of new human participant data, patient images, biological samples, or 
+identifiable clinical information. Therefore, institutional ethics committee 
+approval was not required. Use of artificial intelligence tools: During 
+manuscript preparation, AI-based language assistance was used only to improve 
+grammar, readability, and editorial clarity. No AI tool was used to generate 
+study data, perform study selection, extract results, conduct quality 
+assessment, interpret findings, or draw scientific conclusions. All intellectual 
+content, methodological decisions, interpretations, and final revisions were 
+reviewed and approved by the authors. Informed consent: Not applicable. This 
+review was based exclusively on previously published studies and did not involve 
+direct participation of human subjects or the use of identifiable patient-level 
+data. Competing interests: The authors declare no competing interests.
+
+
+22. Sci Rep. 2026 Jun 26. doi: 10.1038/s41598-026-59274-4. Online ahead of print.
+
+Interpretable machine learning reveals the synergistic impact of essential 
+hypertension on early recurrence in triple-negative breast cancer.
+
+Du Z(1)(2), Tu G(3), Tang L(4).
+
+Author information:
+(1)Department of Breast and Thyroid Surgery, Chongqing Key Laboratory of 
+Molecular Oncology and Epigenetics, The First Affiliated Hospital of Chongqing 
+Medical University, Chongqing, 400016, China.
+(2)Department of Cardiothoracic and Vascular, Breast and Thyroid Surgery, 363 
+Hospital, Chengdu, 610041, China.
+(3)Department of Breast and Thyroid Surgery, Chongqing Key Laboratory of 
+Molecular Oncology and Epigenetics, The First Affiliated Hospital of Chongqing 
+Medical University, Chongqing, 400016, China. 202369@hospital.cqmu.edu.cn.
+(4)Department of Breast and Thyroid Surgery, Chongqing Key Laboratory of 
+Molecular Oncology and Epigenetics, The First Affiliated Hospital of Chongqing 
+Medical University, Chongqing, 400016, China. tlf199411@163.com.
+
+Triple-negative breast cancer (TNBC) patients often ential hypertension, yet how 
+systemic vascular stress synergizes with tumor aggressiveness to drive early 
+recurrence remains poorly understood. A cohort of 549 TNBC patients with 
+comorbid hypertension was analyzed. Fifteen multidimensional clinical and 
+hemodynamic features were extracted. We constructed and compared four machine 
+learning models, employing SHapley Additive exPlanations (SHAP) on the optimal 
+model to decode non-linear interactions. XGBoost demonstrated superior 
+discriminative performance for predicting early recurrence (AUC = 0.840), 
+significantly outperforming logistic regression (P = 0.004). SHAP dependence 
+analysis revealed profound non-linear thresholds, with relapse risk escalating 
+exponentially when systolic blood pressure exceeded 140 mmHg. Furthermore, SHAP 
+interaction tensors identified a robust synergistic effect between widened pulse 
+pressure and tumor invasiveness (e.g., tumor size and lymphovascular invasion), 
+indicating that arterial stiffness critically exacerbates malignant 
+dissemination. These findings suggest that systemic hemodynamic stress and 
+endothelial injury synergistically amplify the inherent aggressiveness of TNBC. 
+The interpretable XGBoost framework provides a reliable, multidimensional risk 
+stratification tool to guide personalized cardio-oncology management and safely 
+triage low-risk patients.
+
+© 2026. The Author(s).
+
+DOI: 10.1038/s41598-026-59274-4
+PMID: 42362737
+
+Conflict of interest statement: Declarations. Competing interests: The authors 
+declare no competing interests. Ethics approval: The study protocol received 
+formal approval from the Institutional Review Board (IRB) of the First 
+Affiliated Hospital of Chongqing Medical University (Approval No. 2020-202).
+
+
+23. Alzheimers Res Ther. 2026 Jun 29. doi: 10.1186/s13195-026-02129-x. Online
+ahead  of print.
+
+Facial phenotypes in Alzheimer's disease: from neurobiology to artificial 
+intelligence.
+
+Sun W(#)(1), Xing R(#)(2), Zhou J(2), Li Y(3), Xu G(4).
+
+Author information:
+(1)Department of Neurology, Shenzhen Second People's Hospital, First Affiliated 
+Hospital of Shenzhen University, Shenzhen, China.
+(2)School of Economics and Management, Nanjing University of Science and 
+Technology, Nanjing, China.
+(3)School of Computer Science and Engineering and Key Laboratory of New 
+Generation Artificial Intelligence Technology and Its Interdisciplinary 
+Applications, Southeast University, Nanjing, China. mysee1989@gmail.com.
+(4)Department of Neurology, Shenzhen Second People's Hospital, First Affiliated 
+Hospital of Shenzhen University, Shenzhen, China. gelinxu@nju.edu.cn.
+(#)Contributed equally
+
+Facial analysis is increasingly being explored as a source of scalable 
+behavioral signals relevant to Alzheimer's disease (AD) and AD-related cognitive 
+impairment. In this narrative review, informed by a structured literature 
+search, we summarize current evidence on the biological and behavioral basis of 
+facial alterations in AD, with particular emphasis on affective expressivity, 
+neuropsychiatric manifestations, and dynamic facial behavior. We also review 
+representative artificial intelligence-based facial analysis methods, including 
+commonly used datasets, feature representations, and modeling strategies, 
+ranging from facial landmarks and texture descriptors to spatiotemporal video 
+models, multimodal fusion, and language-enhanced frameworks. Current evidence 
+remains limited by small and largely single-center cohorts, heterogeneity in 
+acquisition settings and outcome definitions, inadequate control of confounding 
+factors, limited external validation, poor calibration reporting, and persistent 
+concerns regarding interpretability and clinical specificity. Within the 
+evolving biomarker-based diagnostic framework of AD, facial analysis is better 
+viewed as a candidate, non-specific, and context-dependent tool for auxiliary 
+risk stratification, triage support, and longitudinal monitoring rather than as 
+stand-alone diagnostic tests. Future progress will depend on standardized data 
+acquisition, integration with clinical and biomarker data, improved 
+explainability, and prospective real-world validation.
+
+© 2026. The Author(s).
+
+DOI: 10.1186/s13195-026-02129-x
+PMID: 42366401
+
+Conflict of interest statement: Declarations. Ethics approval and consent to 
+participate: Not applicable. Competing interests: The authors declare no 
+competing interests.
+
+
+24. Hum Mutat. 2026 Jun 27;2026:9405486. doi: 10.1155/humu/9405486. eCollection 
+2026.
+
+AI-Augmented Hematological Signatures for Equitable Detection of Hereditary 
+Hemolytic Anemia Carriers: A Global Systematic Review and Meta-Analysis.
+
+Ali NT(1)(2), Abdullah RS(1)(2), Mehdi MAH(2), Ali GS(3), Ali HM(3), Gubran 
+ANM(1), Al-Abd NM(1)(3).
+
+Author information:
+(1)Department of Health Sciences, Faculty of Medicine and Health Sciences, 
+University of Science and Technology, Aden, Yemen, hust.edu.vn.
+(2)Department of Medical Laboratory, Radfan University College, University of 
+Lahej, Alhouta, Yemen.
+(3)Department of Medicine, Faculty of Medicine and Health Sciences, University 
+of Aden, Aden, Yemen, aden-univ.net.
+
+Artificial intelligence (AI) augmentation of routine hematological tests offers 
+a promising strategy to improve hereditary hemolytic anemia (HHA) carrier 
+detection in premarital screening, especially in resource-limited settings. HHA 
+in this review specifically encompasses β-thalassemia, α-thalassemia, sickle 
+cell disease (including HbS and HbC variants), and other hemoglobinopathies with 
+autosomal recessive inheritance patterns requiring carrier detection for 
+prevention. These conditions share hemolytic phenotypes but differ in 
+hematological signatures, necessitating separate subgroup analyses. This global 
+systematic review and meta-analysis evaluated the diagnostic accuracy, equity 
+implications, and implementation challenges of AI-augmented complete blood count 
+(CBC), blood smear, and erythrocyte sedimentation rate (ESR) for HHA carrier 
+identification. We systematically searched seven databases and included 85 
+studies (n = 133,498 participants, 23 countries). AI-augmented screening 
+achieved a pooled sensitivity of 92.8% (95% CI: 91.3%-94.1%) and specificity of 
+91.5% (89.7%-93.0%), representing a 12.3% sensitivity improvement over 
+conventional interpretation (p < 0.001). However, significant geographic 
+disparities were observed: sensitivity in Sub-Saharan Africa was 86.5% compared 
+with 94.8% in the Middle East (p < 0.001), partly due to algorithmic bias 
+against African HbS/HbC variants and infrastructural barriers. Deep learning 
+models achieved the highest sensitivity (95.1%), whereas explainable artificial 
+intelligence (XAI) provided optimal specificity (94.3%). Integrating CBC with 
+blood smear increased specificity by 5.5% at minimal additional cost. AI triage 
+reduced confirmatory testing by 23.7%, saving $8.50 per individual. For 
+equitable implementation, we recommend the following: (1) federated learning to 
+include underrepresented genotypes, (2) WHO/CDC certification of affordable, 
+offline-capable edge AI devices, and (3) mandatory XAI compliance with bias 
+audits. AI can transform HHA screening, but deliberate efforts are needed to 
+avoid exacerbating global health inequities. Importantly, 68% of validation 
+studies used research-grade rather than routine clinical samples, and 
+prospective clinic-to-algorithm validation remains a critical gap requiring 
+urgent attention before real-world deployment.
+
+Copyright © 2026 Naif Taleb Ali et al. Human Mutation published by John Wiley & 
+Sons Ltd.
+
+DOI: 10.1155/humu/9405486
+PMCID: PMC13309745
+PMID: 42369207 [Indexed for MEDLINE]
+
+Conflict of interest statement: The authors declare no conflicts of interest.
+
+
+25. Rheumatol Int. 2026 Jun 30;46(7):172. doi: 10.1007/s00296-026-06220-2.
+
+Machine learning improves online self-referral for inflammatory rheumatic 
+diseases: a registry-based validation study.
+
+Bamberger J(1), Kuhn S(1), von der Decken CB(2)(3)(4), Kleinert S(5)(6), Knitza 
+J(7).
+
+Author information:
+(1)Institute for Digital Medicine, School of Medicine, Philipps-Universität 
+Marburg, Baldingerstrasse 1, 35043, Marburg, Germany.
+(2)RheumaDatenRhePort (RHADAR), Erlangen, Germany.
+(3)Medizinisches Versorgungszentrum Stolberg, Stolberg, Germany.
+(4)Klinik für Internistische Rheumatologie, Rhein-Maas Klinikum, Würselen, 
+Germany.
+(5)Praxisgemeinschaft Rheumatologie Nephrologie Erlangen, Rheumatologische 
+Schwerpunktpraxis, Erlangen, Germany.
+(6)Rheumatologie/Klinische Immunologie, Universitätsklinikum Würzburg, 
+Medizinische Klinik und Poliklinik 2, Würzburg, Germany.
+(7)Institute for Digital Medicine, School of Medicine, Philipps-Universität 
+Marburg, Baldingerstrasse 1, 35043, Marburg, Germany. knitza@uni-marburg.de.
+
+Referral delays and errors in inflammatory rheumatic diseases (IRDs) are common. 
+RhePort is a German online self-referral tool that estimates IRD probability 
+based on a structured questionnaire and expert-derived algorithm. This study 
+evaluated whether machine learning could improve IRD discrimination of RhePort. 
+In this retrospective internal validation study, 1,333 unique RhePort 
+questionnaires linked to rheumatologist-confirmed diagnoses were analyzed. A 
+shared stratified five-fold cross-validation design was used for Logistic 
+Regression, Neural Network, XGBoost, and LightGBM models. For each algorithm, 
+feature selection and Bayesian hyperparameter optimization were performed, 
+followed by evaluation of ensemble strategies. Discrimination, calibration, 
+clinically relevant operating points, and SHAP-based interpretability were 
+assessed against the original RhePort score. IRD prevalence was 35.6% 
+(475/1,333). LightGBM achieved the strongest individual performance, with an 
+area under the receiver operating characteristic curve of 0.791 using 30 
+features. A weighted ensemble of LightGBM and Logistic Regression further 
+improved performance to 0.815 and achieved the lowest Brier score (0.166). At 
+95% sensitivity, specificity increased from 9% for RhePort to 32%; at 90% 
+sensitivity, specificity increased from 15% to 48%. The most influential 
+predictors included C-reactive protein, painful small joints, dactylitis 
+pattern, sex, and erythrocyte sedimentation rate. Ensemble AUC-ROC was 0.828 
+among 746 patients with CRP and/or ESR information and 0.786 among 587 patients 
+without these laboratory data. Machine learning improved IRD classification over 
+the current expert-derived RhePort score and identified questionnaire items that 
+may be omitted without loss of performance, demonstrating the potential of 
+machine learning to enhance rheumatology referral.
+
+© 2026. The Author(s).
+
+DOI: 10.1007/s00296-026-06220-2
+PMCID: PMC13319175
+PMID: 42377591 [Indexed for MEDLINE]
+
+Conflict of interest statement: Declarations. Ethical approval: The 
+Philipps-University Marburg Ethics Committee confirmed on June 10th 2026 that no 
+ethical approval was required (reference: 26–187 ANZ) as the analysis was based 
+on anonymous data.
+
+
+26. Front Oncol. 2026 Jun 16;16:1845038. doi: 10.3389/fonc.2026.1845038.
+eCollection  2026.
+
+Artificial intelligence for biomarker prediction in gastric cancer: from 
+histopathology to multimodal integration.
+
+Jeong Y(1), Ahn S(2)(3), Lee SH(4).
+
+Author information:
+(1)Department of Hospital Pathology, St. Vincent's Hospital, College of 
+Medicine, The Catholic University of Korea, Seoul, Republic of Korea.
+(2)Department of Pathology, College of Medicine, Korea University, 
+Seoul, Republic of Korea.
+(3)Department of Biomedical Informatics, College of Medicine, Korea University, 
+Seoul, Republic of Korea.
+(4)Department of Hospital Pathology, Seoul St. Mary's Hospital, College of 
+Medicine, The Catholic University of Korea, Seoul, Republic of Korea.
+
+INTRODUCTION: Gastric cancer (GC) exhibits substantial molecular heterogeneity, 
+necessitating precision oncology approaches. Conventional biomarker assessments, 
+including immunohistochemistry, in situ hybridization, polymerase chain 
+reaction, and next-generation sequencing, are the diagnostic standard but 
+resource-intensive and may be limited by tissue availability, cost, and 
+turnaround time. Artificial intelligence (AI)-enabled computational pathology 
+using whole-slide images (WSIs) has emerged as a scalable approach for inferring 
+molecular and immune phenotypes directly from routine hematoxylin and 
+eosin-stained histopathological images.
+METHODS: This review synthesizes recent advances in AI-based WSI analysis for 
+biomarker assessment in GC, focusing on molecular subtype prediction, actionable 
+genetic alterations, immune-related features, tumor microenvironment 
+characterization, and multimodal integration.
+RESULTS: AI models have demonstrated promising performance in predicting 
+microsatellite instability and Epstein-Barr virus status, supporting their 
+potential use as prescreening or triage tools to prioritize confirmatory 
+testing. In addition, these approaches enable the quantitative characterization 
+of the tumor microenvironment by mapping tertiary lymphoid structures and immune 
+architecture, providing prognostic insights. Multimodal integration of 
+histopathology with radiologic, genomic, and clinical data has shown improved 
+predictive performance compared to single-modality approaches, particularly for 
+recurrence and treatment responses.
+DISCUSSION: However, challenges remain, including model interpretability, 
+variability in performance across different datasets, and incomplete data across 
+modalities. Future directions include prospective multicenter validation in 
+clinical workflows, standardization of evaluation frameworks, and implementation 
+of uncertainty estimation to support clinical decision-making. Overall, 
+AI-enabled digital pathology represents a promising approach for advancing 
+precision oncology in GC by improving biomarker assessment and providing 
+insights into tumor biology.
+
+Copyright © 2026 Jeong, Ahn and Lee.
+
+DOI: 10.3389/fonc.2026.1845038
+PMCID: PMC13314436
+PMID: 42382396
+
+Conflict of interest statement: The author(s) declared that this work was 
+conducted in the absence of any commercial or financial relationships that could 
+be construed as a potential conflict of interest.
+
+
+27. Intensive Care Med Exp. 2026 Jul 1;14(1):85. doi: 10.1186/s40635-026-00939-9.
+
+Improving mortality prediction in critically ill cancer patients with a 
+multidimensional machine learning model.
+
+Nieto VH(1)(2), Aya AC(3)(4), Cardona AF(5)(2)(6), Pulido E(5)(2), Trujillo 
+H(5)(2), Sánchez N(5)(2), Molano D(1)(2), Wagner-Gutiérrez N(7), Arrieta O(8), 
+Rolfo C(9), Nigita G(9), Nates J(10).
+
+Author information:
+(1)Intensive Care Unit, Luis Carlos Sarmiento Angulo Cancer Treatment and 
+Research Center (CTIC), Bogotá, Colombia.
+(2)GIGA Research Group, Luis Carlos Sarmiento Angulo Cancer Treatment and 
+Research Center (CTIC), Universidad El Bosque, Bogotá, Colombia.
+(3)Institute of Research and Education, Luis Carlos Sarmiento Angulo Cancer 
+Treatment and Research Center (CTIC), Cra. 14 #169-49, Bogotá, Colombia. 
+aaya@fctic.org.
+(4)GIGA Research Group, Luis Carlos Sarmiento Angulo Cancer Treatment and 
+Research Center (CTIC), Universidad El Bosque, Bogotá, Colombia. aaya@fctic.org.
+(5)Institute of Research and Education, Luis Carlos Sarmiento Angulo Cancer 
+Treatment and Research Center (CTIC), Cra. 14 #169-49, Bogotá, Colombia.
+(6)Research and Education Direction, Luis Carlos Sarmiento Angulo Cancer 
+Treatment and Research Center (CTIC), Bogotá, Colombia.
+(7)Gillings School of Global Public Health, University of North Carolina at 
+Chapel Hill, Chapel Hill, USA.
+(8)General Management, Instituto Nacional de Cancerología - INCAN, Mexico City, 
+Mexico.
+(9)Division of Medical Oncology, Department of Internal Medicine, The Ohio State 
+University, Comprehensive Cancer Center, The Ohio State University, Columbus, 
+OH, USA.
+(10)Department of Critical Care Medicine, Division of Anesthesiology, Critical 
+Care, and Pain Medicine, The University of Texas MD Anderson Cancer Center, 
+Houston, TX, USA.
+
+BACKGROUND: Prognostic assessment in critically ill cancer patients is 
+challenging due to the suboptimal performance of traditional severity scores. We 
+developed and validated machine learning models to provide an objective triage 
+and risk-stratification tool at admission, identifying patients who require 
+high-intensity organ support.
+METHODS: We conducted a retrospective cohort study including 997 critically ill 
+cancer patients admitted to the ICU. Forty-six demographic, oncologic, 
+physiological, laboratory, and therapeutic variables collected at ICU admission 
+were used to train and validate ML models. Eight algorithms were evaluated using 
+stratified cross-validation with feature selection and hyperparameter 
+optimization. Model performance was assessed using discrimination, calibration, 
+and classification metrics. Model interpretability was explored using Shapley 
+additive explanations (SHAP).
+RESULTS: CatBoost achieved the best performance for ICU mortality prediction 
+(AUROC 0.94), showing excellent discrimination and calibration, and 
+outperforming other ML models. Prediction of 30-day survival was less accurate 
+(best AUROC 0.74), reflecting the influence of post-ICU factors not captured at 
+admission. Key predictors of ICU mortality included severity of organ 
+dysfunction, therapeutic objectives, vasopressor and methylene blue use, SAPS 
+III score, lactate, platelet count, and blood urea nitrogen. For 30-day 
+survival, baseline physiological status, admission type, SAPS III, lactate, 
+creatinine, age, and body mass index were most relevant. SHAP analysis 
+demonstrated that acute physiology and organ dysfunction, rather than cancer 
+diagnosis alone, primarily drove short-term outcomes.
+CONCLUSIONS: ML-based models, particularly CatBoost, outperformed traditional 
+tools in predicting ICU mortality. Within this oncologic cohort, short-term 
+outcomes were driven primarily by acute physiological derangements rather than 
+specific cancer characteristics. These results support using ML-based risk 
+stratification as an objective triage tool at admission. External validation is 
+warranted to confirm generalizability before clinical integration.
+
+© 2026. The Author(s).
+
+DOI: 10.1186/s40635-026-00939-9
+PMCID: PMC13323767
+PMID: 42384111
+
+Conflict of interest statement: Declarations. Ethics approval and consent to 
+participate: This study was reviewed and approved by the Cayre Ethics Committee 
+(approval No. 164 of 2025), Bogotá, Colombia. All patients provided informed 
+consent and agreed to the use of data and tumor tissue analysis. Authorization 
+was obtained from the Research Ethics Committee (REC) and Privacy Committee to 
+facilitate the retrospective collection of clinical, pathological, and molecular 
+data. Consent for publication: Not applicable, as the manuscript does not 
+contain identifiable patient data. Competing interests: Andrés F. Cardona 
+discloses financial research support from Merck Sharp & Dohme, Boehringer 
+Ingelheim, Roche, Bristol-Myers Squibb, Foundation Medicine, Roche Diagnostics, 
+Thermo Fisher, Broad Institute, Amgen, Flatiron Health, Teva Pharma, Rochem 
+Biocare, Bayer, INQBox, and The Foundation for Clinical and Applied Cancer 
+Research – FICMAC. Additionally, he has received honoraria as an advisor and has 
+participated in speakers’ bureaus. He has provided expert testimony to EISAI, 
+Merck Serono, Janssen Pharmaceutical, Merck Sharp & Dohme, Boehringer Ingelheim, 
+Roche, Bristol-Myers Squibb, Pfizer, Novartis, Celldex Therapeutics, Foundation 
+Medicine, Eli Lilly, Guardant Health, Illumina, and the Foundation for Clinical 
+and Applied Cancer Research (FICMAC).
+
+
+28. Presse Med. 2026 Jul 1:104376. doi: 10.1016/j.lpm.2026.104376. Online ahead
+of  print.
+
+Artificial Intelligence in skin disease therapeutics: from drug discovery to 
+personalized treatment pathways.
+
+Szondy I(1), Martyin K(1), Mohos G(1), Kiss T(1), Szabó K(1), Boostani M(2), 
+Goldust M(3), Grzybowski A(4), Bánvölgyi A(1), Kiss N(5).
+
+Author information:
+(1)Department of Dermatology, Venereology and Dermatooncology, Faculty of 
+Medicine, Semmelweis University, Budapest, Hungary.
+(2)Department of Dermatology, Roswell Park Comprehensive Cancer Center, Buffalo, 
+New York, USA.
+(3)Department of Dermatology, Yale University School of Medicine, New Haven, 
+Connecticut, USA.
+(4)Department of Ophthalmology, University of Warmia and Mazury, Olsztyn, 
+Poland; Institute for Research in Ophthalmology, Foundation for Ophthalmology 
+Development, Poznan, Poland.
+(5)Department of Dermatology, Venereology and Dermatooncology, Faculty of 
+Medicine, Semmelweis University, Budapest, Hungary.. Electronic address: 
+kiss.norbert@semmelweis.hu.
+
+Artificial intelligence (AI) comprises computational methods capable of tasks 
+associated with human cognition, and includes specialized subfields such as 
+machine learning, deep learning, convolutional neural networks for image 
+analysis, and large language models for text-based workflows. In dermatology, 
+these methods are increasingly used across research and clinical practice, 
+supporting drug discovery, diagnosis, decision-making, and personalized 
+treatment. In drug discovery, AI can accelerate target identification, support 
+in silico compound design, and predict the effectiveness and safety profiles of 
+compounds. It also offers opportunities for drug repurposing, helping identify 
+candidates for conditions with limited treatment options. In clinical practice, 
+AI enhances teledermatology and imaging-based assessment, providing consistent 
+lesion analysis, severity evaluation, and triage support across malignant, 
+inflammatory, and infectious skin diseases. Beyond diagnosis, AI is beginning to 
+play a significant role in supporting therapeutic decision-making. Clinical 
+decision-support systems and multimodal AI tools assist clinicians by organizing 
+information, suggesting management strategies, monitoring disease progression, 
+and helping align treatment choices with current guidelines. AI models can 
+further estimate treatment response, durability, and the likelihood of therapy 
+adjustment, creating a basis for more individualized care. Despite these 
+advances, significant challenges remain. Bias in training data, limited 
+real-world validation, unclear regulatory frameworks, concerns over 
+interpretability, and the need for patient and clinician trust remain ongoing 
+barriers. This review aims to provide an up-to-date overview of the emerging 
+application domains of AI in dermatology.
+
+Copyright © 2026. Published by Elsevier Masson SAS.
+
+DOI: 10.1016/j.lpm.2026.104376
+PMID: 42386042
+
+Conflict of interest statement: Declaration of interests The authors declare 
+that they have no known competing financial interests or personal relationships 
+that could have appeared to influence the work reported in this paper.
+
+
+29. Sci Rep. 2026 Jul 1. doi: 10.1038/s41598-026-59810-2. Online ahead of print.
+
+Application of a deep learning method based on CBCT panoramic reconstruction 
+images for differentiating operationally defined cystic and neoplastic jaw 
+lesions from osteomyelitis: a single-center retrospective study.
+
+Xu B(#)(1), Zhang R(#)(2), Liu Q(3), Yang X(3), Lu H(1), Chen Y(1), Guo X(1), 
+Cui G(1), Liu K(1), Guo Z(4), He W(5).
+
+Author information:
+(1)Department of Oral and Maxillofacial Surgery II, The First Affiliated 
+Hospital of Zhengzhou University, No. 1 Jianshe East Road, Erqi District, 
+Zhengzhou, 450052, Henan, China.
+(2)Henan University of Science and Technology, No. 263 Kaiyuan Avenue, Luolong 
+District, Luoyang, 471023, Henan, China.
+(3)Zhengzhou University, No. 100 Science Avenue, Zhongyuan District, Zhengzhou, 
+450001, Henan, China.
+(4)The First Affiliated Hospital of Zhengzhou University, No. 1 Jianshe East 
+Road, Erqi District, Zhengzhou, 450052, Henan, China.
+(5)Department of Oral and Maxillofacial Surgery II, The First Affiliated 
+Hospital of Zhengzhou University, No. 1 Jianshe East Road, Erqi District, 
+Zhengzhou, 450052, Henan, China. heweizdyfy@163.com.
+(#)Contributed equally
+
+This single-center retrospective study developed and internally validated a 
+two-dimensional deep learning model based on cone-beam computed tomography 
+(CBCT) panoramic reconstruction images for the preliminary differentiation of 
+operationally defined cystic and neoplastic jaw lesions from osteomyelitis of 
+the jaw. A total of 400 patients were included, comprising 200 patients with jaw 
+mass lesions and 200 patients with osteomyelitis. The jaw mass lesion cohort 
+included cystic, benign neoplastic, and malignant neoplastic lesions and was 
+analyzed as a single positive class for preliminary screening rather than lesion 
+subtype classification. In this study, the term "jaw mass lesions" was used as 
+an operational imaging-based umbrella term for jaw lesions presenting as 
+clinically relevant expansile, destructive, or mass-like osseous abnormalities 
+on CBCT panoramic reconstruction images. This term does not imply that all 
+included lesions were tumors or soft-tissue masses; in particular, odontogenic 
+keratocyst was classified as a cystic lesion. Images were randomly divided at 
+the patient level into training, validation, and independent test sets in a 
+70:10:20 ratio. ResNet-50 was used as the baseline model and was compared with 
+EfficientNet-B4, Swin Transformer, and ConvNeXt-Tiny under the same evaluation 
+protocol. Model performance was assessed using the area under the receiver 
+operating characteristic curve (AUC), area under the precision-recall curve 
+(AUPRC), accuracy, sensitivity, specificity, precision, and F1 score. 
+Gradient-weighted Class Activation Mapping (Grad-CAM) was used for post hoc 
+visualization, and an exploratory reader study was conducted to preliminarily 
+assess the potential influence of artificial intelligence (AI) assistance on 
+image interpretation. In the independent test set, ResNet-50 achieved an AUC of 
+0.9781 and an AUPRC of 0.9714. The proposed model is intended as a preliminary 
+screening and triage-support tool rather than a replacement for 
+contrast-enhanced MDCT, magnetic resonance imaging (MRI), histopathological 
+examination, or multidisciplinary assessment.
+
+© 2026. The Author(s).
+
+DOI: 10.1038/s41598-026-59810-2
+PMID: 42386861
+
+Conflict of interest statement: Declarations. Competing interests: The authors 
+declare no competing interests. Ethical approval: This retrospective study was 
+conducted in accordance with the Declaration of Helsinki and was approved by the 
+Institutional Review Board (IRB) of the First Affiliated Hospital of Zhengzhou 
+University (Approval No. 2025-KY-2073-001). Informed consent: Informed consent 
+was waived due to the retrospective nature of the study and the use of 
+anonymized CBCT data.
+
+
+30. Biomed Eng Online. 2026 Jul 1. doi: 10.1186/s12938-026-01600-y. Online ahead
+of  print.
+
+Non-invasive classification of stable HFpEF using a deep learning model trained 
+on acoustic features of sustained vowels.
+
+Lyu Y(#)(1)(2), Jiang QC(#)(1), Wu HM(3), Chen CF(3), Hong J(1)(2), Wang 
+YQ(1)(2), Shi YJ(4), Yan HX(5)(6), Xu J(7)(8).
+
+Author information:
+(1)School of Traditional Chinese Medicine, Shanghai University of Traditional 
+Chinese Medicine, Shanghai, 201203, People's Republic of China.
+(2)Shanghai Key Laboratory of Health Identification and Assessment, Shanghai, 
+201203, People's Republic of China.
+(3)Shanghai Lingyun Community Health Service Center, Shanghai, 200237, People's 
+Republic of China.
+(4)Affiliated hospital of Nanjing University of Chinese Medicine, Nanjing, 
+210029, People's Republic of China.
+(5)School of Traditional Chinese Medicine, Shanghai University of Traditional 
+Chinese Medicine, Shanghai, 201203, People's Republic of China. 
+hjy2012ok@163.com.
+(6)Shanghai Key Laboratory of Health Identification and Assessment, Shanghai, 
+201203, People's Republic of China. hjy2012ok@163.com.
+(7)School of Traditional Chinese Medicine, Shanghai University of Traditional 
+Chinese Medicine, Shanghai, 201203, People's Republic of China. 
+xujin3264@hotmail.com.
+(8)Shanghai Key Laboratory of Health Identification and Assessment, Shanghai, 
+201203, People's Republic of China. xujin3264@hotmail.com.
+(#)Contributed equally
+
+BACKGROUND: Conventional identification of stable HFpEF still depends on 
+resource-intensive clinical assessment, whereas non-invasive acoustic analysis 
+of sustained vowels may provide a complementary and accessible classification 
+signal.
+METHODS: The objective of this study was to develop and validate a 
+classification model for stable heart failure with preserved ejection fraction 
+(HFpEF) versus healthy controls using acoustic features extracted from the 
+sustained vowel /ɑː/. In this retrospective case-control study, voice recordings 
+were obtained from a primary cohort of 341 participants and an independent 
+external validation cohort of 172 participants. The present study extracted 384 
+features using the Interspeech 2009 feature set and compared five deep learning 
+models. The top-performing deep learning architecture, the multilayer perceptron 
+(MLP), was further assessed through tenfold cross-validation, independent 
+external validation, and feature analysis using SHapley Additive exPlanations 
+and Local Interpretable Model-Agnostic Explanations. Additional analyses 
+benchmarked the MLP against classical machine-learning models and examined 
+uncertainty, calibration, prevalence sensitivity, and demographic confounding.
+RESULTS: For the binary classification of stable HFpEF versus healthy controls, 
+the MLP classifier demonstrated the strongest performance in the five-model deep 
+learning comparison, achieving a mean tenfold cross-validation accuracy of 
+0.8593 and an area under the curve (AUC) of 0.9130. On the independent external 
+validation cohort, the primary MLP achieved an AUC of 0.836. In a broader 
+benchmark, acoustic-feature models clearly outperformed age/sex-only models, and 
+MLP remained competitive against strong classical tabular baselines. A 
+regularized MLP sensitivity model achieved an external AUC of 0.8638 (95% 
+bootstrap CI 0.8074-0.9188), whereas the best untuned SVM achieved an external 
+AUC of 0.8628. Interpretability analyses highlighted MFCC-related 
+spectral-envelope descriptors as influential feature families, although 
+fold-wise stability supported family-level rather than single-feature 
+conclusions.
+CONCLUSION: While the performance gap between cross-validation and external 
+validation indicates room for further refinement, this study demonstrates that 
+sustained-vowel IS09 acoustic features contain discriminative signal for stable 
+HFpEF versus healthy controls under controlled conditions. The MLP was the 
+strongest model among the tested deep learning architectures, but the broader 
+benchmark showed that it was competitive rather than clearly superior to 
+classical tabular models. These findings support acoustic-feature analysis as a 
+preliminary research-stage adjunctive classification signal, while broader 
+prospective validation in clinically heterogeneous populations is required 
+before any clinical screening, triage, or monitoring role can be established.
+
+© 2026. The Author(s).
+
+DOI: 10.1186/s12938-026-01600-y
+PMID: 42387638
+
+Conflict of interest statement: Declarations. Ethics approval and consent to 
+participate: The study protocol was approved by the Institutional Review Board 
+of Shanghai University of Traditional Chinese Medicine and the study complied 
+with the Declaration of Helsinki. All participants had documented written 
+informed consent in the source study records. Consent for publication: Not 
+applicable. Competing interests: The authors declare no competing interests.
+
+
+31. Sci Rep. 2026 Jul 2. doi: 10.1038/s41598-026-59262-8. Online ahead of print.
+
+An attention-infused deep convolutional paradigm for multi-label classification 
+of thoracic pathologies in chest radiographs.
+
+Imran S(1), Ullah K(2), Khalid S(1), Hussain I(3), Karpulevich E(4), Markin 
+Y(4), Romanov S(5)(6).
+
+Author information:
+(1)Department of Computer Science & IT, University of Malakand, Chakdara, Dir 
+Lower, 18000, Khyber Pakhtunkhwa, Pakistan.
+(2)Department of Software Engineering, University of Malakand, Chakdara, Dir 
+Lower, 18000, Khyber Pakhtunkhwa, Pakistan.
+(3)Quality Enhancement Cell, Shaheed Benazir Bhutto University, Sheringal, Dir 
+Upper, 18050, Khyber Pakhtunkhwa, Pakistan.
+(4)Research Center for Trusted Artificial Intelligence, ISP RAS, Moscow, Russia, 
+109004.
+(5)Almazov National Medical Research Centre, St. Petersburg, Russia, 197341. 
+saromanov@etu.ru.
+(6)Intelligent Devices​ Institute, Saint Petersburg Electrotechnical University 
+"LETI", St. Petersburg, Russia, 197022. saromanov@etu.ru.
+
+This research proposes an empirical benchmarking study of an attention-infused 
+deep convolutional framework for multi-label thoracic pathology classification 
+in chest radiographs, designed to emulate how radiologists selectively focus on 
+suspicious regions. Existing CNN models process entire images uniformly, often 
+missing fine-grained or subtle abnormalities that require localized visual 
+emphasis. In spite of the progress of deep convolutional neural networks (CNNs) 
+in automated CXR analysis, traditional architectures do not sufficiently 
+localize fine-grained pathological information, especially in multi-label 
+contexts. To overcome these constraints, we introduce an attention-aware deep 
+convolutional paradigm that can easily add lightweight spatial attention modules 
+to multiple high-performance CNN backbones, including ResNet101, 
+EfficientNet-B0/B3, and MobileNetV2. The proposed spatial attention module 
+specifically targets the challenge of spatial feature reweighting to improve 
+localization of fine-grained pathological regions; it does not explicitly model 
+other inherent challenges of multi-label CXR classification such as label noise, 
+class imbalance, or disease co-occurrence, which remain contextual factors of 
+the task. The spatial attention system is based on recreating the radiologist 
+attention mechanism, which temporarily accentuates the relevant areas in 
+diagnostics and inhibits the background noise. This improves feature 
+recalibration on intermediate layers, allowing the network to learn global 
+context and localized pathologies simultaneously with little computational cost. 
+It is trained and tested on the NIH ChestX-ray14 dataset with a multi-label 
+classification with sigmoid outputs and binary cross-entropy losses operating on 
+13 thoracic conditions. It is important to note that Attention MobileNetV2 
+achieved a micro-AUC improvement of 0.818 to 0.826, whilst Attention ResNet101 
+achieved its highest micro-AUC of 0.872, which is greater than the non-attention 
+ResNet101 (0.853). Localized pathologies, including emphysema (improvement in 
+performance, +0.05 AUC), effusion (improvement in performance, +0.04) and 
+pneumothorax (improvement in performance, +0.04), showed some of the strongest 
+improvements in performance. ROC analysis showed an improved early-lift behavior 
+and decreased false-positives -which is important in triage. Ablation 
+experiments verified that spatial attention is a selective, 
+architecture-specific promoter, not an amplifier, and the largest advantage was 
+found in lightweight and deep residual networks. Our results demonstrate that 
+spatial attention is a modest but architecture-dependent enhancement of 
+CNN-based chest radiograph classification. The magnitude of improvement varies 
+considerably across backbone architectures: Attention ResNet101 achieves the 
+largest micro-AUC gain (from 0.853 to 0.872), MobileNetV2 shows a moderate 
+improvement (from 0.818 to 0.826), while EfficientNet-B0 and EfficientNet-B3 
+exhibit minimal change, reflecting diminishing returns in already highly 
+optimized architectures. These results confirm that the proposed spatial 
+attention module functions as a selective, architecture-specific enhancer rather 
+than a universally transformative component. Claims of broad clinical 
+reliability are tempered by the reliance on NLP-derived, noisy labels from 
+ChestX-ray14; this work is best understood as an empirical foundation for future 
+hybrid attention strategies that may combine spatial, channel-wise, and 
+self-attention for more robust multi-label CXR analysis. The proposed framework 
+achieves a practical balance between performance, interpretability, and 
+computational efficiency, and may serve as a principled modular plug-in in 
+future AI-assisted radiological diagnostic pipelines, pending further clinical 
+validation on expert-annotated datasets.
+
+© 2026. The Author(s).
+
+DOI: 10.1038/s41598-026-59262-8
+PMID: 42393111
+
+Conflict of interest statement: Declarations. Competing interests: The authors 
+declare no competing interests.
+
+
+32. Stud Health Technol Inform. 2026 Jun 29;338:164-165. doi: 10.3233/SHTI260821.
+
+FT-Transformer DeepSurv: A Novel Approach to Predicting Post-Discharge Mortality 
+in Older Adults.
+
+Chung JY(1), Ji SH(1), Yoo JS(1), Hwang SJ(1), Cha WC(2).
+
+Author information:
+(1)Department of Digital Health, SAIHST, Sungkyunkwan University, Seoul, Korea.
+(2)Department of Emergency Medicine, Samsung Medical Center, Sungkyunkwan 
+University School of Medicine, Seoul, Korea.
+
+No validated tools exist to predict mortality at discharge for older ED patients 
+(≥65), limiting Advance Directive (AD) engagement. Using 41,612 EHR records from 
+Samsung Medical Center (2018-2022), our FT-Transformer DeepSurv model achieved a 
+test C-Index of 0.8747 with the smallest generalization gap (0.015) among four 
+compared models, identifying inflammation and comorbidity burden as dominant 
+predictors over age. This explainable model supports safe discharge planning and 
+proactive AD discussions for high-risk elderly patients.
+
+DOI: 10.3233/SHTI260821
+PMID: 42393983 [Indexed for MEDLINE]
+
+
+33. medRxiv [Preprint]. 2026 Jun 22:2026.06.18.26355980. doi: 
+10.64898/2026.06.18.26355980.
+
+Wearable sensing for quantifying cognitive and balance functions in naturalistic 
+movements of older adults with mild cognitive impairment in therapeutic 
+environments.
+
+Lim J, Islam R, Raghavan D, Omofojoye B, Rodriguez AD, Kiarashi Y, Hershenberg 
+R, Clifford GD, Kwon H.
+
+Mild cognitive impairment (MCI) is a clinically important stage preceding 
+Alzheimer's disease and related dementias, in which cognitive and balance 
+functions are commonly evaluated using standard clinical assessments such as the 
+Montreal Cognitive Assessment (MoCA) and Mini-Balance Evaluation Systems Test 
+(Mini-BESTest). These assessments are administered episodically by clinicians 
+and may miss functional changes during everyday movement. Recent studies and 
+prior work in the Charlie and Harriet Shaffer Cognitive Empowerment Program 
+(CEP), a therapeutic environment supporting lifestyle intervention and 
+naturalistic social interaction, suggest that wearable and passive behavioral 
+sensing can monitor movement patterns associated with cognitive and balance 
+function in older adults with MCI. However, it remains unclear whether passive 
+waist-mounted IMU data collected during naturalistic movement and social 
+interaction can quantify clinician-rated cognitive and balance outcomes, 
+particularly at the subdomain level, in an interpretable and demographically 
+fair manner. To address this gap, we analyzed weekly IMU recordings collected 
+over 6 months from 44 older adults with MCI in the CEP and trained tree-based 
+ensemble regression models to estimate MoCA and Mini-BESTest total and subdomain 
+scores, with interpretability and demographic fairness evaluation. Our models 
+achieved RMSEs of 3.677 for MoCA and 3.672 for Mini-BESTest, benchmarked against 
+Minimal Detectable Change and Minimal Clinically Important Difference 
+thresholds. Feature importance analysis showed distinct movement signal 
+properties across assessments, with general movement intensity features most 
+informative for MoCA and temporal gait features led by cadence most informative 
+for Mini-BESTest. Demographic bias analysis identified sex-related model bias, 
+mitigated through post-processing while maintaining performance. This study 
+supports the feasibility of wearable-based estimation of clinical assessment 
+scores in older adults with MCI during naturalistic activity, with comparable 
+performance between sexes after bias mitigation. This advances the validation of 
+passive sensing for home monitoring to support clinical decision-making and 
+personalized interventions.
+AUTHOR SUMMARY: Mild cognitive impairment (MCI) is an early stage of cognitive 
+decline that may precede Alzheimer's disease and related dementias. Cognitive 
+and balance changes are usually evaluated during clinical visits, but clinical 
+assessments may miss functional changes that occur during everyday movement. In 
+this study, we examined whether waist-worn motion sensors could be used to 
+estimate standard cognitive and balance assessment scores in older adults with 
+MCI during naturalistic activity in a therapeutic program. We used machine 
+learning models to analyze movement patterns collected over six months and 
+evaluated whether the models could estimate total and subdomain scores from the 
+Montreal Cognitive Assessment and Mini-Balance Evaluation Systems Test. We also 
+examined which movement features were most informative, whether estimations 
+differed by sex or race, and whether post-processing bias mitigation reduced 
+these differences. Our findings suggest that passive wearable sensing may 
+provide useful information about cognitive and balance function of older adults 
+with MCI in naturalistic settings. With further validation, this approach could 
+support future monitoring and triage tools by helping identify individuals with 
+MCI who exhibit concerning movement or balance changes and may benefit from more 
+detailed clinical evaluation.
+
+DOI: 10.64898/2026.06.18.26355980
+PMCID: PMC13321215
+PMID: 42396303
+
+
+34. Front Public Health. 2026 Jun 19;14:1828871. doi: 10.3389/fpubh.2026.1828871.
+ eCollection 2026.
+
+Combined clustering and association-rule analysis for hospital costs and length 
+of stay in spontaneous intracerebral hemorrhage hospitalizations.
+
+Li Q(1), Wang Y(1), Sooranna SR(2), Zhao L(1), Tang L(3).
+
+Author information:
+(1)Faculty of Nursing, Youjiang Medical University for Nationalities, Baise, 
+China.
+(2)Department of Metabolism, Digestion and Reproduction, Faculty of Medicine, 
+Imperial College London, London, United Kingdom.
+(3)Department of Infectious Diseases, Baise People's Hospital, Baise, China.
+
+INTRODUCTION: Intracerebral hemorrhage (ICH) imposes a substantial burden on 
+inpatient resources, yet hospital costs and length of stay (LOS) are often 
+evaluated as separate endpoints. This study aimed to identify interpretable 
+clinical-administrative strata and recurrent high-utilization care patterns 
+among spontaneous ICH hospitalizations.
+METHODS: This single-center retrospective cohort study included 1,851 
+spontaneous ICH hospitalizations from 5 November 2022 to 31 October 2024. 
+Clustering variables were restricted to age, admission source, diagnosis-derived 
+hemorrhage-location category, primary ventricular hemorrhage/intraventricular 
+extension, hypertension-coded status, diabetes, and chronic kidney disease/renal 
+failure. Cost-composition ratios, total cost, LOS, procedures, discharge 
+disposition, departments, and acute in-hospital complications were excluded from 
+cluster formation and reserved for descriptive analyses, adjusted modeling, or 
+association-rule mining. Gower dissimilarities with k-medoids clustering were 
+evaluated across K = 2-8 using elbow analysis, average silhouette coefficient, 
+permutation-based gap statistic, subsampling stability, cluster size, clinical 
+interpretability, and parsimony.
+RESULTS: The K = 3 solution was retained as the parsimonious working solution, 
+with the highest average silhouette coefficient among K = 2-7 (0.440), a 14.7% 
+reduction in within-cluster dissimilarity from K = 2, acceptable subsampling 
+stability (mean adjusted Rand index, 0.702), and no small outlier cluster 
+(minimum n = 308). The three strata were emergency-presentation (n = 450), 
+hypertension-uncoded/lobar-leaning (n = 308), and non-emergency 
+hypertension-coded/deep-ICH (n = 1,093). Unadjusted total cost and LOS differed 
+across clusters, but these differences were attenuated after adjustment for sex, 
+payment method, admission department, secondary-diagnosis burden, complications, 
+and procedures. High-cost and prolonged-LOS association rules were dominated by 
+tracheostomy-centered combinations involving DVT/PE, CVC/PICC, chronic kidney 
+disease/renal failure, pneumonia, respiratory failure, or major neurosurgery.
+DISCUSSION: This pathway-oriented framework organized ICH hospitalizations into 
+interpretable baseline clinical-administrative strata and identified recurrent 
+comorbidity/procedure/complication patterns associated with high utilization. 
+These findings may support risk-aware benchmarking and resource management under 
+diagnosis-related group/diagnosis-intervention packet payment reform, although 
+validation using granular clinical severity data is required.
+
+Copyright © 2026 Li, Wang, Sooranna, Zhao and Tang.
+
+DOI: 10.3389/fpubh.2026.1828871
+PMCID: PMC13328334
+PMID: 42404935 [Indexed for MEDLINE]
+
+Conflict of interest statement: The author(s) declared that this work was 
+conducted in the absence of any commercial or financial relationships that could 
+be construed as a potential conflict of interest.
+
+
+35. Medicine (Baltimore). 2026 Jul 3;105(27):e49471. doi: 
+10.1097/MD.0000000000049471.
+
+Integrating ISAR and CIRS with ED triage to predict 30-day adverse outcomes in 
+older adults: Development and internal validation of a dual-scale model.
+
+Liu C(1), Li Y, Jiang W, Ouyang L, Liu D.
+
+Author information:
+(1)Emergency Department, The Central Hospital of Wuhan, Tongji Medical College, 
+Huazhong University of Science and Technology, Wuhan, Hubei, China.
+
+Older emergency department (ED) patients are at significant risk of experiencing 
+composite adverse outcomes such as ED revisits, intensive care unit admissions, 
+and all-cause mortality within a short period. Existing predictive tools 
+primarily utilize single scoring systems, showing limited predictive accuracy 
+and clinical applicability. This study evaluated whether combining the 
+identification of seniors at risk (ISAR) and the cumulative illness rating scale 
+(CIRS) with routinely available ED triage information could provide incremental 
+predictive value for 30-day composite adverse outcomes among older ED patients 
+in China, compared with single-scale and clinical-variable models. A 
+prospective, single-center cohort study was conducted involving older patients 
+aged ≥ 65 years attending a tertiary hospital ED in China from March to May 
+2024. ISAR and CIRS assessments, along with baseline clinical data, were 
+collected upon ED admission. The primary outcome was a composite adverse event 
+within 30 days, including ED revisit, intensive care unit admission, or death. 
+Variable selection was performed using least absolute shrinkage and selection 
+operator regression. Logistic regression models, including single-scale, 
+combined ISAR + CIRS, and baseline clinical models, were constructed and 
+compared based on discrimination, calibration, and clinical net benefit through 
+decision curve analysis. Model interpretability was further evaluated using 
+analyses. A total of 607 older patients were enrolled, with 216 (35.6%) 
+experiencing composite adverse outcomes within 30 days. The combined ISAR + CIRS 
+model showed the highest area under the curve (AUC) among the compared models 
+(AUC = 0.807; 95% confidence interval [CI]: 0.776-0.839), with a statistically 
+significant improvement over the ISAR-based model (AUC = 0.793; 95% CI: 
+0.761-0.826). However, the absolute improvement compared with the CIRS-based 
+model was small (AUC = 0.805; 95% CI: 0.773-0.837). The combined model showed 
+favorable calibration and higher net benefit across clinically relevant 
+thresholds. extreme gradient boosting and SHapley Additive exPlanations analyses 
+suggested that ISAR, CIRS, systolic blood pressure, triage level, and pulse rate 
+were important contributors to model output. The combined ISAR + CIRS model 
+provided an interpretable and clinically feasible approach for early risk 
+stratification of older ED patients. Although the improvement in discrimination 
+was modest, integrating acute geriatric risk assessment and chronic comorbidity 
+burden may support more comprehensive risk evaluation alongside routine ED 
+triage and clinical judgment. Further external validation is needed before 
+broader clinical implementation.
+
+Copyright © 2026 the Author(s). Published by Wolters Kluwer Health, LLC.
+
+DOI: 10.1097/MD.0000000000049471
+PMCID: PMC13337091
+PMID: 42410788 [Indexed for MEDLINE]
+
+Conflict of interest statement: The authors have no funding or conflicts of 
+interest to disclose.
+
+
+36. Sci Rep. 2026 Jul 7. doi: 10.1038/s41598-026-60659-8. Online ahead of print.
+
+Fuzzy cognitive explainable AI framework integrating ResNet-50 and causal 
+clinical concept reasoning for skin lesion detection.
+
+Yadav RK(1), Nandi A(2), Kumar V(3), Moriwal R(4), Kumar M(3).
+
+Author information:
+(1)Department of Data Science and Engineering, Manipal University Jaipur, Dehmi 
+Kalan, Off Jaipur Ajmer Expressway, Jaipur, 303007, India. 
+ram.yadav@jaipur.manipal.edu.
+(2)Vellore Institute of Technology, Vellore, 632014, India.
+(3)School of Computing Science Engineering and Artificial Intelligence, VIT 
+Bhopal University, Bhopal-Indore Highway, Kothrikalan, Sehore, 466114, India.
+(4)Department of Computer Engineering and Applications, Institute of Engineering 
+and Technology, GLA University, Mathura, NH-2, Mathura-Delhi Road, Mathura, 
+Uttar Pradesh, 281406, India.
+
+Melanoma is one of the most aggressive forms of skin cancer, and its early 
+detection from dermoscopic images remains a significant clinical challenge. Deep 
+learning (DL) convolutional neural networks (CNNs) have achieved remarkable 
+results in medical image analysis. However, their inherent opacity is a barrier 
+to trustworthy clinical adoption. Clinicians need not only accurate predictions 
+but also clear, understandable reasons behind those predictions. Although 
+post-hoc explainability techniques such as Grad-CAM and SHapley Additive 
+exPlanations (SHAP) are available, but there is a critical gap. They produce 
+low-level, pixel-based saliency maps that do not connect meaningfully to the 
+clinical concepts dermatologists actually use, namely the ABCD criteria 
+(Asymmetry, Border, Colour, and Diameter). No existing framework captures the 
+causal relationships between these concepts, nor quantifies the uncertainty that 
+arises when the predictive. The model and its explanation disagree. This work 
+addresses that gap through a two-stage hybrid framework. Fuzzy-Cognitive 
+Explainable AI (FC-XAI). In the first stage, a ResNet-50 model is trained for 
+melanoma detection. In the second stage, we employ SHAP to identify salient 
+image regions and map them to high-level clinical concepts. These concepts form 
+the nodes of a Fuzzy Cognitive Map (FCM), a dynamic graph-based model that 
+captures structured concept-level reasoning. The FC-XAI framework was evaluated 
+on the ISIC melanoma dataset. The base DL model achieved an AUC of 0.9832 (95% 
+CI: [0.90, 1.00]), an accuracy of 84%, and a recall of 80% for the malignant 
+class. The generated FCMs produced clear, structured concept-level explanations 
+(e.g., high Asymmetry and Border irregularity strongly activate Malignancy). The 
+uncertainty metric reveals that medium-uncertainty scenarios achieved 82.4% 
+accuracy compared with 57.1% for low-uncertainty scenarios, a finding with 
+direct triage indications. External experimental validation on the PH2 dataset 
+yielded an AUC of 0.9498 with clinically coherent FCM descriptions, supporting 
+reasonable cross-dataset generalisation. By adding a predictive Deep Learning 
+model with a transparent structured concept-level causal model, FC-XAI 
+represents a concrete step towards clinically reliable AI system in dermatology.
+
+© 2026. The Author(s).
+
+DOI: 10.1038/s41598-026-60659-8
+PMID: 42414454
+
+Conflict of interest statement: Declarations. Competing interests: The authors 
+declare no competing interests. Ethics approval: This study uses publicly 
+available, anonymised datasets and did not require ethics approval.
+
+
+37. BMC Med Inform Decis Mak. 2026 Jul 7. doi: 10.1186/s12911-026-03590-2. Online
+ ahead of print.
+
+A multicenter machine learning model for predicting ICU mortality in 
+mechanically ventilated patients: development and external validation.
+
+Zhang Y(#)(1)(2), Chen X(#)(2), Tian X(3), Zhao H(4).
+
+Author information:
+(1)Respiratory and Critical Care Medicine Department, The Second Affiliated 
+Hospital of Anhui Medical University, HeFei, AnHui province, China.
+(2)Intensive Care Unit, Qingdao University Affiliated Yantai Yuhuangding 
+Hospital, YanTai, ShanDong Province, China.
+(3)Intensive Care Unit, Qingdao University Affiliated Yantai Yuhuangding 
+Hospital, YanTai, ShanDong Province, China. tianfenger987@sina.com.
+(4)Respiratory and Critical Care Medicine Department, The Second Affiliated 
+Hospital of Anhui Medical University, HeFei, AnHui province, China. 
+efyzhaohui@126.com.
+(#)Contributed equally
+
+BACKGROUND: Accurate early prediction of mortality in mechanically ventilated 
+intensive care unit (ICU) patients remains challenging due to disease 
+heterogeneity and dynamic clinical trajectories. Traditional severity scoring 
+systems have limited flexibility and generalizability. This study aimed to 
+develop and externally validate a machine learning-based model using routinely 
+available clinical variables to predict ICU mortality in mechanically ventilated 
+patients.
+METHODS: A retrospective multicenter cohort study was conducted using the MIMIC 
+database as the development cohort, with external validation performed in the 
+eICU Collaborative Research Database and an independent institutional cohort. 
+Adult ICU patients receiving invasive mechanical ventilation were included. A 
+two-step feature selection strategy combining least absolute shrinkage and 
+selection operator (LASSO) regression and recursive feature elimination was 
+applied to identify robust predictors. Six machine learning algorithms were 
+compared, and a random forest model was selected. Model performance was 
+evaluated using discrimination, calibration, decision curve analysis, 
+time-dependent area under the curve (AUC), and concordance index (C-index). 
+Model interpretability was assessed using SHAP analysis.
+RESULTS: A total of 21 predictors were selected for model development. The 
+random forest model demonstrated superior overall performance compared with 
+alternative algorithms. In external validation, the model showed favorable early 
+discrimination, with near-perfect AUC values during the first 48 hours in the 
+local cohort and consistently acceptable performance in the eICU cohort. 
+Predictive performance attenuated over time, particularly in the local cohort, 
+whereas temporal stability was observed in the multicenter dataset. Calibration 
+and decision curve analyses supported the reliability and clinical utility of 
+the model. Key predictors included age, markers of respiratory dysfunction, 
+metabolic stress, organ failure, and treatment intensity.
+CONCLUSIONS: The proposed random forest model provides accurate and 
+interpretable admission-time risk stratification for ICU mortality in 
+mechanically ventilated patients. We recommend its use as an admission triage 
+and screening tool for identifying high-risk patients within the first 48 hours 
+of ICU admission. While predictive performance declined over time, the model 
+demonstrated robust early risk stratification and generalizability across 
+independent cohorts, highlighting its potential value for early clinical 
+decision support in critical care settings.
+CLINICAL TRIAL NUMBER: Not applicable. This study was an observational 
+retrospective cohort study and was not registered as a clinical trial.
+
+© 2026. The Author(s).
+
+DOI: 10.1186/s12911-026-03590-2
+PMID: 42414966
+
+Conflict of interest statement: Declarations. Human ethics and consent to 
+participate declarations: This study was a retrospective analysis of 
+de-identified data obtained from publicly available databases (MIMIC and eICU) 
+and an institutional ICU database in which all patient identifiers were removed 
+prior to analysis. The use of the MIMIC and eICU databases for research is 
+authorized under their respective data use agreements, which include ethical 
+oversight from the originating institutions. The external validation using the 
+local ICU database from Yantai Yuhuangding Hospital was specifically reviewed 
+and approved by the Institutional Review Board (IRB) of Yantai Yuhuangding 
+Hospital (Approval No.: 2025-682), which confirmed that the use of fully 
+de-identified retrospective data did not constitute human subjects research 
+requiring additional ethical approval. Declaration of Helsinki: All study 
+procedures were conducted in accordance with the ethical standards of the 
+Declaration of Helsinki. Consent to participate declaration: Not applicable. 
+Informed consent was waived for the analysis of the local institutional database 
+by the Institutional Review Board (IRB) of Yantai Yuhuangding Hospital, as this 
+study involved secondary analysis of de-identified retrospective data, and no 
+direct patient contact or intervention was performed. For the MIMIC and eICU 
+databases, patient consent was obtained during the original data collection 
+processes as per the policies of the data source institutions. Consent for 
+publication: Not applicable. The data used in this study were obtained from the 
+MIMIC and eICU databases, which are publicly available and de-identified. The 
+local institutional data were fully anonymized. Therefore, individual patient 
+consent for publication is not applicable. Competing interests: The authors 
+declare no competing interests.
+
+
+38. PLoS One. 2026 Jul 8;21(7):e0351509. doi: 10.1371/journal.pone.0351509. 
+eCollection 2026.
+
+Explainable machine learning for the early differentiation of pediatric 
+bronchopneumonia using routine laboratory parameters.
+
+Dai J(1), Qiu H(2), Shen L(3), Shi Q(2), Shen K(2), Wang Q(3), Qiu W(1).
+
+Author information:
+(1)Department of Pediatrics, Siyang Hospital, Suqian, China.
+(2)Department of Radiation Oncology, Siyang Hospital, Suqian, China.
+(3)Department of Clinical Laboratory, Shanxian Central Hospital, Heze, China.
+
+OBJECTIVE: Early differentiation of pediatric acute respiratory infections in 
+outpatient and emergency settings is often hindered by nonspecific clinical 
+signs, leading to unnecessary empirical antibiotic use and avoidable radiation 
+exposure. Therefore, this study aimed to develop and internally evaluate an 
+early triage model to distinguish pediatric bronchopneumonia (BP) from 
+uncomplicated upper respiratory tract infection using routine, cost-effective 
+laboratory parameters analyzed with machine-learning algorithms.
+METHODS: This retrospective study consecutively enrolled 532 pediatric patients 
+who presented with mild respiratory symptoms at their initial visit, comprising 
+218 in the BP group and 314 in the Upper Respiratory Tract Infection (URTI) 
+group. Core laboratory indicators were selected using a dual-dimensionality 
+reduction strategy that integrated the Least Absolute Shrinkage and Selection 
+Operator (LASSO) regression with the Boruta algorithm. Seven machine learning 
+classifiers were then constructed and compared based on the resulting feature 
+matrix. The Shapley Additive Explanations (SHAP) framework was subsequently 
+applied to interpret the nonlinear predictive mechanisms of the optimal model.
+RESULTS: This study constructed seven machine learning models: Logistic 
+Regression (LR), Decision Tree (DT), Random Forest (RF), Extreme Gradient 
+Boosting (XGBoost), Lightweight Gradient Boosting Machine (LightGBM), Support 
+Vector Machine (SVM), and Artificial Neural Network (ANN). In the internal 
+validation set, the SVM model demonstrated favorable predictive performance, 
+with an area under the curve (AUC) of 0.921 (95% confidence interval: 
+0.874-0.959). Based on Platt-scaled probability estimates, the SVM model showed 
+the lowest Brier score among the evaluated models, with a Brier score of 0.112. 
+Decision curve analysis confirmed this model's positive net clinical benefit 
+across a broad range of threshold probabilities. SHAP analysis further 
+elucidated the nonlinear contribution weights of multiple conventional 
+parameters at specific physiological thresholds.
+CONCLUSIONS: The multidimensional SVM risk quantification model, based on nine 
+routine laboratory parameters, provides an accurate and objective assessment of 
+pediatric BP risk. This model holds significant potential for clinical 
+translation as a noninvasive, cost-effective triage tool in emergency 
+departments. Its application could effectively reduce unnecessary radiographic 
+screening and excessive antibiotic use.
+
+Copyright: © 2026 Dai et al. This is an open access article distributed under 
+the terms of the Creative Commons Attribution License, which permits 
+unrestricted use, distribution, and reproduction in any medium, provided the 
+original author and source are credited.
+
+DOI: 10.1371/journal.pone.0351509
+PMCID: PMC13345418
+PMID: 42418473 [Indexed for MEDLINE]
+
+Conflict of interest statement: The authors have declared that no competing 
+interests exist.
+
+
+39. BioData Min. 2026 Jul 8. doi: 10.1186/s13040-026-00583-9. Online ahead of
+print.
+
+Cardio-respiratory deep learning model to predict hospital admission from 
+emergency department electrocardiogram images and respiration videos: a 
+prospective study.
+
+Chen GY(1), Lu SC(1), Cheng WH(1), Gao JW(2), Sun JT(3), Huang CH(2), Tsai 
+CL(#)(4), Fu LC(#)(5)(6).
+
+Author information:
+(1)Graduate Institute of Networking and Multimedia, National Taiwan University, 
+Taipei, Taiwan.
+(2)Department of Emergency Medicine, National Taiwan University Hospital, 
+National Taiwan University College of Medicine, Taipei, Taiwan.
+(3)Department of Emergency Medicine, Far Eastern Memorial Hospital, New Taipei 
+City, Taiwan.
+(4)Department of Emergency Medicine, National Taiwan University Hospital, 
+National Taiwan University College of Medicine, Taipei, Taiwan. 
+chulintsai@ntuh.gov.tw.
+(5)Graduate Institute of Networking and Multimedia, National Taiwan University, 
+Taipei, Taiwan. lichen@ntu.edu.tw.
+(6)Department of Computer Science and Information Engineering, National Taiwan 
+University, CSIE Der Tian Hall, No. 1, Section 4, Roosevelt Road, Taipei, 
+106319, Taiwan. lichen@ntu.edu.tw.
+(#)Contributed equally
+
+BACKGROUND: Early prediction of hospital admission at the emergency department 
+(ED) triage can improve patient flow and resource allocation. Most existing 
+models rely solely on structured data. Incorporating multimodal physiologic 
+information, such as cardiac and respiratory signals, may better capture subtle 
+clinical signs. This study aimed to develop a deep learning fusion model that 
+integrates electrocardiogram (ECG) images and respiration videos to predict 
+hospital admission at ED triage.
+METHODS: We prospectively collected ECG images and respiration videos from adult 
+ED patients in a tertiary medical center. The proposed model consisted of 
+modality-specific branches: an ECG branch using transfer learning, a 
+respiration-signal-estimation pipeline, and a spatial attention module to 
+enhance cardiopulmonary feature extraction. Class-balanced loss was applied to 
+address dataset imbalance. Model performance was compared with the baseline 
+Taiwan Triage Acuity Score (TTAS) and single-modality variants. Attention 
+heatmaps using score-class activation mapping (score-CAM) were analyzed for 
+interpretability.
+RESULTS: The study included 118 patients, with a 27% admission rate. The 
+ECG-respiration fusion model achieved an accuracy of 0.814, a recall of 0.749, a 
+precision of 0.635, an F1-score of 0.680, an area under the receiver operating 
+characteristic curve (AUROC) of 0.863, and an area under the precision-recall 
+curve (AUPRC) of 0.675, outperforming both TTAS and single-modality models. 
+Ablation analyses confirmed the additive value of spatial attention and 
+class-balanced loss. Score-CAM visualizations indicated the model focused on 
+physiologically relevant features, such as respiratory waveform inflection 
+points.
+CONCLUSIONS: A multimodal deep learning approach combining ECG and respiration 
+video signals can predict hospital admission at ED triage. Integrating such 
+models into triage systems may enhance earlier risk identification and resource 
+prioritization.
+CLINICAL TRIAL NUMBER: Not applicable.
+
+© 2026. The Author(s).
+
+DOI: 10.1186/s13040-026-00583-9
+PMID: 42421084
+
+Conflict of interest statement: Declarations. Ethics approval and consent to 
+participate: The study was approved by the NTUH Institutional Review Board 
+(reference number: 202308069RINA), and written informed consent was obtained 
+from all participants. The study was conducted in compliance with the 
+Declaration of Helsinki in 1964. Consent for publication: Not applicable. 
+Competing interests: The authors declare no competing interests.
+
+
+40. Digit Health. 2026 Jul 7;12:20552076261466804. doi:
+10.1177/20552076261466804.  eCollection 2026 Jan-Dec.
+
+Interpretable early mortality prediction in oncology ICU patients: A dual-cohort 
+validation of a LASSO-XGBoost-SHAP framework.
+
+Chen X(1), Wang L(1), Qin W(1), Yang M(1), Yan Y(1), Luo X(1), Yuan X(1).
+
+Author information:
+(1)Department of Oncology, Tongji Hospital, Tongji Medical College, Huazhong 
+University of Science and Technology, Wuhan, Hubei, China.
+
+BACKGROUND: Early risk stratification for critically ill cancer patients remains 
+challenging, and conventional severity scores are frequently miscalibrated. We 
+developed and externally validated an interpretable first-day (0-24 h) 
+risk-reassessment model for ICU mortality during the index ICU stay.
+METHODS: We performed a retrospective dual-cohort study using MIMIC-IV for 
+derivation/internal validation (n=9,532; training n=6,673, internal test 
+n=2,859) and eICU-CRD for external validation (n=7,821) among adult cancer 
+patients with an index ICU stay >=24 h. Candidate predictors were restricted to 
+the first 0-24 h after ICU admission. LASSO selected sparse features, nine 
+algorithms were benchmarked, and the final model was chosen by integrated 
+assessment of discrimination, calibration, and decision-curve net benefit. 
+Performance was evaluated using ROC-AUC, PR-AUC, sensitivity, PPV, F2, Brier 
+score, ECE, calibration plots, and decision-curve analysis over p_t=0.01-0.50. 
+TreeSHAP provided global, cohort-level, feature-level, and directional 
+interpretation.
+RESULTS: ICU mortality rates were 9.45% in MIMIC and 7.39% in eICU. XGBoost was 
+retained as the locked model. In the internal test set, XGBoost achieved ROC-AUC 
+0.864 (95% CI 0.844-0.885), PR-AUC 0.428, sensitivity 0.807, PPV 0.249, and F2 
+0.558. In eICU, performance remained stable (ROC-AUC 0.848, 95% CI 0.832-0.864; 
+PR-AUC 0.367; sensitivity 0.794; PPV 0.192; F2 0.487). Calibration remained 
+clinically acceptable, and decision-curve analysis showed positive net benefit 
+across plausible thresholds. SHAP highlighted treatment-intensity indicators and 
+acute physiologic stressors, including vasopressors, sedation, mechanical 
+ventilation, HR_max, SpO2_min, BUN_max, potassium_max, and RR_max, without 
+implying causal effects.
+CONCLUSIONS: This LASSO-XGBoost-SHAP framework supports first-day reassessment 
+after completion of the 24-h predictor window, subsequent monitoring 
+prioritization, resource allocation, and goal-concordant decision-making in 
+oncology ICUs. It should not be interpreted as an admission-time triage model.
+
+© The Author(s) 2026.
+
+DOI: 10.1177/20552076261466804
+PMCID: PMC13342384
+PMID: 42421987
+
+Conflict of interest statement: The authors declared no potential conflicts of 
+interest with respect to the research, authorship, and/or publication of this 
+article.
+
+
+41. PLoS One. 2026 Jul 9;21(7):e0352342. doi: 10.1371/journal.pone.0352342. 
+eCollection 2026.
+
+Machine learning for predicting emergency department visits in patients with 
+type 2 diabetes: A real-world, multi-institutional study.
+
+Kim S(1), Sang H(2)(3), Park J(2)(4), Woo S(2), Cho EH(5), Kim CH(6), Kim DJ(7), 
+Jeong CW(8), Park TS(9), Hwang YC(10), Lim H(11), Kim Z(12), Kang H(12), Yon 
+DK(2)(4)(13)(14), Rhee SY(2)(3)(4)(13).
+
+Author information:
+(1)Department of Family Medicine, Kyung Hee University College of Medicine, 
+Seoul, Korea.
+(2)Center for Digital Health, Medical Science Research Institute, Kyung Hee 
+University College of Medicine, Seoul, Korea.
+(3)Department of Endocrinology and metabolism, Kyung Hee University College of 
+Medicine, Seoul, Korea.
+(4)Department of Regulatory Science, Kyung Hee University, Seoul, Korea.
+(5)Department of Internal Medicine, Kangwon National University College of 
+Medicine, Chuncheon, Republic of Korea.
+(6)Department of Internal Medicine, Sejong General Hospital, Bucheon, Korea.
+(7)Department of Endocrinology and Metabolism, Ajou University School of 
+Medicine, Suwon, Korea.
+(8)Smart Business Team in Information Management Office, Wonkwang University 
+Hospital, Iksan, Korea.
+(9)Division of Endocrinology and Metabolism, Department of Internal Medicine, 
+Research Institute of Clinical Medicine of Jeonbuk National University and 
+Jeonbuk National University Hospital, Jeonju, Korea.
+(10)Division of Endocrinology and Metabolism, Department of Internal Medicine, 
+Kyung Hee University Hospital at Gangdong and Kyung Hee University School of 
+Medicine, Seoul, Korea.
+(11)Department of Medical Nutrition, Graduate School of East-West Medical 
+Science, Kyung Hee University, Yongin, Korea.
+(12)Department of Data Science, Evidnet, Seoul, Korea.
+(13)Department of Precision Medicine, Kyung Hee University College of Medicine, 
+Seoul, Korea.
+(14)Department of Pediatrics, Kyung Hee University Medical Center, Kyung Hee 
+University College of Medicine, Seoul, Korea.
+
+BACKGROUND: Patients with type 2 diabetes mellitus (T2DM) prone to acute 
+diabetic complications are at high risk for emergency department (ED) visits, 
+which often precede hospitalization and mortality. Identifying these high-risk 
+phenotypes before deterioration is critical for preventative care. We developed 
+machine learning (ML) models using large-scale, real-world electronic medical 
+records, including prescription data, to predict the possibility of ED visits in 
+patients with T2DM and support proactive interventions in primary care settings.
+METHODS: We analyzed the electronic health record data of five independent 
+institutions, creating a comprehensive dataset of 220,720 patients. The data 
+included dynamic clinical parameters such as vital signs, laboratory results, 
+and prescription histories. The cohort was randomly split into a training set 
+(n = 176,576) and a test set (n = 44,144). The primary outcome was the first ED 
+visit. We developed multiple ML models using an automated ML framework and 
+optimized them using hyperparameter tuning of the training set. Model 
+performances were evaluated using the area under the receiver operating 
+characteristic (AUROC) curve, and feature importance was analyzed using SHAP 
+values to ensure interpretability.
+RESULTS: Among the screened population, 49,770 (22.6%) experienced at least one 
+ED visit, distributed proportionally across the training and test datasets. The 
+CatBoost model demonstrated superior predictive performance, achieving an AUROC 
+of 0.87 (95% CI, 0.862-0.871) on the test dataset. The model identified 
+modifiable risk factors as key predictors; Diastolic blood pressure was the most 
+significant variable, followed by serum creatinine and systolic blood pressure.
+CONCLUSIONS: This ML-based predictive model can accurately identify high-risk 
+patients with T2DM who are likely to visit the ED based on readily available 
+clinical variables. By enabling healthcare providers to shift from reactive 
+treatment to proactive risk management, it has the potential to reduce the 
+burden of ED visits due to acute complications in T2DM.
+
+Copyright: © 2026 Kim et al. This is an open access article distributed under 
+the terms of the Creative Commons Attribution License, which permits 
+unrestricted use, distribution, and reproduction in any medium, provided the 
+original author and source are credited.
+
+DOI: 10.1371/journal.pone.0352342
+PMCID: PMC13349136
+PMID: 42424276 [Indexed for MEDLINE]
+
+Conflict of interest statement: The authors have declared that no competing 
+interests exist.
+
+
+42. Emerg Med J. 2026 Jul 9:emermed-2025-215852. doi:
+10.1136/emermed-2025-215852.  Online ahead of print.
+
+Feasibility of administering the Patient-Reported Outcome Measure for Older 
+People living with frailty receiving Acute Care (PROM-OPAC) in older people with 
+cognitive impairment.
+
+van Oppen JD(1), Plowright J(2), Goodacre S(3), Keetharuth AD(4).
+
+Author information:
+(1)Centre for Urgent and Emergency Care Research, The University of Sheffield, 
+Sheffield, UK james.vanoppen@doctors.org.uk.
+(2)Medical School, The University of Sheffield, Sheffield, UK.
+(3)Centre for Urgent and Emergency Care Research, The University of Sheffield, 
+Sheffield, UK.
+(4)Sheffield Centre for Health and Related Research (SCHARR), The University of 
+Sheffield, Sheffield, UK.
+
+BACKGROUND: Patient-reported outcome measures (PROMs) are more meaningful than 
+service-orientated metrics, but representation must be equitable. PROM-OPAC is 
+currently the only PROM for Older People living with frailty receiving Acute 
+Care. However, there is limited evidence for its feasibility among the 40% of 
+that cohort who have cognitive impairment. This study examined PROM-OPAC for 
+feasibility and psychometric reliability in people with cognitive impairment.
+METHODS: Older people living with frailty and cognitive impairment were 
+recruited during emergency attendance at a UK hospital. They completed the 
+six-item cognitive impairment test (6CIT), PROM-OPAC and the EuroQol EQ-5D-5L. 
+Analyses were for feasibility (response rate, completeness, completion time) and 
+reliability (response distribution, internal consistency).
+RESULTS: 60 people (63% (95% CI 53% to 73%) of 95 approached) with significant 
+cognitive impairment participated (median 6CIT 21/28; IQR 16-25). 92% responses 
+were complete, with median time 8 (IQR 5-11) min. Internal consistency was 
+acceptable (Cronbach's alpha, 0.70) but the observed response distribution (SD 
+<1 in two items) and end effects suggested interpretability issues. Cognitive 
+impairment severity neither correlated with completion time (Spearman's, 
+p=0.268) nor completeness (Kruskal-Wallis, p=0.858).
+CONCLUSION: Older people living with frailty and cognitive impairment can 
+complete PROMs during emergency care. This study adds to evidence for PROM-OPAC 
+feasibility and psychometric properties. PROM-OPAC presents a means for 
+patient-centred evaluation of acute frailty care.
+
+© Author(s) (or their employer(s)) 2026. No commercial re-use. See rights and 
+permissions. Published by BMJ Group.
+
+DOI: 10.1136/emermed-2025-215852
+PMID: 42425741
+
+Conflict of interest statement: Competing interests: None declared.
+
+
+43. medRxiv [Preprint]. 2026 Jun 29:2026.06.26.26356700. doi: 
+10.64898/2026.06.26.26356700.
+
+The urinary-metabolite-based lung cancer index (uLCI): an interpretable 
+machine-learning risk model for early-stage disease.
+
+Khan MA, Mathé EA, Pine SR, Gonzalez FJ, Harris CC, Wang XW, Patel DP.
+
+BACKGROUND: Five-year survival from lung cancer exceeds 60% at stage I-II but 
+falls below 10% once metastasis occurs. Low-dose CT (LDCT) screening reduces 
+mortality in heavy smokers but carries a false-positive rate of approximately 
+29% and is restricted to smoking-based eligibility, leaving most cases 
+undetected. We aimed to develop and independently validate an interpretable 
+machine-learning urinary metabolite risk index (uLCI) for non-invasive lung 
+cancer detection.
+METHODS: Four urinary metabolites-creatine riboside (CR), N-acetylneuraminic 
+acid (NANA), 27-nor-5β-cholestane-3α,7α,12α,24,25-pentol (CP), and cortisol 
+sulfate (CS)-and three clinical variables (age, race, smoking) were integrated 
+by Lasso-regularised logistic regression into a uLCI score. The model was 
+developed under 10-fold cross-validation in the NCI-Maryland (NCI-MD) cohort 
+(n=845; 470 controls, 375 cases, stages I-IV) and applied without refitting to 
+the independent Colorado Lung Cancer Cohort (n=488; 211 controls, 277 cases). 
+Analyses were prespecified; reporting followed TRIPOD+AI.
+FINDINGS: uLCI achieved an area under the curve (AUC) of 0·906 (95% CI 
+0·887-0·926) in NCI-MD and 0·748 (0·701-0·793) in the independent Colorado 
+cohort. Scores rose monotonically across stages in both cohorts (Spearman ρ=0·69 
+and 0·45; both p<0·0001). Stage-specific discrimination was preserved from stage 
+I to IV (NCI-MD 0·900-0·927; Colorado 0·722-0·843). Net reclassification 
+improvement over clinical variables was 1·24 (1·14-1·36) and 0·74 (0·56-0·90). 
+uLCI tertiles stratified post-resection survival in stage I-II disease (adjusted 
+hazard ratio 2·03, 1·26-3·27).
+INTERPRETATION: uLCI is an independently validated, interpretable urinary risk 
+index that detects lung cancer across all stages, with monotonic stage 
+progression and post-resection prognostic value. Its false-positive rate 
+compares favourably with published estimates for LDCT and cell-free-DNA assays, 
+supporting prospective head-to-head evaluation as a non-invasive triage tool, 
+including in screening-ineligible populations.
+FUNDING: Intramural Research Program, Center for Cancer Research, National 
+Cancer Institute, US National Institutes of Health.
+RESEARCH IN CONTEXT: Evidence before this study: We searched PubMed, Embase, and 
+Web of Science from Jan 1, 2000, to Jan 31, 2026, without language restriction, 
+for biomarker-based diagnostic or risk models for lung cancer, using "lung 
+cancer", "early detection", "biomarker", "urine", "metabolite", "machine 
+learning", "TRIPOD", and "validation in an independent cohort". Five-year 
+survival exceeds 60% at stage I-II but falls below 10% after metastasis. 
+Low-dose CT reduces mortality in heavy smokers but carries an approximately 29% 
+false-positive rate and excludes never-smokers, who account for 10-25% of US 
+lung cancers and up to 40% globally; blood-based cell-free DNA and methylation 
+assays report rates near 27%. Most prior urinary-metabolite work, including our 
+2024 creatine-riboside and N-acetylneuraminic-acid report, used case-control 
+designs without a locked, integrated model, and-even where two cohorts were 
+analyzed-lacked prespecified independent validation or TRIPOD+AI-compliant 
+reporting; an interpretable urinary index integrating an expanded metabolite 
+panel with clinical variables under these standards had not been described.Added 
+value of this study: Across two cohorts (1333 individuals), we developed and 
+independently validated uLCI, an interpretable Lasso-regularised logistic index 
+combining four urinary metabolites (CR, NANA, CP, CS) with age, race, and 
+smoking, reported to TRIPOD+AI standards. The prespecified locked model achieved 
+an AUC of 0·906 (95% CI 0·887-0·926) in NCI-MD development and 0·748 
+(0·701-0·793) in the independent Colorado cohort without refitting, with 
+discrimination preserved from stage I to IV (0·900-0·927; 0·722-0·843). uLCI 
+rose monotonically with stage in both cohorts (Spearman ρ=0·693 and 0·449; both 
+p<0·0001), improved reclassification over clinical variables (net 
+reclassification improvement 1·24 and 0·74), and independently stratified 
+post-resection survival in stage I-II disease (adjusted hazard ratio 2·03 in 
+NCI-MD; 3·81 in Colorado). On indirect benchmarking, the 17-19% false-positive 
+rate was below published estimates for low-dose CT (∼29%) and DELFI (∼27%), and 
+discrimination was preserved in never-smokers - whom low-dose CT excludes - and 
+across racial subgroups in the diverse development cohort.Implications of all 
+the available evidence: A locked, independently validated, non-invasive urinary 
+index that is interpretable, accurate from stage I, stage-responsive, and 
+prognostic after resection addresses a defined detection gap, with a plausible 
+role as a low-cost triage test that raises pre-test probability before imaging 
+and extends risk assessment to screening-ineligible never-smokers, complementary 
+to low-dose CT. Prospective screening-cohort evaluation (planned in the NCI PLCO 
+and Southern Community Cohort biobanks), head-to-head comparison with 
+blood-based assays, recalibration to screening prevalence, and replication in 
+diverse cohorts are the warranted next steps.
+
+DOI: 10.64898/2026.06.26.26356700
+PMCID: PMC13345482
+PMID: 42428063
+
+
+44. Pol J Pathol. 2026 Jun 25;77(2):209-215. doi: 10.5114/pjp.2026.162578.
+
+The role of computational pathology in predicting expression of selected 
+immunohistochemical markers.
+
+Miller M(1), Przybylska M(1), Pakuło S(2), Świderska-Chadaj Ż(1)(3).
+
+Author information:
+(1)IDEAS Research Institute, Warsaw, Poland.
+(2)Maria Sklodowska-Curie National Research Institute of Oncology, Tumor 
+Pathology Department, Gliwice, Poland.
+(3)Faculty of Electrical Engineering, Warsaw University of Technology, Warsaw, 
+Poland.
+
+Immunohistochemistry (IHC) remains a cornerstone of precision oncology, 
+providing essential diagnostic, prognostic, and predictive molecular data. 
+However, the traditional manual assessment of IHC slides faces persistent 
+challenges regarding interobserver variability, reproducibility, and high 
+diagnostic workloads. To address these limitations, artificial intelligence (AI) 
+is increasingly integrated into computational pathology workflows. This paper 
+outlines the current landscape of AI-assisted IHC, highlighting significant 
+trends such as automated scoring, explainable AI, virtual staining, and 
+multiplex analysis. We explore the transition from basic image analysis to 
+advanced deep learning architectures capable of predicting specific IHC 
+biomarker expression directly from standard hematoxylin and eosin morphology. 
+Furthermore, we examine the commercial ecosystem of these tools and highlight 
+the critical pre-analytical bottlenecks that hinder widespread clinical 
+adoption. Finally, we present a practical case study demonstrating an automated, 
+deep learning- based pipeline for quantifying CD34-positive myeloblasts in acute 
+myeloid leukemia and myelodysplastic syndromes. Ultimately, while AI holds vast 
+potential to optimize turnaround times and streamline laboratory triage, its 
+successful clinical implementation will depend on seamless integration into 
+existing digital pathology platforms and standardization of pre-analytical 
+variables, moving the field from fragmented algorithms to reliable, 
+standard-of-care diagnostic tools.
+
+DOI: 10.5114/pjp.2026.162578
+PMID: 42429431 [Indexed for MEDLINE]
+
+
+45. BMC Womens Health. 2026 Jul 11. doi: 10.1186/s12905-026-04680-z. Online ahead
+of  print.
+
+Integrating epigenetic and metabolic indicators for non-invasive endometrial 
+cancer triage: a machine learning approach.
+
+Mao X(#)(1)(2)(3)(4)(5), Lin X(#)(2)(3)(4)(5), Shi Y(2)(3)(4)(5), Zhao J(2), Xue 
+H(6), Wu X(7), Chen G(8), Sun P(1)(2)(3)(4)(5), Peng X(9)(10).
+
+Author information:
+(1)Department of Epidemiology and Health Statistics, School of Public Health, 
+Fujian Medical University, Fuzhou, Fujian, 350108, China.
+(2)College of Clinical Medicine for Obstetrics & Gynecology and Pediatrics, 
+Fujian Medical University, Fuzhou, Fujian, 350001, China.
+(3)Fujian Clinical Research Center for Gynecological Oncology, Fujian Maternity 
+and Child Health Hospital, Affiliated Hospital of Fujian Medical University, 
+Fuzhou, Fujian, 350001, China.
+(4)Laboratory of Gynecologic Oncology, Fujian Maternity and Child Health 
+Hospital, Affiliated Hospital of Fujian Medical University, Fuzhou, 350001, 
+Fujian, China.
+(5)Fujian Key Laboratory of Women and Children's Critical Diseases Research, 
+Fujian Maternity and Child Health Hospital, Affiliated Hospital of Fujian 
+Medical University, Fuzhou, Fujian, 350001, China.
+(6)Center for Cervical Disease Diagnosis and Treatment, College of Clinical 
+Medicine for Obstetrics & Gynecology and Pediatrics, Fujian Maternity and Child 
+Health Hospital, Fujian Medical University, Fuzhou, Fujian, 350001, China.
+(7)Department of Gynecology, The Second Affiliated Hospital of Fujian, 
+University of Traditional Chinese Medicine, No.282 Wusi Road, Fuzhou, Fujian, 
+350001, China.
+(8)Department of Obstetrics and Gynecology, Tongji Hospital, Tongji Medical 
+College, Huazhong University of Science and Technology, Wuhan, Hubei, 430030, 
+China.
+(9)Department of Epidemiology and Health Statistics, School of Public Health, 
+Fujian Medical University, Fuzhou, Fujian, 350108, China. 
+peng123456@fjmu.edu.cn.
+(10)Fujian Provincial Key Laboratory of Environment Factors and Cancer, School 
+of Public Health, Fujian Medical University, Fuzhou, Fujian, 350108, China. 
+peng123456@fjmu.edu.cn.
+(#)Contributed equally
+
+OBJECTIVE: Abnormal uterine bleeding (AUB) is a primary symptom indicative of 
+endometrial cancer (EC), yet its diagnosis still primarily relies on invasive 
+biopsy. This study aimed to develop and validate a non-invasive, interpretable 
+machine learning (ML) model integrating local epigenetic (exfoliated cell CDO1 
+methylation) and systemic metabolic indicators for EC triage.
+METHODS: CDO1 was identified as a potential biomarker via bioinformatics. Its 
+diagnostic performance was assessed using quantitative methylation-specific PCR 
+(qMSP) in a clinical cohort of 267 women with AUB. Subsequently, a multimodal ML 
+framework was developed that incorporated logistic regression (LR), support 
+vector machine (SVM), Random Forest (RF), and eXtreme Gradient Boosting 
+(XGBoost) algorithms to integrate methylation data with clinical metabolic 
+profiles. Model interpretability was ensured by SHapley Additive exPlanations 
+(SHAP) analysis, with final testing in an internal holdout cohort.
+RESULTS: CDO1 hypermethylation was identified as a significant epigenetic 
+alteration associated with metabolic pathways in EC. Within our clinical cohort, 
+CDO1 methylation emerged as a strong independent risk factor, with an odds ratio 
+(OR) of 12.76 and a 95% confidence interval (CI) ranging from 6.31 to 25.80. 
+Using LASSO regression, four critical predictive variables were identified: CDO1 
+methylation, menopausal status, diabetes and age. After integrating CDO1 
+methylation and metabolic profiles, the support vector machine model 
+demonstrated stable performance in the validation set, achieving an area under 
+the curve (AUC) of 0.775 (95% CI: 0.669-0.880), with a sensitivity of 0.800 and 
+a specificity of 0.733. SHAP analysis was used to elucidate the contribution of 
+each feature to the predictive model. The finalized SVM-based model's diagnostic 
+utility was further confirmed in an internal holdout cohort, yielding an AUC of 
+0.904 (95% CI: 0.838-0.969), with a sensitivity of 0.833 and a specificity of 
+0.905, demonstrating its preliminary clinical reliability. Using our model with 
+a cutoff of 0.647 in the internal holdout cohort (n = 160), 24 patients were 
+triaged for biopsy, with 2 EC cases missed, representing a clinical 
+false-negative rate of 16.7%. The finalized SVM-based predictive model was 
+developed into a free online risk calculator 
+(https://phw1996.shinyapps.io/EC_risk/) for real-time clinical triage.
+CONCLUSIONS: Our SVM-based model offers a non-invasive and highly specific 
+approach for the triage of patients experiencing AUB. By correlating localized 
+molecular changes with systemic metabolic dysregulation, this tool supports 
+personalized risk stratification and clinical triage. It is designed for 
+relative risk stratification, and external recalibration is required for 
+clinical absolute risk estimation.
+
+© 2026. The Author(s).
+
+DOI: 10.1186/s12905-026-04680-z
+PMID: 42432620
+
+Conflict of interest statement: Declarations. Ethics approval and consent to 
+participate: The study was reviewed and approved by the Ethics Committee of 
+Fujian Maternity and Child Health Hospital (Approval No. 2022KYLLR03028). The 
+participants provided their written informed consent to participate in this 
+study. This study was performed in accordance with the Helsinki Declaration. 
+Consent for publication: Not applicable. Competing interests: The authors 
+declare no competing interests.
+
+
+46. JAMIA Open. 2026 Jul 10;9(4):ooag136. doi: 10.1093/jamiaopen/ooag136. 
+eCollection 2026 Aug.
+
+Build fair machine learning models to predict adverse outcomes for heart failure 
+patients with preserved ejection fraction and with reduced ejection fraction.
+
+Yeh Y(1), Lee Y(2), Huang Y(2)(3), Huang W(4), Kimmel SE(5), Yang C(6), Jiang 
+Z(7), Xiao T(7), Guo Y(8), Bian J(2)(3), Guo J(1)(2).
+
+Author information:
+(1)Department of Pharmacy Practice, Purdue University College of Pharmacy, 
+Indianapolis, IN 46202, United States.
+(2)Regenstrief Institute, Indianapolis, IN 46202, United States.
+(3)Biostatistics and Health Data Science, Indiana University, Indianapolis, IN 
+46202, United States.
+(4)Pharmaceutical Outcomes & Policy, University of Florida, Gainesville, FL 
+32611, United States.
+(5)Department of Epidemiology, University of Florida, Gainesville, FL 32610, 
+United States.
+(6)Data and Information Systems Research Lab, Emory University, Atlanta, GA 
+30322, United States.
+(7)Department of Computer & Information Science & Engineering, University of 
+Florida, Gainesville, FL 32611, United States.
+(8)Department of Health Outcomes and Biomedical Informatics, University of 
+Florida, Gainesville, FL 32611, United States.
+
+OBJECTIVES: Develop and validate subtype-specific, fairness-aware machine 
+learning (ML) models that integrate clinical and social determinants of health 
+(SDoH) information to predict 6-month readmission or mortality after 
+hospitalization among patients with HFpEF or HFrEF, and to evaluate the 
+incremental contribution of SDoH, model explainability, and subgroup error 
+disparities across demographic groups.
+MATERIALS AND METHODS: We used University of Florida Health electronic health 
+record (EHR) data (2016-2022) to identify adult heart failure (HF) 
+hospitalizations and followed patients for 6 months for a composite outcome of 
+readmission or mortality. Features included clinical characteristics, contextual 
+SDoH (eg, neighborhood deprivation), and individual SDoH extracted from clinical 
+notes via natural language processing (NLP). Logistic regression and XGBoost 
+models were trained with random oversampling. Performance metrics included the C 
+statistic, F1-score, and recall. Fairness was evaluated using false negative 
+rate (FNR) parity across sex, race/ethnicity, and age band, and mitigation 
+methods were applied (eg, Disparate Impact Remover, Adversarial Debiasing, and 
+Calibrated Equalized Odds).
+RESULTS: Adding SDoH improved the C statistic for logistic regression in HFpEF 
+(0.603 vs 0.586) and HFrEF (0.641 vs 0.637). SHapley Additive exPlanations 
+(SHAP) highlighted sodium, financial constraint level, and emergency department 
+visit count in HFpEF, and utilization measures and financial constraint level in 
+HFrEF. FNR ratios indicated race/ethnicity disparities; HFpEF FNRBlack/FNRWhite 
+was 0.7834 (0.8728 after Disparate Impact Remover), and HFrEF 
+FNRHispanic/FNRWhite was 1.2217 (0.9880 after Adversarial Debiasing).
+DISCUSSION: SDoH integration and mitigation can modestly improve performance 
+while reducing subgroup error disparities.
+CONCLUSION: Subtype-specific, fairness-aware ML models for HFpEF and HFrEF 
+provided interpretable 6-month risk stratification and enabled subgroup fairness 
+assessment. Integrating clinical and SDoH information added modest 
+discrimination gains while strengthening interpretation and fairness assessment. 
+These findings support further validation of explainable, equity-aware HF 
+prediction models.
+
+© The Author(s) 2026. Published by Oxford University Press on behalf of the 
+American Medical Informatics Association.
+
+DOI: 10.1093/jamiaopen/ooag136
+PMCID: PMC13353219
+PMID: 42434194
+
+Conflict of interest statement: None reported.
