@@ -139,7 +139,48 @@ Goal: replace "grep six files, read them top to bottom" with a structured query 
 
 ### Category A: Structural / call-graph tools ("how does this code connect?")
 
-- **code-review-graph** — MCP server with a persistent, incremental graph, auto-rebuilds on save. This is the tool the article's author uses daily. The article does not provide a repository link, so no install command is given here — search for it directly if you want to try it, and confirm you're pulling the legitimate project before installing.
+- **code-review-graph** — MCP server with a persistent, incremental graph, auto-rebuilds on save. This is the tool the article's author uses daily. The article itself gave no repository link; the details below come from the project repo and site (site was unreachable via automated fetch — verify directly before relying on it).
+  Repo: https://github.com/tirth8205/code-review-graph
+  Site: https://code-review-graph.com/
+
+  **Install:**
+  ```bash
+  pip install code-review-graph
+  code-review-graph install            # auto-configures MCP servers
+  code-review-graph build              # parse the codebase into a graph (~10s for a 500-file project)
+  ```
+  Platform-specific install variants:
+  ```bash
+  code-review-graph install --platform cursor
+  code-review-graph install --platform claude-code
+  code-review-graph install --platform copilot
+  ```
+
+  **Optional — embeddings for semantic search:**
+  ```bash
+  export CRG_OPENAI_API_KEY=sk-...
+  export CRG_OPENAI_MODEL=text-embedding-3-small
+  ```
+
+  **Usage:** after install + first build, ask your AI assistant: *"Build the code review graph for this project."* Key commands/MCP tools:
+
+  | Command | Purpose |
+  |---|---|
+  | `build` | Parse the entire codebase into a graph |
+  | `update` | Incremental update of changed files only |
+  | `detect-changes --brief` | Analyze changes with a token-savings estimate |
+  | `visualize` | Interactive HTML graph visualization |
+  | `watch` | Auto-update the graph as files change |
+  | `status` | Display graph statistics |
+
+  MCP tools exposed to the agent: **Impact Radius** (blast-radius of changed files), **Review Context** (token-optimized review with structural summary), **Semantic Search** (find entities by name/meaning), **Change Detection** (risk-scored impact analysis). The project claims ~82x median context reduction (38x–528x range) vs. naive full-file reads.
+
+  **Uninstall:**
+  ```bash
+  code-review-graph uninstall --dry-run   # preview only
+  code-review-graph uninstall             # with confirmation
+  code-review-graph uninstall --yes       # no prompt
+  ```
 - **Serena** — LSP-backed, gives the agent precise go-to-definition / find-references.
   Repo: https://github.com/oraios/serena
   ```bash
