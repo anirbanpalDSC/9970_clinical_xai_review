@@ -318,6 +318,25 @@ codex --profile frontier "plan the auth migration"
 
 Even within one model family, dial reasoning effort down for shallow tasks and up for hard ones — it's a separate lever from model choice and saves tokens on its own.
 
+### Routing is manual, not automatic
+
+**Important clarification:** Model routing is **not automatic**. There is no built-in task-difficulty detector that says "this looks hard, use Opus; this looks routine, use Haiku." Routing is deliberate:
+
+- **Claude Code profiles**: You decide which subagent (or the main agent) to use based on task description.
+- **Codex profiles**: You explicitly pick `--profile cheap` or `--profile frontier` at invocation time.
+- **Codex custom agents**: You decide which agent to use for a given task.
+
+**Semi-automatable via agent logic:** You can make routing rule-based by writing explicit instructions in your agent's system prompt:
+```markdown
+## Task routing rules
+
+- If the user asks for triage, log classification, simple edits, or doc updates: delegate to @triage subagent (Haiku, 120-token output budget).
+- If the user asks for architecture, migrations, multi-file refactors, or anything marked "high-stakes": handle yourself with your full reasoning (Sonnet/Opus).
+```
+The agent reads the task, matches it against your rules, and decides which model/subagent to use. This is rule-based automation, not truly automatic, but reduces the friction of manual routing.
+
+**The benefit is a discipline, not magic**: once you establish the habit (cheap for routine work, frontier for hard work), you consistently save tokens without overthinking each decision.
+
 ---
 
 ## Measurement — make it a habit, not a one-off cleanup
