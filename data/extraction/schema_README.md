@@ -1,7 +1,7 @@
 # Extraction Schema — schema_v1.csv
 
-**Issue:** #10
-**Status:** Resolved 2026-05-24
+**Issue:** #10 (v1–v1.2), EM pivot 2026-06-10 (v1.3)
+**Status:** v1.3 columns fully documented and verified 2026-07-22 — all 43 columns ready to extract
 **File:** `data/extraction/schema_v1.csv`
 
 This document is the canonical reference for every column in the extraction schema. All coders must read this before extracting. Where a column maps to a rubric or taxonomy, that document takes precedence over this README for boundary cases.
@@ -189,6 +189,93 @@ Tags that overlap with categorical schema columns (e.g., `#trust_calibration` mi
 
 ---
 
+### Method Justification (RQ1)
+
+Inductive coding — categories below are starting definitions, not a closed a priori taxonomy. Refine wording in `Method_Justification_Notes` as coding proceeds; if a genuinely new justification type emerges across the 7 papers, log it in `memos/decision_log.md` before treating it as a category.
+
+| Column | Type | Values | Definition |
+|--------|------|--------|------------|
+| `Method_Justification_Type` | categorical | `Computational` / `Cognitive` / `Workflow` / `Mixed` / `NotReported` | Why the paper says it chose this XAI method over alternatives |
+| `Method_Justification_Notes` | string | — | Quote or close paraphrase of the justification, with page/section reference |
+
+`Method_Justification_Type` codes:
+- `Computational`: justified on computational grounds — model-agnosticism, speed, compatibility with the model architecture, established benchmark performance, theoretical guarantees (e.g., Shapley additivity)
+- `Cognitive`: justified on human-comprehensibility grounds — alignment with clinical reasoning, simplicity of the explanation form, prior evidence the format is understandable
+- `Workflow`: justified on deployment/integration grounds — fits existing clinical tools, low latency for ED use, compatibility with EHR display constraints
+- `Mixed`: paper gives more than one of the above explicitly — record all applicable types in `Notes`, primary type in this column
+- `NotReported`: method is used with no stated rationale for why it was chosen over alternatives (the common case — do not infer a justification the paper doesn't state)
+
+---
+
+### Method-Interface Isolation (RQ1/RQ2)
+
+| Column | Type | Values | Definition |
+|--------|------|--------|------------|
+| `Method_Interface_Isolated` | categorical | `Yes` / `No` / `NotApplicable` | Does the study design let you attribute an observed effect to the explanation *method* itself, separate from how it's displayed? |
+
+- `Yes`: design isolates the method from presentation — e.g., compares multiple XAI methods through an identical interface, or explicitly varies interface while holding method constant and analyzes the two effects separately
+- `No`: a single method is shown through a single interface with no comparison condition — any effect on comprehension/trust/decision quality is confounded between "the explanation method" and "the way it happened to be displayed"
+- `NotApplicable`: no human-facing interface exists (e.g., `MethodPaper` with only computational/proxy evaluation, `Eval_Type = None`)
+
+This is the RQ1/RQ2 cross-cutting flag: a paper can score well on `Eval_Type`/`Realism_Level` while still leaving method and interface effects confounded — worth checking for every `UserStudy`/`RCT`/`Observational` row.
+
+---
+
+### Framework Classification (RQ2/RQ3)
+
+| Column | Type | Values | Definition |
+|--------|------|--------|------------|
+| `DoshiVelez_Category` | categorical | `FunctionallyGrounded` / `HumanGrounded` / `ApplicationGrounded` | Doshi-Velez & Kim (2017) 3-category evaluation framework |
+| `VilonLongo_Category` | categorical | **interim — see caveat below** | Vilone & Longo (2021) evaluation-approach classification |
+
+**`DoshiVelez_Category` coding rules** (Doshi-Velez & Kim, 2017, "Towards a Rigorous Science of Interpretable Machine Learning"):
+- `FunctionallyGrounded`: no human subjects; interpretability assessed via a formal proxy (fidelity metric, sparsity, a previously-validated proxy task) — maps to `Eval_Type = ProxyMetric` and `N_Participants = 0`
+- `HumanGrounded`: human subjects perform a simplified or proxy task, not the real target decision (e.g., forced-choice explanation comparison, forward/backward simulation, or a trust/utility questionnaire completed as an assigned task by independent participants) — maps to `Eval_Type` containing `ForwardSim`/`BackwardSim`/`TrustQuestionnaire` without `DecisionQuality`/`DownstreamOutcome`. `TrustQuestionnaire` lands here (not `FunctionallyGrounded`) whenever real, independent human participants completed an assigned survey task, even if the instrument itself is unvalidated — distinct from the `Eval_Type=None` + `N_Participants>0` tie-break above, which covers informal, task-less, non-independent commentary (e.g. a co-author glancing at a couple of examples).
+- `ApplicationGrounded`: real end-users (ideally clinicians) perform the real target task in a realistic setting — maps to `Eval_Type` containing `DecisionQuality` or `DownstreamOutcome` combined with `EV_Task >= 2` and `EV_Participant >= 2`
+
+Coding `DoshiVelez_Category` should be a near-mechanical function of `Eval_Type` + `EV_Participant` + `EV_Task` already recorded — if the two disagree, treat it as a flag for `Notes`, not a silent overwrite of either column.
+
+**Tie-break (decision log 2026-07-23, added after `Arnaud_2023`):** when `Eval_Type = None` (no evaluation activity meets any taxonomy minimum) but `N_Participants > 0` (an informal, non-systematic human involvement exists — e.g. a co-author's face-validity commentary on a couple of illustrative examples, with no assigned task and no independent/blinded participants), code `DoshiVelez_Category = FunctionallyGrounded` and flag it in `Notes`. This is a documented tie-break, not a claim the paper's evaluation is genuinely functionally-grounded in the textbook sense — none of the three buckets cleanly fits an informal, sub-taxonomy-threshold human review, and `FunctionallyGrounded` is the least-wrong label since neither `HumanGrounded` nor `ApplicationGrounded`'s criteria are met either.
+
+**`VilonLongo_Category` — verified 2026-07-22 against the primary source** (Vilone & Longo, 2021, *Information Fusion* 76:89–106, DOI 10.1016/j.inffus.2021.05.009, Section 4 / Fig. 5 / Table 4, open access via `https://arrow.tudublin.ie/scschcomart/135/`).
+
+An earlier draft of this section wrongly listed `ApplicationGrounded_RealUsers` / `HumanGrounded_ProxyTask` / `FunctionallyGrounded_ProxyMetric` / `FunctionallyGrounded_Simulation` — that was Doshi-Velez & Kim's grounding framework mislabeled as Vilone & Longo's, which would have made this column redundant with `DoshiVelez_Category`. Having now read the paper directly: Vilone & Longo's own primary classification (Section 4) is **Objective vs. Human-centred** evaluation — the grounding-based three-way split is explicitly presented in their paper as an *alternative* scheme from the literature (attributed there to [2], Preece 2018), not their own proposed category system. Human-centred evaluations are further split into **Qualitative** (open-ended questions/interviews) vs. **Quantitative** (close-ended — Likert scales, forced-choice accuracy, yes/no judgments), per their Table 4 classification of the 70 reviewed evaluation studies.
+
+| Value | Definition |
+|-------|------------|
+| `Objective` | Evaluated using only automated/formal metrics, no human participants judging explanation quality — e.g., fidelity/infidelity, sensitivity to input or parameter perturbation, rule validity/redundancy percentages, text-quality metrics (BLEU/METEOR/CIDEr-style), productivity/performance indicators. Maps to `N_Participants = 0`. |
+| `HumanCentred_Qualitative` | Human participants evaluate explanations via open-ended methods only (interviews, think-aloud, free-text feedback) — no Likert/close-ended instrument. |
+| `HumanCentred_Quantitative` | Human participants evaluate explanations via close-ended methods only (Likert scales, forced-choice accuracy, timed tasks, yes/no judgments). |
+| `HumanCentred_Mixed` | Paper combines both open- and close-ended human-centred measures (common in the reviewed literature — e.g., a Likert-scale questionnaire plus an open-ended interview in the same study). |
+| `NotEvaluated` | No evaluation component. |
+
+This axis is deliberately orthogonal to `DoshiVelez_Category`: Doshi-Velez asks how *realistic/grounded* the evaluation task is; `VilonLongo_Category` asks whether the evaluation was *automated, or human-centred and open- vs. closed-ended*. A paper can be, e.g., `ApplicationGrounded` + `HumanCentred_Quantitative` (real clinicians, real task, evaluated via Likert scale) — code both columns independently from the paper's actual method, not from each other.
+
+No pilot needed before extracting this column — the vocabulary above is verified against the primary source, not provisional.
+
+---
+
+### Regulatory-Relevant Evidence (RQ3)
+
+Maps to the four regulatory-relevant-evidence criteria defined in the preregistration (Section 2), operationalizing what evidence would satisfy interpretability-validation expectations in FDA AI/ML-based SaMD guidance and EU AI Act Article 13.
+
+| Column | Type | Values | Criterion |
+|--------|------|--------|-----------|
+| `Reg_Comprehension` | boolean | `Yes` / `No` | Clinician comprehension of explanation outputs |
+| `Reg_TrustCalibration` | boolean | `Yes` / `No` | Appropriate trust calibration under varying model performance conditions |
+| `Reg_UncertaintyTransparency` | boolean | `Yes` / `No` | Transparency of model uncertainty / failure modes |
+| `Reg_WorkflowSafety` | boolean | `Yes` / `No` | Safe and effective use within realistic clinical workflows |
+| `Reg_Notes` | string | — | Cite the specific evidence supporting each `Yes`; if `No`, note whether the criterion was addressed at all vs. attempted but insufficient |
+
+Coding rules:
+- `Reg_Comprehension = Yes` requires the paper to *test* comprehension (e.g., a comprehension check, correct-interpretation task) — a clinician merely viewing the explanation does not qualify.
+- `Reg_TrustCalibration = Yes` requires evidence trust tracked actual model reliability across varying performance conditions (e.g., trust measured against both correct and incorrect model outputs) — this is the calibration sense, not plausibility. Cross-check against `Trust_Claim`: a `Trust_Claim = Calibrated` or `Both` row is a candidate for `Yes`; `Trust_Claim = Plausibility` alone should be `No` here even if the paper frames it as a trust result.
+- `Reg_UncertaintyTransparency = Yes` requires the explanation or system surfaces model uncertainty or failure conditions to the user (e.g., confidence scores, out-of-distribution flags, explicit "explanation may be unreliable when...") — not just that the paper *discusses* uncertainty as a limitation.
+- `Reg_WorkflowSafety = Yes` requires evaluation within a realistic clinical workflow context — cross-check against `Realism_Level >= 3` and `EV_Environment >= 2`; a paper scoring low on those columns should not independently score `Yes` here without a specific justification recorded in `Reg_Notes`.
+- All four default to `No` in the absence of explicit evidence — do not infer regulatory-relevant evidence from a paper's stated implications or future-work claims.
+
+---
+
 ## Inter-Rater Reliability Protocol
 
 Before full extraction begins:
@@ -208,3 +295,4 @@ Seed paper selection: draw from included papers after full-text screening is com
 | v1 | 2026-05-24 | Initial schema. 26 columns. Deviates from Issue #10 spec on `Realism_Level`, EV columns, and clinician involvement split — see Deviations section. |
 | v1.1 | 2026-05-24 | Added `Tags` column (27 columns total). Issue #13. Controlled tag vocabulary in `memos/tag_vocabulary.md` (21 tags across 4 groups). |
 | v1.2 | 2026-05-26 | Added 6 quality rubric columns: `QR_Participant`, `QR_Task`, `QR_Outcome`, `QR_Faithfulness`, `QR_Reporting`, `QR_Notes` (33 columns total). Issue #20. Rubric in `data/coding/quality_rubric.md`. Adopted and adapted from QUADAS-2, RoB 2, and TRIPOD — see rubric Section 2 for mapping. |
+| v1.3 | 2026-06-10 (columns) / 2026-07-22 (documented) | Added 10 columns for the EM pivot's RQ1–RQ3 framework (43 columns total): `Method_Justification_Type`, `Method_Justification_Notes`, `Method_Interface_Isolated`, `DoshiVelez_Category`, `VilonLongo_Category`, `Reg_Comprehension`, `Reg_TrustCalibration`, `Reg_UncertaintyTransparency`, `Reg_WorkflowSafety`, `Reg_Notes`. Columns existed in the CSV since the 2026-06-10 pivot but were undocumented until now. `VilonLongo_Category` vocabulary verified 2026-07-22 directly against Vilone & Longo (2021) primary source (Objective / HumanCentred_Qualitative / HumanCentred_Quantitative / HumanCentred_Mixed / NotEvaluated) — ready to extract, no pilot required. |

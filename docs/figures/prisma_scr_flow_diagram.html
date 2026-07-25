@@ -1,0 +1,361 @@
+<title>PRISMA-ScR Flow Diagram — 9970 Clinical XAI Scoping Review</title>
+<style>
+  :root {
+    --bg: #f5f8f8;
+    --surface: #ffffff;
+    --ink: #16232a;
+    --ink-soft: #4b5c63;
+    --accent: #0f6d66;
+    --accent-ink: #0a4a45;
+    --accent-soft: #dbeeec;
+    --accent-line: #7fb8b3;
+    --exclude: #93402c;
+    --exclude-ink: #6e2f20;
+    --exclude-soft: #f8ece6;
+    --exclude-line: #cf9a87;
+    --line: #c3cdd0;
+    --caption: #6b7a80;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1517;
+    --surface: #16201f;
+    --ink: #eaf2f0;
+    --ink-soft: #a9bab6;
+    --accent: #4fd6c8;
+    --accent-ink: #9beee3;
+    --accent-soft: #14302c;
+    --accent-line: #2f6b62;
+    --exclude: #e29273;
+    --exclude-ink: #f0b79e;
+    --exclude-soft: #34211b;
+    --exclude-line: #7a4433;
+    --line: #33403f;
+    --caption: #8b9c98;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1517;
+      --surface: #16201f;
+      --ink: #eaf2f0;
+      --ink-soft: #a9bab6;
+      --accent: #4fd6c8;
+      --accent-ink: #9beee3;
+      --accent-soft: #14302c;
+      --accent-line: #2f6b62;
+      --exclude: #e29273;
+      --exclude-ink: #f0b79e;
+      --exclude-soft: #34211b;
+      --exclude-line: #7a4433;
+      --line: #33403f;
+      --caption: #8b9c98;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    padding: 2.5rem 1.25rem 4rem;
+    display: flex;
+    justify-content: center;
+  }
+  .page { width: 100%; max-width: 780px; }
+
+  header.title-block {
+    margin-bottom: 2.25rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1.25rem;
+  }
+  .eyebrow {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    margin: 0 0 0.55rem;
+  }
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    font-size: 1.5rem;
+    line-height: 1.32;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+  .subtitle {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 62ch;
+  }
+
+  .flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0;
+    position: relative;
+  }
+
+  .stage-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  .connector-v {
+    width: 2px;
+    height: 1.75rem;
+    background: var(--accent-line);
+    margin: 0 auto;
+  }
+  .connector-v.final { height: 1.75rem; }
+
+  .main-branch {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 0;
+  }
+
+  .box {
+    background: var(--surface);
+    border: 1.5px solid var(--line);
+    border-radius: 3px;
+    padding: 0.85rem 1.05rem;
+  }
+  .box.main {
+    border-color: var(--accent-line);
+    border-left: 4px solid var(--accent);
+  }
+  .box.side {
+    border-color: var(--exclude-line);
+    border-left: 4px solid var(--exclude);
+    background: var(--exclude-soft);
+  }
+  .box.included {
+    border-left: 4px solid var(--accent);
+    background: var(--accent-soft);
+  }
+
+  .stage-label {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--caption);
+    margin: 0 0 0.3rem;
+  }
+  .box-title {
+    font-size: 0.94rem;
+    font-weight: 600;
+    margin: 0 0 0.15rem;
+    color: var(--ink);
+  }
+  .box p.detail {
+    margin: 0.35rem 0 0;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+  .count {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    color: var(--accent-ink);
+  }
+  .box.side .count { color: var(--exclude-ink); }
+
+  .h-connector {
+    display: flex;
+    align-items: center;
+    width: 2.75rem;
+  }
+  .h-connector .line {
+    flex: 1;
+    height: 2px;
+    background: var(--exclude-line);
+  }
+  .h-connector .arrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid var(--exclude-line);
+  }
+  .side-wrap { max-width: 260px; }
+
+  .breakdown-list {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.2rem;
+  }
+  .breakdown-list li {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .breakdown-list .code {
+    font-family: ui-monospace, monospace;
+    color: var(--exclude-ink);
+    font-weight: 600;
+  }
+
+  .supplement {
+    margin-top: 2.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--line);
+  }
+  .supplement .stage-label { color: var(--caption); }
+  .supplement-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.6rem;
+  }
+  .supplement .box {
+    border-style: dashed;
+    background: var(--surface);
+    flex: 1 1 150px;
+    min-width: 130px;
+  }
+  .supplement .arrow-right {
+    font-family: ui-monospace, monospace;
+    color: var(--caption);
+    flex: 0 0 auto;
+  }
+
+  .caption {
+    margin-top: 2rem;
+    font-size: 0.78rem;
+    color: var(--caption);
+    line-height: 1.5;
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+  }
+  .caption code {
+    font-family: ui-monospace, monospace;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    padding: 0.05rem 0.3rem;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 560px) {
+    .main-branch { grid-template-columns: 1fr; }
+    .h-connector { width: 100%; height: 1.5rem; transform: rotate(90deg); margin: 0.25rem 0; }
+    .side-wrap { max-width: 100%; }
+  }
+</style>
+
+<div class="page">
+  <header class="title-block">
+    <p class="eyebrow">Figure 1 &middot; PRISMA-ScR Flow Diagram</p>
+    <h1>Beyond Fidelity: Explainable AI in Emergency Department Triage and Disposition</h1>
+    <p class="subtitle">Study selection, drawn directly from <code>data/screening/prisma_counts.csv</code>. Scoping review reported per Tricco et al. (2018).</p>
+  </header>
+
+  <div class="flow">
+
+    <div class="stage-row">
+      <div class="main-branch">
+        <div class="box main">
+          <p class="stage-label">Identification</p>
+          <p class="box-title">Records identified from database searching</p>
+          <p class="detail"><span class="count">n = 659</span> &mdash; PubMed (497), IEEE Xplore (161), ACM Digital Library (1, via OpenAlex)</p>
+        </div>
+        <div class="h-connector"><span class="line"></span><span class="arrow"></span></div>
+        <div class="side-wrap box side">
+          <p class="stage-label">Excluded from search</p>
+          <p class="box-title">Embase &mdash; <span class="count">not searched</span></p>
+          <p class="detail">No institutional access; disclosed protocol deviation, reported as a limitation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-v"></div>
+
+    <div class="stage-row">
+      <div class="main-branch">
+        <div class="box main">
+          <p class="box-title">Records after deduplication</p>
+          <p class="detail"><span class="count">n = 650</span> &mdash; 9 duplicates removed; 0 retracted publications found</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-v"></div>
+
+    <div class="stage-row">
+      <div class="main-branch">
+        <div class="box main">
+          <p class="stage-label">Screening</p>
+          <p class="box-title">Title &amp; abstract screened</p>
+          <p class="detail"><span class="count">n = 650</span> &mdash; single reviewer. 40 bulk include, 546 bulk exclude, 64 borderline &rarr; adjudicated (24 forward, 40 exclude)</p>
+        </div>
+        <div class="h-connector"><span class="line"></span><span class="arrow"></span></div>
+        <div class="side-wrap box side">
+          <p class="stage-label">Excluded at title/abstract</p>
+          <p class="box-title"><span class="count">n = 586</span></p>
+          <p class="detail">546 bulk + 40 of 64 borderline records excluded on adjudication</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-v"></div>
+
+    <div class="stage-row">
+      <div class="main-branch">
+        <div class="box main">
+          <p class="stage-label">Eligibility</p>
+          <p class="box-title">Full-text reports assessed for eligibility</p>
+          <p class="detail"><span class="count">n = 55</span> of 64 forwarded (9 not retrievable at reviewer's institution &mdash; disclosed, not excluded)</p>
+        </div>
+        <div class="h-connector"><span class="line"></span><span class="arrow"></span></div>
+        <div class="side-wrap box side">
+          <p class="stage-label">Excluded at full-text</p>
+          <p class="box-title"><span class="count">n = 48</span></p>
+          <ul class="breakdown-list">
+            <li><span>Wrong domain/decision point</span><span class="code">E1&nbsp;22</span></li>
+            <li><span>No qualifying XAI component</span><span class="code">E2&nbsp;5</span></li>
+            <li><span>XAI never evaluated</span><span class="code">E3&nbsp;13</span></li>
+            <li><span>Wrong publication format</span><span class="code">E4&nbsp;8</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="connector-v final"></div>
+
+    <div class="stage-row">
+      <div class="main-branch" style="grid-template-columns: 1fr;">
+        <div class="box included">
+          <p class="stage-label">Included</p>
+          <p class="box-title">Studies included in review</p>
+          <p class="detail"><span class="count">n = 7</span> &mdash; Sulaiman 2025 &middot; Sulaiman 2023 &middot; Arnaud 2023 &middot; Juang 2026 &middot; Xie 2021 &middot; Han 2025 &middot; Tang 2026</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="supplement">
+    <p class="stage-label">Post-hoc supplement (not part of the registered flow above)</p>
+    <div class="supplement-flow">
+      <div class="box"><p class="box-title">Differential search</p><p class="detail">gap window 2026-06-11 &rarr; 2026-07-14, same registered string</p><p class="detail"><span class="count">n = 46</span> new candidates</p></div>
+      <span class="arrow-right">&rarr;</span>
+      <div class="box"><p class="box-title">Full-text assessed</p><p class="detail"><span class="count">n = 6</span> of 7 forwarded (1 not retrievable)</p></div>
+      <span class="arrow-right">&rarr;</span>
+      <div class="box"><p class="box-title">Included</p><p class="detail"><span class="count">n = 0</span> additional</p></div>
+    </div>
+  </div>
+
+  <p class="caption">Source data: <code>data/screening/prisma_counts.csv</code>. Full narrative and citation trail: <code>docs/manuscript/methods_draft_v1.md</code>, <code>memos/decision_log.md</code> (2026-07-14 closure entry). The 9 not-retrievable full-text records and the Embase access gap are reported as disclosed limitations, not silently absorbed exclusions.</p>
+</div>

@@ -828,3 +828,43 @@ A secondary finding: PMID 36634916 was retrieved despite no Concept A term appea
 **Defense if challenged:** "The corpus was not capped arbitrarily at 7 — it reflects the full outcome of (a) exhaustive screening of the registered 64-record T/A-forwarded queue down to the 9 records genuinely unretrievable at this institution, and (b) a targeted differential search update covering the full gap since last search execution, using the same registered, recall-validated search string. That differential search is itself evidence the corpus is not under-sampled: it returned 46 new candidates and confirmed the review's established exclusion patterns generalize to freshly-published literature rather than being artifacts of the original search window. Further growth was assessed as low-yield relative to reviewer time remaining in an 8-week single-reviewer timeline, a documented and registered constraint from the project's 2026-06-10 scope pivot. JBI scoping review methodology does not impose a minimum study count; the review's narrative synthesis is structured around RQ1-RQ3 regardless of corpus size. All retrieval gaps are disclosed, not concealed, in the PRISMA-ScR flow diagram."
 
 ---
+
+## 2026-07-23 — Extraction schema tie-break: `DoshiVelez_Category` when `Eval_Type=None` but `N_Participants>0`
+
+**Decision:** When a paper has `Eval_Type=None` (no evaluation activity meets any of the six taxonomy minimums in `data/coding/eval_type_taxonomy.md`) but `N_Participants>0` (an informal, non-systematic human involvement exists, e.g. a co-author's face-validity commentary on a couple of illustrative examples), code `DoshiVelez_Category = FunctionallyGrounded` and flag it in `Notes`. This is a documented tie-break, not a claim that the paper's evaluation is actually functionally-grounded in the textbook sense.
+
+**Rationale:** Encountered during extraction of `Arnaud_2023` (`rayyan-601300083`) — one physician co-author informally reviewed 2 illustrative LIME explanation examples, not a systematic evaluation. None of the three Doshi-Velez & Kim (2017) buckets (`FunctionallyGrounded`/`HumanGrounded`/`ApplicationGrounded`, `data/extraction/schema_README.md`) cleanly fits this case: `FunctionallyGrounded`'s own mapping criterion requires `N_Participants=0`, which this paper fails to satisfy. Rather than resolve this silently and differently paper-by-paper across the remaining corpus, the user chose the closest-label-plus-flag approach: default to `FunctionallyGrounded` (the paper has no formal human-grounded or application-grounded evaluation either — the informal review doesn't rise to either of those), and rely on the `Notes` flag plus this decision-log entry to keep the coding auditable and distinguishable from a clean `N_Participants=0` case.
+
+**Impact:** Applies retroactively to `Arnaud_2023`'s row (already flagged, no change needed) and prospectively to any of the remaining 4 papers hitting the same `Eval_Type=None` + `N_Participants>0` pattern. `data/extraction/schema_README.md`'s `DoshiVelez_Category` section to be updated with this tie-break rule so the `extractor` subagent applies it automatically rather than re-deriving it per paper.
+
+---
+
+## 2026-07-23 — `Domain` column: no `EmergencyMedicine` value, kept as-is
+
+**Decision:** The controlled `Domain` vocabulary (`Radiology`/`EHR`/`Pathology`/`ICU`/`Pharmacy`/`Oncology`/`Cardiology`/`Other`) has no explicit `EmergencyMedicine` value, surfaced during extraction of `Han_2025` (hymenopteran stings, coded `EHR`) and `Tang_2026` (fall-related disposition, coded `Other`) — both ED-specific studies coded inconsistently against each other. User decided to keep the current split rather than add a new value.
+
+**Rationale:** The whole review is ED-scoped by design (per `docs/protocol/inclusion_boundary.md`), so `Domain` doesn't need to separately flag "this is an ED study" — that's already true of every included paper. The column's actual job is distinguishing sub-specialty focus (radiology vs. pathology vs. general EHR, etc.) among ED-relevant studies, which `EHR`/`Other` already does adequately for these two papers.
+
+**Impact:** No schema or data changes. `Han_2025=EHR`, `Tang_2026=Other` stand as extracted. If a third ED-specific paper hits this same ambiguity in a future corpus update, revisit whether the pattern justifies a dedicated value at that point.
+
+---
+
+## 2026-07-23 — `Clinician_Design` coding rule: co-authorship + clinically-motivated feature selection counts as Yes
+
+**Decision:** When clinician co-authors are listed on a paper and the Methods describe clinically-motivated feature/variable selection (e.g., "preselected candidate variables... to ensure clinical usefulness"), code `Clinician_Design=Yes` even without an explicitly described formal co-design process (iterative feedback sessions, stakeholder workshops, etc.).
+
+**Rationale:** Surfaced as a cross-paper consistency check during extraction review: `Xie_2021` and `Han_2025` have essentially identical evidence (clinician-affiliated co-authors, clinically-informed feature selection, no described formal process) but were initially coded inconsistently (`Yes` vs. `No`). User chose the inclusive reading — authorship-plus-clinical-input counts as design involvement, matching how `QR_Notes`/`Notes` already document this as a softer/informal call rather than requiring a documented stakeholder-engagement subsection.
+
+**Impact:** `Xie_2021`'s `Clinician_Design=Yes` stands as extracted. `Han_2025`'s row (not yet appended to `schema_v1.csv` at time of this entry) to be recoded `Clinician_Design=Yes` when confirmed. Applies prospectively to any paper with the same evidentiary pattern (clinician co-authors + clinically-motivated feature selection, no described formal process).
+
+---
+
+## 2026-07-23 — `Trust_Claim` requires actual human engagement, not authorial rhetoric alone
+
+**Decision:** `Trust_Claim=Plausibility` (or `Calibrated`/`Both`) requires that at least one human — however informal or unvalidated — actually looked at/reacted to an explanation. A paper whose only trust-adjacent language is authorial rhetoric ("this supports clinician trust," "allows physicians to understand and validate") with `N_Participants=0` and no human evaluation of any kind is coded `Trust_Claim=None`, regardless of how the rhetoric reads.
+
+**Rationale:** Surfaced as a cross-paper consistency check: `Sulaiman_2025` (N_Participants=0, rhetoric-only trust language, already confirmed `None` earlier in this review session) and `Han_2025` (N_Participants=0, near-identical rhetoric-only trust language) were initially coded inconsistently (`None` vs. `Plausibility`). Distinguishing this from `Arnaud_2023` (N=1, a physician co-author actually reviewed 2 illustrative examples) and `Juang_2026` (a real, if unvalidated, physician survey was conducted) — those two retain `Plausibility` because genuine human engagement occurred, however informal.
+
+**Impact:** `Han_2025` recoded `Trust_Claim=None` (from the initially-drafted `Plausibility`) before being appended to `schema_v1.csv`. `Sulaiman_2025` unchanged (already `None`). Applies prospectively: any paper with `N_Participants=0` and only rhetorical trust language gets `Trust_Claim=None`.
+
+---
