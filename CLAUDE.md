@@ -29,6 +29,10 @@ This repository is for a clinical XAI (Explainable AI) review project (reference
 | `project_management/weekly_logs/` | Weekly progress logs |
 | `project_management/reviewer_risks/` | Reviewer risk tracking |
 
+## Writing Style
+
+Before finalizing any prose destined for a document in this repo (manuscript drafts, protocol text, OSF registration materials, memos, or any other narrative/prose content meant to be read as authored text rather than code or data) — invoke the `humanizer` skill on the draft to strip AI-writing tells (em dash overuse, rule-of-three, inflated symbolism, hedging/filler phrases, etc.) before presenting or committing it.
+
 ## Getting Started
 
 This is a fresh repository. When the project is initialized, document here:
