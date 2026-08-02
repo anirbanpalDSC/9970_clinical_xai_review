@@ -16,41 +16,6 @@
     --line: #c3cdd0;
     --caption: #6b7a80;
   }
-  :root[data-theme="dark"] {
-    --bg: #0f1517;
-    --surface: #16201f;
-    --ink: #eaf2f0;
-    --ink-soft: #a9bab6;
-    --accent: #4fd6c8;
-    --accent-ink: #9beee3;
-    --accent-soft: #14302c;
-    --accent-line: #2f6b62;
-    --exclude: #e29273;
-    --exclude-ink: #f0b79e;
-    --exclude-soft: #34211b;
-    --exclude-line: #7a4433;
-    --line: #33403f;
-    --caption: #8b9c98;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #0f1517;
-      --surface: #16201f;
-      --ink: #eaf2f0;
-      --ink-soft: #a9bab6;
-      --accent: #4fd6c8;
-      --accent-ink: #9beee3;
-      --accent-soft: #14302c;
-      --accent-line: #2f6b62;
-      --exclude: #e29273;
-      --exclude-ink: #f0b79e;
-      --exclude-soft: #34211b;
-      --exclude-line: #7a4433;
-      --line: #33403f;
-      --caption: #8b9c98;
-    }
-  }
-
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -259,7 +224,7 @@
   <header class="title-block">
     <p class="eyebrow">Figure 1 &middot; PRISMA-ScR Flow Diagram</p>
     <h1>Beyond Fidelity: Explainable AI in Emergency Department Triage and Disposition</h1>
-    <p class="subtitle">Study selection, drawn directly from <code>data/screening/prisma_counts.csv</code>. Scoping review reported per Tricco et al. (2018).</p>
+    <p class="subtitle">Study selection. Scoping review reported per Tricco et al. (2018).</p>
   </header>
 
   <div class="flow">
@@ -356,6 +321,4 @@
       <div class="box"><p class="box-title">Included</p><p class="detail"><span class="count">n = 0</span> additional</p></div>
     </div>
   </div>
-
-  <p class="caption">Source data: <code>data/screening/prisma_counts.csv</code>. Full narrative and citation trail: <code>docs/manuscript/methods_draft_v1.md</code>, <code>memos/decision_log.md</code> (2026-07-14 closure entry). The 9 not-retrievable full-text records and the Embase access gap are reported as disclosed limitations, not silently absorbed exclusions.</p>
 </div>

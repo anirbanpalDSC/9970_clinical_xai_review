@@ -29,7 +29,7 @@ This review is scoped to the **initial ED encounter** - patient intake, acuity/t
 
 **RQ1 - Methods and justification:** Which post-hoc explanation methods (feature attribution, counterfactual, example-based, rule-based) are deployed in EM clinical XAI studies, and what forms of justification - coded inductively as computational, cognitive, or workflow-based - are provided for their selection?
 
-**RQ2 - Evaluation rigor:** How do current clinical XAI studies in EM evaluate explanation effectiveness across levels of human involvement (computational metrics, proxy tasks, simulated users, clinician-in-the-loop experiments, real-world deployment), and what does this distribution reveal about the rigor of existing evaluation practices?
+**RQ2 - Evaluation rigor:** How do current clinical XAI studies in EM evaluate explanation effectiveness across a six-level taxonomy of human involvement (computational proxy metrics, forward/backward simulated-user studies, clinician trust questionnaires, decision-quality studies, and downstream-outcome/deployment evaluation), and what does this distribution reveal about the rigor of existing evaluation practices?
 
 **RQ3 - Regulatory readiness:** What evaluation evidence do current EM-focused XAI studies provide that would satisfy interpretability-validation expectations emerging in regulatory frameworks (FDA AI/ML-based Software as a Medical Device guidance; EU AI Act Article 13), and where are the most consequential evidentiary gaps?
 
@@ -50,7 +50,7 @@ Per the three-gate EM-only inclusion boundary in `docs/protocol/inclusion_bounda
 
 - **Population/Context (Gate 1):** Adult or pediatric studies evaluating predictive models used for decisions occurring during the **initial ED encounter** - initial patient intake, acuity/triage scoring (e.g., ESI or an equivalent acuity scale), or immediate disposition (admit/discharge/transfer/ICU-admit) decisions made at the point of ED care.
 - **Intervention (Gate 2):** A post-hoc explanation method (feature attribution, counterfactual, example-based/case-based, or rule-based) applied to the predictive model, OR an inherently interpretable model explicitly evaluated for its interpretability.
-- **Study types (Gate 3):** Any empirical study reporting at least one of the five RQ2 evaluation levels (computational/fidelity, proxy task, simulated user, clinician-in-the-loop, deployment). Method papers presenting a novel XAI method with an EM clinical demonstration are eligible and coded `Study_Design: MethodPaper`.
+- **Study types (Gate 3):** Any empirical study reporting at least one of the six RQ2 evaluation levels (`ProxyMetric`, `ForwardSim`, `BackwardSim`, `TrustQuestionnaire`, `DecisionQuality`, `DownstreamOutcome` — see `data/coding/eval_type_taxonomy.md`). Method papers presenting a novel XAI method with an EM clinical demonstration are eligible and coded `Study_Design: MethodPaper`.
 - **Publication period:** 2015/01/01 through the search-execution date (inclusive), executed as a single search. A small top-up search covering records published/indexed between initial execution and manuscript submission will be conducted in Phase 3 (see `docs/protocol/search_string_pubmed_v1.md` and `memos/decision_log.md`, 2026-06-10).
 - **Language:** English.
 

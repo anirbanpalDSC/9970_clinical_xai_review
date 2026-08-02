@@ -50,13 +50,14 @@ The study applies, evaluates, or proposes:
 
 ### Gate 3 — Empirical Evaluation Component
 
-The study reports at least one of the five evaluation levels from RQ2's taxonomy, **applied to the explanation method itself** (not only to the underlying predictive model's accuracy):
+The study reports at least one of the six evaluation levels from RQ2's taxonomy (`data/coding/eval_type_taxonomy.md`), **applied to the explanation method itself** (not only to the underlying predictive model's accuracy):
 
-1. Computational / fidelity metrics
-2. Proxy tasks
-3. Simulated-user studies
-4. Clinician-in-the-loop studies
-5. Real-world deployment evaluation
+1. Computational / fidelity metrics (`ProxyMetric`)
+2. Forward simulation (`ForwardSim`)
+3. Backward simulation / counterfactual understanding (`BackwardSim`)
+4. Trust questionnaire (`TrustQuestionnaire`)
+5. Decision-quality study (`DecisionQuality`)
+6. Downstream-outcome / real-world deployment evaluation (`DownstreamOutcome`)
 
 **Exclude:** Review articles, editorials, commentaries, and opinion pieces with no underlying empirical study; protocol-only papers; conference abstracts without full proceedings.
 
@@ -70,7 +71,7 @@ flowchart TD
     B -->|No — decision point is pre-hospital EMS,<br/>inpatient ward, ICU, or operational/admin| X1["EXCLUDE<br/>Wrong care setting / decision point<br/>(even if population originates in ED)"]
     B -->|Yes| C{"Gate 2 — Explainable/interpretable AI method?<br/>Post-hoc (feature attribution, counterfactual,<br/>example-based, rule-based) OR inherently<br/>interpretable model evaluated for interpretability"}
     C -->|No| X2["EXCLUDE<br/>No XAI/interpretability component"]
-    C -->|Yes| D{"Gate 3 — Empirical evaluation component?<br/>Computational/fidelity · proxy task ·<br/>simulated user · clinician-in-the-loop · deployment"}
+    C -->|Yes| D{"Gate 3 — Empirical evaluation component?<br/>Computational/fidelity · forward/backward sim ·<br/>trust questionnaire · decision-quality · downstream outcome"}
     D -->|No — review/commentary/<br/>opinion/protocol only| X3["EXCLUDE<br/>No empirical evaluation"]
     D -->|Yes| INCL["INCLUDE<br/>Proceeds to full-text screening / extraction"]
 ```
